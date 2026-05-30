@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About From Bed to Bar | Garden-to-Glass Cocktails & Mocktails</title>
+  <meta name="description" content="From Bed to Bar is Stephanie's garden-to-glass project — real recipes built around what you actually grow, for home gardeners and curious home bartenders." />
+  <link rel="canonical" href="https://frombedtobar.com/about.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="From Bed to Bar" />
+  <meta property="og:title" content="About From Bed to Bar | Garden-to-Glass Cocktails & Mocktails" />
+  <meta property="og:description" content="From Bed to Bar is Stephanie's garden-to-glass project — real recipes built around what you actually grow, for home gardeners and curious home bartenders." />
+  <meta property="og:url" content="https://frombedtobar.com/about.html" />
+  <meta property="og:image" content="https://frombedtobar.com/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About From Bed to Bar | Garden-to-Glass Cocktails & Mocktails" />
+  <meta name="twitter:description" content="From Bed to Bar is Stephanie's garden-to-glass project — real recipes built around what you actually grow, for home gardeners and curious home bartenders." />
+  <meta name="twitter:image" content="https://frombedtobar.com/og-image.jpg" />
+
+  <meta name="theme-color" content="#b85c38" />
+
+  <!-- JSON-LD: Person + Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://frombedtobar.com/#stephanie",
+        "name": "Stephanie",
+        "url": "https://frombedtobar.com/about.html",
+        "description": "Home gardener and cocktail enthusiast behind From Bed to Bar — a garden-to-glass project built around seasonal ingredients grown at home. Stephanie started From Bed to Bar to help home gardeners turn what they grow into something worth pouring.",
+        "knowsAbout": [
+          "Home gardening",
+          "Cocktail making",
+          "Mocktail recipes",
+          "Herb gardening",
+          "Seasonal drinks",
+          "Garden-to-glass bartending"
+        ],
+        "worksFor": {
+          "@id": "https://frombedtobar.com/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://frombedtobar.com/#organization",
+        "name": "From Bed to Bar",
+        "url": "https://frombedtobar.com/",
+        "logo": "https://frombedtobar.com/images/logo.png",
+        "description": "Garden-to-glass cocktail and mocktail recipes built around what you actually grow at home.",
+        "founder": {
+          "@id": "https://frombedtobar.com/#stephanie"
+        },
+        "sameAs": []
+      },
+      {
+        "@type": "AboutPage",
+        "@id": "https://frombedtobar.com/about.html#page",
+        "url": "https://frombedtobar.com/about.html",
+        "name": "About From Bed to Bar",
+        "description": "The story behind From Bed to Bar — a garden-to-glass project by Stephanie for home gardeners and curious home bartenders.",
+        "isPartOf": {
+          "@id": "https://frombedtobar.com/#website"
+        },
+        "about": {
+          "@id": "https://frombedtobar.com/#organization"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://frombedtobar.com/#website",
+        "url": "https://frombedtobar.com/",
+        "name": "From Bed to Bar",
+        "description": "Garden-to-glass cocktail and mocktail recipes, garden tips, and seasonal planting guides for home bartenders and gardeners.",
+        "inLanguage": "en-US",
+        "publisher": {
+          "@id": "https://frombedtobar.com/#organization"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #f5f0e8;
+      --parchment: #ede5d0;
+      --bark: #3b2a1a;
+      --moss: #4a5e3a;
+      --sage: #7a9468;
+      --terracotta: #b85c38;
+      --amber: #c9873a;
+      --linen: #faf7f2;
+      --ink: #1e160e;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: "Lora", Georgia, serif; background: var(--linen); color: var(--ink); overflow-x: hidden; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 3rem;
+      background: rgba(245,240,232,0.93);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(59,42,26,0.12);
+    }
+    .nav-logo { text-decoration: none; display: flex; align-items: center; }
+    .nav-logo img { height: 44px; width: 44px; object-fit: contain; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; flex-wrap: wrap; }
+    .nav-links a {
+      font-family: "DM Mono", monospace; font-size: 0.78rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--bark); text-decoration: none; opacity: 0.85; transition: opacity 0.2s;
+    }
+    .nav-links a:hover { opacity: 1; }
+    .nav-links a.active { opacity: 1; border-bottom: 2px solid var(--terracotta); padding-bottom: 2px; }
+
+    /* ── MOBILE NAV ── */
+    .nav-hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 4px; background: none; border: none;
+    }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--bark); transition: all 0.3s; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    @media (max-width: 768px) {
+      .nav-hamburger { display: flex; }
+      .nav-links {
+        display: none; position: fixed; top: 66px; left: 0; right: 0;
+        background: rgba(245,240,232,0.98); backdrop-filter: blur(8px);
+        flex-direction: column; gap: 0;
+        border-bottom: 1px solid rgba(59,42,26,0.12); z-index: 99; padding: 0.5rem 0;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links a { display: block; padding: 0.9rem 2rem; font-size: 0.82rem; opacity: 1; border-bottom: 1px solid rgba(59,42,26,0.06); }
+      .nav-links a.active { border-bottom: 1px solid rgba(59,42,26,0.06); border-left: 3px solid var(--terracotta); padding-left: calc(2rem - 3px); }
+    }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      padding: 8rem 5rem 5rem;
+      background: var(--bark);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: "";
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent, transparent 18px,
+        rgba(255,255,255,0.025) 18px, rgba(255,255,255,0.025) 19px
+      );
+    }
+    .page-hero::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(201,135,58,0.12) 0%, transparent 65%);
+    }
+    .hero-inner {
+      position: relative; z-index: 1;
+      max-width: 780px;
+    }
+    .hero-eyebrow {
+      font-family: "DM Mono", monospace;
+      font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--amber); margin-bottom: 1.25rem;
+    }
+    .hero-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 700; line-height: 1.15;
+      color: var(--cream); margin-bottom: 1.75rem;
+    }
+    .hero-title em { font-style: italic; color: var(--amber); }
+    .hero-intro {
+      font-size: 1.1rem; line-height: 1.9;
+      color: rgba(245,240,232,0.82);
+      max-width: 640px;
+    }
+
+    /* ── CONTENT SECTIONS ── */
+    .about-body { max-width: 780px; margin: 0 auto; padding: 5rem 3rem 2rem; }
+
+    .about-section { margin-bottom: 4rem; }
+    .about-section:last-child { margin-bottom: 0; }
+
+    .section-eyebrow {
+      font-family: "DM Mono", monospace;
+      font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--terracotta); margin-bottom: 0.75rem;
+    }
+    .about-section h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.75rem; font-weight: 700;
+      color: var(--bark); margin-bottom: 1.25rem; line-height: 1.3;
+    }
+    .about-section p {
+      font-size: 1rem; line-height: 1.9;
+      color: rgba(30,22,14,0.82); margin-bottom: 1.1rem;
+    }
+    .about-section p:last-child { margin-bottom: 0; }
+
+    .section-divider {
+      border: none; border-top: 1px solid rgba(59,42,26,0.1);
+      margin: 0 3rem 4rem;
+    }
+
+    /* What You'll Find Here — icon list */
+    .find-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-top: 1.25rem; }
+    .find-item {
+      display: grid; grid-template-columns: 2.25rem 1fr; gap: 0.75rem;
+      align-items: start;
+    }
+    .find-icon {
+      width: 2.25rem; height: 2.25rem;
+      background: var(--parchment); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0; margin-top: 0.05rem;
+    }
+    .find-text { font-size: 0.97rem; line-height: 1.8; color: rgba(30,22,14,0.82); }
+    .find-text strong { color: var(--bark); font-weight: 600; }
+
+    /* How Recipes Are Built — numbered steps */
+    .recipe-method { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.25rem; }
+    .method-step {
+      display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; align-items: start;
+    }
+    .step-number {
+      font-family: "DM Mono", monospace;
+      font-size: 1.1rem; font-weight: 500;
+      color: var(--terracotta);
+      padding-top: 0.1rem;
+    }
+    .step-body { font-size: 0.97rem; line-height: 1.85; color: rgba(30,22,14,0.82); }
+    .step-body strong { color: var(--bark); }
+
+    /* Safety note callout */
+    .safety-callout {
+      background: var(--parchment);
+      border-left: 4px solid var(--moss);
+      padding: 1.5rem 1.75rem;
+      margin: 1.5rem 0 0;
+      border-radius: 0 4px 4px 0;
+    }
+    .safety-callout-label {
+      font-family: "DM Mono", monospace;
+      font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--moss); margin-bottom: 0.65rem;
+    }
+    .safety-callout p {
+      font-size: 0.94rem; line-height: 1.8; color: rgba(30,22,14,0.8);
+      margin-bottom: 0.75rem;
+    }
+    .safety-callout p:last-child { margin-bottom: 0; }
+    .safety-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin: 0.75rem 0; }
+    .safety-list li {
+      font-size: 0.94rem; line-height: 1.75; color: rgba(30,22,14,0.8);
+      padding-left: 1.25rem; position: relative;
+    }
+    .safety-list li::before { content: "—"; position: absolute; left: 0; color: var(--sage); }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+      background: var(--moss);
+      padding: 5rem 3rem;
+      text-align: center;
+    }
+    .cta-eyebrow {
+      font-family: "DM Mono", monospace;
+      font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: rgba(245,240,232,0.65); margin-bottom: 1rem;
+    }
+    .cta-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 700; color: var(--cream);
+      margin-bottom: 0.75rem; line-height: 1.25;
+    }
+    .cta-sub {
+      font-size: 0.97rem; line-height: 1.8;
+      color: rgba(245,240,232,0.75);
+      max-width: 520px; margin: 0 auto 2.5rem;
+    }
+    .cta-links {
+      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+    }
+    .cta-link {
+      font-family: "DM Mono", monospace;
+      font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.85rem 1.75rem;
+      border: 1px solid rgba(255,255,255,0.3);
+      color: var(--cream);
+      transition: all 0.2s;
+    }
+    .cta-link:hover { background: var(--amber); border-color: var(--amber); color: var(--bark); }
+    .cta-link.primary { background: var(--amber); border-color: var(--amber); color: var(--bark); }
+    .cta-link.primary:hover { background: #b8782e; border-color: #b8782e; color: var(--cream); }
+
+    /* ── TAGLINE ── */
+    .site-tagline {
+      background: var(--moss); padding: 1.25rem 3rem;
+      text-align: center; border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .site-tagline p {
+      font-family: "DM Mono", monospace; font-size: 0.78rem;
+      letter-spacing: 0.05em; line-height: 1.75;
+      color: rgba(245,240,232,0.88);
+    }
+    .site-tagline strong { color: var(--amber); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bark);
+      padding: 2.5rem 3rem;
+      display: flex; flex-direction: column;
+      align-items: center; gap: 1rem; text-align: center;
+    }
+    .footer-logo { font-family: "Playfair Display", serif; font-style: italic; font-size: 1.1rem; color: var(--cream); }
+    .footer-copy { font-family: "DM Mono", monospace; font-size: 0.75rem; letter-spacing: 0.1em; color: rgba(245,240,232,0.72); }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; justify-content: center; }
+    .footer-links a {
+      font-family: "DM Mono", monospace; font-size: 0.75rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(245,240,232,0.72); text-decoration: none; transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--sage); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .page-hero .hero-inner { animation: fadeUp 0.7s ease both; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { gap: 1rem; }
+      .page-hero { padding: 7rem 1.75rem 4rem; }
+      .about-body { padding: 4rem 1.75rem 2rem; }
+      .section-divider { margin: 0 1.75rem 3rem; }
+      .cta-section { padding: 4rem 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="images/logo.png" alt="From Bed to Bar — home" />
+  </a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="recipes.html">Recipes</a></li>
+    <li><a href="garden-tips.html">Garden Tips</a></li>
+    <li><a href="planting-guide.html">Planting Guide</a></li>
+    <li><a href="bar-essentials.html">Bar Essentials</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<header class="page-hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">About From Bed to Bar</p>
+    <h1 class="hero-title">Garden-grown drinks,<br><em>made approachable.</em></h1>
+    <p class="hero-intro">From Bed to Bar is a garden-to-glass project built around one simple idea: the best drinks start outside, not at a bottle shop. If you grow it, you can pour it — and it doesn't have to be complicated.</p>
+  </div>
+</header>
+
+<!-- ── CONTENT ── -->
+<main>
+
+  <div class="about-body">
+
+    <!-- Section 1: Why I Started -->
+    <section class="about-section" id="why">
+      <p class="section-eyebrow">The origin</p>
+      <h2>Why I Started From Bed to Bar</h2>
+      <p>I'm Stephanie. I'm a home gardener who also enjoys a well-made drink — and for a long time, those two things felt completely separate. I'd grow mint that I didn't know what to do with. I'd pick lavender and let it dry out on the counter. I had a lemon verbena plant that sat there looking beautiful and entirely unused.</p>
+      <p>At some point it clicked that everything I was growing was already in cocktail recipes — it just wasn't labeled that way. The mint in my raised bed was a mojito waiting to happen. The rosemary by the back fence was a sour looking for a bourbon. The elderflower I almost ripped out was practically a spritz on its own.</p>
+      <p>From Bed to Bar started as a way for me to document what I was figuring out: which herbs work well in drinks, how to turn a backyard harvest into something worth pouring, and how to do all of it without needing a professional bar setup or a bartending certificate. It's grown from there, but that's still the heart of it — practical, garden-first, honest about what actually works at home.</p>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- Section 2: What You'll Find Here -->
+    <section class="about-section" id="what">
+      <p class="section-eyebrow">What's here</p>
+      <h2>What You'll Find Here</h2>
+      <p>From Bed to Bar is built for home gardeners, beginners at the bar, and anyone who wants to actually use what they grow. You don't need a lot of equipment. You don't need an impressive spirits collection. You need a garden — even a small one — and some curiosity.</p>
+      <ul class="find-list">
+        <li class="find-item">
+          <div class="find-icon">🌿</div>
+          <div class="find-text"><strong>Cocktail and mocktail recipes</strong> built around real garden ingredients — herbs, edible flowers, fruit, and homegrown syrups. Every recipe includes a non-alcoholic version, because garden-forward drinks don't need alcohol to be worth making.</div>
+        </li>
+        <li class="find-item">
+          <div class="find-icon">🪴</div>
+          <div class="find-text"><strong>Garden tips</strong> for growing plants that are genuinely useful at the bar — including which varieties are worth the effort, how to harvest without killing the plant, and how to preserve what you grow.</div>
+        </li>
+        <li class="find-item">
+          <div class="find-icon">📅</div>
+          <div class="find-text"><strong>A zone-by-zone planting guide</strong> so you can plan what to grow, when to sow, and what's likely to thrive in your climate.</div>
+        </li>
+        <li class="find-item">
+          <div class="find-icon">🍋</div>
+          <div class="find-text"><strong>Bar essentials guidance</strong> covering the basic tools, techniques, and pantry staples that make home bartending less intimidating — without pushing you to buy more than you need.</div>
+        </li>
+        <li class="find-item">
+          <div class="find-icon">📖</div>
+          <div class="find-text"><strong>Blog posts</strong> on seasonal ingredients, what's growing in the garden right now, and the practical side of going garden-to-glass at home.</div>
+        </li>
+      </ul>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- Section 3: How Recipes Are Built -->
+    <section class="about-section" id="recipes">
+      <p class="section-eyebrow">The approach</p>
+      <h2>How Recipes Are Built</h2>
+      <p>Every recipe on this site starts with the garden, not the spirit. That changes the way drinks get developed — it's seasonal first, substitution-friendly, and realistic about what home gardeners actually have on hand.</p>
+      <div class="recipe-method">
+        <div class="method-step">
+          <div class="step-number">01</div>
+          <div class="step-body"><strong>Real ingredients, not idealized ones.</strong> Recipes are built around what you can actually grow — not obscure botanical extracts or ingredients you'd only find at a specialty importer. If a plant is in the recipe, it's one you can reasonably grow at home or find at a farmers' market.</div>
+        </div>
+        <div class="method-step">
+          <div class="step-number">02</div>
+          <div class="step-body"><strong>Seasonal thinking baked in.</strong> What you can pour in May isn't the same as what you can pour in October. Recipes are written with seasonality in mind, and I try to be clear about when something is at its best and what you can substitute when it's not.</div>
+        </div>
+        <div class="method-step">
+          <div class="step-number">03</div>
+          <div class="step-body"><strong>Approachable technique.</strong> Drinks here use methods a home cook can follow — muddling, shaking, simple syrups, infusions. If a technique requires specialised bar equipment, I'll say so and offer a workaround.</div>
+        </div>
+        <div class="method-step">
+          <div class="step-number">04</div>
+          <div class="step-body"><strong>Mocktails are first-class.</strong> Every recipe includes a non-alcoholic version — not as an afterthought, but developed alongside the original. The garden flavours are the point; the spirit is optional.</div>
+        </div>
+        <div class="method-step">
+          <div class="step-number">05</div>
+          <div class="step-body"><strong>Honest about limitations.</strong> I'm not a trained bartender or a professional recipe developer. These recipes reflect what works in my garden and kitchen. If something could go multiple ways or depends on your specific ingredients, I'll say that plainly rather than pretending there's one perfect version.</div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- Section 4: Safety -->
+    <section class="about-section" id="safety">
+      <p class="section-eyebrow">Important to know</p>
+      <h2>A Note on Gardening, Foraging & Safety</h2>
+      <p>Growing your own ingredients is one of the most rewarding parts of the garden-to-glass approach. But it comes with responsibility — especially when those ingredients end up in what you eat and drink.</p>
+      <p>Please keep these points in mind:</p>
+
+      <div class="safety-callout">
+        <p class="safety-callout-label">🌱 Garden & foraging safety</p>
+        <ul class="safety-list">
+          <li><strong>Identify plants correctly before you use them.</strong> Many edible plants have toxic lookalikes. If you're foraging rather than growing your own, be certain of what you're picking. When in doubt, don't use it.</li>
+          <li><strong>Only use food-safe, edible plants.</strong> Not everything that looks like a herb is safe to consume. Stick to verified edible varieties, and cross-check before trying anything unfamiliar.</li>
+          <li><strong>Avoid sprayed or chemically treated plants.</strong> Don't use plants that have been treated with pesticides, herbicides, or other chemicals not approved for food use. Grow your own where you can, and know the source when you don't.</li>
+          <li><strong>Some plants cause reactions in some people.</strong> Allergies to herbs, flowers, and botanicals are real. If you or your guests have known sensitivities, check ingredients carefully.</li>
+        </ul>
+        <p>If you're ever unsure about plant identification or food safety, the right call is to leave it out. No cocktail is worth a health risk.</p>
+      </div>
+
+      <p style="margin-top: 1.5rem;">On alcohol: every recipe on this site includes a mocktail version. If you're making the alcoholic version, please drink responsibly, know your limits, and never drive after drinking. This site is intended for adults of legal drinking age. See our <a href="disclaimer.html" style="color: var(--terracotta); text-decoration: underline;">full disclaimer</a> for more.</p>
+    </section>
+
+  </div><!-- /about-body -->
+
+  <!-- ── CTA ── -->
+  <section class="cta-section">
+    <p class="cta-eyebrow">Ready to get started?</p>
+    <h2 class="cta-title">Start with what's growing.</h2>
+    <p class="cta-sub">Browse recipes built around real garden ingredients, or find out what to grow this season for the best drinks.</p>
+    <div class="cta-links">
+      <a href="recipes.html" class="cta-link primary">Browse Recipes</a>
+      <a href="garden-tips.html" class="cta-link">Garden Tips</a>
+      <a href="planting-guide.html" class="cta-link">Planting Guide</a>
+    </div>
+  </section>
+
+</main>
+
+<div class="site-tagline">
+  <p><strong>Drink responsibly.</strong> Every mocktail on this site is just as good as the cocktail version. Enjoy the garden. Enjoy the bar. Be safe, be kind, and look after each other.</p>
+</div>
+
+<footer>
+  <span class="footer-logo">From Bed to Bar</span>
+  <span class="footer-copy">© 2026 FromBedtoBar.com</span>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="recipes.html">Recipes</a></li>
+    <li><a href="garden-tips.html">Garden Tips</a></li>
+    <li><a href="bar-essentials.html">Bar Essentials</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="disclaimer.html">Disclaimer</a></li>
+  </ul>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var hamburger = document.getElementById("navHamburger");
+    var navLinks = document.querySelector(".nav-links");
+    if (hamburger && navLinks) {
+      hamburger.addEventListener("click", function() {
+        hamburger.classList.toggle("open");
+        navLinks.classList.toggle("open");
+      });
+      navLinks.querySelectorAll("a").forEach(function(link) {
+        link.addEventListener("click", function() {
+          hamburger.classList.remove("open");
+          navLinks.classList.remove("open");
+        });
+      });
+    }
+  });
+</script>
+</body>
+</html>
