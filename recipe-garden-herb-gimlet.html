@@ -66,6 +66,55 @@
   ]
 }
   </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I make this as a mocktail?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Replace the gin with a good tonic water or sparkling water and add an extra half ounce of thyme syrup to compensate for the loss of body. The result is herbal, tart, and genuinely refreshing — not just a watered-down version of the cocktail."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use a different herb instead of thyme?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — this works well with rosemary, tarragon, or lemon verbena. Rosemary gives a more piney, resinous character. Tarragon is softer and slightly anise-like. Lemon verbena brightens the citrus notes nicely. Use the same ratio as the thyme syrup recipe and taste as you steep."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the gin variety matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It does make a difference. A London Dry gin with classic juniper and citrus notes pairs cleanly with thyme. A more floral or contemporary gin can complement the herb but may make the drink harder to balance. If you're not sure, a mid-range London Dry is a reliable choice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does thyme syrup keep?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Thyme syrup keeps for about 2 weeks in the fridge in a sealed container. It may develop a slightly more intense herbal flavour over time, which isn't a bad thing. Discard it if it smells fermented or looks cloudy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use bottled lime juice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fresh is strongly recommended here. A gimlet is a short, simple drink where lime juice is a primary ingredient — bottled juice tends to taste flat and slightly bitter in a way that's noticeable in a cocktail this clean. If you can only get one fresh ingredient, make it the lime."
+      }
+    }
+  ]
+}
+</script>
+
   <meta name="theme-color" content="#b85c38" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -265,6 +314,56 @@
         padding-left: calc(2rem - 3px);
       }
     }
+  
+    /* ── FAQ SECTION ── */
+    .faq-section {
+      background: var(--linen);
+      padding: 4rem 3rem;
+      border-top: 1px solid rgba(59,42,26,0.1);
+    }
+    .faq-inner { max-width: 780px; margin: 0 auto; }
+    .faq-eyebrow {
+      font-family: "DM Mono", monospace;
+      font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--terracotta); margin-bottom: 0.75rem;
+    }
+    .faq-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.75rem; font-weight: 700;
+      color: var(--bark); margin-bottom: 2rem; line-height: 1.3;
+    }
+    .faq-list { display: flex; flex-direction: column; gap: 0; }
+    .faq-item { border-top: 1px solid rgba(59,42,26,0.1); }
+    .faq-item:last-child { border-bottom: 1px solid rgba(59,42,26,0.1); }
+    .faq-question {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 1.5rem;
+      padding: 1.25rem 0;
+      text-align: left;
+    }
+    .faq-question span:first-child {
+      font-family: "Lora", Georgia, serif;
+      font-size: 1rem; font-weight: 500;
+      color: var(--bark); line-height: 1.5;
+    }
+    .faq-question:hover span:first-child { color: var(--terracotta); }
+    .faq-icon {
+      font-family: "DM Mono", monospace;
+      font-size: 1.25rem; color: var(--terracotta);
+      flex-shrink: 0; transition: transform 0.2s;
+      line-height: 1;
+    }
+    .faq-question[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+    .faq-answer { padding: 0 0 1.25rem; }
+    .faq-answer p {
+      font-family: "Lora", Georgia, serif;
+      font-size: 0.97rem; line-height: 1.85;
+      color: rgba(30,22,14,0.78);
+    }
+    @media (max-width: 900px) {
+      .faq-section { padding: 3rem 1.75rem; }
+    }
   </style>
 </head>
 <body>
@@ -312,6 +411,7 @@
   <a href="#tips" class="jump-link">Tips</a>
   <a href="#pairings" class="jump-link">Pairings</a>
   <a href="#related" class="jump-link">Related</a>
+  <a href="#faq" class="jump-link">FAQ</a>
 </div>
 
 <section class="content-section alt" id="recipe">
@@ -468,10 +568,60 @@
   </div>
 </section>
 
-<div class="page-disclaimer">
-  <span class="disclaimer-icon">⚠️</span>
-  <p><strong>Raw Egg Advisory:</strong> Some recipes on this page contain raw egg white. Consuming raw or undercooked eggs may increase the risk of foodborne illness, particularly for pregnant women, young children, the elderly, and those with compromised immune systems. Use pasteurized eggs to reduce this risk, or substitute aquafaba (chickpea liquid) as an egg-free alternative.</p>
-</div>
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <p class="faq-eyebrow">Common Questions</p>
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-list">
+    <div class="faq-item" id="faq-1">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+        <span>Can I make this as a mocktail?</span>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" id="faq-answer-1" hidden>
+        <p>Absolutely. Replace the gin with a good tonic water or sparkling water and add an extra half ounce of thyme syrup to compensate for the loss of body. The result is herbal, tart, and genuinely refreshing — not just a watered-down version of the cocktail.</p>
+      </div>
+    </div>
+    <div class="faq-item" id="faq-2">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+        <span>Can I use a different herb instead of thyme?</span>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" id="faq-answer-2" hidden>
+        <p>Yes — this works well with rosemary, tarragon, or lemon verbena. Rosemary gives a more piney, resinous character. Tarragon is softer and slightly anise-like. Lemon verbena brightens the citrus notes nicely. Use the same ratio as the thyme syrup recipe and taste as you steep.</p>
+      </div>
+    </div>
+    <div class="faq-item" id="faq-3">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+        <span>Does the gin variety matter?</span>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" id="faq-answer-3" hidden>
+        <p>It does make a difference. A London Dry gin with classic juniper and citrus notes pairs cleanly with thyme. A more floral or contemporary gin can complement the herb but may make the drink harder to balance. If you're not sure, a mid-range London Dry is a reliable choice.</p>
+      </div>
+    </div>
+    <div class="faq-item" id="faq-4">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+        <span>How long does thyme syrup keep?</span>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" id="faq-answer-4" hidden>
+        <p>Thyme syrup keeps for about 2 weeks in the fridge in a sealed container. It may develop a slightly more intense herbal flavour over time, which isn't a bad thing. Discard it if it smells fermented or looks cloudy.</p>
+      </div>
+    </div>
+    <div class="faq-item" id="faq-5">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+        <span>Can I use bottled lime juice?</span>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" id="faq-answer-5" hidden>
+        <p>Fresh is strongly recommended here. A gimlet is a short, simple drink where lime juice is a primary ingredient — bottled juice tends to taste flat and slightly bitter in a way that's noticeable in a cocktail this clean. If you can only get one fresh ingredient, make it the lime.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
 <div class="site-tagline">
   <p><strong>Drink responsibly.</strong> Every mocktail on this site is just as good as the cocktail version. Enjoy the garden. Enjoy the bar. Be safe, be kind, and look after each other.</p>
 </div>
@@ -520,6 +670,21 @@
         });
       });
     }
+  });
+</script>
+<script>
+  document.querySelectorAll(".faq-question").forEach(function(btn) {
+    btn.addEventListener("click", function() {
+      var expanded = btn.getAttribute("aria-expanded") === "true";
+      var answerId = btn.getAttribute("aria-controls");
+      var answer = document.getElementById(answerId);
+      btn.setAttribute("aria-expanded", expanded ? "false" : "true");
+      if (expanded) {
+        answer.hidden = true;
+      } else {
+        answer.hidden = false;
+      }
+    });
   });
 </script>
 </body>

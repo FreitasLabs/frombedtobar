@@ -67,6 +67,63 @@
   ]
 }
   </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I skip the egg white?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The egg white (or aquafaba) adds a silky texture and foam on top, but the drink is perfectly good without it. Just shake with ice and strain as normal. If you want foam without egg white, aquafaba — the liquid from a can of chickpeas — works surprisingly well and is completely vegan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use a different whiskey instead of bourbon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rye whiskey is the closest substitute and works very well — it's drier and spicier, which pairs nicely with rosemary. Irish whiskey gives a smoother, lighter result. Scotch can work but its smokiness competes with the herb, so use a lighter unpeated style if you go that route."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use dried rosemary in the syrup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can, but use less — about 1 tablespoon of dried rosemary per cup of water and sugar, versus 6 to 8 fresh sprigs. Dried rosemary is more concentrated and can turn bitter quickly. Steep for no more than 8 minutes and taste frequently. Fresh rosemary gives a cleaner, brighter result if you have it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does rosemary syrup keep?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rosemary syrup keeps for 2 to 3 weeks in the fridge in a sealed jar or bottle. It may deepen slightly in flavour over time. As with any herb syrup, discard it if it smells fermented or the colour changes significantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does 'dry shake' mean and do I have to do it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dry shaking means shaking the ingredients without ice first. It's done to emulsify the egg white and build foam before the ice dilutes everything. If you're using egg white or aquafaba, the dry shake makes a real difference to the texture — it's worth the extra 15 seconds. If you're skipping the egg white, you can go straight to shaking with ice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I make this as a mocktail?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Replace the bourbon with a combination of strong brewed tea (something smoky like lapsang souchong works well) and a splash of apple juice for body. Keep the rosemary syrup, lemon juice, and aquafaba as-is. It won't taste like bourbon, but it will be complex, herbal, and satisfying."
+      }
+    }
+  ]
+}
+</script>
+
   <meta name="theme-color" content="#b85c38" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -267,6 +324,56 @@
         padding-left: calc(2rem - 3px);
       }
     }
+  
+    /* ── FAQ SECTION ── */
+    .faq-section {
+      background: var(--linen);
+      padding: 4rem 3rem;
+      border-top: 1px solid rgba(59,42,26,0.1);
+    }
+    .faq-inner { max-width: 780px; margin: 0 auto; }
+    .faq-eyebrow {
+      font-family: "DM Mono", monospace;
+      font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--terracotta); margin-bottom: 0.75rem;
+    }
+    .faq-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.75rem; font-weight: 700;
+      color: var(--bark); margin-bottom: 2rem; line-height: 1.3;
+    }
+    .faq-list { display: flex; flex-direction: column; gap: 0; }
+    .faq-item { border-top: 1px solid rgba(59,42,26,0.1); }
+    .faq-item:last-child { border-bottom: 1px solid rgba(59,42,26,0.1); }
+    .faq-question {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 1.5rem;
+      padding: 1.25rem 0;
+      text-align: left;
+    }
+    .faq-question span:first-child {
+      font-family: "Lora", Georgia, serif;
+      font-size: 1rem; font-weight: 500;
+      color: var(--bark); line-height: 1.5;
+    }
+    .faq-question:hover span:first-child { color: var(--terracotta); }
+    .faq-icon {
+      font-family: "DM Mono", monospace;
+      font-size: 1.25rem; color: var(--terracotta);
+      flex-shrink: 0; transition: transform 0.2s;
+      line-height: 1;
+    }
+    .faq-question[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+    .faq-answer { padding: 0 0 1.25rem; }
+    .faq-answer p {
+      font-family: "Lora", Georgia, serif;
+      font-size: 0.97rem; line-height: 1.85;
+      color: rgba(30,22,14,0.78);
+    }
+    @media (max-width: 900px) {
+      .faq-section { padding: 3rem 1.75rem; }
+    }
   </style>
 </head>
 <body>
@@ -314,6 +421,7 @@
   <a href="#tips" class="jump-link">Tips</a>
   <a href="#pairings" class="jump-link">Pairings</a>
   <a href="#related" class="jump-link">Related</a>
+  <a href="#faq" class="jump-link">FAQ</a>
 </div>
 
 <section class="content-section alt" id="recipe">
@@ -473,6 +581,69 @@
   </div>
 </section>
 
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <p class="faq-eyebrow">Common Questions</p>
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-list">
+    <div class="faq-item" id="faq-1">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+        <span>Can I skip the egg white?</span>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" id="faq-answer-1" hidden>
+        <p>Yes. The egg white (or aquafaba) adds a silky texture and foam on top, but the drink is perfectly good without it. Just shake with ice and strain as normal. If you want foam without egg white, aquafaba — the liquid from a can of chickpeas — works surprisingly well and is completely vegan.</p>
+      </div>
+    </div>
+    <div class="faq-item" id="faq-2">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+        <span>Can I use a different whiskey instead of bourbon?</span>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" id="faq-answer-2" hidden>
+        <p>Rye whiskey is the closest substitute and works very well — it's drier and spicier, which pairs nicely with rosemary. Irish whiskey gives a smoother, lighter result. Scotch can work but its smokiness competes with the herb, so use a lighter unpeated style if you go that route.</p>
+      </div>
+    </div>
+    <div class="faq-item" id="faq-3">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+        <span>Can I use dried rosemary in the syrup?</span>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" id="faq-answer-3" hidden>
+        <p>You can, but use less — about 1 tablespoon of dried rosemary per cup of water and sugar, versus 6 to 8 fresh sprigs. Dried rosemary is more concentrated and can turn bitter quickly. Steep for no more than 8 minutes and taste frequently. Fresh rosemary gives a cleaner, brighter result if you have it.</p>
+      </div>
+    </div>
+    <div class="faq-item" id="faq-4">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+        <span>How long does rosemary syrup keep?</span>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" id="faq-answer-4" hidden>
+        <p>Rosemary syrup keeps for 2 to 3 weeks in the fridge in a sealed jar or bottle. It may deepen slightly in flavour over time. As with any herb syrup, discard it if it smells fermented or the colour changes significantly.</p>
+      </div>
+    </div>
+    <div class="faq-item" id="faq-5">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+        <span>What does 'dry shake' mean and do I have to do it?</span>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" id="faq-answer-5" hidden>
+        <p>Dry shaking means shaking the ingredients without ice first. It's done to emulsify the egg white and build foam before the ice dilutes everything. If you're using egg white or aquafaba, the dry shake makes a real difference to the texture — it's worth the extra 15 seconds. If you're skipping the egg white, you can go straight to shaking with ice.</p>
+      </div>
+    </div>
+    <div class="faq-item" id="faq-6">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
+        <span>Can I make this as a mocktail?</span>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" id="faq-answer-6" hidden>
+        <p>Yes. Replace the bourbon with a combination of strong brewed tea (something smoky like lapsang souchong works well) and a splash of apple juice for body. Keep the rosemary syrup, lemon juice, and aquafaba as-is. It won't taste like bourbon, but it will be complex, herbal, and satisfying.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
 <div class="page-disclaimer">
   <span class="disclaimer-icon">⚠️</span>
   <p><strong>Raw Egg Advisory:</strong> Some recipes on this page contain raw egg white. Consuming raw or undercooked eggs may increase the risk of foodborne illness, particularly for pregnant women, young children, the elderly, and those with compromised immune systems. Use pasteurized eggs to reduce this risk, or substitute aquafaba (chickpea liquid) as an egg-free alternative.</p>
@@ -525,6 +696,21 @@
         });
       });
     }
+  });
+</script>
+<script>
+  document.querySelectorAll(".faq-question").forEach(function(btn) {
+    btn.addEventListener("click", function() {
+      var expanded = btn.getAttribute("aria-expanded") === "true";
+      var answerId = btn.getAttribute("aria-controls");
+      var answer = document.getElementById(answerId);
+      btn.setAttribute("aria-expanded", expanded ? "false" : "true");
+      if (expanded) {
+        answer.hidden = true;
+      } else {
+        answer.hidden = false;
+      }
+    });
   });
 </script>
 </body>

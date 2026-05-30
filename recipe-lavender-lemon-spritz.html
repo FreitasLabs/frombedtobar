@@ -67,6 +67,55 @@
   ]
 }
   </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I make this as a mocktail?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — replace the vodka with an extra splash of soda water and swap the prosecco for a good sparkling water or alcohol-free sparkling wine. The lavender syrup and fresh lemon do most of the work here, so the mocktail version is genuinely worth making."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use fresh lavender instead of dried in the syrup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can, but use roughly double the amount — about 4 tablespoons of fresh flowers to 1 cup of water and sugar. Fresh lavender is more variable in intensity, so taste the syrup as it steeps and pull it off the heat as soon as it smells floral rather than soapy. Steep for no more than 10 minutes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What can I use instead of prosecco?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any dry sparkling wine works — cava and crémant are both good and usually cheaper. For a completely different direction, sparkling water makes a lighter, less sweet drink. Avoid sweet sparkling wines like Moscato; the lavender syrup already brings the sweetness."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does lavender syrup keep?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stored in a sealed jar or bottle in the fridge, lavender syrup keeps well for 2 to 3 weeks. If it starts to look cloudy or smells off before then, discard it. A small splash of vodka added to the syrup can extend the shelf life a little."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I make a batch of this ahead of time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can pre-mix the vodka, lavender syrup, and lemon juice up to a day ahead and keep it in the fridge. Add the prosecco and soda only when you're ready to serve — adding them early will make the drink flat."
+      }
+    }
+  ]
+}
+</script>
+
   <meta name="theme-color" content="#b85c38" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -264,6 +313,56 @@
         padding-left: calc(2rem - 3px);
       }
     }
+  
+    /* ── FAQ SECTION ── */
+    .faq-section {
+      background: var(--linen);
+      padding: 4rem 3rem;
+      border-top: 1px solid rgba(59,42,26,0.1);
+    }
+    .faq-inner { max-width: 780px; margin: 0 auto; }
+    .faq-eyebrow {
+      font-family: "DM Mono", monospace;
+      font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--terracotta); margin-bottom: 0.75rem;
+    }
+    .faq-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.75rem; font-weight: 700;
+      color: var(--bark); margin-bottom: 2rem; line-height: 1.3;
+    }
+    .faq-list { display: flex; flex-direction: column; gap: 0; }
+    .faq-item { border-top: 1px solid rgba(59,42,26,0.1); }
+    .faq-item:last-child { border-bottom: 1px solid rgba(59,42,26,0.1); }
+    .faq-question {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 1.5rem;
+      padding: 1.25rem 0;
+      text-align: left;
+    }
+    .faq-question span:first-child {
+      font-family: "Lora", Georgia, serif;
+      font-size: 1rem; font-weight: 500;
+      color: var(--bark); line-height: 1.5;
+    }
+    .faq-question:hover span:first-child { color: var(--terracotta); }
+    .faq-icon {
+      font-family: "DM Mono", monospace;
+      font-size: 1.25rem; color: var(--terracotta);
+      flex-shrink: 0; transition: transform 0.2s;
+      line-height: 1;
+    }
+    .faq-question[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+    .faq-answer { padding: 0 0 1.25rem; }
+    .faq-answer p {
+      font-family: "Lora", Georgia, serif;
+      font-size: 0.97rem; line-height: 1.85;
+      color: rgba(30,22,14,0.78);
+    }
+    @media (max-width: 900px) {
+      .faq-section { padding: 3rem 1.75rem; }
+    }
   </style>
 </head>
 <body>
@@ -311,6 +410,7 @@
   <a href="#tips" class="jump-link">Tips</a>
   <a href="#pairings" class="jump-link">Pairings</a>
   <a href="#related" class="jump-link">Related</a>
+  <a href="#faq" class="jump-link">FAQ</a>
 </div>
 
 <section class="content-section alt" id="recipe">
@@ -469,10 +569,60 @@
   </div>
 </section>
 
-<div class="page-disclaimer">
-  <span class="disclaimer-icon">⚠️</span>
-  <p><strong>Raw Egg Advisory:</strong> Some recipes on this page contain raw egg white. Consuming raw or undercooked eggs may increase the risk of foodborne illness, particularly for pregnant women, young children, the elderly, and those with compromised immune systems. Use pasteurized eggs to reduce this risk, or substitute aquafaba (chickpea liquid) as an egg-free alternative.</p>
-</div>
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <p class="faq-eyebrow">Common Questions</p>
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+    <div class="faq-list">
+    <div class="faq-item" id="faq-1">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+        <span>Can I make this as a mocktail?</span>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" id="faq-answer-1" hidden>
+        <p>Yes — replace the vodka with an extra splash of soda water and swap the prosecco for a good sparkling water or alcohol-free sparkling wine. The lavender syrup and fresh lemon do most of the work here, so the mocktail version is genuinely worth making.</p>
+      </div>
+    </div>
+    <div class="faq-item" id="faq-2">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+        <span>Can I use fresh lavender instead of dried in the syrup?</span>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" id="faq-answer-2" hidden>
+        <p>You can, but use roughly double the amount — about 4 tablespoons of fresh flowers to 1 cup of water and sugar. Fresh lavender is more variable in intensity, so taste the syrup as it steeps and pull it off the heat as soon as it smells floral rather than soapy. Steep for no more than 10 minutes.</p>
+      </div>
+    </div>
+    <div class="faq-item" id="faq-3">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+        <span>What can I use instead of prosecco?</span>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" id="faq-answer-3" hidden>
+        <p>Any dry sparkling wine works — cava and crémant are both good and usually cheaper. For a completely different direction, sparkling water makes a lighter, less sweet drink. Avoid sweet sparkling wines like Moscato; the lavender syrup already brings the sweetness.</p>
+      </div>
+    </div>
+    <div class="faq-item" id="faq-4">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+        <span>How long does lavender syrup keep?</span>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" id="faq-answer-4" hidden>
+        <p>Stored in a sealed jar or bottle in the fridge, lavender syrup keeps well for 2 to 3 weeks. If it starts to look cloudy or smells off before then, discard it. A small splash of vodka added to the syrup can extend the shelf life a little.</p>
+      </div>
+    </div>
+    <div class="faq-item" id="faq-5">
+      <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+        <span>Can I make a batch of this ahead of time?</span>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </button>
+      <div class="faq-answer" id="faq-answer-5" hidden>
+        <p>You can pre-mix the vodka, lavender syrup, and lemon juice up to a day ahead and keep it in the fridge. Add the prosecco and soda only when you're ready to serve — adding them early will make the drink flat.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
 <div class="site-tagline">
   <p><strong>Drink responsibly.</strong> Every mocktail on this site is just as good as the cocktail version. Enjoy the garden. Enjoy the bar. Be safe, be kind, and look after each other.</p>
 </div>
@@ -521,6 +671,21 @@
         });
       });
     }
+  });
+</script>
+<script>
+  document.querySelectorAll(".faq-question").forEach(function(btn) {
+    btn.addEventListener("click", function() {
+      var expanded = btn.getAttribute("aria-expanded") === "true";
+      var answerId = btn.getAttribute("aria-controls");
+      var answer = document.getElementById(answerId);
+      btn.setAttribute("aria-expanded", expanded ? "false" : "true");
+      if (expanded) {
+        answer.hidden = true;
+      } else {
+        answer.hidden = false;
+      }
+    });
   });
 </script>
 </body>
