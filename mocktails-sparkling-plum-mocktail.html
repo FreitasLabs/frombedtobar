@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sparkling Plum Mocktail — Garden-to-Glass | From Bed to Bar</title>
+  <meta name="description" content="A sparkling plum mocktail built around homegrown plum syrup, fresh lemon, and soda water. Alcohol-free, deeply flavored, and one of the best things to come out of the plum harvest." />
+  <link rel="canonical" href="https://frombedtobar.com/mocktails-sparkling-plum-mocktail.html" />
+
+  <meta property="og:title" content="Sparkling Plum Mocktail | From Bed to Bar" />
+  <meta property="og:description" content="Homegrown plum syrup, fresh lemon, sparkling water, and garden mint. Alcohol-free and built entirely from the harvest." />
+  <meta property="og:url" content="https://frombedtobar.com/mocktails-sparkling-plum-mocktail.html" />
+  <meta property="og:type" content="article" />
+  <meta name="theme-color" content="#b85c38" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://frombedtobar.com/#website",
+        "url": "https://frombedtobar.com/",
+        "name": "From Bed to Bar",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://frombedtobar.com/#organization",
+        "name": "From Bed to Bar",
+        "url": "https://frombedtobar.com/"
+      },
+      {
+        "@type": "Recipe",
+        "@id": "https://frombedtobar.com/mocktails-sparkling-plum-mocktail.html#recipe",
+        "name": "Sparkling Plum Mocktail",
+        "description": "A bright, refreshing alcohol-free sparkling drink built around homegrown plum simple syrup, fresh lemon juice, sparkling water, and garden mint.",
+        "recipeCategory": "Mocktail",
+        "recipeCuisine": "American",
+        "recipeYield": "1 drink",
+        "prepTime": "PT3M",
+        "totalTime": "PT3M",
+        "author": { "@id": "https://frombedtobar.com/#organization" },
+        "publisher": { "@id": "https://frombedtobar.com/#organization" },
+        "image": "https://frombedtobar.com/og-image.jpg",
+        "datePublished": "2026-06-05",
+        "keywords": "sparkling plum mocktail, plum mocktail, alcohol-free plum drink, homegrown plum drink, garden mocktail",
+        "suitableForDiet": "https://schema.org/AlcoholFree",
+        "recipeIngredient": [
+          "1 oz homegrown plum simple syrup",
+          "3/4 oz fresh lemon juice",
+          "4 oz sparkling water",
+          "Fresh mint sprig — garnish",
+          "Lemon wheel — garnish",
+          "Ice"
+        ],
+        "recipeInstructions": [
+          { "@type": "HowToStep", "name": "Build over ice", "text": "Fill a highball glass with ice. Pour the plum syrup over the ice, then add the fresh lemon juice. Stir briefly to combine." },
+          { "@type": "HowToStep", "name": "Top with sparkling water", "text": "Pour sparkling water gently down the inside of the glass to preserve carbonation. One slow stir from the bottom to integrate." },
+          { "@type": "HowToStep", "name": "Garnish and serve", "text": "Slap a fresh mint sprig against your palm and press into the drink. Add a lemon wheel on the rim. Serve immediately." }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --moss: #4a5c3a;
+      --moss-dark: #35432a;
+      --terra: #b85c38;
+      --amber: #c9873f;
+      --bark: #3d2b1f;
+      --cream: #f5f0e8;
+      --cream-dark: #ede5d8;
+      --plum: #5a2d5a;
+      --plum-light: #7a3d7a;
+      --text: #2c2018;
+      --text-muted: #6b5a4e;
+      --rule: #d4c4b0;
+    }
+
+    body { font-family: 'Lora', Georgia, serif; background: var(--cream); color: var(--text); line-height: 1.7; }
+
+    /* NAV */
+    nav { background: var(--bark); padding: 0 1.5rem; position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--cream); text-decoration: none; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--cream-dark); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.85; transition: opacity 0.2s; }
+    .nav-links a:hover { opacity: 1; color: var(--amber); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { width: 24px; height: 2px; background: var(--cream); border-radius: 2px; }
+    .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--bark); padding: 1.5rem; z-index: 99; flex-direction: column; gap: 1.2rem; border-top: 1px solid rgba(255,255,255,0.1); }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--cream-dark); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; }
+    @media (max-width: 768px) { .nav-links { display: none; } .hamburger { display: flex; } }
+
+    /* HERO */
+    .recipe-hero {
+      background: linear-gradient(150deg, var(--plum) 0%, #5a1f5a 30%, var(--moss-dark) 100%);
+      color: var(--cream); padding: 4rem 1.5rem 3rem; text-align: center; position: relative; overflow: hidden;
+    }
+    .recipe-hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--plum), var(--amber), var(--moss)); }
+    .hero-tag { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.75rem; }
+    .hero-badge { display: inline-block; font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; background: rgba(74,92,58,0.4); border: 1px solid rgba(122,148,104,0.5); color: rgba(245,240,232,0.9); padding: 0.25rem 0.75rem; margin-bottom: 0.75rem; }
+    .recipe-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.15; margin-bottom: 1rem; }
+    .recipe-hero .subtitle { font-style: italic; font-size: 1.05rem; color: rgba(245,240,232,0.8); max-width: 520px; margin: 0 auto 1.5rem; }
+    .meta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.08em; color: rgba(245,240,232,0.7); }
+
+    /* BREADCRUMB */
+    .breadcrumb { background: var(--cream-dark); border-bottom: 1px solid var(--rule); padding: 0.6rem 1.5rem; font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.06em; color: var(--text-muted); }
+    .breadcrumb a { color: var(--moss); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    /* SPEC STRIP */
+    .spec-strip { background: var(--bark); display: flex; flex-wrap: wrap; border-bottom: 3px solid var(--plum); }
+    .spec-item { padding: 0.85rem 1.5rem; text-align: center; border-right: 1px solid rgba(255,255,255,0.08); flex: 1; min-width: 110px; }
+    .spec-item:last-child { border-right: none; }
+    .spec-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--amber); display: block; margin-bottom: 0.15rem; }
+    .spec-value { font-family: 'Playfair Display', serif; font-size: 0.88rem; color: var(--cream); }
+
+    /* LAYOUT */
+    .recipe-layout { max-width: 960px; margin: 0 auto; padding: 3rem 1.5rem; display: grid; grid-template-columns: 1fr 300px; gap: 3rem; align-items: start; }
+    @media (max-width: 720px) { .recipe-layout { grid-template-columns: 1fr; gap: 2rem; } }
+
+    /* SIDEBAR */
+    .sidebar-stack { display: flex; flex-direction: column; gap: 1.5rem; position: sticky; top: 80px; }
+    .sidebar-card { background: white; border: 1px solid var(--rule); border-radius: 4px; padding: 1.5rem; }
+    .sidebar-card h3 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--bark); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--plum); }
+    .measure-list { list-style: none; }
+    .measure-list li { font-size: 0.88rem; padding: 0.45rem 0; border-bottom: 1px dotted var(--rule); color: var(--text); display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; }
+    .measure-list li:last-child { border-bottom: none; }
+    .measure-name { flex: 1; line-height: 1.4; }
+    .measure-qty { font-family: 'DM Mono', monospace; font-size: 0.76rem; color: var(--plum); white-space: nowrap; }
+    .optional-note { font-family: 'DM Mono', monospace; font-size: 0.62rem; color: var(--text-muted); display: block; margin-top: 0.1rem; }
+    .batch-box { background: var(--cream); border-left: 3px solid var(--amber); padding: 0.75rem 1rem; font-size: 0.82rem; color: var(--text-muted); margin-top: 1.25rem; }
+    .batch-box strong { color: var(--bark); display: block; margin-bottom: 0.2rem; font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; }
+
+    /* MAIN */
+    .intro-text { font-size: 1.03rem; line-height: 1.8; margin-bottom: 2rem; }
+    .intro-text p + p { margin-top: 1rem; }
+
+    h2 { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 600; color: var(--bark); margin: 2rem 0 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--rule); }
+    h2::before { content: '— '; color: var(--plum); }
+
+    .steps-list { list-style: none; counter-reset: steps; }
+    .steps-list li { counter-increment: steps; display: flex; gap: 1rem; padding: 0.75rem 0; border-bottom: 1px dotted var(--rule); font-size: 0.92rem; line-height: 1.65; }
+    .steps-list li:last-child { border-bottom: none; }
+    .steps-list li::before { content: counter(steps); font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--plum); min-width: 1.5rem; line-height: 1.4; }
+
+    .tip-block { background: var(--cream-dark); border-left: 3px solid var(--terra); padding: 1rem 1.25rem; margin: 1.5rem 0; font-size: 0.88rem; font-style: italic; color: var(--text-muted); }
+    .tip-block strong { font-style: normal; color: var(--bark); font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; display: block; margin-bottom: 0.3rem; }
+
+    .callout-box { background: linear-gradient(135deg, rgba(90,45,90,0.05), rgba(74,92,58,0.06)); border: 1px solid rgba(90,45,90,0.2); border-radius: 4px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .callout-box strong { color: var(--plum); }
+    .callout-box p { font-size: 0.92rem; line-height: 1.75; color: var(--text-muted); }
+
+    /* VARIATIONS */
+    .variation-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1rem 0; }
+    @media (max-width: 500px) { .variation-grid { grid-template-columns: 1fr; } }
+    .variation-card { background: white; border: 1px solid var(--rule); border-top: 3px solid var(--moss); padding: 1.25rem; }
+    .variation-name { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 700; font-style: italic; color: var(--bark); margin-bottom: 0.4rem; }
+    .variation-desc { font-size: 0.85rem; line-height: 1.65; color: var(--text-muted); }
+
+    /* SCALE TABLE */
+    .storage-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; border: 1px solid var(--rule); margin: 1rem 0; background: var(--rule); }
+    .storage-cell { background: white; padding: 0.75rem 1rem; }
+    .storage-cell.header { background: var(--plum); color: white; }
+    .storage-cell.header span { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .storage-cell p { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem; }
+    .storage-cell strong { font-family: 'Playfair Display', serif; color: var(--bark); }
+    @media (max-width: 500px) { .storage-grid { grid-template-columns: 1fr; } }
+
+    /* CROSSLINKS */
+    .crosslink-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2.5rem 0; }
+    @media (max-width: 500px) { .crosslink-bar { grid-template-columns: 1fr; } }
+    .crosslink-card { background: white; border: 1px solid var(--rule); padding: 1.25rem; text-decoration: none; color: inherit; transition: border-color 0.2s, transform 0.2s; display: block; }
+    .crosslink-card:hover { border-color: var(--plum); transform: translateY(-2px); }
+    .crosslink-card .label { font-family: 'DM Mono', monospace; font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.3rem; }
+    .crosslink-card h4 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--bark); margin-bottom: 0.25rem; }
+    .crosslink-card p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+
+    .drink-bar { background: var(--moss-dark); color: rgba(245,240,232,0.75); text-align: center; padding: 0.5rem 1rem; font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; }
+
+    footer { background: var(--bark); color: var(--cream-dark); text-align: center; padding: 2.5rem 1.5rem; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-style: italic; color: var(--cream); margin-bottom: 0.5rem; }
+    footer p { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; opacity: 0.6; margin-bottom: 0.25rem; }
+    footer a { color: var(--amber); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">From Bed to Bar</a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="recipes.html">Recipes</a></li>
+      <li><a href="garden-tips.html">Garden Tips</a></li>
+      <li><a href="herb-hub.html">Herb Hub</a></li>
+      <li><a href="planting-guide.html">Planting Guide</a></li>
+      <li><a href="bar-essentials.html">Bar Essentials</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="/#newsletter">Newsletter</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="preserves-plum-jam.html">Plum Jam</a></li>
+      <li><a href="cocktails-plum-bourbon-sour.html">Plum Sour</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="recipes.html">Recipes</a>
+    <a href="garden-tips.html">Garden</a>
+    <a href="bar-essentials.html">Bar Essentials</a>
+    <a href="blog.html">Journal</a>
+    <a href="disclaimer.html">Disclaimer</a>
+  </div>
+
+  <div class="breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="recipes.html">Recipes</a> &rsaquo; Sparkling Plum Mocktail
+  </div>
+
+  <div class="recipe-hero">
+    <div class="hero-badge">🌿 Alcohol-Free</div>
+    <div class="hero-tag">Mocktail &nbsp;·&nbsp; Garden to Glass</div>
+    <h1>Sparkling Plum Mocktail</h1>
+    <p class="subtitle">Homegrown plum syrup, fresh lemon, sparkling water, and a sprig of garden mint. Everything the harvest has to offer — no spirit required.</p>
+    <div class="meta-row">
+      <span>⏱ 5 minutes</span>
+      <span>🌿 Alcohol-Free</span>
+      <span>🍑 From the garden</span>
+      <span>All Ages</span>
+    </div>
+  </div>
+
+  <div class="spec-strip">
+    <div class="spec-item"><span class="spec-label">Spirit</span><span class="spec-value">None</span></div>
+    <div class="spec-item"><span class="spec-label">Profile</span><span class="spec-value">Fruity, Tart, Bright</span></div>
+    <div class="spec-item"><span class="spec-label">Glass</span><span class="spec-value">Highball</span></div>
+    <div class="spec-item"><span class="spec-label">Season</span><span class="spec-value">Late Summer</span></div>
+    <div class="spec-item"><span class="spec-label">All Ages</span><span class="spec-value">Yes</span></div>
+  </div>
+
+  <div class="recipe-layout">
+    <main>
+      <div class="intro-text">
+        <p>The plum harvest is generous to a fault — more fruit than most households can eat fresh, more than enough to put up jam and syrup and still have plenty left over. This drink exists to close the loop on the garden-to-glass story without a spirit in the middle. The plum syrup is doing all the work: color, sweetness, tartness, and the particular stone-fruit flavor that no store-bought ingredient matches.</p>
+        <p>It's a five-minute drink once the syrup is made. If you haven't made the syrup yet, that's where to start — the <a href="recipe-plum-simple-syrup.html" style="color: var(--plum);">Plum Simple Syrup recipe</a> takes about 25 minutes and can be frozen in ice cube trays for all-winter use.</p>
+      </div>
+
+      <div class="callout-box">
+        <strong>From the same trees.</strong>
+        <p>This mocktail uses the same plum syrup that goes into the <a href="cocktails-plum-bourbon-sour.html" style="color: var(--plum);">Plum Bourbon Sour</a>. Make one batch of syrup and you have ingredients for both. The cocktail and mocktail versions are more similar than different — the spirit adds warmth and structure, but the plum does the heavy lifting either way. See the full harvest-to-bar story on the <a href="plum-guide.html" style="color: var(--plum);">Plum Guide</a>.</p>
+      </div>
+
+      <h2>Instructions</h2>
+      <ol class="steps-list">
+        <li>Fill a tall highball glass with ice — pack it well. A well-chilled glass keeps the drink cold and maintains the carbonation of the sparkling water longer.</li>
+        <li>Pour 1 oz of <a href="recipe-plum-simple-syrup.html" style="color: var(--plum);">homegrown plum simple syrup</a> over the ice. Follow with ¾ oz of fresh-squeezed lemon juice. Stir briefly — about 10 seconds — to combine.</li>
+        <li>Taste the syrup-lemon base before adding the soda. If you want more plum, add another ¼ oz of syrup. More tartness — another squeeze of lemon. Fix the balance before the bubbles go in.</li>
+        <li>Pour 4 oz of sparkling water gently down the inside of the glass. This preserves the carbonation — pouring straight down over ice knocks most of the bubbles out before the first sip. One slow stir from the bottom to integrate.</li>
+        <li>Slap a fresh sprig of mint firmly against your palm — this bruises the leaves and releases the aromatic oils without crushing them. Press the sprig into the top of the drink so the leaves sit just above the rim. Add a lemon wheel on the side.</li>
+      </ol>
+
+      <div class="tip-block">
+        <strong>On the sparkling water</strong>
+        The quality of the sparkling water matters more in a three-ingredient drink than it would in a cocktail with six components. Naturally sparkling mineral water — Topo Chico, Gerolsteiner, San Pellegrino — has a mineral character that sharpens the plum and lifts the lemon in a way that plain carbonated water doesn't. It's worth using if you have it.
+      </div>
+
+      <div class="tip-block">
+        <strong>The mint matters</strong>
+        Fresh garden mint cut within the hour is meaningfully different from mint that's been refrigerated for three days. The volatile aromatic oils that give mint its brightness degrade quickly after cutting. For the garnish on this drink — where the nose is directly over the mint with every sip — use the freshest sprig you have. See the <a href="how-to-harvest-preserve-mint.html" style="color: var(--plum); font-style:normal;">Mint Harvest Guide</a> for more on keeping cut mint fresh.
+      </div>
+
+      <h2>Variations</h2>
+      <div class="variation-grid">
+        <div class="variation-card">
+          <div class="variation-name">Plum &amp; Ginger</div>
+          <div class="variation-desc">Add ½ oz of fresh ginger juice (grate and press through a fine strainer) to the base before adding soda. The spice and plum work the same way ginger works with stone fruit in cooking — it sharpens and amplifies.</div>
+        </div>
+        <div class="variation-card">
+          <div class="variation-name">Plum &amp; Hibiscus</div>
+          <div class="variation-desc">Replace half the sparkling water with chilled hibiscus tea. The floral tartness of hibiscus doubles down on the plum's natural acidity and creates a color that looks like it was designed for it.</div>
+        </div>
+        <div class="variation-card">
+          <div class="variation-name">Frozen Plum Lemonade</div>
+          <div class="variation-desc">Blend all the liquid ingredients with 1 cup of ice until smooth. No sparkling water — just the syrup, lemon, and ice. The result is a granita-adjacent frozen drink that works especially well at outdoor gatherings where glasses get warm.</div>
+        </div>
+        <div class="variation-card">
+          <div class="variation-name">Plum Shrub Soda</div>
+          <div class="variation-desc">Swap the plum syrup for ¾ oz of homemade plum shrub (drinking vinegar) — equal parts plums, sugar, and apple cider vinegar, macerated and strained. A shrub adds vinegar acidity alongside sweetness, making the drink sharper and more complex than syrup alone.</div>
+        </div>
+      </div>
+
+      <h2>Scale for a Crowd</h2>
+      <div class="storage-grid">
+        <div class="storage-cell header"><span>Serves</span></div>
+        <div class="storage-cell header"><span>Plum Syrup</span></div>
+        <div class="storage-cell header"><span>Lemon Juice + Soda</span></div>
+        <div class="storage-cell"><strong>4 people</strong></div>
+        <div class="storage-cell"><p>4 oz</p></div>
+        <div class="storage-cell"><p>3 oz lemon + 16 oz soda</p></div>
+        <div class="storage-cell"><strong>8 people</strong></div>
+        <div class="storage-cell"><p>8 oz</p></div>
+        <div class="storage-cell"><p>6 oz lemon + 32 oz soda</p></div>
+        <div class="storage-cell"><strong>16+ people</strong></div>
+        <div class="storage-cell"><p>16 oz</p></div>
+        <div class="storage-cell"><p>12 oz lemon · add soda per glass</p></div>
+      </div>
+      <p style="font-size:0.85rem; color:var(--text-muted); font-style:italic; margin-top:0.75rem;">Pre-mix the syrup and lemon in a pitcher and refrigerate. Add sparkling water per glass at serving — adding it ahead kills the carbonation.</p>
+
+      <h2>Cocktail Version</h2>
+      <p style="font-size:0.95rem; line-height:1.8; color:var(--text-muted);">The cocktail version of this drink is the <a href="cocktails-plum-bourbon-sour.html" style="color:var(--plum);">Plum Bourbon Sour</a> — 2 oz bourbon, ¾ oz plum syrup, ¾ oz fresh lemon juice, optional amaro and egg white. The spirit adds structure and warmth, but the plum does the same work in both versions. Both use the same jar of syrup from the same trees. Must be 21 or older to consume alcohol. Please drink responsibly.</p>
+
+      <div class="crosslink-bar">
+        <a class="crosslink-card" href="recipe-plum-simple-syrup.html">
+          <div class="label">Make the syrup first</div>
+          <h4>Plum Simple Syrup</h4>
+          <p>The backbone of this drink. 25 minutes — keeps 4 weeks in the fridge or 6 months frozen.</p>
+        </a>
+        <a class="crosslink-card" href="cocktails-plum-bourbon-sour.html">
+          <div class="label">Add a spirit</div>
+          <h4>Plum Bourbon Sour</h4>
+          <p>Same syrup, same lemon — add bourbon and optional amaro. The cocktail that closes the garden-to-glass loop.</p>
+        </a>
+        <a class="crosslink-card" href="preserves-plum-jam.html">
+          <div class="label">Same harvest</div>
+          <h4>Homemade Plum Jam</h4>
+          <p>Put up the rest of the batch. One harvest, three products — jam, syrup, and this drink.</p>
+        </a>
+        <a class="crosslink-card" href="plum-guide.html">
+          <div class="label">Grow your own</div>
+          <h4>The Plum Guide</h4>
+          <p>Everything about growing plum trees — from variety selection and planting to harvest timing and pruning.</p>
+        </a>
+      </div>
+    </main>
+
+    <aside>
+      <div class="sidebar-stack">
+        <div class="sidebar-card">
+          <h3>Ingredients</h3>
+          <ul class="measure-list">
+            <li>
+              <span class="measure-name"><a href="recipe-plum-simple-syrup.html" style="color:var(--plum); text-decoration:underline;">Plum simple syrup</a></span>
+              <span class="measure-qty">1 oz</span>
+            </li>
+            <li>
+              <span class="measure-name">Fresh lemon juice</span>
+              <span class="measure-qty">¾ oz</span>
+            </li>
+            <li>
+              <span class="measure-name">Sparkling water</span>
+              <span class="measure-qty">4 oz</span>
+            </li>
+            <li>
+              <span class="measure-name">
+                Fresh mint sprig
+                <span class="optional-note">Garnish — from the garden</span>
+              </span>
+              <span class="measure-qty">1</span>
+            </li>
+            <li>
+              <span class="measure-name">
+                Lemon wheel
+                <span class="optional-note">Garnish</span>
+              </span>
+              <span class="measure-qty">1</span>
+            </li>
+          </ul>
+          <div class="batch-box">
+            <strong>Glass &amp; Ice</strong>
+            Tall highball glass packed with ice. Serve immediately after adding sparkling water.
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>From the Garden</h3>
+          <ul style="list-style:none; font-size:0.85rem; color:var(--text-muted);">
+            <li style="padding:0.35rem 0; border-bottom:1px dotted var(--rule); display:flex; gap:0.5rem;"><span style="color:var(--plum); font-size:0.5rem; margin-top:0.35rem;">◆</span><span>Plums from the tree → syrup</span></li>
+            <li style="padding:0.35rem 0; border-bottom:1px dotted var(--rule); display:flex; gap:0.5rem;"><span style="color:var(--plum); font-size:0.5rem; margin-top:0.35rem;">◆</span><span>Spearmint for the garnish</span></li>
+            <li style="padding:0.35rem 0; display:flex; gap:0.5rem;"><span style="color:var(--plum); font-size:0.5rem; margin-top:0.35rem;">◆</span><span>Fresh-squeezed lemon</span></li>
+          </ul>
+          <div class="batch-box" style="margin-top:1rem;">
+            <strong>Plum cluster</strong>
+            <a href="plum-guide.html" style="color:var(--plum); font-size:0.82rem; display:block; margin-bottom:0.2rem;">→ Plum Growing Guide</a>
+            <a href="how-to-harvest-preserve-plums.html" style="color:var(--plum); font-size:0.82rem; display:block;">→ Harvest &amp; Preserve Plums</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="drink-bar">Drink responsibly &mdash; Please enjoy in moderation</div>
+
+  <footer>
+    <div class="footer-logo">From Bed to Bar</div>
+    <p>Garden-to-glass cocktails &amp; growing guides</p>
+    <p style="margin-top:0.75rem;">
+      <a href="disclaimer.html">Disclaimer</a> &nbsp;&middot;&nbsp;
+      <a href="recipes.html">All Recipes</a> &nbsp;&middot;&nbsp;
+      <a href="/">Home</a>
+    </p>
+    <p style="margin-top:1rem; font-size:0.62rem;">Must be 21+ to consume alcohol. Drink responsibly.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
