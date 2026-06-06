@@ -191,6 +191,10 @@
     footer p { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; opacity: 0.6; margin-bottom: 0.25rem; }
     footer a { color: var(--amber); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
+  
+    .footer-links { display: flex; gap: 1rem; list-style: none; flex-wrap: wrap; justify-content: center; margin-top: 0.75rem; }
+    .footer-links a { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); text-decoration: none; opacity: 0.8; transition: opacity 0.2s; }
+    .footer-links a:hover { opacity: 1; }
   </style>
 </head>
 <body>
@@ -198,25 +202,27 @@
   <nav>
     <a href="/" class="nav-logo">From Bed to Bar</a>
     <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="recipes">Recipes</a></li>
-      <li><a href="garden-tips">Garden Tips</a></li>
-      <li><a href="herb-hub">Herb Hub</a></li>
-      <li><a href="planting-guide">Planting Guide</a></li>
-      <li><a href="bar-essentials">Bar Essentials</a></li>
-      <li><a href="blog">Blog</a></li>
-      <li><a href="/#newsletter">Newsletter</a></li>
-      <li><a href="about">About</a></li>
-      <li><a href="preserves-plum-jam">Plum Jam</a></li>
-      <li><a href="cocktails-plum-bourbon-sour">Plum Sour</a></li>
-    </ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="recipes">Recipes</a></li>
+    <li><a href="garden-tips">Garden Tips</a></li>
+    <li><a href="herb-hub">Herb Hub</a></li>
+    <li><a href="planting-guide">Planting Guide</a></li>
+    <li><a href="bar-essentials">Bar Essentials</a></li>
+    <li><a href="blog">Blog</a></li>
+    <li><a href="/#newsletter">Newsletter</a></li>
+    <li><a href="about">About</a></li>
+  </ul>
     <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
   </nav>
-  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu" id="mobileMenu">
+    <a href="/">Home</a>
     <a href="recipes">Recipes</a>
-    <a href="garden-tips">Garden</a>
+    <a href="garden-tips">Garden Tips</a>
+    <a href="herb-hub">Herb Hub</a>
+    <a href="planting-guide">Planting Guide</a>
     <a href="bar-essentials">Bar Essentials</a>
-    <a href="blog">Journal</a>
+    <a href="blog">Blog</a>
+    <a href="about">About</a>
     <a href="disclaimer">Disclaimer</a>
   </div>
 
@@ -316,9 +322,33 @@
       <h2>Cocktail Version</h2>
       <p style="font-size:0.95rem; line-height:1.8; color:var(--text-muted);">The cocktail version of this drink is the <a href="cocktails-plum-bourbon-sour" style="color:var(--plum);">Plum Bourbon Sour</a> — 2 oz bourbon, ¾ oz plum syrup, ¾ oz fresh lemon juice, optional amaro and egg white. The spirit adds structure and warmth, but the plum does the same work in both versions. Both use the same jar of syrup from the same trees. Must be 21 or older to consume alcohol. Please drink responsibly.</p>
 
-      <div class="crosslink-bar">
+      <div class="crosslink-bar" style="grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));">
         <a class="crosslink-card" href="recipe-plum-simple-syrup">
           <div class="label">Make the syrup first</div>
+          <h4>Plum Simple Syrup</h4>
+          <p>The backbone of this drink. 25 minutes, keeps 3–4 weeks refrigerated.</p>
+        </a>
+        <a class="crosslink-card" href="cocktails-plum-bourbon-sour">
+          <div class="label">Add a spirit</div>
+          <h4>Plum Bourbon Sour</h4>
+          <p>Same syrup — add bourbon and optional amaro. The cocktail version.</p>
+        </a>
+        <a class="crosslink-card" href="preserves-plum-jam">
+          <div class="label">Same harvest</div>
+          <h4>Homemade Plum Jam</h4>
+          <p>Put up the rest of the batch. One harvest, three products.</p>
+        </a>
+        <a class="crosslink-card" href="plum-guide">
+          <div class="label">Grow your own</div>
+          <h4>The Plum Guide</h4>
+          <p>Everything about growing the trees that make this drink possible.</p>
+        </a>
+        <a class="crosslink-card" href="how-to-harvest-preserve-plums">
+          <div class="label">Harvest guide</div>
+          <h4>Harvest & Preserve Plums</h4>
+          <p>From pick to glass — the full plum harvest walkthrough.</p>
+        </a>
+      </div>
           <h4>Plum Simple Syrup</h4>
           <p>The backbone of this drink. 25 minutes — keeps 4 weeks in the fridge or 6 months frozen.</p>
         </a>
@@ -400,11 +430,18 @@
   <footer>
     <div class="footer-logo">From Bed to Bar</div>
     <p>Garden-to-glass cocktails &amp; growing guides</p>
-    <p style="margin-top:0.75rem;">
-      <a href="disclaimer">Disclaimer</a> &nbsp;&middot;&nbsp;
-      <a href="recipes">All Recipes</a> &nbsp;&middot;&nbsp;
-      <a href="/">Home</a>
-    </p>
+        <ul class="footer-links" style="margin-top:0.75rem;">
+      <li><a href="/">Home</a></li>
+      <li><a href="recipes">Recipes</a></li>
+      <li><a href="garden-tips">Garden Tips</a></li>
+      <li><a href="herb-hub">Herb Hub</a></li>
+      <li><a href="bar-essentials">Bar Essentials</a></li>
+      <li><a href="plum-guide">Plum Guide</a></li>
+      <li><a href="mint-guide">Mint Guide</a></li>
+      <li><a href="blog">Blog</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="disclaimer">Disclaimer</a></li>
+    </ul>
     <p style="margin-top:1rem; font-size:0.62rem;">Must be 21+ to consume alcohol. Drink responsibly.</p>
   </footer>
 

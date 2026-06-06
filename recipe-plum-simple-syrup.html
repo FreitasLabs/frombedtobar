@@ -328,6 +328,10 @@
     }
     footer a { color: var(--amber); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
+  
+    .footer-links { display: flex; gap: 1rem; list-style: none; flex-wrap: wrap; justify-content: center; margin-top: 0.75rem; }
+    .footer-links a { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); text-decoration: none; opacity: 0.8; transition: opacity 0.2s; }
+    .footer-links a:hover { opacity: 1; }
   </style>
 </head>
 <body>
@@ -344,18 +348,20 @@
     <li><a href="blog">Blog</a></li>
     <li><a href="/#newsletter">Newsletter</a></li>
     <li><a href="about">About</a></li>
-    <li><a href="preserves-plum-jam">Plum Jam</a></li>
-    <li><a href="cocktails-plum-bourbon-sour">Plum Sour</a></li>
   </ul>
     <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
     </div>
   </nav>
-  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu" id="mobileMenu">
+    <a href="/">Home</a>
     <a href="recipes">Recipes</a>
-    <a href="garden-tips">Garden</a>
+    <a href="garden-tips">Garden Tips</a>
+    <a href="herb-hub">Herb Hub</a>
+    <a href="planting-guide">Planting Guide</a>
     <a href="bar-essentials">Bar Essentials</a>
-    <a href="blog">Journal</a>
+    <a href="blog">Blog</a>
+    <a href="about">About</a>
     <a href="disclaimer">Disclaimer</a>
   </div>
 
@@ -422,9 +428,33 @@
         Keeps in the refrigerator for 3–4 weeks in a sealed jar. For longer storage, freeze in ice cube trays and transfer to a freezer bag. Each cube is roughly 1 oz — perfect for pulling out one serving at a time.
       </div>
 
-      <div class="crosslink-bar">
+      <div class="crosslink-bar" style="grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));">
         <a class="crosslink-card" href="preserves-plum-jam">
           <div class="label">Also from the garden</div>
+          <h4>Homemade Plum Jam</h4>
+          <p>Put up the rest of the harvest. Same fruit, same trees — a full canning guide.</p>
+        </a>
+        <a class="crosslink-card" href="cocktails-plum-bourbon-sour">
+          <div class="label">Use this syrup</div>
+          <h4>Plum Bourbon Sour</h4>
+          <p>This syrup is the backbone of the plum cocktail. Garden to glass in one pour.</p>
+        </a>
+        <a class="crosslink-card" href="mocktails-sparkling-plum-mocktail">
+          <div class="label">Alcohol-free</div>
+          <h4>Sparkling Plum Mocktail</h4>
+          <p>This syrup again — sparkling water, lemon, fresh mint. No spirit needed.</p>
+        </a>
+        <a class="crosslink-card" href="plum-guide">
+          <div class="label">Grow your own</div>
+          <h4>The Plum Guide</h4>
+          <p>Variety selection, planting, pruning, and the full season calendar.</p>
+        </a>
+        <a class="crosslink-card" href="how-to-harvest-preserve-plums">
+          <div class="label">Harvest guide</div>
+          <h4>Harvest & Preserve Plums</h4>
+          <p>When to pick and the best ways to process a full plum harvest.</p>
+        </a>
+      </div>
           <h4>Homemade Plum Jam</h4>
           <p>Put up the rest of the harvest. Same fruit, same trees — a full canning guide.</p>
         </a>
@@ -470,11 +500,18 @@
   <footer>
     <div class="footer-logo">From Bed to Bar</div>
     <p>Garden-to-glass cocktails &amp; growing guides</p>
-    <p style="margin-top:0.75rem;">
-      <a href="disclaimer">Disclaimer</a> &nbsp;&middot;&nbsp;
-      <a href="recipes">All Recipes</a> &nbsp;&middot;&nbsp;
-      <a href="/">Home</a>
-    </p>
+        <ul class="footer-links" style="margin-top:0.75rem;">
+      <li><a href="/">Home</a></li>
+      <li><a href="recipes">Recipes</a></li>
+      <li><a href="garden-tips">Garden Tips</a></li>
+      <li><a href="herb-hub">Herb Hub</a></li>
+      <li><a href="bar-essentials">Bar Essentials</a></li>
+      <li><a href="plum-guide">Plum Guide</a></li>
+      <li><a href="mint-guide">Mint Guide</a></li>
+      <li><a href="blog">Blog</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="disclaimer">Disclaimer</a></li>
+    </ul>
     <p style="margin-top:1rem; font-size:0.62rem;">Must be 21+ to consume alcohol. Drink responsibly.</p>
   </footer>
 

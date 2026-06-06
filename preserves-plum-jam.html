@@ -273,6 +273,10 @@
     footer p { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; opacity: 0.6; margin-bottom: 0.25rem; }
     footer a { color: var(--amber); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
+  
+    .footer-links { display: flex; gap: 1rem; list-style: none; flex-wrap: wrap; justify-content: center; margin-top: 0.75rem; }
+    .footer-links a { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); text-decoration: none; opacity: 0.8; transition: opacity 0.2s; }
+    .footer-links a:hover { opacity: 1; }
   </style>
 </head>
 <body>
@@ -289,16 +293,18 @@
     <li><a href="blog">Blog</a></li>
     <li><a href="/#newsletter">Newsletter</a></li>
     <li><a href="about">About</a></li>
-    <li><a href="preserves-plum-jam">Plum Jam</a></li>
-    <li><a href="cocktails-plum-bourbon-sour">Plum Sour</a></li>
   </ul>
     <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
   </nav>
-  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu" id="mobileMenu">
+    <a href="/">Home</a>
     <a href="recipes">Recipes</a>
-    <a href="garden-tips">Garden</a>
+    <a href="garden-tips">Garden Tips</a>
+    <a href="herb-hub">Herb Hub</a>
+    <a href="planting-guide">Planting Guide</a>
     <a href="bar-essentials">Bar Essentials</a>
-    <a href="blog">Journal</a>
+    <a href="blog">Blog</a>
+    <a href="about">About</a>
     <a href="disclaimer">Disclaimer</a>
   </div>
 
@@ -439,9 +445,33 @@
         </div>
       </div>
 
-      <div class="crosslink-bar">
+      <div class="crosslink-bar" style="grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));">
         <a class="crosslink-card" href="recipe-plum-simple-syrup">
           <div class="label">Same fruit</div>
+          <h4>Plum Simple Syrup</h4>
+          <p>Pull a pound before the sugar goes in. One harvest, two products.</p>
+        </a>
+        <a class="crosslink-card" href="cocktails-plum-bourbon-sour">
+          <div class="label">Garden to glass</div>
+          <h4>Plum Bourbon Sour</h4>
+          <p>The cocktail that closes the loop — made with syrup from the same trees.</p>
+        </a>
+        <a class="crosslink-card" href="mocktails-sparkling-plum-mocktail">
+          <div class="label">Alcohol-free</div>
+          <h4>Sparkling Plum Mocktail</h4>
+          <p>Same syrup in a tall glass with sparkling water and fresh lemon. No spirit needed.</p>
+        </a>
+        <a class="crosslink-card" href="plum-guide">
+          <div class="label">Growing guide</div>
+          <h4>The Plum Guide</h4>
+          <p>Everything about growing plum trees — from variety to first harvest.</p>
+        </a>
+        <a class="crosslink-card" href="how-to-harvest-preserve-plums">
+          <div class="label">Before the jam</div>
+          <h4>Harvest & Preserve Plums</h4>
+          <p>When to pick, how to process, and safe preservation methods.</p>
+        </a>
+      </div>
           <h4>Plum Simple Syrup</h4>
           <p>Pull a pound of fruit before the sugar goes in. One harvest, two products.</p>
         </a>
@@ -512,11 +542,18 @@
   <footer>
     <div class="footer-logo">From Bed to Bar</div>
     <p>Garden-to-glass cocktails &amp; growing guides</p>
-    <p style="margin-top:0.75rem;">
-      <a href="disclaimer">Disclaimer</a> &nbsp;&middot;&nbsp;
-      <a href="recipes">All Recipes</a> &nbsp;&middot;&nbsp;
-      <a href="/">Home</a>
-    </p>
+        <ul class="footer-links" style="margin-top:0.75rem;">
+      <li><a href="/">Home</a></li>
+      <li><a href="recipes">Recipes</a></li>
+      <li><a href="garden-tips">Garden Tips</a></li>
+      <li><a href="herb-hub">Herb Hub</a></li>
+      <li><a href="bar-essentials">Bar Essentials</a></li>
+      <li><a href="plum-guide">Plum Guide</a></li>
+      <li><a href="mint-guide">Mint Guide</a></li>
+      <li><a href="blog">Blog</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="disclaimer">Disclaimer</a></li>
+    </ul>
     <p style="margin-top:1rem; font-size:0.62rem;">Must be 21+ to consume alcohol. Drink responsibly.</p>
   </footer>
 
