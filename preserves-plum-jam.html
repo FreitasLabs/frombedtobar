@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homemade Plum Jam — From the Tree to the Jar | From Bed to Bar</title>
+  <meta name="description" content="A complete guide to making homemade plum jam from homegrown plums — from canning basics to flavor variations and how the jam connects back to your cocktail glass." />
+  <link rel="canonical" href="https://frombedtobar.com/preserves-plum-jam.html" />
+  <meta property="og:title" content="Homemade Plum Jam | From Bed to Bar" />
+  <meta property="og:description" content="From the tree to the jar: a complete guide to homemade plum jam, with canning instructions, flavor variations, and the garden-to-glass connection." />
+  <meta property="og:url" content="https://frombedtobar.com/preserves-plum-jam.html" />
+  <meta property="og:type" content="article" />
+  <meta name="theme-color" content="#b85c38" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --moss: #4a5c3a;
+      --moss-dark: #35432a;
+      --terra: #b85c38;
+      --amber: #c9873f;
+      --bark: #3d2b1f;
+      --cream: #f5f0e8;
+      --cream-dark: #ede5d8;
+      --plum: #5a2d5a;
+      --plum-light: #7a3d7a;
+      --text: #2c2018;
+      --text-muted: #6b5a4e;
+      --rule: #d4c4b0;
+    }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    nav {
+      background: var(--bark);
+      padding: 0 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--cream);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--cream-dark);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+    }
+    .nav-links a:hover { opacity: 1; color: var(--amber); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { width: 24px; height: 2px; background: var(--cream); border-radius: 2px; }
+    .mobile-menu {
+      display: none; position: fixed; top: 64px; left: 0; right: 0;
+      background: var(--bark); padding: 1.5rem; z-index: 99;
+      flex-direction: column; gap: 1.2rem; border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--cream-dark); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; }
+    @media (max-width: 768px) { .nav-links { display: none; } .hamburger { display: flex; } }
+
+    /* HERO — warm jam palette */
+    .recipe-hero {
+      background: linear-gradient(150deg, var(--plum) 0%, #7a1f3a 35%, var(--bark) 100%);
+      color: var(--cream);
+      padding: 4rem 1.5rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .recipe-hero::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--amber), var(--terra), var(--plum));
+    }
+    .hero-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--amber); margin-bottom: 0.75rem;
+    }
+    .recipe-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700; line-height: 1.15; margin-bottom: 1rem;
+    }
+    .recipe-hero .subtitle {
+      font-style: italic; font-size: 1.05rem;
+      color: rgba(245,240,232,0.8); max-width: 520px; margin: 0 auto 1.5rem;
+    }
+    .meta-row {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 1.5rem; font-family: 'DM Mono', monospace;
+      font-size: 0.72rem; letter-spacing: 0.08em; color: rgba(245,240,232,0.7);
+    }
+
+    .breadcrumb {
+      background: var(--cream-dark); border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 1.5rem; font-family: 'DM Mono', monospace;
+      font-size: 0.68rem; letter-spacing: 0.06em; color: var(--text-muted);
+    }
+    .breadcrumb a { color: var(--moss); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    /* TWO-COLUMN LAYOUT */
+    .recipe-layout {
+      max-width: 960px; margin: 0 auto; padding: 3rem 1.5rem;
+      display: grid; grid-template-columns: 1fr 300px; gap: 3rem; align-items: start;
+    }
+    @media (max-width: 720px) { .recipe-layout { grid-template-columns: 1fr; gap: 2rem; } }
+
+    /* SIDEBAR */
+    .sidebar-stack { display: flex; flex-direction: column; gap: 1.5rem; position: sticky; top: 80px; }
+    .sidebar-card {
+      background: white; border: 1px solid var(--rule); border-radius: 4px; padding: 1.5rem;
+    }
+    .sidebar-card h3 {
+      font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--bark);
+      margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--plum);
+    }
+    .ingredient-section { margin-bottom: 1rem; }
+    .ingredient-section h4 {
+      font-family: 'DM Mono', monospace; font-size: 0.68rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--terra); margin-bottom: 0.5rem;
+    }
+    .ingredient-list { list-style: none; }
+    .ingredient-list li {
+      font-size: 0.85rem; padding: 0.35rem 0; border-bottom: 1px dotted var(--rule);
+      color: var(--text); display: flex; gap: 0.5rem; line-height: 1.4;
+    }
+    .ingredient-list li:last-child { border-bottom: none; }
+    .ingredient-list li::before { content: '◆'; color: var(--plum); font-size: 0.5rem; margin-top: 0.3rem; flex-shrink: 0; }
+
+    .equipment-list { list-style: none; }
+    .equipment-list li {
+      font-size: 0.85rem; padding: 0.3rem 0; color: var(--text-muted);
+      border-bottom: 1px dotted var(--rule); display: flex; gap: 0.5rem;
+    }
+    .equipment-list li:last-child { border-bottom: none; }
+    .equipment-list li::before { content: '·'; color: var(--amber); font-size: 1.2rem; line-height: 0.9; }
+
+    .batch-box {
+      background: var(--cream); border-left: 3px solid var(--moss);
+      padding: 0.75rem 1rem; font-size: 0.82rem; color: var(--text-muted);
+    }
+    .batch-box strong { color: var(--bark); display: block; margin-bottom: 0.2rem; font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; }
+
+    /* MAIN */
+    .intro-text { font-size: 1.03rem; line-height: 1.8; margin-bottom: 2rem; }
+    .intro-text p + p { margin-top: 1rem; }
+
+    h2 {
+      font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 600;
+      color: var(--bark); margin: 2rem 0 1rem; padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    h2::before { content: '— '; color: var(--plum); }
+
+    .steps-list { list-style: none; counter-reset: steps; }
+    .steps-list li {
+      counter-increment: steps; display: flex; gap: 1rem;
+      padding: 0.75rem 0; border-bottom: 1px dotted var(--rule);
+      font-size: 0.92rem; line-height: 1.65;
+    }
+    .steps-list li:last-child { border-bottom: none; }
+    .steps-list li::before {
+      content: counter(steps); font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; font-weight: 700; color: var(--plum); min-width: 1.5rem; line-height: 1.4;
+    }
+
+    .tip-block {
+      background: var(--cream-dark); border-left: 3px solid var(--terra);
+      padding: 1rem 1.25rem; margin: 1.5rem 0;
+      font-size: 0.88rem; font-style: italic; color: var(--text-muted);
+    }
+    .tip-block strong {
+      font-style: normal; color: var(--bark); font-family: 'DM Mono', monospace;
+      font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+      display: block; margin-bottom: 0.3rem;
+    }
+
+    /* RECOMMENDED VERSION CALLOUT */
+    .recommended-box {
+      background: linear-gradient(135deg, rgba(90,45,90,0.05), rgba(201,135,63,0.06));
+      border: 1px solid rgba(90,45,90,0.25); border-radius: 4px;
+      padding: 1.25rem 1.5rem; margin: 1.5rem 0;
+    }
+    .recommended-box .rec-label {
+      font-family: 'DM Mono', monospace; font-size: 0.68rem;
+      letter-spacing: 0.1em; text-transform: uppercase; color: var(--plum); margin-bottom: 0.75rem;
+    }
+    .recommended-box ul { list-style: none; margin-bottom: 0.75rem; }
+    .recommended-box ul li { font-size: 0.88rem; padding: 0.2rem 0; display: flex; gap: 0.5rem; }
+    .recommended-box ul li::before { content: '◆'; color: var(--amber); font-size: 0.5rem; margin-top: 0.35rem; }
+    .recommended-box .note { font-size: 0.82rem; font-style: italic; color: var(--text-muted); }
+
+    /* STORAGE TABLE */
+    .storage-grid {
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px;
+      border: 1px solid var(--rule); margin: 1rem 0; background: var(--rule);
+    }
+    .storage-cell {
+      background: white; padding: 0.75rem 1rem;
+    }
+    .storage-cell.header { background: var(--plum); color: white; }
+    .storage-cell.header span { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .storage-cell p { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem; }
+    .storage-cell strong { font-family: 'Playfair Display', serif; color: var(--bark); }
+    @media (max-width: 500px) { .storage-grid { grid-template-columns: 1fr; } }
+
+    /* BATCH NOTES */
+    .batch-notes {
+      background: white; border: 1px solid var(--rule); padding: 1.5rem; margin: 2rem 0;
+    }
+    .batch-notes h3 {
+      font-family: 'Playfair Display', serif; font-size: 1.1rem; font-style: italic;
+      color: var(--bark); margin-bottom: 1rem;
+    }
+    .notes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 500px) { .notes-grid { grid-template-columns: 1fr; } }
+    .notes-field label {
+      font-family: 'DM Mono', monospace; font-size: 0.68rem;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted);
+      display: block; margin-bottom: 0.3rem;
+    }
+    .notes-field .line {
+      border-bottom: 1px solid var(--rule); padding-bottom: 0.4rem; min-height: 1.4rem;
+    }
+    .notes-long { margin-top: 1rem; }
+    .notes-long .line { margin-bottom: 0.5rem; min-height: 1.4rem; }
+
+    .crosslink-bar {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2.5rem 0;
+    }
+    @media (max-width: 500px) { .crosslink-bar { grid-template-columns: 1fr; } }
+    .crosslink-card {
+      background: white; border: 1px solid var(--rule); padding: 1.25rem;
+      text-decoration: none; color: inherit; transition: border-color 0.2s, transform 0.2s;
+    }
+    .crosslink-card:hover { border-color: var(--plum); transform: translateY(-2px); }
+    .crosslink-card .label { font-family: 'DM Mono', monospace; font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.3rem; }
+    .crosslink-card h4 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--bark); margin-bottom: 0.25rem; }
+    .crosslink-card p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+
+    .drink-bar {
+      background: var(--moss-dark); color: rgba(245,240,232,0.75); text-align: center;
+      padding: 0.5rem 1rem; font-family: 'DM Mono', monospace;
+      font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    footer {
+      background: var(--bark); color: var(--cream-dark); text-align: center; padding: 2.5rem 1.5rem;
+    }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-style: italic; color: var(--cream); margin-bottom: 0.5rem; }
+    footer p { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; opacity: 0.6; margin-bottom: 0.25rem; }
+    footer a { color: var(--amber); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">From Bed to Bar</a>
+    <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="recipes.html">Recipes</a></li>
+    <li><a href="garden-tips.html">Garden Tips</a></li>
+    <li><a href="herb-hub.html">Herb Hub</a></li>
+    <li><a href="planting-guide.html">Planting Guide</a></li>
+    <li><a href="bar-essentials.html">Bar Essentials</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="/#newsletter">Newsletter</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="preserves-plum-jam.html">Plum Jam</a></li>
+    <li><a href="cocktails-plum-bourbon-sour.html">Plum Sour</a></li>
+  </ul>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="recipes">Recipes</a>
+    <a href="garden-tips">Garden</a>
+    <a href="bar-essentials">Bar Essentials</a>
+    <a href="blog">Journal</a>
+    <a href="disclaimer">Disclaimer</a>
+  </div>
+
+  <div class="breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="recipes">Recipes</a> &rsaquo; Plum Jam
+  </div>
+
+  <div class="recipe-hero">
+    <div class="hero-tag">Garden Pantry &nbsp;·&nbsp; Preserves</div>
+    <h1>Homemade Plum Jam</h1>
+    <p class="subtitle">From the tree to the jar — a full canning guide built around the plums in your own backyard.</p>
+    <div class="meta-row">
+      <span>⏱ About 1 hour</span>
+      <span>🫙 5–6 pints</span>
+      <span>🌿 From the garden</span>
+      <span>🥃 Makes cocktail syrup too</span>
+    </div>
+  </div>
+
+  <div class="recipe-layout">
+    <main>
+      <div class="intro-text">
+        <p>There's something about a backyard plum harvest that demands you do something with it. The trees don't ask whether you're ready — they just ripen. This jam is the answer for most of the fruit.</p>
+        <p>It's a straightforward put-up: plums, sugar, lemon juice, and time. The cinnamon and vanilla are optional but recommended. The result keeps for a year on the shelf, gets better on toast after about two weeks, and — if you hold back a pound or two before the sugar goes in — becomes the base for <a href="recipe-plum-simple-syrup" style="color: var(--plum);">Plum Simple Syrup</a> and the <a href="cocktails-plum-bourbon-sour" style="color: var(--plum);">Plum Bourbon Sour</a>.</p>
+      </div>
+
+      <div class="recommended-box">
+        <div class="rec-label">Recommended Version</div>
+        <ul>
+          <li>5.6 lb pitted plums</li>
+          <li>3.75 lb granulated sugar</li>
+          <li>Juice of 2 lemons</li>
+          <li>1 cinnamon stick (during cooking)</li>
+          <li>1 tsp vanilla extract (after cooking)</li>
+        </ul>
+        <p class="note">This combination gives you a rich, balanced plum flavor without pushing into candy-sweet. The cinnamon is subtle enough that you won't identify it — you'll just notice the jam tastes a little more like itself.</p>
+      </div>
+
+      <h2>Step 1 — Prepare the Fruit</h2>
+      <ol class="steps-list">
+        <li>Wash plums thoroughly under cold water.</li>
+        <li>Pit and cut into quarters or rough chunks. No need to peel — the skins add body and color.</li>
+        <li>Add to a large heavy-bottomed pot or Dutch oven.</li>
+      </ol>
+
+      <div class="tip-block">
+        <strong>Garden to glass note</strong>
+        Before adding anything else, set aside 1 lb of cut fruit in a separate pot. That becomes your <a href="recipe-plum-simple-syrup" style="color: var(--plum); font-style: normal;">Plum Simple Syrup</a> — same harvest, two products.
+      </div>
+
+      <h2>Step 2 — Cook the Fruit</h2>
+      <ol class="steps-list">
+        <li>Add lemon juice and cinnamon stick if using.</li>
+        <li>Cook over medium heat, stirring occasionally.</li>
+        <li>After 15–20 minutes the fruit should be fully soft and beginning to break down. Press gently with your spoon to help it along.</li>
+      </ol>
+
+      <h2>Step 3 — Add Sugar</h2>
+      <ol class="steps-list">
+        <li>Gradually stir in sugar. Take your time — rushing this can cause scorching on the bottom.</li>
+        <li>Stir until the sugar is fully dissolved before you increase the heat.</li>
+        <li>Bring to a full rolling boil that can't be stirred down.</li>
+      </ol>
+
+      <h2>Step 4 — Cook to Jam Stage</h2>
+      <ol class="steps-list">
+        <li>Boil vigorously, stirring frequently. The mixture will spit — keep the heat managed and stay close.</li>
+        <li>Continue cooking 20–35 minutes. The range depends on how much natural moisture your plums had.</li>
+        <li>Skim foam from the surface if desired. This is cosmetic — it doesn't affect the flavor or safety of the jam.</li>
+      </ol>
+
+      <h2>Step 5 — Test for Doneness</h2>
+      <ol class="steps-list">
+        <li>Before you start cooking, put a small plate in the freezer.</li>
+        <li>When you think the jam might be done, drop a small spoonful onto the cold plate.</li>
+        <li>Wait 30 seconds, then push the edge with your finger.</li>
+        <li>If the surface wrinkles and holds its shape, it's ready. If it runs, give it another 5 minutes and test again.</li>
+      </ol>
+
+      <div class="tip-block">
+        <strong>No thermometer needed</strong>
+        The plate test is reliable. If you have a candy thermometer, you're looking for 220&deg;F (104&deg;C) at sea level. Adjust down about 2&deg;F for every 1,000 feet of elevation.
+      </div>
+
+      <h2>Finishing the Jam</h2>
+      <ol class="steps-list">
+        <li>Remove from heat and pull out the cinnamon stick.</li>
+        <li>Stir in vanilla extract, almond extract, or bourbon if using. Adding these off-heat preserves more of their flavor.</li>
+        <li>Let stand 5 minutes, then stir gently before filling jars. This helps distribute the fruit evenly.</li>
+      </ol>
+
+      <h2>Water-Bath Canning</h2>
+      <ol class="steps-list">
+        <li>Ladle hot jam into hot sterilized jars, leaving 1/4-inch headspace.</li>
+        <li>Wipe jar rims clean with a damp cloth. Any residue on the rim can prevent a proper seal.</li>
+        <li>Apply lids and bands fingertip tight — firm but not cranked down.</li>
+        <li>Process half-pint or pint jars in a boiling water bath for 10 minutes.</li>
+        <li>Remove jars and let cool undisturbed for 12–24 hours. You'll hear the lids pop as they seal.</li>
+      </ol>
+
+      <div class="tip-block">
+        <strong>Altitude adjustment</strong>
+        Processing times assume sea level. If you're above 1,000 feet, adjust according to current USDA guidelines — add 1 minute for every 1,000 feet up to 6,000 feet, then 2 minutes per 1,000 feet above that.
+      </div>
+
+      <h2>Storage</h2>
+      <div class="storage-grid">
+        <div class="storage-cell header"><span>Where</span></div>
+        <div class="storage-cell header"><span>How Long</span></div>
+        <div class="storage-cell header"><span>Notes</span></div>
+        <div class="storage-cell"><strong>Pantry (sealed)</strong></div>
+        <div class="storage-cell"><p>Up to 1 year</p></div>
+        <div class="storage-cell"><p>Cool, dark location. Check seal before opening.</p></div>
+        <div class="storage-cell"><strong>Refrigerator (opened)</strong></div>
+        <div class="storage-cell"><p>3–4 weeks</p></div>
+        <div class="storage-cell"><p>Use a clean spoon every time.</p></div>
+        <div class="storage-cell"><strong>Freezer</strong></div>
+        <div class="storage-cell"><p>Up to 1 year</p></div>
+        <div class="storage-cell"><p>Leave 1/2-inch headspace in freezer-safe containers.</p></div>
+      </div>
+
+      <h2>Batch Notes</h2>
+      <div class="batch-notes">
+        <h3>Keep track of your batches</h3>
+        <div class="notes-grid">
+          <div class="notes-field"><label>Plum Variety</label><div class="line"></div></div>
+          <div class="notes-field"><label>Date Made</label><div class="line"></div></div>
+          <div class="notes-field"><label>Sugar Used</label><div class="line"></div></div>
+          <div class="notes-field"><label>Flavor Additions</label><div class="line"></div></div>
+          <div class="notes-field"><label>Final Yield</label><div class="line"></div></div>
+          <div class="notes-field"><label>Family Rating (1–10)</label><div class="line"></div></div>
+        </div>
+        <div class="notes-long">
+          <label style="font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-muted); display:block; margin-bottom:0.5rem;">Notes for Next Batch</label>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+
+      <div class="crosslink-bar">
+        <a class="crosslink-card" href="recipe-plum-simple-syrup">
+          <div class="label">Same fruit</div>
+          <h4>Plum Simple Syrup</h4>
+          <p>Pull a pound of fruit before the sugar goes in. One harvest, two products.</p>
+        </a>
+        <a class="crosslink-card" href="cocktails-plum-bourbon-sour">
+          <div class="label">Garden to glass</div>
+          <h4>Plum Bourbon Sour</h4>
+          <p>The cocktail that closes the loop — made with syrup from the same trees.</p>
+        </a>
+      </div>
+    </main>
+
+    <aside>
+      <div class="sidebar-stack">
+        <div class="sidebar-card">
+          <h3>Ingredients</h3>
+          <div class="ingredient-section">
+            <h4>Base Recipe</h4>
+            <ul class="ingredient-list">
+              <li>5.6 lb (2.54 kg) pitted plums</li>
+              <li>3.75 lb (1.7 kg) granulated sugar</li>
+              <li>Juice of 2 lemons (~1/4 cup)</li>
+            </ul>
+          </div>
+          <div class="ingredient-section">
+            <h4>Optional Additions</h4>
+            <ul class="ingredient-list">
+              <li>1 cinnamon stick</li>
+              <li>1 tsp vanilla extract</li>
+              <li>1/4 tsp almond extract</li>
+              <li>1–2 Tbsp bourbon</li>
+              <li>1 Tbsp fresh grated ginger</li>
+            </ul>
+          </div>
+          <div class="batch-box">
+            <strong>Batch Size</strong>
+            5.6 lb pitted plums yields 5–6 pints or 8–10 half-pint jars.
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Equipment</h3>
+          <ul class="equipment-list">
+            <li>Large heavy-bottomed pot or Dutch oven</li>
+            <li>Long-handled spoon</li>
+            <li>Potato masher (optional)</li>
+            <li>Candy thermometer (optional)</li>
+            <li>Sterilized canning jars and lids</li>
+            <li>Water-bath canner</li>
+            <li>Jar lifter and canning funnel</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="drink-bar">Drink responsibly &mdash; Please enjoy in moderation</div>
+
+  <footer>
+    <div class="footer-logo">From Bed to Bar</div>
+    <p>Garden-to-glass cocktails &amp; growing guides</p>
+    <p style="margin-top:0.75rem;">
+      <a href="disclaimer">Disclaimer</a> &nbsp;&middot;&nbsp;
+      <a href="recipes">All Recipes</a> &nbsp;&middot;&nbsp;
+      <a href="/">Home</a>
+    </p>
+    <p style="margin-top:1rem; font-size:0.62rem;">Must be 21+ to consume alcohol. Drink responsibly.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

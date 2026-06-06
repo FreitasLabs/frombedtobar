@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plum Bourbon Sour — Garden-to-Glass | From Bed to Bar</title>
+  <meta name="description" content="A Plum Bourbon Sour built around homegrown plum syrup — stone fruit, oak, and citrus in one glass. The cocktail that closes the garden-to-glass loop." />
+  <link rel="canonical" href="https://frombedtobar.com/cocktails-plum-bourbon-sour.html" />
+  <meta property="og:title" content="Plum Bourbon Sour | From Bed to Bar" />
+  <meta property="og:description" content="Stone fruit, oak, lemon, and a hint of smoke. Built around homegrown plum syrup — the cocktail that closes the garden-to-glass loop." />
+  <meta property="og:url" content="https://frombedtobar.com/cocktails-plum-bourbon-sour.html" />
+  <meta property="og:type" content="article" />
+  <meta name="theme-color" content="#b85c38" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Recipe",
+    "name": "Plum Bourbon Sour",
+    "description": "A garden-to-glass cocktail built around homegrown plum simple syrup, bourbon, fresh lemon juice, and optional egg white.",
+    "recipeCategory": "Cocktail",
+    "recipeYield": "1 cocktail",
+    "prepTime": "PT5M",
+    "author": { "@type": "Organization", "name": "From Bed to Bar" },
+    "recipeIngredient": [
+      "2 oz bourbon",
+      "3/4 oz homegrown plum simple syrup",
+      "3/4 oz fresh lemon juice",
+      "1/2 oz Amaro Nonino or Averna (optional)",
+      "1 egg white (optional)",
+      "2 dashes Angostura bitters",
+      "Ice"
+    ],
+    "recipeInstructions": [
+      { "@type": "HowToStep", "text": "If using egg white, combine all ingredients except bitters in a shaker and dry shake for 15 seconds." },
+      { "@type": "HowToStep", "text": "Add ice and shake hard for 10–12 seconds until the shaker is very cold." },
+      { "@type": "HowToStep", "text": "Double-strain into a chilled coupe or rocks glass over a large ice cube." },
+      { "@type": "HowToStep", "text": "Dot the foam with Angostura bitters and drag a toothpick through for a decorative pattern." }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --moss: #4a5c3a;
+      --moss-dark: #35432a;
+      --terra: #b85c38;
+      --amber: #c9873f;
+      --bark: #3d2b1f;
+      --cream: #f5f0e8;
+      --cream-dark: #ede5d8;
+      --plum: #5a2d5a;
+      --text: #2c2018;
+      --text-muted: #6b5a4e;
+      --rule: #d4c4b0;
+    }
+
+    body { font-family: 'Lora', Georgia, serif; background: var(--cream); color: var(--text); line-height: 1.7; }
+
+    nav {
+      background: var(--bark); padding: 0 1.5rem; position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between; height: 64px;
+    }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--cream); text-decoration: none; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--cream-dark); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.85; transition: opacity 0.2s; }
+    .nav-links a:hover { opacity: 1; color: var(--amber); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+    .hamburger span { width: 24px; height: 2px; background: var(--cream); border-radius: 2px; }
+    .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--bark); padding: 1.5rem; z-index: 99; flex-direction: column; gap: 1.2rem; border-top: 1px solid rgba(255,255,255,0.1); }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--cream-dark); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; }
+    @media (max-width: 768px) { .nav-links { display: none; } .hamburger { display: flex; } }
+
+    /* HERO — deep bourbon-amber-plum gradient */
+    .recipe-hero {
+      background: linear-gradient(145deg, #2a1a0e 0%, var(--bark) 30%, #5a2d1a 60%, var(--plum) 100%);
+      color: var(--cream);
+      padding: 4.5rem 1.5rem 3.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .recipe-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 120%, rgba(201,135,63,0.25) 0%, transparent 60%);
+    }
+    .recipe-hero::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--plum), var(--amber), var(--terra));
+    }
+    .hero-tag {
+      font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--amber); margin-bottom: 0.75rem; position: relative;
+    }
+    .recipe-hero h1 {
+      font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+      font-weight: 700; line-height: 1.1; margin-bottom: 1rem; position: relative;
+    }
+    .recipe-hero .subtitle {
+      font-style: italic; font-size: 1.05rem; color: rgba(245,240,232,0.75);
+      max-width: 520px; margin: 0 auto 1.75rem; position: relative;
+    }
+    .meta-row {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 1.5rem; font-family: 'DM Mono', monospace; font-size: 0.72rem;
+      letter-spacing: 0.08em; color: rgba(245,240,232,0.65); position: relative;
+    }
+
+    /* QUICK SPEC STRIP */
+    .spec-strip {
+      background: var(--bark); display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 0; border-bottom: 3px solid var(--plum);
+    }
+    .spec-item {
+      padding: 0.9rem 1.5rem; text-align: center; border-right: 1px solid rgba(255,255,255,0.1);
+      flex: 1; min-width: 120px;
+    }
+    .spec-item:last-child { border-right: none; }
+    .spec-label { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber); display: block; margin-bottom: 0.2rem; }
+    .spec-value { font-family: 'Playfair Display', serif; font-size: 0.95rem; color: var(--cream); }
+
+    .breadcrumb {
+      background: var(--cream-dark); border-bottom: 1px solid var(--rule);
+      padding: 0.6rem 1.5rem; font-family: 'DM Mono', monospace;
+      font-size: 0.68rem; letter-spacing: 0.06em; color: var(--text-muted);
+    }
+    .breadcrumb a { color: var(--moss); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    .recipe-layout {
+      max-width: 920px; margin: 0 auto; padding: 3rem 1.5rem;
+      display: grid; grid-template-columns: 1fr 280px; gap: 3rem; align-items: start;
+    }
+    @media (max-width: 720px) { .recipe-layout { grid-template-columns: 1fr; } }
+
+    /* SIDEBAR */
+    .sidebar-stack { display: flex; flex-direction: column; gap: 1.5rem; position: sticky; top: 80px; }
+    .sidebar-card { background: white; border: 1px solid var(--rule); border-radius: 4px; padding: 1.5rem; }
+    .sidebar-card h3 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--bark); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--plum); }
+
+    .measure-list { list-style: none; }
+    .measure-list li {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 0.45rem 0; border-bottom: 1px dotted var(--rule); font-size: 0.87rem;
+    }
+    .measure-list li:last-child { border-bottom: none; }
+    .measure { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--plum); font-weight: 500; white-space: nowrap; margin-left: 0.5rem; }
+    .ingredient-name { color: var(--text); line-height: 1.35; }
+    .optional-tag {
+      font-family: 'DM Mono', monospace; font-size: 0.6rem;
+      letter-spacing: 0.06em; color: var(--text-muted); text-transform: uppercase;
+      display: block;
+    }
+
+    .glass-box {
+      background: var(--cream); border-left: 3px solid var(--amber);
+      padding: 0.75rem 1rem; font-size: 0.82rem; color: var(--text-muted); margin-top: 1rem;
+    }
+    .glass-box strong { color: var(--bark); display: block; margin-bottom: 0.2rem; font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; }
+
+    /* MAIN */
+    .intro-text { font-size: 1.03rem; line-height: 1.8; margin-bottom: 2rem; }
+    .intro-text p + p { margin-top: 1rem; }
+
+    h2 {
+      font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 600;
+      color: var(--bark); margin: 2rem 0 1rem; padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    h2::before { content: '— '; color: var(--plum); }
+
+    .steps-list { list-style: none; counter-reset: steps; }
+    .steps-list li {
+      counter-increment: steps; display: flex; gap: 1rem;
+      padding: 0.75rem 0; border-bottom: 1px dotted var(--rule);
+      font-size: 0.92rem; line-height: 1.65;
+    }
+    .steps-list li:last-child { border-bottom: none; }
+    .steps-list li::before {
+      content: counter(steps); font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; font-weight: 700; color: var(--plum); min-width: 1.5rem; line-height: 1.4;
+    }
+
+    .tip-block {
+      background: var(--cream-dark); border-left: 3px solid var(--terra);
+      padding: 1rem 1.25rem; margin: 1.5rem 0;
+      font-size: 0.88rem; font-style: italic; color: var(--text-muted);
+    }
+    .tip-block strong {
+      font-style: normal; color: var(--bark); font-family: 'DM Mono', monospace;
+      font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+      display: block; margin-bottom: 0.3rem;
+    }
+
+    /* BOURBON GUIDE */
+    .bourbon-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+    @media (max-width: 500px) { .bourbon-grid { grid-template-columns: 1fr; } }
+    .bourbon-card {
+      background: white; border: 1px solid var(--rule); padding: 1rem;
+    }
+    .bourbon-card .b-name { font-family: 'Playfair Display', serif; font-size: 0.95rem; color: var(--bark); margin-bottom: 0.2rem; }
+    .bourbon-card .b-why { font-size: 0.8rem; color: var(--text-muted); line-height: 1.45; }
+    .bourbon-card .b-tag { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.3rem; }
+
+    /* VARIATIONS */
+    .variation-list { list-style: none; }
+    .variation-list li {
+      padding: 0.65rem 0; border-bottom: 1px dotted var(--rule);
+      font-size: 0.9rem; line-height: 1.6;
+    }
+    .variation-list li:last-child { border-bottom: none; }
+    .variation-list li strong { color: var(--plum); font-family: 'Playfair Display', serif; font-style: italic; }
+
+    .egg-notice {
+      background: rgba(90,45,90,0.06); border: 1px solid rgba(90,45,90,0.2);
+      padding: 0.9rem 1.1rem; margin: 1.5rem 0; font-size: 0.82rem;
+      color: var(--text-muted); line-height: 1.6;
+    }
+    .egg-notice strong { color: var(--plum); font-style: normal; }
+
+    .crosslink-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2.5rem 0; }
+    @media (max-width: 500px) { .crosslink-bar { grid-template-columns: 1fr; } }
+    .crosslink-card { background: white; border: 1px solid var(--rule); padding: 1.25rem; text-decoration: none; color: inherit; transition: border-color 0.2s, transform 0.2s; }
+    .crosslink-card:hover { border-color: var(--plum); transform: translateY(-2px); }
+    .crosslink-card .label { font-family: 'DM Mono', monospace; font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.3rem; }
+    .crosslink-card h4 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--bark); margin-bottom: 0.25rem; }
+    .crosslink-card p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+
+    .drink-bar { background: var(--moss-dark); color: rgba(245,240,232,0.75); text-align: center; padding: 0.5rem 1rem; font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    footer { background: var(--bark); color: var(--cream-dark); text-align: center; padding: 2.5rem 1.5rem; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-style: italic; color: var(--cream); margin-bottom: 0.5rem; }
+    footer p { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; opacity: 0.6; margin-bottom: 0.25rem; }
+    footer a { color: var(--amber); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="nav-logo">From Bed to Bar</a>
+    <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="recipes.html">Recipes</a></li>
+    <li><a href="garden-tips.html">Garden Tips</a></li>
+    <li><a href="herb-hub.html">Herb Hub</a></li>
+    <li><a href="planting-guide.html">Planting Guide</a></li>
+    <li><a href="bar-essentials.html">Bar Essentials</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="/#newsletter">Newsletter</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="preserves-plum-jam.html">Plum Jam</a></li>
+    <li><a href="cocktails-plum-bourbon-sour.html">Plum Sour</a></li>
+  </ul>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="recipes">Recipes</a>
+    <a href="garden-tips">Garden</a>
+    <a href="bar-essentials">Bar Essentials</a>
+    <a href="blog">Journal</a>
+    <a href="disclaimer">Disclaimer</a>
+  </div>
+
+  <div class="recipe-hero">
+    <div class="hero-tag">Cocktail &nbsp;·&nbsp; Garden to Glass</div>
+    <h1>Plum Bourbon Sour</h1>
+    <p class="subtitle">Stone fruit, oak, lemon, and a little smoke. Built with plums from your own trees.</p>
+    <div class="meta-row">
+      <span>🥃 Spirit-forward</span>
+      <span>🍋 Balanced &amp; tart</span>
+      <span>⏱ 5 minutes</span>
+      <span>🌿 Homegrown syrup</span>
+    </div>
+  </div>
+
+  <div class="spec-strip">
+    <div class="spec-item">
+      <span class="spec-label">Spirit</span>
+      <span class="spec-value">Bourbon</span>
+    </div>
+    <div class="spec-item">
+      <span class="spec-label">Profile</span>
+      <span class="spec-value">Fruity, Tart, Oak</span>
+    </div>
+    <div class="spec-item">
+      <span class="spec-label">Strength</span>
+      <span class="spec-value">Medium-Strong</span>
+    </div>
+    <div class="spec-item">
+      <span class="spec-label">Glass</span>
+      <span class="spec-value">Coupe or Rocks</span>
+    </div>
+    <div class="spec-item">
+      <span class="spec-label">Season</span>
+      <span class="spec-value">Late Summer</span>
+    </div>
+  </div>
+
+  <div class="breadcrumb">
+    <a href="/">Home</a> &rsaquo; <a href="recipes">Recipes</a> &rsaquo; Plum Bourbon Sour
+  </div>
+
+  <div class="recipe-layout">
+    <main>
+      <div class="intro-text">
+        <p>A Whiskey Sour is one of the most honest cocktails there is: spirit, citrus, sweetener. The ratio matters more than the ingredients. When the sweetener is homegrown plum syrup — made from the same trees that fill your yard every August — it stops being a variation and starts being its own thing.</p>
+        <p>The plum syrup does three jobs in this drink: it sweetens, it adds color (a deep rose-burgundy that looks like the fruit looks), and it brings a slight tartness that lifts the citrus without fighting the bourbon. The amaro is optional but worth it — it adds a herbal bitter note that keeps the drink from going sweet.</p>
+      </div>
+
+      <h2>How to Make It</h2>
+
+      <div class="egg-notice">
+        <strong>On the egg white:</strong> This recipe includes an optional egg white, which creates a silky texture and the foam that holds the bitters pattern on top. Raw egg carries a small food safety risk. Skip it if you prefer — the drink is excellent either way. See our <a href="disclaimer" style="color: var(--plum);">disclaimer page</a> for more information.
+      </div>
+
+      <ol class="steps-list">
+        <li>Chill your glass. A coupe in the freezer for 5 minutes, or a rocks glass with ice water while you build the drink.</li>
+        <li>If using egg white: combine bourbon, plum syrup, lemon juice, amaro, and egg white in a shaker without ice. Dry shake hard for 15 seconds to emulsify.</li>
+        <li>Add a large scoop of ice and shake hard for another 10–12 seconds. The shaker should be very cold and starting to frost on the outside.</li>
+        <li>If skipping the egg white: combine everything with ice in one step and shake for 12–15 seconds.</li>
+        <li>Double-strain into your chilled glass. If serving on the rocks, pour over a large cube.</li>
+        <li>Add 2 dashes of Angostura bitters. If you have egg white foam, dot 3 small drops and drag a toothpick through to make a pattern. If no foam, just dash directly over the drink.</li>
+      </ol>
+
+      <div class="tip-block">
+        <strong>Lemon matters here</strong>
+        Fresh-squeezed only. Bottled lemon juice has a cooked, flat quality that makes the whole drink taste off. This cocktail only has a handful of ingredients — each one carries its weight.
+      </div>
+
+      <h2>Which Bourbon to Use</h2>
+      <p style="font-size:0.92rem; margin-bottom:1rem; color:var(--text-muted);">The plum syrup has stone fruit, a little vanilla, and slight tartness. You want a bourbon that works with that, not against it.</p>
+      <div class="bourbon-grid">
+        <div class="bourbon-card">
+          <div class="b-tag">Best overall</div>
+          <div class="b-name">Buffalo Trace</div>
+          <div class="b-why">Approachable, vanilla-forward, and priced for cocktails. Doesn't fight the fruit.</div>
+        </div>
+        <div class="bourbon-card">
+          <div class="b-tag">Richer, more oak</div>
+          <div class="b-name">Knob Creek</div>
+          <div class="b-why">Higher proof and more tannin. Makes the drink a bit bigger and drier.</div>
+        </div>
+        <div class="bourbon-card">
+          <div class="b-tag">Spicier option</div>
+          <div class="b-name">Bulleit Rye</div>
+          <div class="b-why">Technically a rye. The spice and the plum create an interesting back-and-forth.</div>
+        </div>
+        <div class="bourbon-card">
+          <div class="b-tag">Special occasion</div>
+          <div class="b-name">Woodford Reserve</div>
+          <div class="b-why">Complex enough to taste on its own. Lovely here if you have a bottle open.</div>
+        </div>
+      </div>
+
+      <h2>Variations</h2>
+      <ul class="variation-list">
+        <li><strong>Smoked Plum Sour</strong> — Smoke the glass before pouring: invert a rocks glass over a lit piece of cinnamon stick or cedar chip for 20–30 seconds. Wipe dry and pour the cocktail in. The smoke lingers in the first sip.</li>
+        <li><strong>Plum &amp; Thyme Sour</strong> — Add a sprig of fresh thyme to the shaker with the other ingredients. Strain it out. It adds an herbal note that makes the plum taste more like a garden and less like a juice bar.</li>
+        <li><strong>Sparkling Version</strong> — Build the drink without shaking: combine bourbon, plum syrup, and lemon juice over ice in a rocks glass and top with 2 oz of club soda. Stir once. Lower ABV, still great.</li>
+        <li><strong>Mocktail</strong> — Replace the bourbon with strong-brewed hibiscus tea (chilled) and use the same ratios. The tea has enough tartness and color to hold the drink together.</li>
+      </ul>
+
+      <div class="tip-block">
+        <strong>On the amaro</strong>
+        Amaro Nonino is the recommendation — it has an orange, herbal bitterness that works perfectly here. Averna is a good substitute: darker, more caramel. Either one keeps the drink from going one-dimensional. If you don't have amaro on hand, a bar spoon of Aperol works in a pinch.
+      </div>
+
+      <div class="crosslink-bar">
+        <a class="crosslink-card" href="recipe-plum-simple-syrup">
+          <div class="label">Make the syrup first</div>
+          <h4>Plum Simple Syrup</h4>
+          <p>The backbone of this cocktail. Homegrown, 25 minutes, and keeps for a month.</p>
+        </a>
+        <a class="crosslink-card" href="preserves-plum-jam">
+          <div class="label">Same harvest</div>
+          <h4>Homemade Plum Jam</h4>
+          <p>Put up the rest of the batch. Same fruit, same trees — garden to glass and jar.</p>
+        </a>
+      </div>
+    </main>
+
+    <aside>
+      <div class="sidebar-stack">
+        <div class="sidebar-card">
+          <h3>The Recipe</h3>
+          <ul class="measure-list">
+            <li>
+              <span class="ingredient-name">Bourbon</span>
+              <span class="measure">2 oz</span>
+            </li>
+            <li>
+              <span class="ingredient-name">
+                <a href="recipe-plum-simple-syrup" style="color:var(--plum); text-decoration:none;">Plum simple syrup</a>
+              </span>
+              <span class="measure">3/4 oz</span>
+            </li>
+            <li>
+              <span class="ingredient-name">Fresh lemon juice</span>
+              <span class="measure">3/4 oz</span>
+            </li>
+            <li>
+              <span class="ingredient-name">
+                Amaro Nonino or Averna
+                <span class="optional-tag">optional</span>
+              </span>
+              <span class="measure">1/2 oz</span>
+            </li>
+            <li>
+              <span class="ingredient-name">
+                Egg white
+                <span class="optional-tag">optional — see note</span>
+              </span>
+              <span class="measure">1</span>
+            </li>
+            <li>
+              <span class="ingredient-name">Angostura bitters</span>
+              <span class="measure">2 dashes</span>
+            </li>
+          </ul>
+          <div class="glass-box">
+            <strong>Glass &amp; Ice</strong>
+            Coupe (up) or rocks glass over a large cube. Chill the glass before pouring.
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Equipment</h3>
+          <ul style="list-style:none; font-size:0.85rem; color:var(--text-muted);">
+            <li style="padding:0.3rem 0; border-bottom:1px dotted var(--rule);">Cocktail shaker</li>
+            <li style="padding:0.3rem 0; border-bottom:1px dotted var(--rule);">Fine mesh strainer</li>
+            <li style="padding:0.3rem 0; border-bottom:1px dotted var(--rule);">Hawthorne strainer</li>
+            <li style="padding:0.3rem 0; border-bottom:1px dotted var(--rule);">Jigger</li>
+            <li style="padding:0.3rem 0;">Citrus juicer</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="drink-bar">Drink responsibly &mdash; Must be 21+ &mdash; Please enjoy in moderation</div>
+
+  <footer>
+    <div class="footer-logo">From Bed to Bar</div>
+    <p>Garden-to-glass cocktails &amp; growing guides</p>
+    <p style="margin-top:0.75rem;">
+      <a href="disclaimer">Disclaimer</a> &nbsp;&middot;&nbsp;
+      <a href="recipes">All Recipes</a> &nbsp;&middot;&nbsp;
+      <a href="/">Home</a>
+    </p>
+    <p style="margin-top:1rem; font-size:0.62rem;">Must be 21+ to consume alcohol. Drink responsibly.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
