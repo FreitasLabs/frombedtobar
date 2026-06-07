@@ -146,14 +146,6 @@
 
     .nav-links a:hover { opacity: 1; }
 
-    .hero-logo {
-      width: 100px;
-      height: 100px;
-      object-fit: contain;
-      margin-bottom: 1.5rem;
-      animation: fadeUp 0.8s ease both;
-      filter: brightness(0) invert(1) opacity(0.9);
-    }
 
     /* ── HERO ── */
     .hero {
@@ -184,6 +176,34 @@
         rgba(255,255,255,0.025) 18px,
         rgba(255,255,255,0.025) 19px
       );
+    }
+
+    /* ── HERO CTAS ── */
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      animation: fadeUp 0.8s 0.45s ease both;
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      background: transparent;
+      color: var(--cream);
+      text-decoration: none;
+      border: 1px solid rgba(245,240,232,0.5);
+      transition: background 0.25s, border-color 0.25s, transform 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(245,240,232,0.1);
+      border-color: var(--cream);
+      transform: translateY(-2px);
     }
 
     /* botanical SVG decoration */
@@ -251,14 +271,18 @@
     }
 
     .hero-right {
-      background-color: var(--parchment);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 4rem 3rem;
-      gap: 1.5rem;
-      animation: fadeIn 1s 0.3s ease both;
+      position: relative;
+      overflow: hidden;
+      min-height: 500px;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      position: absolute;
+      inset: 0;
     }
 
     a.feature-card, a.recipe-card {
@@ -588,8 +612,8 @@
       .nav-links { gap: 1.5rem; }
 
       .hero { grid-template-columns: 1fr; }
-      .hero-left { padding: 4rem 2rem; min-height: 60vh; }
-      .hero-right { padding: 3rem 2rem; }
+      .hero-left { padding: 4rem 2rem; min-height: auto; order: 1; }
+      .hero-right { min-height: 300px; position: relative; order: 2; }
 
       section { padding: 4rem 1.75rem; }
 
@@ -709,11 +733,13 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-left">
-      <img src="images/logo.png" alt="From Bed to Bar logo — garden-to-glass cocktails and mocktails" class="hero-logo" />
       <p class="hero-eyebrow">Garden · Harvest · Craft</p>
       <h1 class="hero-title">From the <em>garden bed</em> to your bar cart.</h1>
       <p class="hero-sub">Grow it. Harvest it. Pour it. Recipes, garden tips, and cocktail inspiration rooted in what you actually grow.</p>
-      <a href="#recipes" class="btn-primary">Explore Recipes</a>
+      <div class="hero-ctas">
+        <a href="recipes" class="btn-primary">Explore Recipes</a>
+        <a href="herb-hub" class="btn-secondary">Start with the Herb Hub</a>
+      </div>
 
       <!-- Botanical SVG decoration -->
       <svg class="botanical" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -729,32 +755,11 @@
     </div>
 
     <div class="hero-right">
-      <a href="recipes" class="feature-card">
-        <div class="card-icon">🥃</div>
-        <div>
-          <div class="card-title">Garden-to-Glass Recipes</div>
-          <div class="card-desc">Cocktails and mocktails built around what's growing in your beds right now — herbs, berries, citrus, and more.</div>
-        </div>
-      </a>
-      <a href="garden-tips" class="feature-card">
-        <div class="card-icon">🌱</div>
-        <div>
-          <div class="card-title">Grow What You Drink</div>
-          <div class="card-desc">Practical tips on growing mint, lavender, basil, and other bar-friendly plants even in small spaces.</div>
-        </div>
-      </a>
-      <a href="planting-guide#calendar" class="feature-card">
-        <div class="card-icon">📅</div>
-        <div>
-          <div class="card-title">Planting Guide</div>
-          <div class="card-desc">Zone-by-zone planting calendar — what to plant each month, when to harvest, and how to grow everything behind your bar.</div>
-        </div>
-      </a>
+      <img src="images/home-hero.png"
+           alt="Garden-to-glass table with fresh herbs, fruit, homemade syrups, cocktail, and mocktail"
+           class="hero-img" />
     </div>
   </section>
-<figure class="page-hero-image" style="margin:0; line-height:0; display:block;">
-  <img src="images/home-hero.png" alt="From Bed to Bar — a garden-to-glass cocktail setup with fresh herbs, homemade syrups, and seasonal fruit" style="width:100%; height:auto; display:block; max-height:520px; object-fit:cover;" />
-</figure>
 
 
   <!-- RECIPES -->
@@ -926,9 +931,8 @@
     <li><a href="recipes">Recipes</a></li>
     <li><a href="garden-tips">Garden Tips</a></li>
     <li><a href="herb-hub">Herb Hub</a></li>
+    <li><a href="planting-guide">Planting Guide</a></li>
     <li><a href="bar-essentials">Bar Essentials</a></li>
-    <li><a href="plum-guide">Plum Guide</a></li>
-    <li><a href="mint-guide">Mint Guide</a></li>
     <li><a href="blog">Blog</a></li>
     <li><a href="about">About</a></li>
     <li><a href="disclaimer">Disclaimer</a></li>
