@@ -672,6 +672,19 @@
         padding-left: calc(2rem - 3px);
       }
     }
+    /* ── HARVEST IMAGE CARDS responsive ── */
+    @media (max-width: 900px) {
+      #seasonal-harvest { padding: 4rem 1.75rem !important; }
+      #seasonal-harvest > div[style*="grid-template-columns: repeat(4"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+    @media (max-width: 540px) {
+      #seasonal-harvest > div[style*="grid-template-columns: repeat(4"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -770,48 +783,69 @@
 
   
   <!-- SEASONAL HARVEST -->
-  <section class="recipes-section" id="seasonal-harvest" style="background: var(--bark); border-top: 3px solid var(--amber);">
+  <section id="seasonal-harvest" style="background: var(--bark); border-top: 3px solid var(--amber); padding: 6rem 5rem; position: relative; overflow: hidden;">
+    <div style="position: absolute; top: -60px; left: -60px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(201,135,58,0.12) 0%, transparent 70%); pointer-events: none;"></div>
+
     <p class="section-label" style="color: var(--amber);">From the Seasonal Harvest</p>
     <h2 class="section-title" style="color: var(--cream);">Fresh from the orchard, <em style="color: var(--sage);">straight to the glass.</em></h2>
-    <p class="recipes-intro">Fresh from the garden, orchard, and kitchen — seasonal recipes, preserves, syrups, cocktails, and mocktails built around what's ripe right now. This summer: homegrown plums.</p>
+    <p class="recipes-intro">Fresh from the garden, orchard, and kitchen — explore seasonal recipes, preserves, syrups, cocktails, and mocktails built around what is ripe right now.</p>
 
-    <div class="recipe-grid">
-      <a href="plum-guide" class="recipe-card">
-        <div class="recipe-season" style="color: var(--amber);">Growing Guide</div>
-        <div class="recipe-name">Complete Plum Guide</div>
-        <div class="recipe-desc">Variety selection, planting, pruning, harvest timing, and everything the plum tree produces — from jam to syrup to cocktail.</div>
-        <span class="recipe-tag" style="border-color: rgba(201,135,58,0.4); color: var(--amber);">Garden · Tree Fruit · Season: Summer</span>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
+
+      <a href="plum-guide" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); transition: transform 0.25s, background 0.25s; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)';this.style.background='rgba(255,255,255,0.09)'" onmouseout="this.style.transform='';this.style.background='rgba(255,255,255,0.05)'">
+        <div style="overflow: hidden; aspect-ratio: 4/3;">
+          <img src="images/plum-guide.png" alt="Ripe purple plums hanging from a backyard plum tree ready for harvest" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform=''" />
+        </div>
+        <div style="padding: 1.5rem 1.5rem 1.75rem; flex: 1; display: flex; flex-direction: column;">
+          <p style="font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.6rem;">Growing Guide</p>
+          <p style="font-family: 'Playfair Display', serif; font-size: 1.15rem; font-style: italic; color: var(--cream); line-height: 1.3; margin-bottom: 0.65rem;">Complete Plum Guide</p>
+          <p style="font-size: 0.88rem; line-height: 1.65; color: rgba(245,240,232,0.82); flex: 1;">Variety selection, planting, pruning, and harvest timing — everything the plum tree produces, from jam to syrup to cocktail.</p>
+          <span style="display: inline-block; margin-top: 1.25rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber); border-bottom: 1px solid rgba(201,135,58,0.4); padding-bottom: 0.15rem;">Read the guide →</span>
+        </div>
       </a>
-      <a href="preserves-plum-jam" class="recipe-card">
-        <div class="recipe-season" style="color: var(--amber);">Preserves</div>
-        <div class="recipe-name">Homemade Plum Jam</div>
-        <div class="recipe-desc">From the tree to the jar. A full water-bath canning guide built around homegrown plums — with flavor variations and batch notes.</div>
-        <span class="recipe-tag" style="border-color: rgba(201,135,58,0.4); color: var(--amber);">Preserves · Canning · Makes 5–6 pints</span>
+
+      <a href="preserves-plum-jam" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); transition: transform 0.25s, background 0.25s; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)';this.style.background='rgba(255,255,255,0.09)'" onmouseout="this.style.transform='';this.style.background='rgba(255,255,255,0.05)'">
+        <div style="overflow: hidden; aspect-ratio: 4/3;">
+          <img src="images/plum-jam.png" alt="Jars of deep ruby homemade plum jam sealed and ready for the pantry shelf" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform=''" />
+        </div>
+        <div style="padding: 1.5rem 1.5rem 1.75rem; flex: 1; display: flex; flex-direction: column;">
+          <p style="font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.6rem;">Preserves</p>
+          <p style="font-family: 'Playfair Display', serif; font-size: 1.15rem; font-style: italic; color: var(--cream); line-height: 1.3; margin-bottom: 0.65rem;">Homemade Plum Jam</p>
+          <p style="font-size: 0.88rem; line-height: 1.65; color: rgba(245,240,232,0.82); flex: 1;">From the tree to the jar. A full water-bath canning guide with flavor variations, the plate test, and batch notes. Makes 5–6 pints.</p>
+          <span style="display: inline-block; margin-top: 1.25rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber); border-bottom: 1px solid rgba(201,135,58,0.4); padding-bottom: 0.15rem;">Full canning guide →</span>
+        </div>
       </a>
-      <a href="recipe-plum-simple-syrup" class="recipe-card">
-        <div class="recipe-season" style="color: var(--amber);">Bar Pantry</div>
-        <div class="recipe-name">Plum Simple Syrup</div>
-        <div class="recipe-desc">Pull a pound of plums before the jam sugar goes in. Twenty-five minutes and you have a jewel-toned syrup that bridges the orchard and the bar cart.</div>
-        <span class="recipe-tag" style="border-color: rgba(201,135,58,0.4); color: var(--amber);">Syrup · Garden to Glass · 25 min</span>
+
+      <a href="recipe-plum-simple-syrup" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); transition: transform 0.25s, background 0.25s; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)';this.style.background='rgba(255,255,255,0.09)'" onmouseout="this.style.transform='';this.style.background='rgba(255,255,255,0.05)'">
+        <div style="overflow: hidden; aspect-ratio: 4/3;">
+          <img src="images/plum-simple-syrup.png" alt="A jar of jewel-toned homemade plum simple syrup beside fresh plums" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform=''" />
+        </div>
+        <div style="padding: 1.5rem 1.5rem 1.75rem; flex: 1; display: flex; flex-direction: column;">
+          <p style="font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.6rem;">Bar Pantry · 25 min</p>
+          <p style="font-family: 'Playfair Display', serif; font-size: 1.15rem; font-style: italic; color: var(--cream); line-height: 1.3; margin-bottom: 0.65rem;">Plum Simple Syrup</p>
+          <p style="font-size: 0.88rem; line-height: 1.65; color: rgba(245,240,232,0.82); flex: 1;">Pull a pound of plums before the jam sugar goes in. Twenty-five minutes and you have a jewel-toned syrup that bridges the orchard and the bar cart.</p>
+          <span style="display: inline-block; margin-top: 1.25rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber); border-bottom: 1px solid rgba(201,135,58,0.4); padding-bottom: 0.15rem;">Syrup recipe →</span>
+        </div>
       </a>
-      <a href="cocktails-plum-bourbon-sour" class="recipe-card">
-        <div class="recipe-season" style="color: var(--amber);">Late Summer · Cocktail</div>
-        <div class="recipe-name">Plum Bourbon Sour</div>
-        <div class="recipe-desc">Stone fruit, oak, lemon, and a hint of smoke. Built around plum syrup from the same trees — the drink that closes the garden-to-glass loop.</div>
-        <span class="recipe-tag" style="border-color: rgba(201,135,58,0.4); color: var(--amber);">Cocktail · Bourbon · Spirit-Forward</span>
+
+      <a href="cocktails-plum-bourbon-sour" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); transition: transform 0.25s, background 0.25s; cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)';this.style.background='rgba(255,255,255,0.09)'" onmouseout="this.style.transform='';this.style.background='rgba(255,255,255,0.05)'">
+        <div style="overflow: hidden; aspect-ratio: 4/3;">
+          <img src="images/plum-bourbon-sour.png" alt="A Plum Bourbon Sour cocktail in a coupe glass with a deep purple hue from homegrown plum syrup" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform=''" />
+        </div>
+        <div style="padding: 1.5rem 1.5rem 1.75rem; flex: 1; display: flex; flex-direction: column;">
+          <p style="font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.6rem;">Cocktail · Late Summer</p>
+          <p style="font-family: 'Playfair Display', serif; font-size: 1.15rem; font-style: italic; color: var(--cream); line-height: 1.3; margin-bottom: 0.65rem;">Plum Bourbon Sour</p>
+          <p style="font-size: 0.88rem; line-height: 1.65; color: rgba(245,240,232,0.82); flex: 1;">Stone fruit, oak, lemon, and a hint of smoke. Built around plum syrup from the same trees — the drink that closes the garden-to-glass loop.</p>
+          <span style="display: inline-block; margin-top: 1.25rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber); border-bottom: 1px solid rgba(201,135,58,0.4); padding-bottom: 0.15rem;">Full recipe →</span>
+        </div>
       </a>
-      <a href="mocktails-sparkling-plum-mocktail" class="recipe-card">
-        <div class="recipe-season" style="color: var(--amber);">Late Summer · Alcohol-Free</div>
-        <div class="recipe-name">Sparkling Plum Mocktail</div>
-        <div class="recipe-desc">Plum syrup, fresh lemon, sparkling water, and a sprig of garden mint. Everything the harvest offers — no spirit required, all ages welcome.</div>
-        <span class="recipe-tag" style="border-color: rgba(122,148,104,0.4); color: var(--sage);">Mocktail · Alcohol-Free · All Ages</span>
-      </a>
-      <a href="how-to-harvest-preserve-plums" class="recipe-card">
-        <div class="recipe-season" style="color: var(--amber);">Garden Technique</div>
-        <div class="recipe-name">Harvest &amp; Preserve Plums</div>
-        <div class="recipe-desc">When to pick, how to process a full harvest, and the best preservation methods — jam, syrup, frozen, and infused spirits. Includes canning safety guidance.</div>
-        <span class="recipe-tag" style="border-color: rgba(201,135,58,0.4); color: var(--amber);">Guide · Preservation · Canning Safety</span>
-      </a>
+
+    </div>
+
+    <div style="margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+      <a href="mocktails-sparkling-plum-mocktail" style="font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,240,232,0.65); text-decoration: none; border: 1px solid rgba(255,255,255,0.15); padding: 0.5rem 1rem; transition: color 0.2s, border-color 0.2s;" onmouseover="this.style.color='var(--cream)';this.style.borderColor='rgba(255,255,255,0.4)'" onmouseout="this.style.color='rgba(245,240,232,0.65)';this.style.borderColor='rgba(255,255,255,0.15)'">Sparkling Plum Mocktail</a>
+      <a href="how-to-harvest-preserve-plums" style="font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,240,232,0.65); text-decoration: none; border: 1px solid rgba(255,255,255,0.15); padding: 0.5rem 1rem; transition: color 0.2s, border-color 0.2s;" onmouseover="this.style.color='var(--cream)';this.style.borderColor='rgba(255,255,255,0.4)'" onmouseout="this.style.color='rgba(245,240,232,0.65)';this.style.borderColor='rgba(255,255,255,0.15)'">Harvest &amp; Preserve Plums</a>
+      <a href="plum-guide" style="font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,240,232,0.65); text-decoration: none; border: 1px solid rgba(255,255,255,0.15); padding: 0.5rem 1rem; transition: color 0.2s, border-color 0.2s;" onmouseover="this.style.color='var(--cream)';this.style.borderColor='rgba(255,255,255,0.4)'" onmouseout="this.style.color='rgba(245,240,232,0.65)';this.style.borderColor='rgba(255,255,255,0.15)'">Full Plum Guide</a>
     </div>
   </section>
 
