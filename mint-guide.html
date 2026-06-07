@@ -391,6 +391,20 @@
     .footer-links a { font-family: "DM Mono", monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,240,232,0.72); text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: var(--sage); }
 
+    /* ── IMAGE RECIPE CARDS ── */
+    .img-card-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 2rem; }
+    .img-card { background: var(--cream); border: 1px solid rgba(59,42,26,0.1); display: flex; flex-direction: column; text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s; }
+    .img-card:hover { transform: translateY(-4px); box-shadow: 0 10px 32px rgba(59,42,26,0.12); }
+    .img-card-photo { width: 100%; aspect-ratio: 4 / 3; overflow: hidden; flex-shrink: 0; }
+    .img-card-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+    .img-card:hover .img-card-photo img { transform: scale(1.05); }
+    .img-card-body { padding: 1.25rem 1.25rem 1.5rem; flex: 1; display: flex; flex-direction: column; gap: 0.5rem; }
+    .img-card-eyebrow { font-family: "DM Mono", monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--terracotta); }
+    .img-card-title { font-family: "Playfair Display", serif; font-size: 1rem; font-weight: 700; font-style: italic; color: var(--bark); line-height: 1.3; }
+    .img-card-desc { font-size: 0.87rem; line-height: 1.65; color: rgba(30,22,14,0.7); flex: 1; }
+    .img-card-btn { margin-top: 1rem; display: inline-block; font-family: "DM Mono", monospace; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream); background: var(--moss); padding: 0.55rem 1rem; align-self: flex-start; transition: background 0.2s; }
+    .img-card:hover .img-card-btn { background: var(--bark); }
+
     /* ── ANIMATIONS ── */
     @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -407,12 +421,16 @@
       .technique-grid { grid-template-columns: 1fr; }
       .mistakes-grid { grid-template-columns: 1fr; }
       .drink-item { grid-template-columns: 1fr; gap: 0.5rem; }
+      .img-card-grid { grid-template-columns: repeat(2, 1fr); }
       .link-strip { padding: 2rem 1.75rem; }
     }
     @media (min-width: 600px) and (max-width: 900px) {
       .reasons-grid { grid-template-columns: repeat(2, 1fr); }
       .preserve-grid { grid-template-columns: repeat(2, 1fr); }
       .technique-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .img-card-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -944,6 +962,73 @@
         <span class="related-guide-soon">Coming soon</span>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ── EXPLORE MORE MINT RECIPES & GUIDES ── -->
+<section class="content-section alt" id="explore-more">
+  <p class="section-eyebrow">Explore more</p>
+  <h2 class="section-title">Mint Recipes <em>&amp; Guides</em></h2>
+  <p class="section-intro">One plant, four ways to use it. Every page below starts with the mint growing in your garden right now.</p>
+
+  <div class="img-card-grid">
+
+    <a href="how-to-harvest-preserve-mint" class="img-card">
+      <div class="img-card-photo">
+        <img src="images/harvest-preserve-mint.png"
+             alt="Freshly cut spearmint stems laid out on a wooden surface ready for drying or syrup making"
+             loading="lazy" />
+      </div>
+      <div class="img-card-body">
+        <p class="img-card-eyebrow">Garden Technique</p>
+        <p class="img-card-title">Harvest &amp; Preserve Mint</p>
+        <p class="img-card-desc">When to cut, how to store fresh stems, and the best ways to preserve a glut — syrup cubes, infusions, and what actually works in the freezer.</p>
+        <span class="img-card-btn">Read the guide</span>
+      </div>
+    </a>
+
+    <a href="recipe-mint-simple-syrup" class="img-card">
+      <div class="img-card-photo">
+        <img src="images/mint-simple-syrup.png"
+             alt="A jar of homemade mint simple syrup with fresh spearmint leaves beside it"
+             loading="lazy" />
+      </div>
+      <div class="img-card-body">
+        <p class="img-card-eyebrow">Bar Pantry · 20 min</p>
+        <p class="img-card-title">Mint Simple Syrup</p>
+        <p class="img-card-desc">The most useful thing you can make with fresh garden mint. Steep, strain, and keep in the fridge for three weeks — or freeze in cubes for winter.</p>
+        <span class="img-card-btn">Syrup recipe</span>
+      </div>
+    </a>
+
+    <a href="cocktails-garden-mojito" class="img-card">
+      <div class="img-card-photo">
+        <img src="images/garden-mojito.png"
+             alt="A Garden Mojito in a tall highball glass with a fresh spearmint sprig and lime wheel garnish"
+             loading="lazy" />
+      </div>
+      <div class="img-card-body">
+        <p class="img-card-eyebrow">Cocktail · Summer</p>
+        <p class="img-card-title">Garden Mojito</p>
+        <p class="img-card-desc">White rum, homegrown mint syrup, fresh lime, and soda. No muddling — cleaner flavor, consistent results, and everything from the garden.</p>
+        <span class="img-card-btn">Full cocktail recipe</span>
+      </div>
+    </a>
+
+    <a href="mocktails-sparkling-mint-limeade" class="img-card">
+      <div class="img-card-photo">
+        <img src="images/sparkling-mint-limeade.png"
+             alt="A Sparkling Mint Limeade in a tall glass with fresh garden mint and a lime wedge"
+             loading="lazy" />
+      </div>
+      <div class="img-card-body">
+        <p class="img-card-eyebrow">Mocktail · Alcohol-Free</p>
+        <p class="img-card-title">Sparkling Mint Limeade</p>
+        <p class="img-card-desc">Mint syrup, fresh lime juice, and sparkling water. One of the best things to come out of the garden all summer — no spirit needed.</p>
+        <span class="img-card-btn">Full recipe</span>
+      </div>
+    </a>
+
   </div>
 </section>
 
