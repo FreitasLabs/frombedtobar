@@ -197,7 +197,13 @@
     .footer-links { display: flex; gap: 1rem; list-style: none; flex-wrap: wrap; justify-content: center; margin-top: 0.75rem; }
     .footer-links a { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); text-decoration: none; opacity: 0.8; transition: opacity 0.2s; }
     .footer-links a:hover { opacity: 1; }
-  </style>
+
+    /* ── JUMP NAV ── */
+    .jump-nav { background: var(--bark); padding: 0.85rem 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); position: sticky; top: 64px; z-index: 90; }
+    .jump-nav-label { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,240,232,0.55); flex-shrink: 0; margin-right: 0.35rem; }
+    .jump-link { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(245,240,232,0.82); text-decoration: none; padding: 0.3rem 0.75rem; border: 1px solid rgba(255,255,255,0.15); transition: all 0.2s; white-space: nowrap; }
+    .jump-link:hover { background: var(--amber); color: var(--bark); border-color: var(--amber); }
+  </style></style>
 </head>
 <body>
 
@@ -247,13 +253,24 @@
 
   <div class="spec-strip">
     <div class="spec-item"><span class="spec-label">Spirit</span><span class="spec-value">None</span></div>
+
+
+
     <div class="spec-item"><span class="spec-label">Profile</span><span class="spec-value">Fruity, Tart, Bright</span></div>
     <div class="spec-item"><span class="spec-label">Glass</span><span class="spec-value">Highball</span></div>
     <div class="spec-item"><span class="spec-label">Season</span><span class="spec-value">Late Summer</span></div>
     <div class="spec-item"><span class="spec-label">All Ages</span><span class="spec-value">Yes</span></div>
   </div>
 
-  <div class="recipe-layout">
+  <div class="jump-nav">
+  <span class="jump-nav-label">Jump to:</span>
+  <a href="#instructions" class="jump-link">Instructions</a>
+  <a href="#variations" class="jump-link">Variations</a>
+  <a href="#batch" class="jump-link">Scale for a Crowd</a>
+  <a href="#cocktail" class="jump-link">Cocktail Version</a>
+</div>
+
+<div class="recipe-layout">
     <main>
       <div class="intro-text">
         <p>The plum harvest is generous to a fault — more fruit than most households can eat fresh, more than enough to put up jam and syrup and still have plenty left over. This drink exists to close the loop on the garden-to-glass story without a spirit in the middle. The plum syrup is doing all the work: color, sweetness, tartness, and the particular stone-fruit flavor that no store-bought ingredient matches.</p>
@@ -265,7 +282,7 @@
         <p>This mocktail uses the same plum syrup that goes into the <a href="cocktails-plum-bourbon-sour" style="color: var(--plum);">Plum Bourbon Sour</a>. Make one batch of syrup and you have ingredients for both. The cocktail and mocktail versions are more similar than different — the spirit adds warmth and structure, but the plum does the heavy lifting either way. See the full harvest-to-bar story on the <a href="plum-guide" style="color: var(--plum);">Plum Guide</a>.</p>
       </div>
 
-      <h2>Instructions</h2>
+      <h2 id="instructions">Instructions</h2>
       <ol class="steps-list">
         <li>Fill a tall highball glass with ice — pack it well. A well-chilled glass keeps the drink cold and maintains the carbonation of the sparkling water longer.</li>
         <li>Pour 1 oz of <a href="recipe-plum-simple-syrup" style="color: var(--plum);">homegrown plum simple syrup</a> over the ice. Follow with ¾ oz of fresh-squeezed lemon juice. Stir briefly — about 10 seconds — to combine.</li>
@@ -284,7 +301,7 @@
         Fresh garden mint cut within the hour is meaningfully different from mint that's been refrigerated for three days. The volatile aromatic oils that give mint its brightness degrade quickly after cutting. For the garnish on this drink — where the nose is directly over the mint with every sip — use the freshest sprig you have. See the <a href="how-to-harvest-preserve-mint" style="color: var(--plum); font-style:normal;">Mint Harvest Guide</a> for more on keeping cut mint fresh.
       </div>
 
-      <h2>Variations</h2>
+      <h2 id="variations">Variations</h2>
       <div class="variation-grid">
         <div class="variation-card">
           <div class="variation-name">Plum &amp; Ginger</div>
@@ -304,7 +321,7 @@
         </div>
       </div>
 
-      <h2>Scale for a Crowd</h2>
+      <h2 id="batch">Scale for a Crowd</h2>
       <div class="storage-grid">
         <div class="storage-cell header"><span>Serves</span></div>
         <div class="storage-cell header"><span>Plum Syrup</span></div>
@@ -321,7 +338,7 @@
       </div>
       <p style="font-size:0.85rem; color:var(--text-muted); font-style:italic; margin-top:0.75rem;">Pre-mix the syrup and lemon in a pitcher and refrigerate. Add sparkling water per glass at serving — adding it ahead kills the carbonation.</p>
 
-      <h2>Cocktail Version</h2>
+      <h2 id="cocktail">Cocktail Version</h2>
       <p style="font-size:0.95rem; line-height:1.8; color:var(--text-muted);">The cocktail version of this drink is the <a href="cocktails-plum-bourbon-sour" style="color:var(--plum);">Plum Bourbon Sour</a> — 2 oz bourbon, ¾ oz plum syrup, ¾ oz fresh lemon juice, optional amaro and egg white. The spirit adds structure and warmth, but the plum does the same work in both versions. Both use the same jar of syrup from the same trees. Must be 21 or older to consume alcohol. Please drink responsibly.</p>
 
       

@@ -279,7 +279,13 @@
     .footer-links { display: flex; gap: 1rem; list-style: none; flex-wrap: wrap; justify-content: center; margin-top: 0.75rem; }
     .footer-links a { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); text-decoration: none; opacity: 0.8; transition: opacity 0.2s; }
     .footer-links a:hover { opacity: 1; }
-  </style>
+
+    /* ── JUMP NAV ── */
+    .jump-nav { background: var(--bark); padding: 0.85rem 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); position: sticky; top: 64px; z-index: 90; }
+    .jump-nav-label { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,240,232,0.55); flex-shrink: 0; margin-right: 0.35rem; }
+    .jump-link { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(245,240,232,0.82); text-decoration: none; padding: 0.3rem 0.75rem; border: 1px solid rgba(255,255,255,0.15); transition: all 0.2s; white-space: nowrap; }
+    .jump-link:hover { background: var(--amber); color: var(--bark); border-color: var(--amber); }
+  </style></style>
 </head>
 <body>
 
@@ -314,6 +320,9 @@
     <a href="/">Home</a> &rsaquo; <a href="recipes">Recipes</a> &rsaquo; Plum Jam
   </div>
 
+
+
+
   <div class="recipe-hero">
     <div class="hero-tag">Garden Pantry &nbsp;·&nbsp; Preserves</div>
     <h1>Homemade Plum Jam</h1>
@@ -326,7 +335,19 @@
     </div>
   </div>
 
-  <div class="recipe-layout">
+  <div class="jump-nav">
+  <span class="jump-nav-label">Jump to:</span>
+  <a href="#prepare" class="jump-link">Prepare</a>
+  <a href="#cook-fruit" class="jump-link">Cook</a>
+  <a href="#add-sugar" class="jump-link">Add Sugar</a>
+  <a href="#jam-stage" class="jump-link">Jam Stage</a>
+  <a href="#test" class="jump-link">Test</a>
+  <a href="#finishing" class="jump-link">Finishing</a>
+  <a href="#canning" class="jump-link">Canning</a>
+  <a href="#storage" class="jump-link">Storage</a>
+</div>
+
+<div class="recipe-layout">
     <main>
       <div class="intro-text">
         <p>There's something about a backyard plum harvest that demands you do something with it. The trees don't ask whether you're ready — they just ripen. This jam is the answer for most of the fruit.</p>
@@ -345,7 +366,7 @@
         <p class="note">This combination gives you a rich, balanced plum flavor without pushing into candy-sweet. The cinnamon is subtle enough that you won't identify it — you'll just notice the jam tastes a little more like itself.</p>
       </div>
 
-      <h2>Step 1 — Prepare the Fruit</h2>
+      <h2 id="prepare">Step 1 — Prepare the Fruit</h2>
       <ol class="steps-list">
         <li>Wash plums thoroughly under cold water.</li>
         <li>Pit and cut into quarters or rough chunks. No need to peel — the skins add body and color.</li>
@@ -357,28 +378,28 @@
         Before adding anything else, set aside 1 lb of cut fruit in a separate pot. That becomes your <a href="recipe-plum-simple-syrup" style="color: var(--plum); font-style: normal;">Plum Simple Syrup</a> — same harvest, two products.
       </div>
 
-      <h2>Step 2 — Cook the Fruit</h2>
+      <h2 id="cook-fruit">Step 2 — Cook the Fruit</h2>
       <ol class="steps-list">
         <li>Add lemon juice and cinnamon stick if using.</li>
         <li>Cook over medium heat, stirring occasionally.</li>
         <li>After 15–20 minutes the fruit should be fully soft and beginning to break down. Press gently with your spoon to help it along.</li>
       </ol>
 
-      <h2>Step 3 — Add Sugar</h2>
+      <h2 id="add-sugar">Step 3 — Add Sugar</h2>
       <ol class="steps-list">
         <li>Gradually stir in sugar. Take your time — rushing this can cause scorching on the bottom.</li>
         <li>Stir until the sugar is fully dissolved before you increase the heat.</li>
         <li>Bring to a full rolling boil that can't be stirred down.</li>
       </ol>
 
-      <h2>Step 4 — Cook to Jam Stage</h2>
+      <h2 id="jam-stage">Step 4 — Cook to Jam Stage</h2>
       <ol class="steps-list">
         <li>Boil vigorously, stirring frequently. The mixture will spit — keep the heat managed and stay close.</li>
         <li>Continue cooking 20–35 minutes. The range depends on how much natural moisture your plums had.</li>
         <li>Skim foam from the surface if desired. This is cosmetic — it doesn't affect the flavor or safety of the jam.</li>
       </ol>
 
-      <h2>Step 5 — Test for Doneness</h2>
+      <h2 id="test">Step 5 — Test for Doneness</h2>
       <ol class="steps-list">
         <li>Before you start cooking, put a small plate in the freezer.</li>
         <li>When you think the jam might be done, drop a small spoonful onto the cold plate.</li>
@@ -391,14 +412,14 @@
         The plate test is reliable. If you have a candy thermometer, you're looking for 220&deg;F (104&deg;C) at sea level. Adjust down about 2&deg;F for every 1,000 feet of elevation.
       </div>
 
-      <h2>Finishing the Jam</h2>
+      <h2 id="finishing">Finishing the Jam</h2>
       <ol class="steps-list">
         <li>Remove from heat and pull out the cinnamon stick.</li>
         <li>Stir in vanilla extract, almond extract, or bourbon if using. Adding these off-heat preserves more of their flavor.</li>
         <li>Let stand 5 minutes, then stir gently before filling jars. This helps distribute the fruit evenly.</li>
       </ol>
 
-      <h2>Water-Bath Canning</h2>
+      <h2 id="canning">Water-Bath Canning</h2>
       <ol class="steps-list">
         <li>Ladle hot jam into hot sterilized jars, leaving 1/4-inch headspace.</li>
         <li>Wipe jar rims clean with a damp cloth. Any residue on the rim can prevent a proper seal.</li>
@@ -412,7 +433,7 @@
         Processing times assume sea level. If you're above 1,000 feet, adjust according to current USDA guidelines — add 1 minute for every 1,000 feet up to 6,000 feet, then 2 minutes per 1,000 feet above that.
       </div>
 
-      <h2>Storage</h2>
+      <h2 id="storage">Storage</h2>
       <div class="storage-grid">
         <div class="storage-cell header"><span>Where</span></div>
         <div class="storage-cell header"><span>How Long</span></div>
@@ -428,7 +449,7 @@
         <div class="storage-cell"><p>Leave 1/2-inch headspace in freezer-safe containers.</p></div>
       </div>
 
-      <h2>Batch Notes</h2>
+      <h2 id="batch-notes">Batch Notes</h2>
       <div class="batch-notes">
         <h3>Keep track of your batches</h3>
         <div class="notes-grid">

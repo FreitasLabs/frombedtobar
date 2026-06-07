@@ -243,7 +243,13 @@
     .footer-links { display: flex; gap: 1rem; list-style: none; flex-wrap: wrap; justify-content: center; margin-top: 0.75rem; }
     .footer-links a { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); text-decoration: none; opacity: 0.8; transition: opacity 0.2s; }
     .footer-links a:hover { opacity: 1; }
-  </style>
+
+    /* ── JUMP NAV ── */
+    .jump-nav { background: var(--bark); padding: 0.85rem 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); position: sticky; top: 64px; z-index: 90; }
+    .jump-nav-label { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,240,232,0.55); flex-shrink: 0; margin-right: 0.35rem; }
+    .jump-link { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(245,240,232,0.82); text-decoration: none; padding: 0.3rem 0.75rem; border: 1px solid rgba(255,255,255,0.15); transition: all 0.2s; white-space: nowrap; }
+    .jump-link:hover { background: var(--amber); color: var(--bark); border-color: var(--amber); }
+  </style></style>
 </head>
 <body>
 
@@ -291,6 +297,9 @@
       <span class="spec-label">Spirit</span>
       <span class="spec-value">Bourbon</span>
     </div>
+
+
+
     <div class="spec-item">
       <span class="spec-label">Profile</span>
       <span class="spec-value">Fruity, Tart, Oak</span>
@@ -313,14 +322,21 @@
     <a href="/">Home</a> &rsaquo; <a href="recipes">Recipes</a> &rsaquo; Plum Bourbon Sour
   </div>
 
-  <div class="recipe-layout">
+  <div class="jump-nav">
+  <span class="jump-nav-label">Jump to:</span>
+  <a href="#how-to-make" class="jump-link">How to Make It</a>
+  <a href="#bourbon" class="jump-link">Which Bourbon</a>
+  <a href="#variations" class="jump-link">Variations</a>
+</div>
+
+<div class="recipe-layout">
     <main>
       <div class="intro-text">
         <p>A Whiskey Sour is one of the most honest cocktails there is: spirit, citrus, sweetener. The ratio matters more than the ingredients. When the sweetener is homegrown plum syrup — made from the same trees that fill your yard every August — it stops being a variation and starts being its own thing.</p>
         <p>The plum syrup does three jobs in this drink: it sweetens, it adds color (a deep rose-burgundy that looks like the fruit looks), and it brings a slight tartness that lifts the citrus without fighting the bourbon. The amaro is optional but worth it — it adds a herbal bitter note that keeps the drink from going sweet.</p>
       </div>
 
-      <h2>How to Make It</h2>
+      <h2 id="how-to-make">How to Make It</h2>
 
       <div class="egg-notice">
         <strong>On the egg white:</strong> This recipe includes an optional egg white, which creates a silky texture and the foam that holds the bitters pattern on top. Raw egg carries a small food safety risk. Skip it if you prefer — the drink is excellent either way. See our <a href="disclaimer" style="color: var(--plum);">disclaimer page</a> for more information.
@@ -340,7 +356,7 @@
         Fresh-squeezed only. Bottled lemon juice has a cooked, flat quality that makes the whole drink taste off. This cocktail only has a handful of ingredients — each one carries its weight.
       </div>
 
-      <h2>Which Bourbon to Use</h2>
+      <h2 id="bourbon">Which Bourbon to Use</h2>
       <p style="font-size:0.92rem; margin-bottom:1rem; color:var(--text-muted);">The plum syrup has stone fruit, a little vanilla, and slight tartness. You want a bourbon that works with that, not against it.</p>
       <div class="bourbon-grid">
         <div class="bourbon-card">
@@ -365,7 +381,7 @@
         </div>
       </div>
 
-      <h2>Variations</h2>
+      <h2 id="variations">Variations</h2>
       <ul class="variation-list">
         <li><strong>Smoked Plum Sour</strong> — Smoke the glass before pouring: invert a rocks glass over a lit piece of cinnamon stick or cedar chip for 20–30 seconds. Wipe dry and pour the cocktail in. The smoke lingers in the first sip.</li>
         <li><strong>Plum &amp; Thyme Sour</strong> — Add a sprig of fresh thyme to the shaker with the other ingredients. Strain it out. It adds an herbal note that makes the plum taste more like a garden and less like a juice bar.</li>

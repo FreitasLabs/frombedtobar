@@ -334,7 +334,13 @@
     .footer-links { display: flex; gap: 1rem; list-style: none; flex-wrap: wrap; justify-content: center; margin-top: 0.75rem; }
     .footer-links a { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); text-decoration: none; opacity: 0.8; transition: opacity 0.2s; }
     .footer-links a:hover { opacity: 1; }
-  </style>
+
+    /* ── JUMP NAV ── */
+    .jump-nav { background: var(--bark); padding: 0.85rem 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); position: sticky; top: 64px; z-index: 90; }
+    .jump-nav-label { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,240,232,0.55); flex-shrink: 0; margin-right: 0.35rem; }
+    .jump-link { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(245,240,232,0.82); text-decoration: none; padding: 0.3rem 0.75rem; border: 1px solid rgba(255,255,255,0.15); transition: all 0.2s; white-space: nowrap; }
+    .jump-link:hover { background: var(--amber); color: var(--bark); border-color: var(--amber); }
+  </style></style>
 </head>
 <body>
 
@@ -371,6 +377,9 @@
     <a href="/">Home</a> &rsaquo; <a href="recipes">Recipes</a> &rsaquo; Plum Simple Syrup
   </div>
 
+
+
+
   <div class="recipe-hero">
     <div class="hero-tag">Garden Pantry &nbsp;·&nbsp; Cocktail Syrup</div>
     <h1>Homegrown Plum Simple Syrup</h1>
@@ -383,7 +392,14 @@
     </div>
   </div>
 
-  <div class="recipe-layout">
+  <div class="jump-nav">
+  <span class="jump-nav-label">Jump to:</span>
+  <a href="#instructions" class="jump-link">Instructions</a>
+  <a href="#how-to-use" class="jump-link">How to Use It</a>
+  <a href="#variations" class="jump-link">Make It Your Own</a>
+</div>
+
+<div class="recipe-layout">
     <main>
       <div class="intro-text">
         <p>When the plum trees come in, they come in hard. After putting up a batch of jam, the best thing you can do with the rest of the harvest is cook it down into a syrup — deep, jewel-toned, and tasting of August in a bottle.</p>
@@ -394,7 +410,7 @@
         <strong>From the same trees.</strong> If you're making plum jam this season, set aside a pound or two before adding the sugar. The syrup and the jam come from the same batch of fruit — and the syrup becomes a cocktail ingredient on its own. See how they connect on the <a href="preserves-plum-jam" style="color: var(--plum);">Plum Jam page</a> and the <a href="cocktails-plum-bourbon-sour" style="color: var(--plum);">Plum Bourbon Sour page</a>.
       </div>
 
-      <h2>Instructions</h2>
+      <h2 id="instructions">Instructions</h2>
       <ol class="steps-list">
         <li>Wash and pit the plums. No need to peel. Cut into rough quarters.</li>
         <li>Combine the plums, water, and sugar in a medium saucepan over medium heat.</li>
@@ -410,7 +426,7 @@
         This syrup works with any variety of plum from your trees. Darker-skinned varieties like Santa Rosa or Friar will give you a deeper color and slightly more tannic finish, which holds up better in spirit-forward cocktails. Lighter varieties lean sweeter and work beautifully in sparkling drinks.
       </div>
 
-      <h2>How to Use It</h2>
+      <h2 id="how-to-use">How to Use It</h2>
       <ol class="steps-list">
         <li><strong>In cocktails:</strong> Substitute 3/4 oz of this syrup anywhere a recipe calls for simple syrup. It adds color, fruit, and a subtle tartness.</li>
         <li><strong>In mocktails:</strong> Combine 1 oz syrup with 4 oz sparkling water and a squeeze of lemon for an instant garden soda.</li>
@@ -418,7 +434,7 @@
         <li><strong>As a gift:</strong> Pour into small swing-top bottles and label with the variety and date. A jar of homegrown plum syrup is a better gift than almost anything you could buy.</li>
       </ol>
 
-      <h2>Make It Your Own</h2>
+      <h2 id="variations">Make It Your Own</h2>
       <ol class="steps-list">
         <li><strong>Add spice:</strong> Drop in a cinnamon stick or two star anise while cooking. Remove before straining.</li>
         <li><strong>Go floral:</strong> A few sprigs of fresh thyme during the last 5 minutes adds an herbal note that pairs especially well with gin or vodka drinks.</li>
