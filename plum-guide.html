@@ -310,6 +310,20 @@
     .footer-links a { font-family: "DM Mono", monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,240,232,0.72); text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: var(--sage); }
 
+    /* ── IMAGE RECIPE CARDS ── */
+    .img-card-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.25rem; margin-top: 2rem; }
+    .img-card { background: var(--cream); border: 1px solid rgba(59,42,26,0.1); display: flex; flex-direction: column; text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s; }
+    .img-card:hover { transform: translateY(-4px); box-shadow: 0 10px 32px rgba(59,42,26,0.12); }
+    .img-card-photo { width: 100%; aspect-ratio: 4 / 3; overflow: hidden; flex-shrink: 0; }
+    .img-card-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+    .img-card:hover .img-card-photo img { transform: scale(1.05); }
+    .img-card-body { padding: 1.25rem 1.25rem 1.5rem; flex: 1; display: flex; flex-direction: column; gap: 0.5rem; }
+    .img-card-eyebrow { font-family: "DM Mono", monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--terracotta); }
+    .img-card-title { font-family: "Playfair Display", serif; font-size: 1rem; font-weight: 700; font-style: italic; color: var(--bark); line-height: 1.3; }
+    .img-card-desc { font-size: 0.87rem; line-height: 1.65; color: rgba(30,22,14,0.7); flex: 1; }
+    .img-card-btn { margin-top: 1rem; display: inline-block; font-family: "DM Mono", monospace; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream); background: var(--moss); padding: 0.55rem 1rem; align-self: flex-start; transition: background 0.2s; }
+    .img-card:hover .img-card-btn { background: var(--bark); }
+
     @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
     @media (max-width: 900px) {
@@ -323,6 +337,7 @@
       .uses-grid { grid-template-columns: 1fr; }
       .mistakes-grid { grid-template-columns: 1fr; }
       .crosslink-grid { grid-template-columns: 1fr; }
+      .img-card-grid { grid-template-columns: repeat(2, 1fr); }
       .link-strip { padding: 2rem 1.75rem; }
       .harvest-step { grid-template-columns: 2.5rem 1fr; }
     }
@@ -331,6 +346,10 @@
       .uses-grid { grid-template-columns: repeat(2, 1fr); }
       .mistakes-grid { grid-template-columns: repeat(2, 1fr); }
       .crosslink-grid { grid-template-columns: repeat(2, 1fr); }
+      .img-card-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .img-card-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -828,6 +847,87 @@
       <div class="crosslink-title">Planting Guide</div>
       <div class="crosslink-desc">Zone-by-zone calendar — when to plant, what to plant alongside, and how to sequence the bar garden across the year.</div>
     </a>
+  </div>
+</section>
+
+<!-- ── EXPLORE MORE ── -->
+<section class="content-section" id="explore-more">
+  <p class="section-eyebrow">Explore more</p>
+  <h2 class="section-title">Plum Recipes <em>&amp; Guides</em></h2>
+  <p class="section-intro">One harvest, five directions. Every page below starts with the same plums from your trees.</p>
+
+  <div class="img-card-grid">
+
+    <a href="how-to-harvest-preserve-plums" class="img-card">
+      <div class="img-card-photo">
+        <img src="images/harvest-preserve-plums.png"
+             alt="Freshly picked plums being sorted in a colander, ready for processing into jam and syrup"
+             loading="lazy" />
+      </div>
+      <div class="img-card-body">
+        <p class="img-card-eyebrow">Garden Technique</p>
+        <p class="img-card-title">Harvest &amp; Preserve Plums</p>
+        <p class="img-card-desc">When to pick, how to handle a full harvest, and the best preservation methods — jam, syrup, freezing, and infused spirits.</p>
+        <span class="img-card-btn">Read the guide</span>
+      </div>
+    </a>
+
+    <a href="preserves-plum-jam" class="img-card">
+      <div class="img-card-photo">
+        <img src="images/plum-jam.png"
+             alt="Jars of deep ruby homemade plum jam sealed and cooling after water-bath canning"
+             loading="lazy" />
+      </div>
+      <div class="img-card-body">
+        <p class="img-card-eyebrow">Preserves · Canning</p>
+        <p class="img-card-title">Homemade Plum Jam</p>
+        <p class="img-card-desc">From the tree to the jar. A full water-bath canning guide with flavor variations, the plate test, and batch notes.</p>
+        <span class="img-card-btn">Full canning guide</span>
+      </div>
+    </a>
+
+    <a href="recipe-plum-simple-syrup" class="img-card">
+      <div class="img-card-photo">
+        <img src="images/plum-simple-syrup.png"
+             alt="A jar of jewel-toned homemade plum simple syrup beside a handful of fresh plums"
+             loading="lazy" />
+      </div>
+      <div class="img-card-body">
+        <p class="img-card-eyebrow">Bar Pantry · 25 min</p>
+        <p class="img-card-title">Plum Simple Syrup</p>
+        <p class="img-card-desc">Pull a pound before the jam sugar goes in. Twenty-five minutes and you have the cocktail ingredient of the season.</p>
+        <span class="img-card-btn">Syrup recipe</span>
+      </div>
+    </a>
+
+    <a href="cocktails-plum-bourbon-sour" class="img-card">
+      <div class="img-card-photo">
+        <img src="images/plum-bourbon-sour.png"
+             alt="A Plum Bourbon Sour in a coupe glass with a deep purple hue and Angostura bitters pattern on the foam"
+             loading="lazy" />
+      </div>
+      <div class="img-card-body">
+        <p class="img-card-eyebrow">Cocktail · Late Summer</p>
+        <p class="img-card-title">Plum Bourbon Sour</p>
+        <p class="img-card-desc">Stone fruit, oak, lemon, and a hint of smoke. The drink that closes the garden-to-glass loop.</p>
+        <span class="img-card-btn">Full cocktail recipe</span>
+      </div>
+    </a>
+
+    <a href="mocktails-sparkling-plum-mocktail" class="img-card">
+      <div class="img-card-photo">
+        <img src="images/sparkling-plum-mocktail.png"
+             alt="A Sparkling Plum Mocktail in a tall glass with a lemon wheel garnish and garden mint"
+             loading="lazy" />
+      </div>
+      <div class="img-card-body">
+        <p class="img-card-eyebrow">Mocktail · Alcohol-Free</p>
+        <p class="img-card-title">Sparkling Plum Mocktail</p>
+        <p class="img-card-desc">Plum syrup, fresh lemon, sparkling water, garden mint. Everything the harvest offers — no spirit needed.</p>
+        <span class="img-card-btn">Full recipe</span>
+      </div>
+    </a>
+
   </div>
 </section>
 
