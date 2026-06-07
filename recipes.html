@@ -396,6 +396,38 @@
         padding-left: calc(2rem - 3px);
       }
     }
+
+    /* ── IMAGE CARDS ── */
+    .card-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .recipe-card:hover .card-image img {
+      transform: scale(1.04);
+    }
+    .card-link-btn {
+      display: inline-block;
+      margin-top: 0.65rem;
+      font-family: "DM Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--moss);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(74,94,58,0.35);
+      padding-bottom: 0.1rem;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .card-link-btn:hover { color: var(--terracotta); border-color: var(--terracotta); }
   </style>
 </head>
 <body>
@@ -964,7 +996,9 @@
 
   <!-- ── PLUM CLUSTER CARDS ── -->
   <div class="recipe-card" data-tags="cocktail" data-name="Plum Bourbon Sour" data-season="summer" data-spirit="bourbon" data-ingredients="plum lemon bourbon" data-garden="2" data-order="15" data-inseason="true">
-    <div class="card-top" data-emoji="🍑">
+    
+      <div class="card-image"><img src="images/plum-bourbon-sour.png" alt="A Plum Bourbon Sour in a coupe glass showing a deep purple hue" loading="lazy" /></div>
+      <div class="card-top" data-emoji="🍑">
       <div class="card-number">No. 12 · Late Summer · Seasonal</div>
       <div class="card-name">Plum Bourbon Sour</div>
     </div>
@@ -1003,11 +1037,14 @@
         <span class="garden-note-icon">🌱</span>
         <span class="garden-note-text">Built from homegrown plums — tree to glass. <a href="cocktails-plum-bourbon-sour" style="color:var(--moss);text-decoration:underline;font-size:0.75rem;">Full recipe →</a> · <a href="plum-guide" style="color:var(--moss);text-decoration:underline;font-size:0.75rem;">Plum Guide →</a></span>
       </div>
-    </div>
+    <a href="cocktails-plum-bourbon-sour" class="card-link-btn">Full cocktail recipe →</a>
+      </div>
   </div>
 
   <div class="recipe-card" data-tags="mocktail" data-name="Sparkling Plum Mocktail" data-season="summer" data-spirit="none" data-ingredients="plum lemon mint" data-garden="2" data-order="16" data-inseason="true">
-    <div class="card-top" data-emoji="🌿">
+    
+      <div class="card-image"><img src="images/sparkling-plum-mocktail.png" alt="A Sparkling Plum Mocktail in a tall glass with a lemon wheel garnish" loading="lazy" /></div>
+      <div class="card-top" data-emoji="🌿">
       <div class="card-number">No. 13 · Late Summer · Alcohol-Free</div>
       <div class="card-name">Sparkling Plum Mocktail</div>
     </div>
@@ -1035,11 +1072,14 @@
         <span class="garden-note-icon">🌱</span>
         <span class="garden-note-text">Plum tree to glass — no spirit needed. <a href="mocktails-sparkling-plum-mocktail" style="color:var(--moss);text-decoration:underline;font-size:0.75rem;">Full recipe →</a> · <a href="plum-guide" style="color:var(--moss);text-decoration:underline;font-size:0.75rem;">Plum Guide →</a></span>
       </div>
-    </div>
+    <a href="mocktails-sparkling-plum-mocktail" class="card-link-btn">Full recipe →</a>
+      </div>
   </div>
 
   <div class="recipe-card" data-tags="syrup" data-name="Plum Simple Syrup" data-season="summer" data-spirit="none" data-ingredients="plum lemon" data-garden="2" data-order="17" data-inseason="true">
-    <div class="card-top" data-emoji="🫙" style="background:var(--terracotta);">
+    
+      <div class="card-image"><img src="images/plum-simple-syrup.png" alt="A jar of jewel-toned homemade plum simple syrup beside fresh plums" loading="lazy" /></div>
+      <div class="card-top" data-emoji="🫙" style="background:var(--terracotta);">
       <div class="card-number">Syrup · Late Summer · Seasonal</div>
       <div class="card-name">Plum Simple Syrup</div>
     </div>
@@ -1066,11 +1106,14 @@
         <span class="garden-note-icon">🌱</span>
         <span class="garden-note-text">From the same plum trees. <a href="recipe-plum-simple-syrup" style="color:var(--moss);text-decoration:underline;font-size:0.75rem;">Full syrup recipe →</a> · <a href="preserves-plum-jam" style="color:var(--moss);text-decoration:underline;font-size:0.75rem;">Also: Plum Jam →</a></span>
       </div>
-    </div>
+    <a href="recipe-plum-simple-syrup" class="card-link-btn">Full syrup recipe →</a>
+      </div>
   </div>
 
   <div class="recipe-card" data-tags="syrup" data-name="Homemade Plum Jam" data-season="summer" data-spirit="none" data-ingredients="plum lemon sugar" data-garden="2" data-order="18" data-inseason="true">
-    <div class="card-top" data-emoji="🫙" style="background:var(--terracotta);">
+    
+      <div class="card-image"><img src="images/plum-jam.png" alt="Jars of deep ruby homemade plum jam sealed and ready for the pantry" loading="lazy" /></div>
+      <div class="card-top" data-emoji="🫙" style="background:var(--terracotta);">
       <div class="card-number">Preserves · Late Summer · Canning</div>
       <div class="card-name">Homemade Plum Jam</div>
     </div>
@@ -1098,12 +1141,15 @@
         <span class="garden-note-icon">🌱</span>
         <span class="garden-note-text">From the tree to the jar. <a href="preserves-plum-jam" style="color:var(--moss);text-decoration:underline;font-size:0.75rem;">Full canning guide →</a> · <a href="how-to-harvest-preserve-plums" style="color:var(--moss);text-decoration:underline;font-size:0.75rem;">Harvest guide →</a></span>
       </div>
-    </div>
+    <a href="preserves-plum-jam" class="card-link-btn">Full canning guide →</a>
+      </div>
   </div>
 
   <!-- Garden Mojito -->
   <div class="recipe-card" data-tags="cocktail" data-name="Garden Mojito" data-season="summer" data-spirit="rum" data-ingredients="mint lime rum" data-garden="2" data-order="17" data-inseason="true">
-    <div class="card-top" data-emoji="🍹">
+    
+      <div class="card-image"><img src="images/garden-mojito.png" alt="A Garden Mojito in a highball glass with fresh spearmint garnish" loading="lazy" /></div>
+      <div class="card-top" data-emoji="🍹">
       <div class="card-number">No. 14 · Summer</div>
       <div class="card-name">Garden Mojito</div>
     </div>
@@ -1141,12 +1187,15 @@
         <span class="garden-note-icon">🌱</span>
         <span class="garden-note-text">Spearmint from the garden, harvested the same morning. <a href="cocktails-garden-mojito" style="color:var(--moss);text-decoration:underline;font-size:0.75rem;">Full recipe →</a></span>
       </div>
-    </div>
+    <a href="cocktails-garden-mojito" class="card-link-btn">Full cocktail recipe →</a>
+      </div>
   </div>
 
   <!-- Sparkling Mint Limeade -->
   <div class="recipe-card" data-tags="mocktail" data-name="Sparkling Mint Limeade" data-season="summer" data-spirit="none" data-ingredients="mint lime" data-garden="2" data-order="18" data-inseason="true">
-    <div class="card-top" data-emoji="🌿">
+    
+      <div class="card-image"><img src="images/sparkling-mint-limeade.png" alt="A Sparkling Mint Limeade in a highball glass with fresh mint and lime" loading="lazy" /></div>
+      <div class="card-top" data-emoji="🌿">
       <div class="card-number">No. 15 · Summer · Alcohol-Free</div>
       <div class="card-name">Sparkling Mint Limeade</div>
     </div>
@@ -1173,12 +1222,15 @@
         <span class="garden-note-icon">🌱</span>
         <span class="garden-note-text">Garden mint, fresh lime, and bubbles. Naturally alcohol-free. <a href="mocktails-sparkling-mint-limeade" style="color:var(--moss);text-decoration:underline;font-size:0.75rem;">Full recipe →</a></span>
       </div>
-    </div>
+    <a href="mocktails-sparkling-mint-limeade" class="card-link-btn">Full recipe →</a>
+      </div>
   </div>
 
   <!-- Mint Syrup -->
   <div class="recipe-card" data-tags="syrup" data-name="Mint Syrup" data-season="all" data-spirit="none" data-ingredients="mint" data-garden="1" data-order="12" data-inseason="true">
-    <div class="card-top" data-emoji="🌿" style="background:var(--terracotta);">
+    
+      <div class="card-image"><img src="images/mint-simple-syrup.png" alt="Fresh garden spearmint beside a jar of homemade mint simple syrup" loading="lazy" /></div>
+      <div class="card-top" data-emoji="🌿" style="background:var(--terracotta);">
       <div class="card-number">Syrup · Year-Round</div>
       <div class="card-name">Mint Syrup</div>
     </div>
@@ -1193,7 +1245,8 @@
         <span class="garden-note-icon">🌱</span>
         <span class="garden-note-text">Mint runs May–October. Pot it separately — it spreads. Keeps 2–3 weeks refrigerated. <a href="recipe-mint-simple-syrup" style="color:var(--terracotta);">Full syrup recipe →</a> · <a href="mint-guide" style="color:var(--terracotta);">Mint Guide →</a></span>
       </div>
-    </div>
+    <a href="recipe-mint-simple-syrup" class="card-link-btn">Full syrup recipe →</a>
+      </div>
   </div>
 
   <!-- Thyme & Rosemary Syrup -->
