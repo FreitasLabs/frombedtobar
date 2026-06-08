@@ -32,336 +32,190 @@
       --rule: #d4c4b0;
     }
 
-    body {
-      font-family: 'Lora', Georgia, serif;
-      background: var(--cream);
-      color: var(--text);
-      line-height: 1.7;
-    }
+    body { font-family: 'Lora', Georgia, serif; background: var(--cream); color: var(--text); line-height: 1.7; }
 
-    /* NAV */
-    nav {
-      background: var(--bark);
-      padding: 0 1.5rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-    }
-    .nav-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--cream);
-      text-decoration: none;
-      letter-spacing: 0.01em;
-    }
+    nav { background: var(--bark); padding: 0 1.5rem; position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--cream); text-decoration: none; letter-spacing: 0.01em; }
     .nav-links { display: flex; gap: 1.75rem; list-style: none; }
-    .nav-links a {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.72rem;
-      color: var(--cream-dark);
-      text-decoration: none;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      opacity: 0.85;
-      transition: opacity 0.2s;
-    }
+    .nav-links a { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--cream-dark); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.85; transition: opacity 0.2s; }
     .nav-links a:hover { opacity: 1; color: var(--amber); }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
     .hamburger span { width: 24px; height: 2px; background: var(--cream); border-radius: 2px; transition: 0.3s; }
-    .mobile-menu {
-      display: none; position: fixed; top: 64px; left: 0; right: 0;
-      background: var(--bark); padding: 1.5rem; z-index: 99;
-      flex-direction: column; gap: 1.2rem; border-top: 1px solid rgba(255,255,255,0.1);
-    }
+    .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--bark); padding: 1.5rem; z-index: 99; flex-direction: column; gap: 1.2rem; border-top: 1px solid rgba(255,255,255,0.1); }
     .mobile-menu.open { display: flex; }
-    .mobile-menu a {
-      font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--cream-dark);
-      text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase;
-    }
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-    }
+    .mobile-menu a { font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--cream-dark); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; }
+    @media (max-width: 768px) { .nav-links { display: none; } .hamburger { display: flex; } }
 
-    /* HERO */
-    .recipe-hero {
-      background: linear-gradient(160deg, var(--plum) 0%, var(--bark) 60%, var(--moss-dark) 100%);
-      color: var(--cream);
-      padding: 4rem 1.5rem 3rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .recipe-hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 50% 0%, rgba(90,45,90,0.4) 0%, transparent 70%);
-    }
-    .hero-tag {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--amber);
-      margin-bottom: 0.75rem;
-      position: relative;
-    }
-    .recipe-hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 700;
-      line-height: 1.15;
-      margin-bottom: 1rem;
-      position: relative;
-    }
-    .recipe-hero .subtitle {
-      font-style: italic;
-      font-size: 1.05rem;
-      color: rgba(245,240,232,0.8);
-      max-width: 520px;
-      margin: 0 auto 1.5rem;
-      position: relative;
-    }
-    .meta-row {
-      display: flex; flex-wrap: wrap; justify-content: center;
-      gap: 1.5rem; font-family: 'DM Mono', monospace;
-      font-size: 0.72rem; letter-spacing: 0.08em;
-      color: rgba(245,240,232,0.7); position: relative;
-    }
+    .recipe-hero { background: linear-gradient(160deg, var(--plum) 0%, var(--bark) 60%, var(--moss-dark) 100%); color: var(--cream); padding: 4rem 1.5rem 3rem; text-align: center; position: relative; overflow: hidden; }
+    .recipe-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(90,45,90,0.4) 0%, transparent 70%); }
+    .hero-tag { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.75rem; position: relative; }
+    .recipe-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.15; margin-bottom: 1rem; position: relative; }
+    .recipe-hero .subtitle { font-style: italic; font-size: 1.05rem; color: rgba(245,240,232,0.8); max-width: 520px; margin: 0 auto 1.5rem; position: relative; }
+    .meta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.08em; color: rgba(245,240,232,0.7); position: relative; }
     .meta-row span { display: flex; align-items: center; gap: 0.4rem; }
 
-    /* BREADCRUMB */
-    .breadcrumb {
-      background: var(--cream-dark);
-      border-bottom: 1px solid var(--rule);
-      padding: 0.6rem 1.5rem;
-      font-family: 'DM Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.06em;
-      color: var(--text-muted);
-    }
+    .breadcrumb { background: var(--cream-dark); border-bottom: 1px solid var(--rule); padding: 0.6rem 1.5rem; font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.06em; color: var(--text-muted); }
     .breadcrumb a { color: var(--moss); text-decoration: none; }
     .breadcrumb a:hover { text-decoration: underline; }
 
-    /* LAYOUT */
-    .recipe-layout {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-      display: grid;
-      grid-template-columns: 1fr 280px;
-      gap: 3rem;
-      align-items: start;
-    }
-    @media (max-width: 720px) {
-      .recipe-layout { grid-template-columns: 1fr; gap: 2rem; }
-    }
+    .recipe-layout { max-width: 900px; margin: 0 auto; padding: 3rem 1.5rem; display: grid; grid-template-columns: 1fr 280px; gap: 3rem; align-items: start; }
+    @media (max-width: 720px) { .recipe-layout { grid-template-columns: 1fr; gap: 2rem; } }
 
-    /* SIDEBAR */
-    .sidebar-card {
-      background: white;
-      border: 1px solid var(--rule);
-      border-radius: 4px;
-      padding: 1.5rem;
-      position: sticky;
-      top: 80px;
-    }
-    .sidebar-card h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      color: var(--bark);
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--plum);
-    }
+    .sidebar-card { background: white; border: 1px solid var(--rule); border-radius: 4px; padding: 1.5rem; position: sticky; top: 80px; }
+    .sidebar-card h3 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--bark); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--plum); }
     .ingredient-list { list-style: none; }
-    .ingredient-list li {
-      font-size: 0.88rem;
-      padding: 0.4rem 0;
-      border-bottom: 1px dotted var(--rule);
-      color: var(--text);
-      display: flex;
-      gap: 0.5rem;
-    }
+    .ingredient-list li { font-size: 0.88rem; padding: 0.4rem 0; border-bottom: 1px dotted var(--rule); color: var(--text); display: flex; gap: 0.5rem; line-height: 1.4; }
     .ingredient-list li:last-child { border-bottom: none; }
-    .ingredient-list li::before {
-      content: '◆';
-      color: var(--plum);
-      font-size: 0.5rem;
-      margin-top: 0.35rem;
-      flex-shrink: 0;
-    }
-    .yield-box {
-      margin-top: 1.25rem;
-      background: var(--cream);
-      border-left: 3px solid var(--amber);
-      padding: 0.75rem 1rem;
-      font-size: 0.83rem;
-      color: var(--text-muted);
-    }
-    .yield-box strong { color: var(--bark); display: block; margin-bottom: 0.2rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; }
+    .ingredient-list li::before { content: '◆'; color: var(--plum); font-size: 0.5rem; margin-top: 0.35rem; flex-shrink: 0; }
 
-    /* MAIN CONTENT */
-    .intro-text {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: var(--text);
-      margin-bottom: 2rem;
-    }
+    .yield-box { background: var(--cream); border-left: 3px solid var(--moss); padding: 0.75rem 1rem; font-size: 0.82rem; color: var(--text-muted); margin-top: 1rem; }
+    .yield-box strong { color: var(--bark); display: block; margin-bottom: 0.2rem; font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; }
+
+    .intro-text { font-size: 1.03rem; line-height: 1.8; margin-bottom: 2rem; }
     .intro-text p + p { margin-top: 1rem; }
 
-    .callout-box {
-      background: linear-gradient(135deg, rgba(90,45,90,0.06) 0%, rgba(201,135,63,0.06) 100%);
-      border: 1px solid rgba(90,45,90,0.2);
-      border-radius: 4px;
-      padding: 1.25rem 1.5rem;
-      margin: 1.5rem 0;
-      font-size: 0.92rem;
-    }
-    .callout-box strong { color: var(--plum); font-family: 'Playfair Display', serif; font-style: italic; }
-
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: var(--bark);
-      margin: 2rem 0 1rem;
-      padding-bottom: 0.4rem;
-      border-bottom: 1px solid var(--rule);
-    }
+    h2 { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 600; color: var(--bark); margin: 2rem 0 1rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--rule); }
     h2::before { content: '— '; color: var(--plum); }
 
     .steps-list { list-style: none; counter-reset: steps; }
-    .steps-list li {
-      counter-increment: steps;
-      display: flex;
-      gap: 1rem;
-      padding: 0.75rem 0;
-      border-bottom: 1px dotted var(--rule);
-      font-size: 0.92rem;
-      line-height: 1.65;
-    }
+    .steps-list li { counter-increment: steps; display: flex; gap: 1rem; padding: 0.75rem 0; border-bottom: 1px dotted var(--rule); font-size: 0.92rem; line-height: 1.65; }
     .steps-list li:last-child { border-bottom: none; }
-    .steps-list li::before {
-      content: counter(steps);
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--plum);
-      min-width: 1.5rem;
-      line-height: 1.4;
-    }
+    .steps-list li::before { content: counter(steps); font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--plum); min-width: 1.5rem; line-height: 1.4; }
 
-    .tip-block {
-      background: var(--cream-dark);
-      border-left: 3px solid var(--terra);
-      padding: 1rem 1.25rem;
-      margin: 1.5rem 0;
-      font-size: 0.88rem;
-      font-style: italic;
-      color: var(--text-muted);
-    }
-    .tip-block strong { font-style: normal; color: var(--bark); font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; display: block; margin-bottom: 0.3rem; }
+    .tip-block { background: var(--cream-dark); border-left: 3px solid var(--terra); padding: 1rem 1.25rem; margin: 1.5rem 0; font-size: 0.88rem; font-style: italic; color: var(--text-muted); }
+    .tip-block strong { font-style: normal; color: var(--bark); font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; display: block; margin-bottom: 0.3rem; }
 
-    .crosslink-bar {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin: 2.5rem 0;
-    }
+    .callout-box { background: linear-gradient(135deg, rgba(90,45,90,0.05), rgba(74,92,58,0.06)); border: 1px solid rgba(90,45,90,0.2); border-radius: 4px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .callout-box strong { color: var(--plum); }
+    .callout-box p { font-size: 0.92rem; line-height: 1.75; color: var(--text-muted); }
+
+    .crosslink-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2.5rem 0; }
     @media (max-width: 500px) { .crosslink-bar { grid-template-columns: 1fr; } }
-    .crosslink-card {
-      background: white;
-      border: 1px solid var(--rule);
-      padding: 1.25rem;
-      text-decoration: none;
-      color: inherit;
-      transition: border-color 0.2s, transform 0.2s;
-    }
+    .crosslink-card { background: white; border: 1px solid var(--rule); padding: 1.25rem; text-decoration: none; color: inherit; transition: border-color 0.2s, transform 0.2s; }
     .crosslink-card:hover { border-color: var(--plum); transform: translateY(-2px); }
-    .crosslink-card .label {
-      font-family: 'DM Mono', monospace; font-size: 0.66rem;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--amber); margin-bottom: 0.3rem;
-    }
-    .crosslink-card h4 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem; color: var(--bark); margin-bottom: 0.25rem;
-    }
+    .crosslink-card .label { font-family: 'DM Mono', monospace; font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.3rem; }
+    .crosslink-card h4 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--bark); margin-bottom: 0.25rem; }
     .crosslink-card p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
 
-    /* DRINK RESPONSIBLY BAR */
-    .drink-bar {
-      background: var(--moss-dark);
-      color: rgba(245,240,232,0.75);
-      text-align: center;
-      padding: 0.5rem 1rem;
-      font-family: 'DM Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    /* FOOTER */
-    footer {
-      background: var(--bark);
-      color: var(--cream-dark);
-      text-align: center;
-      padding: 2.5rem 1.5rem;
-    }
-    footer .footer-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      font-style: italic;
-      color: var(--cream);
-      margin-bottom: 0.5rem;
-    }
-    footer p {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.08em;
-      opacity: 0.6;
-      margin-bottom: 0.25rem;
-    }
+    .drink-bar { background: var(--moss-dark); color: rgba(245,240,232,0.75); text-align: center; padding: 0.5rem 1rem; font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    footer { background: var(--bark); color: var(--cream-dark); text-align: center; padding: 2.5rem 1.5rem; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-style: italic; color: var(--cream); margin-bottom: 0.5rem; }
+    footer p { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; opacity: 0.6; margin-bottom: 0.25rem; }
     footer a { color: var(--amber); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
-  
     .footer-links { display: flex; gap: 1rem; list-style: none; flex-wrap: wrap; justify-content: center; margin-top: 0.75rem; }
     .footer-links a { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); text-decoration: none; opacity: 0.8; transition: opacity 0.2s; }
     .footer-links a:hover { opacity: 1; }
 
-    /* ── JUMP NAV ── */
     .jump-nav { background: var(--bark); padding: 0.85rem 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); position: sticky; top: 64px; z-index: 90; }
     .jump-nav-label { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,240,232,0.55); flex-shrink: 0; margin-right: 0.35rem; }
     .jump-link { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(245,240,232,0.82); text-decoration: none; padding: 0.3rem 0.75rem; border: 1px solid rgba(255,255,255,0.15); transition: all 0.2s; white-space: nowrap; }
     .jump-link:hover { background: var(--amber); color: var(--bark); border-color: var(--amber); }
-  </style></style>
+
+    /* ── RECIPE SCALER ── */
+    .recipe-scaler {
+      background: linear-gradient(135deg, rgba(90,45,90,0.06), rgba(61,43,31,0.04));
+      border: 1px solid rgba(90,45,90,0.2);
+      border-radius: 4px;
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    .scaler-label { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--plum); margin-bottom: 0.75rem; }
+    .scaler-row { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 0.85rem; }
+    .scaler-row label { font-size: 0.85rem; color: var(--text); line-height: 1.4; }
+    .scaler-input { width: 70px; font-family: 'DM Mono', monospace; font-size: 0.9rem; padding: 0.35rem 0.5rem; border: 1px solid var(--plum); border-radius: 3px; background: white; color: var(--text); text-align: center; }
+    .scaler-input:focus { outline: 2px solid var(--plum); outline-offset: 1px; }
+    .scaler-unit { font-size: 0.85rem; color: var(--text-muted); }
+    .scaler-btns { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .scaler-btn { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.4rem 0.85rem; border: 1px solid; background: none; cursor: pointer; transition: background 0.15s, color 0.15s; border-radius: 2px; }
+    .scaler-btn-apply { border-color: var(--plum); color: var(--plum); }
+    .scaler-btn-apply:hover { background: var(--plum); color: white; }
+    .scaler-btn-reset { border-color: var(--rule); color: var(--text-muted); }
+    .scaler-btn-reset:hover { background: var(--cream-dark); color: var(--text); }
+    .scaler-note { font-size: 0.78rem; color: var(--text-muted); font-style: italic; margin-top: 0.5rem; }
+    .scaled-badge { display: none; font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; background: var(--plum); color: white; padding: 0.15rem 0.5rem; border-radius: 2px; margin-left: 0.5rem; vertical-align: middle; }
+    .scaled-badge.visible { display: inline; }
+
+    /* ── PRINT BUTTON ── */
+    .print-btn-wrap { display: flex; justify-content: flex-end; margin-bottom: 1.25rem; }
+    .print-btn { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.5rem 1.1rem; background: none; border: 1px solid var(--rule); color: var(--text-muted); cursor: pointer; transition: border-color 0.2s, color 0.2s; border-radius: 2px; }
+    .print-btn:hover { border-color: var(--bark); color: var(--bark); }
+    .print-btn::before { content: '⎙ '; }
+
+    /* ── PRINT STYLES ── */
+    @media print {
+      nav, .mobile-menu, .breadcrumb, .jump-nav,
+      .print-btn-wrap, .crosslink-bar, .drink-bar, footer { display: none !important; }
+
+      body { background: white; font-size: 11pt; }
+
+      .recipe-hero { display: block !important; background: none; color: black; padding: 0 0 1rem; text-align: left; }
+      .recipe-hero::before { display: none; }
+      .recipe-hero h1 { font-size: 20pt; color: black; }
+      .recipe-hero .subtitle { color: #444; }
+      .meta-row { color: #555; }
+      .hero-tag { color: #555; }
+
+      .recipe-layout { display: block; max-width: 100%; padding: 0; }
+      main { width: 100%; }
+      aside { display: block; width: 100%; }
+
+      .sidebar-card { border: none; padding: 0; border-radius: 0; position: static; }
+      .sidebar-card h3 { border-bottom: 1pt solid #ccc; color: black; }
+      .ingredient-list li { font-size: 10pt; }
+      .ingredient-list li::before { color: #555; }
+      .yield-box { background: none; border-left: 2pt solid #aaa; }
+
+      .callout-box { display: none; }
+
+      h2 { font-size: 13pt; color: black; border-bottom: 0.5pt solid #ccc; break-after: avoid; }
+      h2::before { color: #777; }
+      .steps-list li { font-size: 10pt; }
+      .steps-list li::before { color: #777; }
+      .tip-block { background: #f5f5f5; border-left: 2pt solid #aaa; color: #444; }
+
+      .recipe-scaler { display: none; }
+
+      .scaler-note-print {
+        display: block !important;
+        font-size: 9pt;
+        color: #666;
+        font-style: italic;
+        margin-top: 0.25rem;
+      }
+      .print-footer-url {
+        display: block !important;
+        margin-top: 2rem;
+        font-family: monospace;
+        font-size: 8pt;
+        color: #888;
+      }
+    }
+
+    .scaler-note-print { display: none; }
+    .print-footer-url { display: none; }
+  </style>
 </head>
 <body>
 
   <nav>
     <a href="/" class="nav-logo"><img src="images/logo.png" alt="From Bed to Bar — home" style="height:40px;width:40px;object-fit:contain;" /></a>
     <ul class="nav-links">
-    <li><a href="/">Home</a></li>
-    <li><a href="recipes">Recipes</a></li>
-    <li><a href="garden-tips">Garden Tips</a></li>
-    <li><a href="herb-hub">Herb Hub</a></li>
-    <li><a href="planting-guide">Planting Guide</a></li>
-    <li><a href="bar-essentials">Bar Essentials</a></li>
-    <li><a href="blog">Blog</a></li>
-    <li><a href="/#newsletter">Newsletter</a></li>
-    <li><a href="about">About</a></li>
-  </ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="recipes">Recipes</a></li>
+      <li><a href="garden-tips">Garden Tips</a></li>
+      <li><a href="herb-hub">Herb Hub</a></li>
+      <li><a href="planting-guide">Planting Guide</a></li>
+      <li><a href="bar-essentials">Bar Essentials</a></li>
+      <li><a href="blog">Blog</a></li>
+      <li><a href="/#newsletter">Newsletter</a></li>
+      <li><a href="about">About</a></li>
+    </ul>
     <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
     </div>
   </nav>
-    <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu">
     <a href="/">Home</a>
     <a href="recipes">Recipes</a>
     <a href="garden-tips">Garden Tips</a>
@@ -377,9 +231,6 @@
     <a href="/">Home</a> &rsaquo; <a href="recipes">Recipes</a> &rsaquo; Plum Simple Syrup
   </div>
 
-
-
-
   <div class="recipe-hero">
     <div class="hero-tag">Garden Pantry &nbsp;·&nbsp; Cocktail Syrup</div>
     <h1>Homegrown Plum Simple Syrup</h1>
@@ -393,21 +244,27 @@
   </div>
 
   <div class="jump-nav">
-  <span class="jump-nav-label">Jump to:</span>
-  <a href="#instructions" class="jump-link">Instructions</a>
-  <a href="#how-to-use" class="jump-link">How to Use It</a>
-  <a href="#variations" class="jump-link">Make It Your Own</a>
-</div>
+    <span class="jump-nav-label">Jump to:</span>
+    <a href="#instructions" class="jump-link">Instructions</a>
+    <a href="#how-to-use" class="jump-link">How to Use It</a>
+    <a href="#variations" class="jump-link">Make It Your Own</a>
+  </div>
 
-<div class="recipe-layout">
+  <div class="recipe-layout">
     <main>
+
+      <div class="print-btn-wrap">
+        <button class="print-btn" onclick="window.print()">Print Recipe</button>
+      </div>
+
       <div class="intro-text">
         <p>When the plum trees come in, they come in hard. After putting up a batch of jam, the best thing you can do with the rest of the harvest is cook it down into a syrup — deep, jewel-toned, and tasting of August in a bottle.</p>
         <p>This syrup is the bridge between the garden and the bar cart. Add it to bourbon and it rounds out the edges. Stir it into sparkling water and it becomes something worth sipping on its own. Keep a jar in the fridge and you'll find yourself reaching for it constantly.</p>
       </div>
 
       <div class="callout-box">
-        <strong>From the same trees.</strong> If you're making plum jam this season, set aside a pound or two before adding the sugar. The syrup and the jam come from the same batch of fruit — and the syrup becomes a cocktail ingredient on its own. See how they connect on the <a href="preserves-plum-jam" style="color: var(--plum);">Plum Jam page</a> and the <a href="cocktails-plum-bourbon-sour" style="color: var(--plum);">Plum Bourbon Sour page</a>.
+        <strong>From the same trees.</strong>
+        <p>If you're making plum jam this season, set aside a pound or two before adding the sugar. The syrup and the jam come from the same batch of fruit — and the syrup becomes a cocktail ingredient on its own. See how they connect on the <a href="preserves-plum-jam" style="color: var(--plum);">Plum Jam page</a> and the <a href="cocktails-plum-bourbon-sour" style="color: var(--plum);">Plum Bourbon Sour page</a>.</p>
       </div>
 
       <h2 id="instructions">Instructions</h2>
@@ -446,7 +303,6 @@
         Keeps in the refrigerator for 3–4 weeks in a sealed jar. For longer storage, freeze in ice cube trays and transfer to a freezer bag. Each cube is roughly 1 oz — perfect for pulling out one serving at a time.
       </div>
 
-      
       <div class="crosslink-bar" style="grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));">
         <a class="crosslink-card" href="preserves-plum-jam">
           <div class="label">Also from the garden</div>
@@ -474,23 +330,46 @@
           <p>When to pick and the best ways to process a full plum harvest.</p>
         </a>
       </div>
+
+      <span class="print-footer-url">frombedtobar.com/recipe-plum-simple-syrup</span>
     </main>
 
     <aside>
       <div class="sidebar-card">
-        <h3>Ingredients</h3>
+        <h3>Ingredients <span class="scaled-badge" id="scaledBadge">Scaled</span></h3>
+
+        <!-- SCALER -->
+        <div class="recipe-scaler">
+          <div class="scaler-label">Scale this recipe</div>
+          <div class="scaler-row">
+            <label for="plumInput">I have</label>
+            <input type="number" id="plumInput" class="scaler-input"
+                   value="1" min="0.5" max="20" step="0.5"
+                   aria-label="Pounds of pitted plums" />
+            <span class="scaler-unit">lb pitted plums</span>
+          </div>
+          <div class="scaler-btns">
+            <button class="scaler-btn scaler-btn-apply" onclick="scaleSyrup()">Update</button>
+            <button class="scaler-btn scaler-btn-reset" onclick="resetSyrup()">Reset</button>
+          </div>
+          <p class="scaler-note">Scales plums, sugar, and lemon juice. Water stays at 1 cup for up to 2 lb; increases gently beyond that. Optional additions stay the same.</p>
+        </div>
+
         <ul class="ingredient-list">
-          <li>1 lb (450g) fresh plums, pitted</li>
-          <li>1 cup (200g) granulated sugar</li>
-          <li>1 cup (240ml) water</li>
-          <li>1 Tbsp fresh lemon juice <em style="font-size:0.8rem; color:var(--text-muted)">(optional)</em></li>
+          <li id="ing-plums">1 lb (450g) fresh plums, pitted</li>
+          <li id="ing-sugar">1 cup (200g) granulated sugar</li>
+          <li id="ing-water">1 cup (240ml) water</li>
+          <li id="ing-lemon">1 Tbsp fresh lemon juice <em style="font-size:0.8rem; color:var(--text-muted)">(optional)</em></li>
           <li>1 cinnamon stick <em style="font-size:0.8rem; color:var(--text-muted)">(optional)</em></li>
           <li>1/2 tsp vanilla extract <em style="font-size:0.8rem; color:var(--text-muted)">(optional, add after)</em></li>
         </ul>
+
         <div class="yield-box">
           <strong>Yield</strong>
-          Approximately 1.5–2 cups of syrup. Scales easily — double the fruit and sugar, keep the water the same.
+          <span id="yield-note">Approximately 1.5–2 cups of syrup.</span>
         </div>
+
+        <span class="scaler-note-print" id="scalerNotePrint"></span>
       </div>
     </aside>
   </div>
@@ -500,7 +379,7 @@
   <footer>
     <div class="footer-logo">From Bed to Bar</div>
     <p>Garden-to-glass cocktails &amp; growing guides</p>
-        <ul class="footer-links" style="margin-top:0.75rem;">
+    <ul class="footer-links" style="margin-top:0.75rem;">
       <li><a href="/">Home</a></li>
       <li><a href="recipes">Recipes</a></li>
       <li><a href="garden-tips">Garden Tips</a></li>
@@ -519,6 +398,110 @@
     function toggleMenu() {
       document.getElementById('mobileMenu').classList.toggle('open');
     }
+
+    // ── SYRUP SCALER ─────────────────────────────────────────────
+    var SYR_BASE_PLUMS  = 1;    // lb
+    var SYR_BASE_SUGAR  = 200;  // g (1 cup)
+    var SYR_BASE_WATER  = 240;  // ml (1 cup) — scales gently
+    var SYR_BASE_LEMON  = 1;    // Tbsp
+
+    function roundToQuarter(v) { return Math.round(v * 4) / 4; }
+    function roundKg(v)        { return Math.round(v * 10) / 10; }
+
+    // Convert grams of sugar to a friendly cup string
+    function sugarCupStr(g) {
+      var cups = g / 200;  // 200g = 1 cup
+      var rounded = roundToQuarter(cups);
+      if (rounded === 0.25) return '1/4 cup (' + Math.round(g) + 'g)';
+      if (rounded === 0.5)  return '1/2 cup (' + Math.round(g) + 'g)';
+      if (rounded === 0.75) return '3/4 cup (' + Math.round(g) + 'g)';
+      if (rounded === 1)    return '1 cup (' + Math.round(g) + 'g)';
+      // Mixed: e.g. 1.25 → 1 1/4 cups
+      var whole = Math.floor(rounded);
+      var frac  = rounded - whole;
+      var fracStr = frac === 0.25 ? '1/4' : frac === 0.5 ? '1/2' : frac === 0.75 ? '3/4' : '';
+      if (whole > 0 && fracStr) return whole + ' ' + fracStr + ' cups (' + Math.round(g) + 'g)';
+      if (whole > 0)            return whole + ' cup' + (whole > 1 ? 's' : '') + ' (' + Math.round(g) + 'g)';
+      return rounded + ' cup (' + Math.round(g) + 'g)';
+    }
+
+    // Water scales gently — 1 cup for up to 2 lb, then +1/2 cup per additional lb
+    function waterMl(lb) {
+      if (lb <= 2) return 240;
+      return 240 + Math.round((lb - 2) * 120);  // +120ml per lb above 2
+    }
+    function waterStr(ml) {
+      var cups = ml / 240;
+      var rounded = roundToQuarter(cups);
+      if (rounded === 1)   return '1 cup (' + ml + 'ml)';
+      if (rounded === 1.5) return '1 1/2 cups (' + ml + 'ml)';
+      if (rounded === 2)   return '2 cups (' + ml + 'ml)';
+      return rounded + ' cups (' + ml + 'ml)';
+    }
+
+    // Lemon juice in Tbsp
+    function lemonTbspStr(tbsp) {
+      var rounded = Math.round(tbsp * 2) / 2;  // nearest 0.5 Tbsp
+      if (rounded <= 0) rounded = 0.5;
+      if (rounded === 0.5) return '1/2 Tbsp fresh lemon juice';
+      if (rounded === 1)   return '1 Tbsp fresh lemon juice';
+      if (rounded === 1.5) return '1 1/2 Tbsp fresh lemon juice';
+      return rounded + ' Tbsp fresh lemon juice';
+    }
+
+    // Yield string
+    function yieldStr(lb) {
+      // ~1.5 cups per lb rough estimate
+      var low  = Math.round(lb * 1.5 * 10) / 10;
+      var high = Math.round(lb * 2   * 10) / 10;
+      return 'Approximately ' + low + '–' + high + ' cups of syrup.';
+    }
+
+    // Plum string with kg
+    function plumStr(lb) {
+      return lb + ' lb (' + roundKg(lb * 0.4536) + 'kg) fresh plums, pitted';
+    }
+
+    function scaleSyrup() {
+      var userLb = parseFloat(document.getElementById('plumInput').value);
+      if (isNaN(userLb) || userLb <= 0) { alert('Please enter a valid amount of plums.'); return; }
+
+      var ratio  = userLb / SYR_BASE_PLUMS;
+      var sugar  = SYR_BASE_SUGAR * ratio;   // g
+      var water  = waterMl(userLb);           // ml, gentle scale
+      var lemon  = SYR_BASE_LEMON * ratio;   // Tbsp
+
+      document.getElementById('ing-plums').textContent = plumStr(userLb);
+      document.getElementById('ing-sugar').textContent = sugarCupStr(sugar) + ' granulated sugar';
+      document.getElementById('ing-water').textContent = waterStr(water) + ' water';
+      document.getElementById('ing-lemon').innerHTML   = lemonTbspStr(lemon) +
+        ' <em style="font-size:0.8rem; color:var(--text-muted)">(optional)</em>';
+
+      document.getElementById('yield-note').textContent = yieldStr(userLb);
+
+      var isScaled = Math.abs(userLb - SYR_BASE_PLUMS) > 0.01;
+      document.getElementById('scaledBadge').classList.toggle('visible', isScaled);
+      document.getElementById('scalerNotePrint').textContent =
+        isScaled ? 'Recipe scaled for ' + userLb + ' lb pitted plums.' : '';
+    }
+
+    function resetSyrup() {
+      document.getElementById('plumInput').value = SYR_BASE_PLUMS;
+
+      document.getElementById('ing-plums').textContent = '1 lb (450g) fresh plums, pitted';
+      document.getElementById('ing-sugar').textContent = '1 cup (200g) granulated sugar';
+      document.getElementById('ing-water').textContent = '1 cup (240ml) water';
+      document.getElementById('ing-lemon').innerHTML   =
+        '1 Tbsp fresh lemon juice <em style="font-size:0.8rem; color:var(--text-muted)">(optional)</em>';
+
+      document.getElementById('yield-note').textContent = 'Approximately 1.5–2 cups of syrup.';
+      document.getElementById('scaledBadge').classList.remove('visible');
+      document.getElementById('scalerNotePrint').textContent = '';
+    }
+
+    document.getElementById('plumInput').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') scaleSyrup();
+    });
   </script>
 </body>
 </html>
