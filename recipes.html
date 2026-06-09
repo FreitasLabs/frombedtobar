@@ -472,6 +472,11 @@
       .card-body { padding: 1.1rem 1.25rem; gap: 0.9rem; }
       .card-actions { margin-top: 0.5rem; }
     }
+
+    /* Clickable image/header on data-href cards */
+    [data-href] .card-image,
+    [data-href] .card-top { cursor: pointer; }
+    [data-href] .card-image img { pointer-events: none; }
   </style>
 </head>
 <body>
@@ -1060,7 +1065,7 @@
 
 
   <!-- ── PLUM CLUSTER CARDS ── -->
-  <a href="cocktails-plum-bourbon-sour" class="recipe-card" data-tags="cocktail" data-name="Plum Bourbon Sour" data-season="summer" data-spirit="bourbon" data-ingredients="plum lemon bourbon" data-garden="2" data-order="15" data-inseason="true" style="text-decoration:none;color:inherit;display:block;cursor:pointer;">
+  <div data-href="cocktails-plum-bourbon-sour" class="recipe-card" data-tags="cocktail" data-name="Plum Bourbon Sour" data-season="summer" data-spirit="bourbon" data-ingredients="plum lemon bourbon" data-garden="2" data-order="15" data-inseason="true">
     
       <div class="card-image"><img src="images/plum-bourbon-sour.png" alt="A Plum Bourbon Sour in a coupe glass showing a deep purple hue" loading="lazy" /></div>
       <div class="card-top" data-emoji="🍑">
@@ -1107,9 +1112,9 @@
       <div class="card-related-links"><span>Plum Syrup →</span> <span class="sep">·</span> <span>Plum Guide →</span></div>
       </div>
       </div>
-  </a>
+  </div>
 
-  <a href="mocktails-sparkling-plum-mocktail" class="recipe-card" data-tags="mocktail" data-name="Sparkling Plum Mocktail" data-season="summer" data-spirit="none" data-ingredients="plum lemon mint" data-garden="2" data-order="16" data-inseason="true" style="text-decoration:none;color:inherit;display:block;cursor:pointer;">
+  <div data-href="mocktails-sparkling-plum-mocktail" class="recipe-card" data-tags="mocktail" data-name="Sparkling Plum Mocktail" data-season="summer" data-spirit="none" data-ingredients="plum lemon mint" data-garden="2" data-order="16" data-inseason="true">
     
       <div class="card-image"><img src="images/sparkling-plum-mocktail.png" alt="A Sparkling Plum Mocktail in a tall glass with a lemon wheel garnish" loading="lazy" /></div>
       <div class="card-top" data-emoji="🌿">
@@ -1145,9 +1150,9 @@
       <div class="card-related-links"><span>Plum Guide →</span></div>
       </div>
       </div>
-  </a>
+  </div>
 
-  <a href="recipe-plum-simple-syrup" class="recipe-card" data-tags="syrup" data-name="Plum Simple Syrup" data-season="summer" data-spirit="none" data-ingredients="plum lemon" data-garden="2" data-order="17" data-inseason="true" style="text-decoration:none;color:inherit;display:block;cursor:pointer;">
+  <div data-href="recipe-plum-simple-syrup" class="recipe-card" data-tags="syrup" data-name="Plum Simple Syrup" data-season="summer" data-spirit="none" data-ingredients="plum lemon" data-garden="2" data-order="17" data-inseason="true">
     
       <div class="card-image"><img src="images/plum-simple-syrup.png" alt="A jar of jewel-toned homemade plum simple syrup beside fresh plums" loading="lazy" /></div>
       <div class="card-top" data-emoji="🫙" style="background:var(--terracotta);">
@@ -1182,9 +1187,9 @@
       <div class="card-related-links"><span>Plum Jam →</span></div>
       </div>
       </div>
-  </a>
+  </div>
 
-  <a href="preserves-plum-jam" class="recipe-card" data-tags="syrup" data-name="Homemade Plum Jam" data-season="summer" data-spirit="none" data-ingredients="plum lemon sugar" data-garden="2" data-order="18" data-inseason="true" style="text-decoration:none;color:inherit;display:block;cursor:pointer;">
+  <div data-href="preserves-plum-jam" class="recipe-card" data-tags="syrup" data-name="Homemade Plum Jam" data-season="summer" data-spirit="none" data-ingredients="plum lemon sugar" data-garden="2" data-order="18" data-inseason="true">
     
       <div class="card-image"><img src="images/plum-jam.png" alt="Jars of deep ruby homemade plum jam sealed and ready for the pantry" loading="lazy" /></div>
       <div class="card-top" data-emoji="🫙" style="background:var(--terracotta);">
@@ -1220,10 +1225,10 @@
       <div class="card-related-links"><span>Harvest guide →</span></div>
       </div>
       </div>
-  </a>
+  </div>
 
   <!-- Garden Mojito -->
-  <a href="cocktails-garden-mojito" class="recipe-card" data-tags="cocktail" data-name="Garden Mojito" data-season="summer" data-spirit="rum" data-ingredients="mint lime rum" data-garden="2" data-order="17" data-inseason="true" style="text-decoration:none;color:inherit;display:block;cursor:pointer;">
+  <div data-href="cocktails-garden-mojito" class="recipe-card" data-tags="cocktail" data-name="Garden Mojito" data-season="summer" data-spirit="rum" data-ingredients="mint lime rum" data-garden="2" data-order="17" data-inseason="true">
     
       <div class="card-image"><img src="images/garden-mojito.png" alt="A Garden Mojito in a highball glass with fresh spearmint garnish" loading="lazy" /></div>
       <div class="card-top" data-emoji="🍹">
@@ -1269,10 +1274,10 @@
       <div class="card-related-links"><span>Mint Syrup →</span> <span class="sep">·</span> <span>Mint Guide →</span></div>
       </div>
       </div>
-  </a>
+  </div>
 
   <!-- Sparkling Mint Limeade -->
-  <a href="mocktails-sparkling-mint-limeade" class="recipe-card" data-tags="mocktail" data-name="Sparkling Mint Limeade" data-season="summer" data-spirit="none" data-ingredients="mint lime" data-garden="2" data-order="18" data-inseason="true" style="text-decoration:none;color:inherit;display:block;cursor:pointer;">
+  <div data-href="mocktails-sparkling-mint-limeade" class="recipe-card" data-tags="mocktail" data-name="Sparkling Mint Limeade" data-season="summer" data-spirit="none" data-ingredients="mint lime" data-garden="2" data-order="18" data-inseason="true">
     
       <div class="card-image"><img src="images/sparkling-mint-limeade.png" alt="A Sparkling Mint Limeade in a highball glass with fresh mint and lime" loading="lazy" /></div>
       <div class="card-top" data-emoji="🌿">
@@ -1307,10 +1312,10 @@
       <div class="card-related-links"><span>Mint Guide →</span></div>
       </div>
       </div>
-  </a>
+  </div>
 
   <!-- Mint Syrup -->
-  <a href="recipe-mint-simple-syrup" class="recipe-card" data-tags="syrup" data-name="Mint Syrup" data-season="all" data-spirit="none" data-ingredients="mint" data-garden="1" data-order="12" data-inseason="true" style="text-decoration:none;color:inherit;display:block;cursor:pointer;">
+  <div data-href="recipe-mint-simple-syrup" class="recipe-card" data-tags="syrup" data-name="Mint Syrup" data-season="all" data-spirit="none" data-ingredients="mint" data-garden="1" data-order="12" data-inseason="true">
     
       <div class="card-image"><img src="images/mint-simple-syrup.png" alt="Fresh garden spearmint beside a jar of homemade mint simple syrup" loading="lazy" /></div>
       <div class="card-top" data-emoji="🌿" style="background:var(--terracotta);">
@@ -1333,7 +1338,7 @@
       <div class="card-related-links"><span>Mint Guide →</span></div>
       </div>
       </div>
-  </a>
+  </div>
 
   <!-- Thyme & Rosemary Syrup -->
   <div class="recipe-card" data-tags="syrup" data-name="Thyme Rosemary Syrup" data-season="all" data-spirit="none" data-ingredients="thyme rosemary" data-garden="2" data-order="13" data-inseason="true">
@@ -1460,6 +1465,7 @@
     cards.forEach(function(card) {
       var tabs = card.querySelectorAll(".card-tab");
       var panels = card.querySelectorAll(".card-content-panel");
+
       tabs.forEach(function(tab, i) {
         tab.addEventListener("click", function() {
           tabs.forEach(function(t) { t.classList.remove("active"); });
@@ -1468,6 +1474,18 @@
           if (panels[i]) panels[i].classList.add("active");
         });
       });
+
+      // For data-href cards: navigate only when clicking the image or card header
+      var dest = card.getAttribute("data-href");
+      if (dest) {
+        var clickZones = card.querySelectorAll(".card-image, .card-top");
+        clickZones.forEach(function(zone) {
+          zone.style.cursor = "pointer";
+          zone.addEventListener("click", function() {
+            window.location.href = dest;
+          });
+        });
+      }
     });
 
     // Filter toggle panel
