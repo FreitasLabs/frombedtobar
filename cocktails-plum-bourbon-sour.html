@@ -70,12 +70,18 @@
     .nav-links { display: flex; gap: 1.75rem; list-style: none; }
     .nav-links a { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--cream-dark); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.85; transition: opacity 0.2s; }
     .nav-links a:hover { opacity: 1; color: var(--amber); }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
-    .hamburger span { width: 24px; height: 2px; background: var(--cream); border-radius: 2px; }
-    .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: var(--bark); padding: 1.5rem; z-index: 99; flex-direction: column; gap: 1.2rem; border-top: 1px solid rgba(255,255,255,0.1); }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu a { font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--cream-dark); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; }
-    @media (max-width: 768px) { .nav-links { display: none; } .hamburger { display: flex; } }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--cream); transition: all 0.3s; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 768px) {
+      .nav-hamburger { display: flex; }
+      .nav-links { display: none; position: fixed; top: 64px; left: 0; right: 0; background: rgba(61,43,31,0.98); backdrop-filter: blur(8px); flex-direction: column; gap: 0; border-bottom: 1px solid rgba(255,255,255,0.1); z-index: 99; padding: 0.5rem 0; }
+      .nav-links.open { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links a { display: block; padding: 0.9rem 2rem; font-size: 0.82rem; opacity: 1; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    }
 
     /* HERO — deep bourbon-amber-plum gradient */
     .recipe-hero {
@@ -255,30 +261,19 @@
 
   <nav>
     <a href="/" class="nav-logo"><img src="images/logo.png" alt="From Bed to Bar — home" style="height:40px;width:40px;object-fit:contain;" /></a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul class="nav-links">
-    <li><a href="/">Home</a></li>
-    <li><a href="recipes">Recipes</a></li>
-    <li><a href="garden-tips">Garden Tips</a></li>
-    <li><a href="herb-hub">Herb Hub</a></li>
-    <li><a href="planting-guide">Planting Guide</a></li>
-    <li><a href="bar-essentials">Bar Essentials</a></li>
-    <li><a href="blog">Blog</a></li>
-    <li><a href="/#newsletter">Newsletter</a></li>
-    <li><a href="about">About</a></li>
-  </ul>
-    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+      <li><a href="/">Home</a></li>
+      <li><a href="recipes">Recipes</a></li>
+      <li><a href="garden-tips">Garden Tips</a></li>
+      <li><a href="herb-hub">Herb Hub</a></li>
+      <li><a href="planting-guide">Planting Guide</a></li>
+      <li><a href="bar-essentials">Bar Essentials</a></li>
+      <li><a href="blog">Blog</a></li>
+      <li><a href="/#newsletter">Newsletter</a></li>
+      <li><a href="about">About</a></li>
+    </ul>
   </nav>
-    <div class="mobile-menu" id="mobileMenu">
-    <a href="/">Home</a>
-    <a href="recipes">Recipes</a>
-    <a href="garden-tips">Garden Tips</a>
-    <a href="herb-hub">Herb Hub</a>
-    <a href="planting-guide">Planting Guide</a>
-    <a href="bar-essentials">Bar Essentials</a>
-    <a href="blog">Blog</a>
-    <a href="about">About</a>
-    <a href="disclaimer">Disclaimer</a>
-  </div>
 
   <div class="recipe-hero">
     <div class="hero-tag">Cocktail &nbsp;·&nbsp; Garden to Glass</div>
@@ -503,9 +498,22 @@
   </footer>
 
   <script>
-    function toggleMenu() {
-      document.getElementById('mobileMenu').classList.toggle('open');
-    }
+    document.addEventListener("DOMContentLoaded", function() {
+      var hamburger = document.getElementById("navHamburger");
+      var navLinks = document.querySelector(".nav-links");
+      if (hamburger && navLinks) {
+        hamburger.addEventListener("click", function() {
+          hamburger.classList.toggle("open");
+          navLinks.classList.toggle("open");
+        });
+        navLinks.querySelectorAll("a").forEach(function(link) {
+          link.addEventListener("click", function() {
+            hamburger.classList.remove("open");
+            navLinks.classList.remove("open");
+          });
+        });
+      }
+    });
   </script>
 </body>
 </html>
