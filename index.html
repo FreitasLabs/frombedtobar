@@ -150,46 +150,56 @@
     /* ── HERO — full-width cinematic background ── */
     .hero {
       position: relative;
-      min-height: 80vh;
+      min-height: 85vh;
       padding-top: 72px;
       display: flex;
-      align-items: flex-end;
+      /* Text anchored top-left — sits in the sky/hills zone above the table */
+      align-items: flex-start;
       overflow: hidden;
-      /* Sits above body::before texture layer */
       isolation: isolate;
     }
 
-    /* The actual photo — positioned to fill the hero */
+    /* Photo: pull image up so golden sky fills the upper third */
     .hero-bg {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 30%;
+      object-position: center top;
       display: block;
       z-index: 0;
     }
 
-    /* Dark gradient overlay — clear image at top, dark at bottom for text */
+    /* Overlay: very light top-left corner (sky is already pale/open),
+       gentle left-side darkening for text contrast,
+       slightly heavier at the very bottom to ground the composition */
     .hero::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(26, 20, 10, 0.15) 0%,
-        rgba(26, 20, 10, 0.38) 45%,
-        rgba(26, 20, 10, 0.80) 100%
-      );
+      background:
+        linear-gradient(
+          to right,
+          rgba(20, 16, 8, 0.52) 0%,
+          rgba(20, 16, 8, 0.28) 50%,
+          rgba(20, 16, 8, 0.04) 100%
+        ),
+        linear-gradient(
+          to bottom,
+          rgba(20, 16, 8, 0.08) 0%,
+          rgba(20, 16, 8, 0.05) 55%,
+          rgba(20, 16, 8, 0.45) 100%
+        );
       z-index: 1;
     }
 
+    /* Text sits in the top-left, offset from nav */
     .hero-content {
       position: relative;
       z-index: 2;
-      padding: 4rem 5rem 5rem;
-      max-width: 680px;
+      padding: 3.5rem 5rem 5rem;
+      max-width: 620px;
     }
 
     .hero-eyebrow {
@@ -600,8 +610,9 @@
       nav { padding: 1rem 1.5rem; }
       .nav-links { gap: 1.5rem; }
 
-      .hero { min-height: 70vh; align-items: flex-end; }
-      .hero-bg { object-position: center 25%; }
+      .hero { min-height: 75vh; align-items: flex-start; }
+      .hero-bg { object-position: center top; }
+      .hero-content { padding: 2.75rem 1.75rem 3rem; }
       .hero-content { padding: 2.5rem 1.75rem 3.5rem; max-width: 100%; }
 
       section { padding: 4rem 1.75rem; }
@@ -732,11 +743,11 @@
     />
     <div class="hero-content">
       <p class="hero-eyebrow">Garden-to-Glass Living</p>
-      <h1 class="hero-title">From the <em>garden bed</em> to your bar cart.</h1>
-      <p class="hero-sub">Grow it. Harvest it. Pour it. Seasonal recipes, herb guides, homemade syrups, cocktails, and mocktails rooted in what you actually grow.</p>
+      <h1 class="hero-title">Rooted in the garden.<br><em>Raised around the table.</em></h1>
+      <p class="hero-sub">Seasonal cocktails, mocktails, syrups, and garden guides built around what you actually grow — from mint and basil to plums, rosemary, lavender, and lemon balm.</p>
       <div class="hero-ctas">
         <a href="recipes" class="btn-primary">Explore Recipes</a>
-        <a href="herb-hub" class="btn-secondary">Start with the Herb Hub</a>
+        <a href="herb-hub" class="btn-secondary">Visit the Herb Hub</a>
       </div>
     </div>
   </section>
