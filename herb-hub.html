@@ -216,14 +216,83 @@
     .jump-link:hover { background: var(--amber); color: var(--bark); border-color: var(--amber); }
 
     /* ── PAGE HERO ── */
-    .page-header { background: var(--moss); padding: 8rem 5rem 5rem; position: relative; overflow: hidden; }
-    .page-header::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(-45deg, transparent, transparent 18px, rgba(255,255,255,0.02) 18px, rgba(255,255,255,0.02) 19px); }
-    .page-header::after { content: "🌿"; position: absolute; right: 4rem; bottom: -1.5rem; font-size: 14rem; opacity: 0.08; line-height: 1; }
-    .header-inner { position: relative; z-index: 1; max-width: 760px; }
-    .header-eyebrow { font-family: "DM Mono", monospace; font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,240,232,0.75); margin-bottom: 1rem; animation: fadeUp 0.7s ease both; }
-    .header-title { font-family: "Playfair Display", serif; font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 700; color: var(--cream); line-height: 1.15; margin-bottom: 1.25rem; animation: fadeUp 0.7s 0.1s ease both; }
-    .header-title em { font-style: italic; color: var(--amber); }
-    .header-sub { font-size: 1.05rem; line-height: 1.8; color: rgba(245,240,232,0.82); max-width: 600px; animation: fadeUp 0.7s 0.2s ease both; }
+.page-header {
+  position: relative;
+  min-height: 75vh;
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.page-header-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 0;
+}
+
+.page-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(8,6,2,.82) 0%,
+    rgba(8,6,2,.62) 28%,
+    rgba(8,6,2,.30) 52%,
+    rgba(8,6,2,.08) 72%,
+    rgba(8,6,2,0) 88%
+  );
+  z-index: 1;
+}
+.header-inner,
+.header-inner-wrap {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  padding: 3rem 0 3.5rem 8vw;
+}
+
+.header-eyebrow {
+  font-family: "DM Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(245,240,232,.82);
+  margin-bottom: 1rem;
+  text-shadow: 0 1px 8px rgba(4,2,0,.65);
+}
+
+.header-title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.8rem, 4vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-shadow:
+    0 2px 14px rgba(4,2,0,.75),
+    0 6px 48px rgba(4,2,0,.45);
+}
+
+.header-title em {
+  color: var(--amber);
+  font-style: italic;
+}
+
+.header-sub {
+  font-family: "Lora", Georgia, serif;
+  font-size: clamp(.95rem,1.1vw,1.1rem);
+  line-height: 1.9;
+  color: rgba(245,240,232,.88);
+  max-width: 600px;
+  text-shadow: 0 1px 8px rgba(4,2,0,.5);
+}
 
     /* ── SHARED SECTION STYLES ── */
     .content-section { padding: 5rem; }
@@ -341,29 +410,36 @@
     @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      nav { padding: 0 1.5rem; height: 66px; }
-      .nav-logo img { height: 44px; width: 44px; }
-      .nav-links { gap: 1.5rem; }
-      .nav-links a { font-size: 0.82rem; font-weight: 400; letter-spacing: 0.1em; opacity: 0.85; }
-      .page-header { padding: 7rem 1.75rem 4rem; }
-      .jump-nav { padding: 1rem 1.75rem; }
-      .content-section { padding: 4rem 1.75rem; }
-      .benefits-grid { grid-template-columns: 1fr; }
-      .herb-grid { grid-template-columns: 1fr; }
-      .harvest-grid { grid-template-columns: 1fr; }
-      .method-grid { grid-template-columns: 1fr; }
-      .recipe-cards { grid-template-columns: 1fr; }
-      .season-blocks { grid-template-columns: 1fr; }
-      .link-strip { padding: 2rem 1.75rem; }
-    }
-    @media (min-width: 600px) and (max-width: 900px) {
-      .herb-grid { grid-template-columns: repeat(2, 1fr); }
-      .benefits-grid { grid-template-columns: repeat(2, 1fr); }
-      .harvest-grid { grid-template-columns: repeat(2, 1fr); }
-      .method-grid { grid-template-columns: repeat(2, 1fr); }
-      .recipe-cards { grid-template-columns: repeat(2, 1fr); }
-    }
+  @media (max-width: 900px) {
+
+  .page-header {
+    min-height: 80vh;
+    padding-top: 66px;
+    align-items: flex-end;
+  }
+
+  .header-inner,
+  .header-inner-wrap {
+    padding: 0 1.75rem 3rem;
+    max-width: 100%;
+  }
+
+  .header-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+  }
+
+  .page-header::after {
+    background: linear-gradient(
+      to top,
+      rgba(8,6,2,.92) 0%,
+      rgba(8,6,2,.68) 40%,
+      rgba(8,6,2,.18) 75%,
+      rgba(8,6,2,0) 100%
+    );
+  }
+
+}
   
     /* ── NEWSLETTER ── */
     .newsletter-section {
@@ -411,15 +487,30 @@
 
 <!-- ── HERO ── -->
 <header class="page-header">
+
+  <img
+    src="images/heroes/herb-hub-hero.png"
+    class="page-header-bg"
+    alt=""
+    aria-hidden="true">
+
   <div class="header-inner">
-    <p class="header-eyebrow">Cocktail Herb Guide</p>
-    <h1 class="header-title">The Complete<br><em>Garden-to-Glass</em> Herb Guide</h1>
-    <p class="header-sub">Herbs are the bridge between the garden and the glass. They become syrups, infusions, garnishes, muddled bases, and seasonal inspiration. This is everything you need to know about growing and using them — from the soil to the shaker.</p>
+
+    <p class="header-eyebrow">
+      Herb Hub
+    </p>
+
+    <h1 class="header-title">
+      Grow, Harvest & Use Fresh Herbs
+    </h1>
+
+    <p class="header-sub">
+      Learn how to grow, harvest, preserve, and enjoy herbs throughout the seasons—from mint and basil to rosemary, lavender, thyme, and lemon balm.
+    </p>
+
   </div>
+
 </header>
-<figure class="page-hero-image" style="margin:0; line-height:0; display:block;">
-  <img src="images/herb-hub.png" alt="Fresh cocktail herbs — spearmint, basil, lavender, and rosemary — growing in a garden bed" style="width:100%; height:auto; display:block; max-height:520px; object-fit:cover;" />
-</figure>
 
 
 <!-- ── JUMP NAV ── -->
