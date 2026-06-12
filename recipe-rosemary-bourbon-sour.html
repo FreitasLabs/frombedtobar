@@ -133,11 +133,33 @@
     :root { --cream: #f5f0e8; --parchment: #ede5d0; --bark: #3b2a1a; --moss: #4a5e3a; --sage: #7a9468; --terracotta: #b85c38; --amber: #c9873a; --linen: #faf7f2; --ink: #1e160e; }
     html { scroll-behavior: smooth; }
     body { font-family: "Lora", Georgia, serif; background: var(--linen); color: var(--ink); overflow-x: hidden; }
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1rem 3rem; background: rgba(245,240,232,0.93); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(59,42,26,0.12); }
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 3.5rem;
+      height: 100px;
+      background: rgba(245,240,232,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(59,42,26,0.12);
+    }
     .nav-logo { text-decoration: none; display: flex; align-items: center; }
-    .nav-logo img { height: 44px; width: 44px; object-fit: contain; }
-    .nav-links { display: flex; gap: 1.75rem; list-style: none; flex-wrap: wrap; }
-    .nav-links a { font-family: "DM Mono", monospace; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bark); text-decoration: none; opacity: 0.85; transition: opacity 0.2s; }
+    .nav-logo img { height: 84px; width: 84px; object-fit: contain; }
+    .nav-links { display: flex; gap: 2.25rem; list-style: none; flex-wrap: wrap; }
+    .nav-links a {
+      font-family: "DM Mono", monospace;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--bark);
+      text-decoration: none;
+      opacity: 0.82;
+      transition: opacity 0.2s;
+    }
     .nav-links a:hover { opacity: 1; }
     .nav-links a.active { opacity: 1; border-bottom: 2px solid var(--terracotta); padding-bottom: 2px; }
     .recipe-hero { padding: 8rem 5rem 4rem; position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
@@ -246,7 +268,10 @@
     .egg-warning-text strong { color: var(--terracotta); }
     @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     @media (max-width: 900px) {
-      nav { padding: 1rem 1.5rem; } .nav-links { gap: 1rem; }
+      nav { padding: 0 1.5rem; height: 66px; }
+      .nav-logo img { height: 44px; width: 44px; }
+      .nav-links { gap: 1.5rem; }
+      .nav-links a { font-size: 0.82rem; font-weight: 400; letter-spacing: 0.1em; opacity: 0.85; } .nav-links { gap: 1rem; }
       .recipe-hero { grid-template-columns: 1fr; padding: 7rem 1.75rem 3rem; gap: 2rem; }
       .jump-nav { padding: 1rem 1.75rem; }
       .content-section { padding: 3rem 1.75rem; }
