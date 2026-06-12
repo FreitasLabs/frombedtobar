@@ -12,11 +12,11 @@
   <meta property="og:title" content="How to Grow Plums for Cocktails & Preserves | From Bed to Bar" />
   <meta property="og:description" content="Variety selection, planting, pruning, harvest timing, and what to make from every pound you pick. The complete garden-to-glass plum guide." />
   <meta property="og:url" content="https://frombedtobar.com/plum-guide" />
-  <meta property="og:image" content="https://frombedtobar.com/images/plum-guide.png" />
+  <meta property="og:image" content="https://frombedtobar.com/images/guides/plum-guide.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="How to Grow Plums for Cocktails & Preserves | From Bed to Bar" />
   <meta name="twitter:description" content="The complete garden-to-glass plum guide — from planting to pour." />
-  <meta name="twitter:image" content="https://frombedtobar.com/images/plum-guide.png" />
+  <meta name="twitter:image" content="https://frombedtobar.com/images/guides/plum-guide.png" />
   <meta name="theme-color" content="#4a5e3a" />
 
   <script type="application/ld+json">
@@ -196,19 +196,83 @@
     }
 
     /* ── PAGE HERO ── */
-    .page-header { background: linear-gradient(150deg, var(--plum-accent) 0%, #3d1a3d 40%, var(--bark) 100%); padding: 8rem 5rem 5rem; position: relative; overflow: hidden; }
-    .page-header::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(-45deg, transparent, transparent 18px, rgba(255,255,255,0.015) 18px, rgba(255,255,255,0.015) 19px); }
-    .page-header::after { content: "🍑"; position: absolute; right: 4rem; bottom: -1.5rem; font-size: 14rem; opacity: 0.07; line-height: 1; }
-    .header-inner { position: relative; z-index: 1; max-width: 760px; }
-    .header-eyebrow { font-family: "DM Mono", monospace; font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,240,232,0.7); margin-bottom: 1rem; animation: fadeUp 0.7s ease both; }
-    .header-back { display: inline-block; font-family: "DM Mono", monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber); text-decoration: none; margin-bottom: 1.25rem; opacity: 0.85; transition: opacity 0.2s; animation: fadeUp 0.7s ease both; }
-    .header-back:hover { opacity: 1; }
-    .header-title { font-family: "Playfair Display", serif; font-size: clamp(2rem, 4vw, 3.25rem); font-weight: 700; color: var(--cream); line-height: 1.15; margin-bottom: 1.25rem; animation: fadeUp 0.7s 0.1s ease both; }
-    .header-title em { font-style: italic; color: var(--amber); }
-    .header-sub { font-size: 1.05rem; line-height: 1.8; color: rgba(245,240,232,0.82); max-width: 620px; animation: fadeUp 0.7s 0.2s ease both; }
-    .header-meta { margin-top: 1.5rem; display: flex; gap: 1.5rem; flex-wrap: wrap; animation: fadeUp 0.7s 0.3s ease both; }
-    .header-tag { font-family: "DM Mono", monospace; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,240,232,0.6); border: 1px solid rgba(255,255,255,0.2); padding: 0.25rem 0.7rem; }
+  .page-header {
+  position: relative;
+  min-height: 75vh;
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+}
 
+.page-header-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 0;
+}
+
+.page-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(8,6,2,.82) 0%,
+    rgba(8,6,2,.62) 28%,
+    rgba(8,6,2,.30) 52%,
+    rgba(8,6,2,.08) 72%,
+    rgba(8,6,2,0) 88%
+  );
+  z-index: 1;
+}
+    .header-inner,
+.header-inner-wrap {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  padding: 3rem 0 3.5rem 8vw;
+}
+
+.header-eyebrow {
+  font-family: "DM Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(245,240,232,.82);
+  margin-bottom: 1rem;
+  text-shadow: 0 1px 8px rgba(4,2,0,.65);
+}
+
+.header-title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.8rem, 4vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-shadow:
+    0 2px 14px rgba(4,2,0,.75),
+    0 6px 48px rgba(4,2,0,.45);
+}
+
+.header-title em {
+  color: var(--amber);
+  font-style: italic;
+}
+
+.header-sub {
+  font-family: "Lora", Georgia, serif;
+  font-size: clamp(.95rem,1.1vw,1.1rem);
+  line-height: 1.9;
+  color: rgba(245,240,232,.88);
+  max-width: 600px;
+  text-shadow: 0 1px 8px rgba(4,2,0,.5);
+}
     /* ── JUMP NAV ── */
     .jump-nav { background: var(--bark); padding: 1rem 5rem; display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); position: sticky; top: 66px; z-index: 90; }
     .jump-nav-label { font-family: "DM Mono", monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,240,232,0.65); flex-shrink: 0; margin-right: 0.5rem; }
