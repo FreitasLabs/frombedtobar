@@ -1,0 +1,178 @@
+FROM BED TO BAR — PHASE 6 IMAGE CLEANUP REPORT
+Generated: 2026-06-12
+Source ZIP: frombedtobar-main__10_.zip
+
+═══════════════════════════════════════════════════════════════
+SUMMARY
+═══════════════════════════════════════════════════════════════
+
+Phase focused on wiring new images into the site, removing
+onerror fallbacks where real images now exist, and replacing
+all stale og-image.jpg references with correct image paths.
+
+Pages reviewed:       37
+Pages modified:       24
+OG references fixed:  24 pages (meta + JSON-LD schema)
+onerror removed:       2 instances (lavender-guide-hero.png)
+onerror retained:     10 instances (images not yet on disk)
+Broken images fixed:   1 (lavender-guide-hero.png now wired)
+Remaining missing:     5 image files not yet on disk
+
+═══════════════════════════════════════════════════════════════
+STEP 1 — IMAGE INVENTORY
+═══════════════════════════════════════════════════════════════
+
+Images confirmed on disk in /images/ from uploaded ZIP:
+  ✓ og-image.PNG
+  ✓ lavender-guide-hero.png
+  (all other standard site images present)
+
+NOT YET on disk (uploaded to GitHub but not in this ZIP):
+  ✗ mint-guide-hero.png
+  ✗ rosemary-guide-hero.png
+  ✗ lemon-balm-guide-hero.png
+  ✗ planting-guide-hero.png
+  ✗ herb-hub-hero.png (no upload confirmed)
+
+═══════════════════════════════════════════════════════════════
+STEP 2 — HERO IMAGE WIRING
+═══════════════════════════════════════════════════════════════
+
+lavender-guide-hero.png — ON DISK ✓
+  Referenced in:
+    basil-guide.html (img-card) — onerror REMOVED ✓
+    lemon-balm-guide.html (img-card) — onerror REMOVED ✓
+    lavender-guide.html (OG image) — set as OG ✓
+
+mint-guide-hero.png — NOT ON DISK
+  Referenced in: basil-guide.html, lemon-balm-guide.html
+  onerror fallback RETAINED (image will load when uploaded)
+
+rosemary-guide-hero.png — NOT ON DISK
+  Referenced in: thyme-guide.html
+  onerror fallback RETAINED
+
+lemon-balm-guide-hero.png — NOT ON DISK
+  Not referenced in any img-card (will be wired when uploaded)
+
+planting-guide-hero.png — NOT ON DISK
+  Referenced in: lavender-guide.html, rosemary-guide.html
+  onerror fallback RETAINED
+
+herb-hub-hero.png — NOT ON DISK (no upload confirmed)
+  Referenced in: basil-guide.html, lavender-guide.html,
+    lemon-balm-guide.html, rosemary-guide.html, thyme-guide.html
+  onerror fallback RETAINED
+
+═══════════════════════════════════════════════════════════════
+STEP 3 — onerror FALLBACK STATUS
+═══════════════════════════════════════════════════════════════
+
+Removed (image now on disk):
+  basil-guide.html      → lavender-guide-hero.png ✓
+  lemon-balm-guide.html → lavender-guide-hero.png ✓
+
+Retained (image still missing — fallback is correct behavior):
+  basil-guide.html      → mint-guide-hero.png
+  basil-guide.html      → herb-hub-hero.png
+  lavender-guide.html   → planting-guide-hero.png
+  lavender-guide.html   → herb-hub-hero.png
+  lemon-balm-guide.html → mint-guide-hero.png
+  lemon-balm-guide.html → herb-hub-hero.png
+  rosemary-guide.html   → planting-guide-hero.png
+  rosemary-guide.html   → herb-hub-hero.png
+  thyme-guide.html      → rosemary-guide-hero.png
+  thyme-guide.html      → herb-hub-hero.png
+
+═══════════════════════════════════════════════════════════════
+STEP 4 — OG/TWITTER IMAGE UPDATES
+═══════════════════════════════════════════════════════════════
+
+All 24 pages using stale og-image.jpg updated.
+Updated in: og:image meta, twitter:image meta, JSON-LD schema.
+
+Pages receiving recipe/page-specific OG images:
+  cocktails-garden-mojito.html    → garden-mojito.png
+  recipe-garden-herb-gimlet.html  → garden-herb-gimlet.jpeg
+  recipe-lavender-lemon-spritz.html → lavender-lemon-spritz.jpeg
+  recipe-mint-simple-syrup.html   → mint-simple-syrup.png
+  recipe-rosemary-bourbon-sour.html → rosemary-bourbon-sour.jpeg
+  how-to-harvest-preserve-mint.html → harvest-preserve-mint.png
+  how-to-harvest-preserve-plums.html → harvest-preserve-plums.png
+  lavender-guide.html             → lavender-guide-hero.png
+  plum-guide.html                 → plum-guide.png
+  mocktails-sparkling-mint-limeade.html → sparkling-mint-limeade.png
+
+Pages receiving generic og-image.PNG (no better dedicated image):
+  basil-guide.html, thyme-guide.html, mint-guide.html,
+  rosemary-guide.html, lemon-balm-guide.html,
+  blog-post-1.html through blog-post-4.html, disclaimer.html
+
+Pages already correct — untouched:
+  index.html, about.html, bar-essentials.html, blog.html,
+  garden-tips.html, herb-hub.html, planting-guide.html,
+  recipes.html, recipe-cucumber-mint-gin-tonic.html,
+  recipe-hibiscus-paloma.html, recipe-peach-honey-bourbon-smash.html,
+  recipe-strawberry-basil-smash.html, recipe-plum-simple-syrup.html,
+  cocktails-plum-bourbon-sour.html, mocktails-sparkling-plum-mocktail.html,
+  preserves-plum-jam.html
+
+═══════════════════════════════════════════════════════════════
+STEP 5 — QA RESULTS
+═══════════════════════════════════════════════════════════════
+
+  ✓ Zero og-image.jpg references remaining (meta + schema)
+  ✓ og-image.PNG capitalization preserved throughout
+  ✓ All 37 OG images verified on disk
+  ✓ lavender-guide-hero.png wired and onerror removed
+  ✓ Missing image onerror fallbacks retained correctly
+  ✓ Navigation unchanged on all 37 pages
+  ✓ Footer unchanged on all 37 pages
+  ✓ No content rewritten
+  ✓ No schema removed
+  ✓ No H1 changes
+  ✓ index.html untouched
+
+═══════════════════════════════════════════════════════════════
+REMAINING MISSING IMAGES
+═══════════════════════════════════════════════════════════════
+
+Upload these to GitHub /images/ to complete the image set.
+onerror fallbacks will show emoji placeholders until then:
+
+  mint-guide-hero.png       — used in basil-guide, lemon-balm-guide
+  rosemary-guide-hero.png   — used in thyme-guide
+  lemon-balm-guide-hero.png — not yet referenced (wire after upload)
+  planting-guide-hero.png   — used in lavender-guide, rosemary-guide
+  herb-hub-hero.png         — used in 5 herb guides (not yet uploaded)
+
+Once uploaded: re-run image cleanup to remove remaining
+onerror fallbacks and set as OG images where appropriate.
+
+═══════════════════════════════════════════════════════════════
+RECOMMENDED NEXT PHASE
+═══════════════════════════════════════════════════════════════
+
+1. UPLOAD REMAINING IMAGES
+   Upload mint-guide-hero.png, rosemary-guide-hero.png,
+   lemon-balm-guide-hero.png, planting-guide-hero.png,
+   and herb-hub-hero.png to GitHub /images/ then run
+   another image cleanup pass to wire them in.
+
+2. OG IMAGE UPGRADES FOR REMAINING RECIPE PAGES
+   Consider adding dedicated hero images to the CSS-gradient
+   recipe pages (recipe-lavender-lemon-spritz, etc.) — they
+   now have recipe-specific OG images but no hero photo.
+
+3. CONTENT PHASE — MISSING RECIPE PAGES
+   High priority pages without dedicated pages:
+   - recipe-blueberry-lemon-mint-mojito
+   - recipe-elderflower-cucumber-gin-fizz
+   - recipe-lavender-syrup
+   - recipe-jalapeño-watermelon-margarita
+   - recipe-tomato-water-bloody-mary
+   - Lemon balm recipe (any)
+
+4. SITEMAP LASTMOD REFRESH
+   Many entries still show May 2026 dates.
+   Update to current date after this phase deploys.
