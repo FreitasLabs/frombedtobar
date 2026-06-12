@@ -499,19 +499,94 @@
     .faq-answer p { font-size: 0.97rem; line-height: 1.85; color: rgba(30,22,14,0.78); }
 
     /* ── RECIPE CARDS ── */
-    .img-card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
-    .img-card { background: var(--cream); border: 1px solid rgba(59,42,26,0.1); display: flex; flex-direction: column; text-decoration: none; color: inherit; transition: transform 0.2s; }
-    .img-card:hover { transform: translateY(-4px); }
-    .img-card-photo { width: 100%; aspect-ratio: 4 / 3; overflow: hidden; background: var(--parchment); display: flex; align-items: center; justify-content: center; }
-    .img-card-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
-    .img-card:hover .img-card-photo img { transform: scale(1.05); }
-    .img-card-photo-placeholder { font-size: 3rem; opacity: 0.3; }
-    .img-card-body { padding: 1.25rem 1.25rem 1.5rem; flex: 1; display: flex; flex-direction: column; gap: 0.5rem; }
-    .img-card-eyebrow { font-family: "DM Mono", monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rosemary); }
-    .img-card-title { font-family: "Playfair Display", serif; font-size: 1rem; font-weight: 700; font-style: italic; color: var(--bark); line-height: 1.3; }
-    .img-card-desc { font-size: 0.87rem; line-height: 1.65; color: rgba(30,22,14,0.7); flex: 1; }
-    .img-card-btn { margin-top: 1rem; display: inline-block; font-family: "DM Mono", monospace; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream); background: var(--rosemary-deep); padding: 0.55rem 1rem; align-self: flex-start; transition: background 0.2s; }
-    .img-card:hover .img-card-btn { background: var(--bark); }
+   <p class="section-eyebrow">From Garden to Glass</p>
+
+<h2 class="section-title">
+What to Make with <em>Rosemary</em>
+</h2>
+
+<p class="section-intro">
+From homemade syrups to bourbon cocktails, these are some of our favorite ways to bring rosemary from the garden to the glass.
+</p>
+
+<div class="img-card-grid">
+
+  <!-- Rosemary Syrup -->
+  <a href="rosemary-syrup" class="img-card">
+    <div class="img-card-photo">
+      <img
+        src="/images/syrups/rosemary-syrup.jpg"
+        alt="Homemade rosemary simple syrup">
+    </div>
+
+    <div class="img-card-body">
+      <div class="img-card-eyebrow">Homemade Syrup</div>
+
+      <h3 class="img-card-title">
+        Rosemary Simple Syrup
+      </h3>
+
+      <p class="img-card-desc">
+        Earthy, aromatic, and surprisingly versatile. A simple way to preserve fresh rosemary from the garden.
+      </p>
+
+      <span class="img-card-btn">
+        View Recipe
+      </span>
+    </div>
+  </a>
+
+  <!-- Rosemary Bourbon Sour -->
+  <a href="recipe-rosemary-bourbon-sour" class="img-card">
+    <div class="img-card-photo">
+      <img
+        src="/images/recipes/rosemary-bourbon-sour.jpg"
+        alt="Rosemary Bourbon Sour cocktail">
+    </div>
+
+    <div class="img-card-body">
+      <div class="img-card-eyebrow">Featured Cocktail</div>
+
+      <h3 class="img-card-title">
+        Rosemary Bourbon Sour
+      </h3>
+
+      <p class="img-card-desc">
+        Bright citrus, rich bourbon, and fresh rosemary come together in a classic cocktail perfect for cool evenings.
+      </p>
+
+      <span class="img-card-btn">
+        Make It
+      </span>
+    </div>
+  </a>
+
+  <!-- Herb Hub -->
+  <a href="herb-hub" class="img-card">
+    <div class="img-card-photo">
+      <img
+        src="/images/heroes/herb-hub-hero.png"
+        alt="Fresh herbs growing in the garden">
+    </div>
+
+    <div class="img-card-body">
+      <div class="img-card-eyebrow">Explore More</div>
+
+      <h3 class="img-card-title">
+        Visit the Herb Hub
+      </h3>
+
+      <p class="img-card-desc">
+        Discover more herbs, growing guides, and seasonal inspiration for your garden-to-glass journey.
+      </p>
+
+      <span class="img-card-btn">
+        Explore
+      </span>
+    </div>
+  </a>
+
+</div>
 
     /* ── CALLOUT ── */
     .callout-box { background: var(--rosemary-pale); border-left: 4px solid var(--rosemary); padding: 1.5rem 1.75rem; max-width: 680px; margin: 2rem 0; }
