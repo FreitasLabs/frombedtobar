@@ -147,105 +147,120 @@
     .nav-links a:hover { opacity: 1; }
 
 
-    /* ── HERO — full-width cinematic background ── */
+    /* ── HERO — full-width cinematic editorial hero ── */
     .hero {
       position: relative;
-      min-height: 85vh;
-      padding-top: 72px; /* clear fixed nav */
+      min-height: 88vh;
+      padding-top: 72px;
       display: flex;
-      align-items: center; /* vertical center */
+      align-items: center;
       overflow: hidden;
       isolation: isolate;
     }
 
-    /* Photo anchored top so golden sky fills the upper half */
+    /* Photo: anchored center-top so golden sky and hillside dominate */
     .hero-bg {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center top;
+      object-position: center 15%;
       display: block;
       z-index: 0;
     }
 
-    /* Full-frame overlay: light overall so image stays warm and visible.
-       Heavier vignette at the bottom grounds the table area. */
+    /* Gradient overlay — left-to-right fade only.
+       Left third is dark enough for text; right two-thirds stay warm and open.
+       No bottom crush — the image breathes. */
     .hero::after {
       content: '';
       position: absolute;
       inset: 0;
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(12, 9, 4, 0.12) 0%,
-          rgba(12, 9, 4, 0.08) 40%,
-          rgba(12, 9, 4, 0.52) 100%
-        );
+      background: linear-gradient(
+        105deg,
+        rgba(10, 7, 3, 0.82) 0%,
+        rgba(10, 7, 3, 0.68) 28%,
+        rgba(10, 7, 3, 0.38) 52%,
+        rgba(10, 7, 3, 0.08) 72%,
+        rgba(10, 7, 3, 0.00) 100%
+      );
       z-index: 1;
     }
 
-    /* Text block: positioned 10vw from left, vertically centred,
-       nudged above-centre with a negative margin-top.
-       Has its own localised dark backdrop so text is always legible
-       regardless of what the image shows behind it. */
+    /* Text block — no box, no panel, no border.
+       Pure type over gradient. Left margin gives breathing room from edge. */
     .hero-content {
       position: relative;
       z-index: 2;
-      margin-left: 10vw;
-      margin-top: -4vh; /* pull slightly above true centre */
-      max-width: 720px;
-      padding: 2.5rem 3rem 2.75rem;
-      /* Localised scrim — semi-transparent bark panel behind the text only */
-      background: rgba(12, 9, 4, 0.42);
-      backdrop-filter: blur(0px); /* no blur — keeps editorial crispness */
-      border-left: 3px solid rgba(201, 135, 58, 0.55); /* amber accent rule */
+      padding: 0 0 0 8vw;
+      max-width: 52vw;
+      background: none;
+      border: none;
     }
 
     .hero-eyebrow {
       font-family: 'DM Mono', monospace;
-      font-size: 0.78rem;
-      letter-spacing: 0.24em;
+      font-size: 0.8rem;
+      letter-spacing: 0.26em;
       text-transform: uppercase;
-      color: var(--amber);
-      margin-bottom: 1rem;
+      color: var(--sage);
+      margin-bottom: 1.5rem;
       animation: fadeUp 0.8s ease both;
     }
 
+    /* H1: the dominant element. Large, bold, commanding.
+       Line 1 in white. Line 2 (em) in amber italic — distinct but not loud. */
     .hero-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.8rem, 4.5vw, 4.8rem);
+      font-size: clamp(3.2rem, 5.2vw, 5.6rem);
       font-weight: 700;
-      line-height: 1.08;
+      line-height: 1.06;
       color: #ffffff;
-      margin-bottom: 1.25rem;
-      text-shadow: 0 2px 20px rgba(8, 5, 1, 0.6);
-      animation: fadeUp 0.8s 0.15s ease both;
+      margin-bottom: 1.75rem;
+      text-shadow:
+        0 2px 12px rgba(5, 3, 1, 0.7),
+        0 4px 40px rgba(5, 3, 1, 0.4);
+      animation: fadeUp 0.8s 0.12s ease both;
     }
 
     .hero-title em {
       font-style: italic;
       color: var(--amber);
-      display: block; /* forces second line to its own line cleanly */
+      display: block;
     }
 
+    /* Supporting line — slightly larger than body, Playfair italic, cream */
+    .hero-tagline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.05rem, 1.4vw, 1.3rem);
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.5;
+      color: rgba(245, 240, 232, 0.88);
+      margin-bottom: 1.25rem;
+      text-shadow: 0 1px 10px rgba(5, 3, 1, 0.55);
+      animation: fadeUp 0.8s 0.22s ease both;
+    }
+
+    /* Body copy — Lora, comfortable reading size */
     .hero-sub {
-      font-size: 1rem;
-      line-height: 1.78;
-      color: rgba(245, 240, 232, 0.92);
-      max-width: 580px;
-      margin-bottom: 2rem;
-      text-shadow: 0 1px 6px rgba(8, 5, 1, 0.45);
+      font-family: 'Lora', Georgia, serif;
+      font-size: clamp(0.98rem, 1.1vw, 1.1rem);
+      line-height: 1.8;
+      color: rgba(245, 240, 232, 0.82);
+      max-width: 480px;
+      margin-bottom: 2.5rem;
+      text-shadow: 0 1px 8px rgba(5, 3, 1, 0.5);
       animation: fadeUp 0.8s 0.3s ease both;
     }
 
     /* ── HERO CTAS ── */
     .hero-ctas {
       display: flex;
-      gap: 0.875rem;
+      gap: 1rem;
       flex-wrap: wrap;
-      animation: fadeUp 0.8s 0.45s ease both;
+      animation: fadeUp 0.8s 0.42s ease both;
     }
 
     .btn-primary {
@@ -614,17 +629,27 @@
       nav { padding: 1rem 1.5rem; }
       .nav-links { gap: 1.5rem; }
 
-      .hero { min-height: 75vh; align-items: flex-end; }
-      .hero-bg { object-position: center top; }
-      .hero-content {
-        margin-left: 0;
-        margin-top: 0;
-        max-width: 100%;
-        padding: 1.75rem 1.5rem 2rem;
-        border-left: none;
-        border-top: 3px solid rgba(201, 135, 58, 0.55);
-        background: rgba(12, 9, 4, 0.52);
+      .hero { min-height: 80vh; align-items: flex-end; }
+      .hero-bg { object-position: center 20%; }
+      /* On mobile: full-width bottom overlay so stacked text is always readable */
+      .hero::after {
+        background: linear-gradient(
+          to top,
+          rgba(10, 7, 3, 0.88) 0%,
+          rgba(10, 7, 3, 0.65) 45%,
+          rgba(10, 7, 3, 0.20) 75%,
+          rgba(10, 7, 3, 0.00) 100%
+        );
       }
+      .hero-content {
+        padding: 0 1.5rem 2.75rem;
+        max-width: 100%;
+      }
+      .hero-title { font-size: clamp(2.6rem, 9vw, 3.4rem); }
+      .hero-tagline { font-size: 1rem; }
+      .hero-sub { font-size: 0.97rem; max-width: 100%; margin-bottom: 2rem; }
+      .hero-ctas { flex-direction: column; gap: 0.75rem; }
+      .btn-primary, .btn-secondary { text-align: center; width: 100%; box-sizing: border-box; }
 
       section { padding: 4rem 1.75rem; }
 
@@ -754,11 +779,12 @@
     />
     <div class="hero-content">
       <p class="hero-eyebrow">Garden-to-Glass Living</p>
-      <h1 class="hero-title">Rooted in the garden.<br><em>Raised around the table.</em></h1>
-      <p class="hero-sub">Seasonal cocktails, mocktails, syrups, and garden guides built around what you actually grow — from mint and basil to plums, rosemary, lavender, and lemon balm.</p>
+      <h1 class="hero-title">Rooted in the garden.<em>Raised around the table.</em></h1>
+      <p class="hero-tagline">A seasonal homegrown approach to cocktails, mocktails, syrups, preserves, and garden guides.</p>
+      <p class="hero-sub">Grow what you can. Harvest what is ready. Turn mint, basil, plums, rosemary, lavender, and lemon balm into drinks worth gathering around.</p>
       <div class="hero-ctas">
         <a href="recipes" class="btn-primary">Explore Recipes</a>
-        <a href="herb-hub" class="btn-secondary">Visit the Herb Hub</a>
+        <a href="herb-hub" class="btn-secondary">Start with the Herb Hub</a>
       </div>
     </div>
   </section>
