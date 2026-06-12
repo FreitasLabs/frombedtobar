@@ -13,13 +13,13 @@
   <meta property="og:title" content="About From Bed to Bar | Garden-to-Glass Cocktails & Mocktails" />
   <meta property="og:description" content="From Bed to Bar is Stephanie's garden-to-glass project — real recipes built around what you actually grow, for home gardeners and curious home bartenders." />
   <meta property="og:url" content="https://frombedtobar.com/about" />
-  <meta property="og:image" content="https://frombedtobar.com/images/about-hero.png" />
+  <meta property="og:image" content="https://frombedtobar.com/images/heroes/about-hero.png" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="About From Bed to Bar | Garden-to-Glass Cocktails & Mocktails" />
   <meta name="twitter:description" content="From Bed to Bar is Stephanie's garden-to-glass project — real recipes built around what you actually grow, for home gardeners and curious home bartenders." />
-  <meta name="twitter:image" content="https://frombedtobar.com/images/about-hero.png" />
+  <meta name="twitter:image" content="https://frombedtobar.com/images/heroes/about-hero.png" />
 
   <meta name="theme-color" content="#b85c38" />
 
@@ -161,48 +161,83 @@
     }
 
     /* ── PAGE HERO ── */
-    .page-hero {
-      padding: 8rem 5rem 5rem;
-      background: var(--bark);
-      position: relative;
-      overflow: hidden;
-    }
-    .page-hero::before {
-      content: "";
-      position: absolute; inset: 0;
-      background: repeating-linear-gradient(
-        -45deg,
-        transparent, transparent 18px,
-        rgba(255,255,255,0.025) 18px, rgba(255,255,255,0.025) 19px
-      );
-    }
-    .page-hero::after {
-      content: "";
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 70% 50%, rgba(201,135,58,0.12) 0%, transparent 65%);
-    }
-    .hero-inner {
-      position: relative; z-index: 1;
-      max-width: 780px;
-    }
-    .hero-eyebrow {
-      font-family: "DM Mono", monospace;
-      font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--amber); margin-bottom: 1.25rem;
-    }
-    .hero-title {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(2.4rem, 5vw, 3.6rem);
-      font-weight: 700; line-height: 1.15;
-      color: var(--cream); margin-bottom: 1.75rem;
-    }
-    .hero-title em { font-style: italic; color: var(--amber); }
-    .hero-intro {
-      font-size: 1.1rem; line-height: 1.9;
-      color: rgba(245,240,232,0.82);
-      max-width: 640px;
-    }
+    .page-header {
+  position: relative;
+  min-height: 75vh;
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+}
 
+.page-header-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 0;
+}
+
+.page-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(8,6,2,.82) 0%,
+    rgba(8,6,2,.62) 28%,
+    rgba(8,6,2,.30) 52%,
+    rgba(8,6,2,.08) 72%,
+    rgba(8,6,2,0) 88%
+  );
+  z-index: 1;
+}
+    .header-inner,
+.header-inner-wrap {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  padding: 3rem 0 3.5rem 8vw;
+}
+
+.header-eyebrow {
+  font-family: "DM Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(245,240,232,.82);
+  margin-bottom: 1rem;
+  text-shadow: 0 1px 8px rgba(4,2,0,.65);
+}
+
+.header-title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.8rem, 4vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-shadow:
+    0 2px 14px rgba(4,2,0,.75),
+    0 6px 48px rgba(4,2,0,.45);
+}
+
+.header-title em {
+  color: var(--amber);
+  font-style: italic;
+}
+
+.header-sub {
+  font-family: "Lora", Georgia, serif;
+  font-size: clamp(.95rem,1.1vw,1.1rem);
+  line-height: 1.9;
+  color: rgba(245,240,232,.88);
+  max-width: 600px;
+  text-shadow: 0 1px 8px rgba(4,2,0,.5);
+}
     /* ── CONTENT SECTIONS ── */
     .about-body { max-width: 780px; margin: 0 auto; padding: 5rem 3rem 2rem; }
 
@@ -419,16 +454,32 @@
 </nav>
 
 <!-- ── HERO ── -->
-<header class="page-hero">
-  <div class="hero-inner">
-    <p class="hero-eyebrow">About From Bed to Bar</p>
-    <h1 class="hero-title">Garden-grown drinks,<br><em>made approachable.</em></h1>
-    <p class="hero-intro">From Bed to Bar is a garden-to-glass project built around one simple idea: the best drinks start outside, not at a bottle shop. If you grow it, you can pour it — and it doesn't have to be complicated.</p>
+<header class="page-header">
+
+  <img
+    src="/images/heroes/about-hero.png"
+    class="page-header-bg"
+    alt=""
+    aria-hidden="true">
+
+  <div class="header-inner">
+
+    <p class="header-eyebrow">
+      About
+    </p>
+
+    <h1 class="header-title">
+      Rooted in the Garden.<br>
+      Raised Around the Table.
+    </h1>
+
+    <p class="header-sub">
+      From Bed to Bar is a journey toward slower living, seasonal recipes, and gathering with the people we love. What started in the garden has become a way of reconnecting with home, hospitality, and the simple joy of creating something beautiful together.
+    </p>
+
   </div>
+
 </header>
-<figure class="page-hero-image" style="margin:0; line-height:0; display:block;">
-  <img src="images/about-hero.png" alt="Stephanie from From Bed to Bar in her garden — the garden-to-glass project behind the site" style="width:100%; height:auto; display:block; max-height:520px; object-fit:cover;" />
-</figure>
 
 
 <!-- ── CONTENT ── -->
