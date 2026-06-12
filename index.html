@@ -347,7 +347,7 @@
     }
 
     /* ── SECTION SHARED ── */
-    section { padding: 6rem 5rem; }
+    section { padding: 7rem 5rem; }
 
     .section-label {
       font-family: 'DM Mono', monospace;
@@ -549,7 +549,7 @@
     .newsletter-section {
       background: var(--parchment);
       text-align: center;
-      padding: 6rem 5rem;
+      padding: 8rem 5rem;
     }
 
     .newsletter-section .section-title { margin-bottom: 0.75rem; }
@@ -652,7 +652,7 @@
       .hero-ctas { flex-direction: column; gap: 0.75rem; }
       .btn-primary, .btn-secondary { text-align: center; width: 100%; box-sizing: border-box; }
 
-      section { padding: 4rem 1.75rem; }
+      section { padding: 5rem 1.75rem; }
 
       .recipe-grid { grid-template-columns: 1fr; }
 
@@ -746,6 +746,183 @@
       }
     }
 
+
+    /* ── BRAND STORY SECTION ── */
+    .brand-story {
+      background: var(--linen);
+      padding: 7rem 5rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(59,42,26,0.08);
+    }
+
+    .brand-story-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .brand-story-rule {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .brand-story-rule::before,
+    .brand-story-rule::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 1px;
+      background: rgba(59,42,26,0.2);
+    }
+
+    .brand-story-rule span {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+    }
+
+    .brand-story h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--bark);
+      margin-bottom: 2rem;
+    }
+
+    .brand-story h2 em {
+      font-style: italic;
+      color: var(--moss);
+    }
+
+    .brand-story p {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.9;
+      color: rgba(30,22,14,0.75);
+      margin-bottom: 1.75rem;
+    }
+
+    .brand-story p:last-of-type {
+      margin-bottom: 2.75rem;
+    }
+
+    .btn-story {
+      display: inline-block;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--bark);
+      text-decoration: none;
+      border-bottom: 2px solid var(--terracotta);
+      padding-bottom: 0.3rem;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .btn-story:hover {
+      color: var(--terracotta);
+    }
+
+    /* ── START HERE SECTION ── */
+    .start-here {
+      background: var(--cream);
+      padding: 7rem 5rem;
+    }
+
+    .start-here-header {
+      margin-bottom: 3.5rem;
+    }
+
+    .start-here-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .start-here-card {
+      background: var(--linen);
+      border: 1px solid rgba(59,42,26,0.1);
+      padding: 2rem 1.75rem 2rem;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .start-here-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 36px rgba(59,42,26,0.09);
+    }
+
+    .start-here-card-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 1rem;
+    }
+
+    .start-here-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--bark);
+      line-height: 1.25;
+      margin-bottom: 0.85rem;
+    }
+
+    .start-here-card-desc {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: rgba(30,22,14,0.72);
+      flex: 1;
+      margin-bottom: 1.75rem;
+    }
+
+    .start-here-card-link {
+      display: inline-block;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--bark);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(59,42,26,0.3);
+      padding-bottom: 0.2rem;
+      align-self: flex-start;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .start-here-card-link:hover {
+      color: var(--terracotta);
+      border-color: var(--terracotta);
+    }
+
+    /* ── SECTION DIVIDER ── */
+    .section-divider {
+      width: 40px;
+      height: 2px;
+      background: var(--terracotta);
+      margin-bottom: 1.25rem;
+    }
+
+
+    @media (max-width: 900px) {
+      .brand-story { padding: 5rem 1.75rem; }
+      .brand-story p { font-size: 1rem; }
+      .start-here { padding: 5rem 1.75rem; }
+      .start-here-grid { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    }
+
+    @media (max-width: 540px) {
+      .start-here-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -789,6 +966,17 @@
     </div>
   </section>
 
+
+  <!-- BRAND STORY -->
+  <section class="brand-story">
+    <div class="brand-story-inner">
+      <div class="brand-story-rule"><span>Our Story</span></div>
+      <h2>Rooted in <em>Something Simple</em></h2>
+      <p>From Bed to Bar began with a desire to slow down, grow more of what we use, and create meaningful moments around the table. What started with herbs and raised beds has grown into a journey of learning, preserving, gathering, and sharing the beauty found in everyday life.</p>
+      <p>Whether it's harvesting lavender, making homemade syrup, or simply enjoying time with family, we believe some of life's best moments begin in the garden and end around the table.</p>
+      <a href="about" class="btn-story">Read Our Story →</a>
+    </div>
+  </section>
 
   <!-- RECIPES -->
   <section class="recipes-section" id="recipes">
@@ -920,6 +1108,46 @@
     <div class="tips-visual">
       <div class="tips-visual-label">The whole idea</div>
       <div class="tips-visual-quote">"The best cocktail ingredient is the one you grew yourself."</div>
+    </div>
+  </section>
+
+  <!-- START HERE -->
+  <section class="start-here" id="start-here">
+    <div class="start-here-header">
+      <div class="section-divider"></div>
+      <p class="section-label">Start Here</p>
+      <h2 class="section-title">Explore some of Stephanie's favorite<br><em>places around the garden.</em></h2>
+    </div>
+    <div class="start-here-grid">
+
+      <div class="start-here-card">
+        <p class="start-here-card-label">Recipes</p>
+        <h3 class="start-here-card-title">Favorite Recipes</h3>
+        <p class="start-here-card-desc">Garden-inspired cocktails, mocktails, syrups, and seasonal creations.</p>
+        <a href="recipes" class="start-here-card-link">Explore Recipes →</a>
+      </div>
+
+      <div class="start-here-card">
+        <p class="start-here-card-label">Herb Hub</p>
+        <h3 class="start-here-card-title">Herb Hub</h3>
+        <p class="start-here-card-desc">Learn how to grow, harvest, and use herbs throughout the seasons.</p>
+        <a href="herb-hub" class="start-here-card-link">Visit Herb Hub →</a>
+      </div>
+
+      <div class="start-here-card">
+        <p class="start-here-card-label">Planting Guide</p>
+        <h3 class="start-here-card-title">Planting Guide</h3>
+        <p class="start-here-card-desc">Seasonal growing advice and inspiration for the home garden.</p>
+        <a href="planting-guide" class="start-here-card-link">View Planting Guide →</a>
+      </div>
+
+      <div class="start-here-card">
+        <p class="start-here-card-label">Our Story</p>
+        <h3 class="start-here-card-title">Our Story</h3>
+        <p class="start-here-card-desc">Learn the heart behind From Bed to Bar and the journey that inspired it.</p>
+        <a href="about" class="start-here-card-link">Read More →</a>
+      </div>
+
     </div>
   </section>
 
