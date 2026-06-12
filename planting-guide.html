@@ -131,7 +131,87 @@
     .nav-links a.active { opacity: 1; border-bottom: 2px solid var(--terracotta); padding-bottom: 2px; }
 
     /* PAGE HEADER */
-    .page-header { background: var(--moss); padding: 8rem 5rem 4.5rem; position: relative; overflow: hidden; }
+    .page-header {
+      position: relative;
+      min-height: 70vh;
+      padding-top: 100px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .page-header-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
+      z-index: 0;
+    }
+
+    .page-header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(8, 6, 2, 0.82) 0%,
+        rgba(8, 6, 2, 0.68) 25%,
+        rgba(8, 6, 2, 0.38) 48%,
+        rgba(8, 6, 2, 0.08) 68%,
+        rgba(8, 6, 2, 0.00) 82%
+      );
+      z-index: 1;
+    }
+
+    .header-inner-wrap {
+      position: relative;
+      z-index: 2;
+      padding: 3rem 0 3.5rem 8vw;
+      max-width: 680px;
+    }
+
+    .header-eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.82rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--cream);
+      opacity: 0.75;
+      margin-bottom: 1.25rem;
+    }
+
+    .header-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 4vw, 4.2rem);
+      font-weight: 700;
+      line-height: 1.08;
+      color: #ffffff;
+      margin-bottom: 1.25rem;
+      text-shadow:
+        0 2px 14px rgba(4, 2, 0, 0.75),
+        0 6px 48px rgba(4, 2, 0, 0.45);
+    }
+
+    .header-title em {
+      font-style: italic;
+      font-size: 0.9em;
+      color: var(--amber);
+    }
+
+    .header-sub {
+      font-family: 'Lora', Georgia, serif;
+      font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+      line-height: 1.78;
+      color: rgba(245, 240, 232, 0.85);
+      max-width: 520px;
+      text-shadow: 0 1px 8px rgba(4, 2, 0, 0.5);
+    }
+
+    .page-hero-image { display: none; }
     .page-header::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(-45deg, transparent, transparent 18px, rgba(255,255,255,0.025) 18px, rgba(255,255,255,0.025) 19px); }
     .page-header::after { content: "🌱"; position: absolute; right: 4rem; bottom: -1rem; font-size: 14rem; opacity: 0.08; line-height: 1; }
     .header-eyebrow { font-family: "DM Mono", monospace; font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,240,232,0.88); margin-bottom: 1rem; animation: fadeUp 0.7s ease both; }
@@ -305,6 +385,20 @@
     @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
     @media (max-width: 900px) {
+      .page-header { min-height: 60vh; align-items: flex-end; padding-top: 66px; }
+      .page-header-bg { object-position: center 20%; }
+      .page-header::after {
+        background: linear-gradient(
+          to top,
+          rgba(8, 6, 2, 0.88) 0%,
+          rgba(8, 6, 2, 0.60) 45%,
+          rgba(8, 6, 2, 0.15) 75%,
+          rgba(8, 6, 2, 0.00) 100%
+        );
+      }
+      .header-inner-wrap { padding: 0 1.5rem 2.5rem; max-width: 100%; }
+      .header-title { font-size: clamp(2rem, 8vw, 2.8rem); }
+      .header-sub { font-size: 0.95rem; max-width: 100%; }
       nav { padding: 0 1.5rem; height: 66px; }
       .nav-logo img { height: 44px; width: 44px; }
       .nav-links { gap: 1.5rem; }
@@ -428,13 +522,18 @@
 </nav>
 
 <div class="page-header">
-  <p class="header-eyebrow">Garden Tips · Seasonal Guide</p>
-  <h1 class="header-title">Plant it. Grow it. <em>Harvest it.</em></h1>
-  <p class="header-sub">A complete seasonal planting calendar for home gardeners — from herbs and berries to fruit trees and bar-ready vegetables. Covering all USDA hardiness zones with organic growing practices throughout.</p>
+  <img
+    src="images/planting-guide-hero.png"
+    alt=""
+    class="page-header-bg"
+    aria-hidden="true"
+  />
+  <div class="header-inner-wrap">
+    <p class="header-eyebrow">Garden Tips · Seasonal Guide</p>
+    <h1 class="header-title">Plant it. Grow it. <em>Harvest it.</em></h1>
+    <p class="header-sub">A complete seasonal planting calendar for home gardeners — from herbs and berries to fruit trees and bar-ready vegetables. Covering all USDA hardiness zones with organic growing practices throughout.</p>
+  </div>
 </div>
-<figure class="page-hero-image" style="margin:0; line-height:0; display:block;">
-  <img src="images/planting-guide.png" alt="A home garden planting setup with herbs and seedlings arranged for a seasonal cocktail garden" style="width:100%; height:auto; display:block; max-height:520px; object-fit:cover;" />
-</figure>
 
 
 <div class="jump-nav">
