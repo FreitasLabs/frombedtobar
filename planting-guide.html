@@ -176,12 +176,13 @@
 
     .header-eyebrow {
       font-family: 'DM Mono', monospace;
-      font-size: 0.82rem;
+      font-size: 0.9rem;
       letter-spacing: 0.28em;
       text-transform: uppercase;
-      color: var(--cream);
-      opacity: 0.75;
+      color: #ffffff;
+      opacity: 1;
       margin-bottom: 1.25rem;
+      text-shadow: 0 1px 8px rgba(4, 2, 0, 0.65);
     }
 
     .header-title {
@@ -214,8 +215,7 @@
     .page-hero-image { display: none; }
     .page-header::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(-45deg, transparent, transparent 18px, rgba(255,255,255,0.025) 18px, rgba(255,255,255,0.025) 19px); }
     .page-header::after { content: "🌱"; position: absolute; right: 4rem; bottom: -1rem; font-size: 14rem; opacity: 0.08; line-height: 1; }
-    .header-eyebrow { font-family: "DM Mono", monospace; font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,240,232,0.88); margin-bottom: 1rem; animation: fadeUp 0.7s ease both; }
-    .header-title { font-family: "Playfair Display", serif; font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 700; color: var(--cream); line-height: 1.15; margin-bottom: 1rem; animation: fadeUp 0.7s 0.1s ease both; }
+        .header-title { font-family: "Playfair Display", serif; font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 700; color: var(--cream); line-height: 1.15; margin-bottom: 1rem; animation: fadeUp 0.7s 0.1s ease both; }
     .header-title em { font-style: italic; color: var(--amber); }
     .header-sub { font-size: 1rem; line-height: 1.75; color: rgba(245,240,232,0.88); max-width: 580px; animation: fadeUp 0.7s 0.2s ease both; }
 
