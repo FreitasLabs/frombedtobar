@@ -167,11 +167,11 @@
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(8, 6, 2, 0.82) 0%,
-    rgba(8, 6, 2, 0.62) 28%,
-    rgba(8, 6, 2, 0.30) 52%,
-    rgba(8, 6, 2, 0.08) 72%,
-    rgba(8, 6, 2, 0.00) 88%
+    rgba(8,6,2,.82) 0%,
+    rgba(8,6,2,.62) 28%,
+    rgba(8,6,2,.30) 52%,
+    rgba(8,6,2,.08) 72%,
+    rgba(8,6,2,0) 88%
   );
   z-index: 1;
 }
@@ -180,60 +180,52 @@
 .header-inner-wrap {
   position: relative;
   z-index: 2;
-  max-width: 680px;
+  max-width: 760px;
   padding: 3rem 0 3.5rem 8vw;
 }
 
 .header-eyebrow {
   font-family: "DM Mono", monospace;
-  font-size: 0.82rem;
-  letter-spacing: 0.26em;
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: rgba(245,240,232,0.82);
-  margin-bottom: 1.25rem;
-  text-shadow: 0 1px 8px rgba(4,2,0,0.65);
+  color: rgba(245,240,232,.82);
+  margin-bottom: 1rem;
+  text-shadow: 0 1px 8px rgba(4,2,0,.65);
 }
 
 .header-title {
   font-family: "Playfair Display", serif;
-  font-size: clamp(2.4rem, 4vw, 4.2rem);
+  font-size: clamp(2.8rem, 4vw, 4.5rem);
   font-weight: 700;
-  line-height: 1.08;
+  line-height: 1.1;
   color: #fff;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   text-shadow:
-    0 2px 14px rgba(4,2,0,0.75),
-    0 6px 48px rgba(4,2,0,0.45);
+    0 2px 14px rgba(4,2,0,.75),
+    0 6px 48px rgba(4,2,0,.45);
 }
 
 .header-title em {
-  font-style: italic;
   color: var(--amber);
+  font-style: italic;
 }
 
 .header-sub {
-  font-size: clamp(0.95rem, 1.1vw, 1.08rem);
-  line-height: 1.8;
-  color: rgba(245,240,232,0.88);
-  max-width: 560px;
-  text-shadow: 0 1px 8px rgba(4,2,0,0.5);
+  font-family: "Lora", Georgia, serif;
+  font-size: clamp(.95rem,1.1vw,1.1rem);
+  line-height: 1.9;
+  color: rgba(245,240,232,.88);
+  max-width: 600px;
+  text-shadow: 0 1px 8px rgba(4,2,0,.5);
 }
 
 @media (max-width: 900px) {
+
   .page-header {
-    min-height: 78vh;
+    min-height: 80vh;
     padding-top: 66px;
     align-items: flex-end;
-  }
-
-  .page-header::after {
-    background: linear-gradient(
-      to top,
-      rgba(8,6,2,0.90) 0%,
-      rgba(8,6,2,0.68) 42%,
-      rgba(8,6,2,0.24) 72%,
-      rgba(8,6,2,0.00) 100%
-    );
   }
 
   .header-inner,
@@ -246,6 +238,17 @@
     font-size: 0.72rem;
     letter-spacing: 0.18em;
   }
+
+  .page-header::after {
+    background: linear-gradient(
+      to top,
+      rgba(8,6,2,.92) 0%,
+      rgba(8,6,2,.68) 40%,
+      rgba(8,6,2,.18) 75%,
+      rgba(8,6,2,0) 100%
+    );
+  }
+
 }
 
     /* CONTROLS */
@@ -628,14 +631,31 @@
   </ul>
 </nav>
 
-<div class="page-header">
-  <p class="header-eyebrow">Cocktails &nbsp;·&nbsp; Mocktails &nbsp;·&nbsp; Homemade Syrups</p>
-  <h1 class="header-title">Rooted in the Garden.<br><em>Raised Around the Table.</em></h1>
-  <p class="header-sub">Seasonal cocktails, mocktails, and homemade syrups — grown in the garden, made in the kitchen, shared around the table.</p>
-</div>
-<figure class="page-hero-image" style="margin:0; line-height:0; display:block;">
-  <img src="images/recipes-hero.png" alt="A spread of garden-to-glass cocktail and mocktail recipes with fresh herbs and seasonal fruit" style="width:100%; height:auto; display:block; max-height:520px; object-fit:cover;" />
-</figure>
+<header class="page-header">
+
+  <img
+    src="images/heroes/recipes-hero.png"
+    class="page-header-bg"
+    alt=""
+    aria-hidden="true">
+
+  <div class="header-inner">
+
+    <p class="header-eyebrow">
+      Recipes
+    </p>
+
+    <h1 class="header-title">
+      Seasonal Recipes from the Garden
+    </h1>
+
+    <p class="header-sub">
+      Cocktails, mocktails, syrups, preserves, and garden-inspired creations rooted in what is growing right now.
+    </p>
+
+  </div>
+
+</header>
 
 
 <!-- CONTROLS -->
