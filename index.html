@@ -147,112 +147,106 @@
     .nav-links a:hover { opacity: 1; }
 
 
-    /* ── HERO — full-width cinematic editorial hero ── */
+    /* ── HERO — premium lifestyle editorial hero ── */
     .hero {
       position: relative;
-      min-height: 88vh;
+      min-height: 92vh;
       padding-top: 72px;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       overflow: hidden;
       isolation: isolate;
     }
 
-    /* Photo: anchored center-top so golden sky and hillside dominate */
+    /* Image: crop from very top so sky sits in upper third */
     .hero-bg {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 15%;
+      object-position: center 10%;
       display: block;
       z-index: 0;
     }
 
-    /* Gradient overlay — left-to-right fade only.
-       Left third is dark enough for text; right two-thirds stay warm and open.
-       No bottom crush — the image breathes. */
+    /* Overlay: pure horizontal left-to-right.
+       Left 40%: luxuriously dark (0.85) so huge type reads cleanly.
+       Transparent by 72% — right half of the image stays warm and open. */
     .hero::after {
       content: '';
       position: absolute;
       inset: 0;
       background: linear-gradient(
-        105deg,
-        rgba(10, 7, 3, 0.82) 0%,
-        rgba(10, 7, 3, 0.68) 28%,
-        rgba(10, 7, 3, 0.38) 52%,
-        rgba(10, 7, 3, 0.08) 72%,
-        rgba(10, 7, 3, 0.00) 100%
+        to right,
+        rgba(8, 6, 2, 0.85) 0%,
+        rgba(8, 6, 2, 0.72) 22%,
+        rgba(8, 6, 2, 0.42) 40%,
+        rgba(8, 6, 2, 0.10) 58%,
+        rgba(8, 6, 2, 0.00) 72%
       );
       z-index: 1;
     }
 
-    /* Text block — no box, no panel, no border.
-       Pure type over gradient. Left margin gives breathing room from edge. */
+    /* Text block: 8vw in from left, bottom-padded so text sits
+       in the middle-lower third — over the raised beds, below the hills */
     .hero-content {
       position: relative;
       z-index: 2;
-      padding: 0 0 0 8vw;
-      max-width: 52vw;
+      padding: 0 0 8vh 8vw;
+      max-width: 700px;
       background: none;
       border: none;
     }
 
+    /* Eyebrow: cream, generous tracking — quiet brand introduction */
     .hero-eyebrow {
       font-family: 'DM Mono', monospace;
-      font-size: 0.8rem;
-      letter-spacing: 0.26em;
+      font-size: 0.85rem;
+      letter-spacing: 0.32em;
       text-transform: uppercase;
-      color: var(--sage);
-      margin-bottom: 1.5rem;
+      color: var(--cream);
+      opacity: 0.75;
+      margin-bottom: 1.75rem;
       animation: fadeUp 0.8s ease both;
     }
 
-    /* H1: the dominant element. Large, bold, commanding.
-       Line 1 in white. Line 2 (em) in amber italic — distinct but not loud. */
+    /* H1: the brand manifesto — fills the left column like a magazine cover.
+       ~80–100px equivalent at typical laptop widths.
+       Line 1: white. Line 2: amber italic at 88% size — supports, not competes. */
     .hero-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(3.2rem, 5.2vw, 5.6rem);
+      font-size: clamp(3.6rem, 6.2vw, 6.5rem);
       font-weight: 700;
-      line-height: 1.06;
+      line-height: 1.05;
       color: #ffffff;
-      margin-bottom: 1.75rem;
+      margin-bottom: 2rem;
       text-shadow:
-        0 2px 12px rgba(5, 3, 1, 0.7),
-        0 4px 40px rgba(5, 3, 1, 0.4);
+        0 2px 14px rgba(4, 2, 0, 0.75),
+        0 6px 48px rgba(4, 2, 0, 0.45);
       animation: fadeUp 0.8s 0.12s ease both;
     }
 
     .hero-title em {
       font-style: italic;
+      font-size: 0.88em;
       color: var(--amber);
       display: block;
+      margin-top: 0.08em;
     }
 
-    /* Supporting line — slightly larger than body, Playfair italic, cream */
+    /* Tagline: one elegant sentence. The only supporting copy. */
     .hero-tagline {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(1.05rem, 1.4vw, 1.3rem);
+      font-size: clamp(1.1rem, 1.5vw, 1.4rem);
       font-style: italic;
       font-weight: 400;
-      line-height: 1.5;
+      line-height: 1.55;
       color: rgba(245, 240, 232, 0.88);
-      margin-bottom: 1.25rem;
-      text-shadow: 0 1px 10px rgba(5, 3, 1, 0.55);
-      animation: fadeUp 0.8s 0.22s ease both;
-    }
-
-    /* Body copy — Lora, comfortable reading size */
-    .hero-sub {
-      font-family: 'Lora', Georgia, serif;
-      font-size: clamp(0.98rem, 1.1vw, 1.1rem);
-      line-height: 1.8;
-      color: rgba(245, 240, 232, 0.82);
-      max-width: 480px;
-      margin-bottom: 2.5rem;
-      text-shadow: 0 1px 8px rgba(5, 3, 1, 0.5);
-      animation: fadeUp 0.8s 0.3s ease both;
+      max-width: 560px;
+      margin-bottom: 2.75rem;
+      text-shadow: 0 1px 12px rgba(4, 2, 0, 0.6);
+      animation: fadeUp 0.8s 0.24s ease both;
     }
 
     /* ── HERO CTAS ── */
@@ -260,7 +254,7 @@
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
-      animation: fadeUp 0.8s 0.42s ease both;
+      animation: fadeUp 0.8s 0.38s ease both;
     }
 
     .btn-primary {
@@ -629,25 +623,25 @@
       nav { padding: 1rem 1.5rem; }
       .nav-links { gap: 1.5rem; }
 
-      .hero { min-height: 80vh; align-items: flex-end; }
-      .hero-bg { object-position: center 20%; }
-      /* On mobile: full-width bottom overlay so stacked text is always readable */
+      .hero { min-height: 85vh; align-items: flex-end; }
+      .hero-bg { object-position: center 15%; }
+      /* Mobile: bottom-up gradient so text over table/beds is always readable */
       .hero::after {
         background: linear-gradient(
           to top,
-          rgba(10, 7, 3, 0.88) 0%,
-          rgba(10, 7, 3, 0.65) 45%,
-          rgba(10, 7, 3, 0.20) 75%,
-          rgba(10, 7, 3, 0.00) 100%
+          rgba(8, 6, 2, 0.90) 0%,
+          rgba(8, 6, 2, 0.70) 40%,
+          rgba(8, 6, 2, 0.25) 68%,
+          rgba(8, 6, 2, 0.00) 100%
         );
       }
       .hero-content {
-        padding: 0 1.5rem 2.75rem;
+        padding: 0 1.5rem 3rem;
         max-width: 100%;
       }
-      .hero-title { font-size: clamp(2.6rem, 9vw, 3.4rem); }
-      .hero-tagline { font-size: 1rem; }
-      .hero-sub { font-size: 0.97rem; max-width: 100%; margin-bottom: 2rem; }
+      .hero-eyebrow { font-size: 0.78rem; letter-spacing: 0.24em; margin-bottom: 1.25rem; }
+      .hero-title { font-size: clamp(2.8rem, 10vw, 3.8rem); margin-bottom: 1.5rem; }
+      .hero-tagline { font-size: 1.05rem; margin-bottom: 2rem; max-width: 100%; }
       .hero-ctas { flex-direction: column; gap: 0.75rem; }
       .btn-primary, .btn-secondary { text-align: center; width: 100%; box-sizing: border-box; }
 
@@ -781,7 +775,6 @@
       <p class="hero-eyebrow">Garden-to-Glass Living</p>
       <h1 class="hero-title">Rooted in the garden.<em>Raised around the table.</em></h1>
       <p class="hero-tagline">A seasonal homegrown approach to cocktails, mocktails, syrups, preserves, and garden guides.</p>
-      <p class="hero-sub">Grow what you can. Harvest what is ready. Turn mint, basil, plums, rosemary, lavender, and lemon balm into drinks worth gathering around.</p>
       <div class="hero-ctas">
         <a href="recipes" class="btn-primary">Explore Recipes</a>
         <a href="herb-hub" class="btn-secondary">Start with the Herb Hub</a>
