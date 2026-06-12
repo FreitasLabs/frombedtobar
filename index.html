@@ -171,25 +171,28 @@
       z-index: 0;
     }
 
-    /* Overlay: very light top-left corner (sky is already pale/open),
-       gentle left-side darkening for text contrast,
-       slightly heavier at the very bottom to ground the composition */
+    /* Overlay: strong left column for text contrast against warm hillside,
+       right half stays bright and warm, subtle bottom scrim */
     .hero::after {
       content: '';
       position: absolute;
       inset: 0;
       background:
+        /* Left column: dark enough that cream/amber text is legible
+           over the golden hills — fades out by 60% width */
         linear-gradient(
           to right,
-          rgba(20, 16, 8, 0.52) 0%,
-          rgba(20, 16, 8, 0.28) 50%,
-          rgba(20, 16, 8, 0.04) 100%
+          rgba(15, 11, 5, 0.78) 0%,
+          rgba(15, 11, 5, 0.55) 35%,
+          rgba(15, 11, 5, 0.18) 60%,
+          rgba(15, 11, 5, 0.00) 100%
         ),
+        /* Subtle top-to-bottom: slightly darker at base to ground the frame */
         linear-gradient(
           to bottom,
-          rgba(20, 16, 8, 0.08) 0%,
-          rgba(20, 16, 8, 0.05) 55%,
-          rgba(20, 16, 8, 0.45) 100%
+          rgba(15, 11, 5, 0.10) 0%,
+          rgba(15, 11, 5, 0.00) 50%,
+          rgba(15, 11, 5, 0.35) 100%
         );
       z-index: 1;
     }
@@ -207,7 +210,7 @@
       font-size: 0.78rem;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: var(--sage);
+      color: rgba(245, 240, 232, 0.80);
       margin-bottom: 1.25rem;
       animation: fadeUp 0.8s ease both;
     }
@@ -219,6 +222,7 @@
       line-height: 1.08;
       color: var(--cream);
       margin-bottom: 1.25rem;
+      text-shadow: 0 2px 16px rgba(10, 7, 2, 0.55);
       animation: fadeUp 0.8s 0.15s ease both;
     }
 
@@ -230,9 +234,10 @@
     .hero-sub {
       font-size: 1.05rem;
       line-height: 1.75;
-      color: rgba(245, 240, 232, 0.88);
+      color: rgba(245, 240, 232, 0.95);
       max-width: 560px;
       margin-bottom: 2.25rem;
+      text-shadow: 0 1px 8px rgba(10, 7, 2, 0.5);
       animation: fadeUp 0.8s 0.3s ease both;
     }
 
