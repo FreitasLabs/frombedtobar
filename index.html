@@ -109,7 +109,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.2rem 3rem;
+      /* Desktop: taller header with generous horizontal breathing room */
+      padding: 0 3.5rem;
+      height: 100px;
       background: rgba(245, 240, 232, 0.92);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid rgba(59,42,26,0.12);
@@ -121,26 +123,29 @@
       align-items: center;
     }
 
+    /* Desktop: logo larger and proportional — premium magazine scale */
     .nav-logo-img {
-      height: 48px;
-      width: 48px;
+      height: 84px;
+      width: 84px;
       object-fit: contain;
     }
 
     .nav-links {
       display: flex;
-      gap: 2.5rem;
+      gap: 2.25rem;
       list-style: none;
     }
 
+    /* Desktop: 14px, weight 500, tighter tracking — readable, not cramped */
     .nav-links a {
       font-family: 'DM Mono', monospace;
-      font-size: 0.82rem;
-      letter-spacing: 0.12em;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--bark);
       text-decoration: none;
-      opacity: 0.7;
+      opacity: 0.82;
       transition: opacity 0.2s;
     }
 
@@ -151,7 +156,7 @@
     .hero {
       position: relative;
       min-height: 92vh;
-      padding-top: 72px;
+      padding-top: 100px;
       display: flex;
       align-items: flex-end;
       overflow: hidden;
@@ -620,8 +625,10 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
-      nav { padding: 1rem 1.5rem; }
+      nav { padding: 0 1.5rem; height: 66px; }
+      .nav-logo-img { height: 44px; width: 44px; }
       .nav-links { gap: 1.5rem; }
+      .nav-links a { font-size: 0.82rem; font-weight: 400; letter-spacing: 0.12em; opacity: 0.7; }
 
       .hero { min-height: 85vh; align-items: flex-end; }
       .hero-bg { object-position: center 15%; }
