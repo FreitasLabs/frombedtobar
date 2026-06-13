@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How to Grow Mint for Cocktails | From Bed to Bar</title>
-  <meta name="description" content="How to grow, harvest, preserve, and use mint for cocktails and mocktails. Varieties, growing tips, harvesting, and the best mint drink recipes." />
+  <title>Mint Harvest Hub | Grow, Harvest & Make Mint Drinks | From Bed to Bar</title>
+  <meta name="description" content="The Mint Harvest Hub from From Bed to Bar: grow mint, harvest it well, preserve it as syrup, and use it in cocktails, mocktails, and everyday gatherings." />
   <link rel="canonical" href="https://frombedtobar.com/mint-guide" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="From Bed to Bar" />
-  <meta property="og:title" content="How to Grow Mint for Cocktails & Mocktails | Complete Garden-to-Glass Guide" />
-  <meta property="og:description" content="Learn how to grow, harvest, preserve, and use mint for cocktails and mocktails. Includes growing tips, harvest advice, drink pairings, and garden-to-glass ideas." />
+  <meta property="og:title" content="Mint Harvest Hub | Grow, Harvest & Make Mint Drinks" />
+  <meta property="og:description" content="Grow mint, harvest it well, preserve the extra, and turn a simple garden herb into cocktails, mocktails, syrups, and moments around the table." />
   <meta property="og:url" content="https://frombedtobar.com/mint-guide" />
   <meta property="og:image" content="https://frombedtobar.com/images/guides/mint-guide-hero.png" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="How to Grow Mint for Cocktails & Mocktails | Complete Garden-to-Glass Guide" />
-  <meta name="twitter:description" content="Learn how to grow, harvest, preserve, and use mint for cocktails and mocktails. Includes growing tips, harvest advice, drink pairings, and garden-to-glass ideas." />
+  <meta name="twitter:title" content="Mint Harvest Hub | Grow, Harvest & Make Mint Drinks" />
+  <meta name="twitter:description" content="Grow mint, harvest it well, preserve the extra, and turn a simple garden herb into cocktails, mocktails, syrups, and moments around the table." />
   <meta name="twitter:image" content="https://frombedtobar.com/images/guides/mint-guide-hero.png" />
   <link rel="preload" as="image" href="/images/guides/mint-guide-hero.png" />
   <meta name="theme-color" content="#4a5e3a" />
@@ -314,9 +314,13 @@
       font-size: 0.82rem;
       letter-spacing: 0.28em;
       text-transform: uppercase;
-      color: var(--cream);
-      opacity: 0.75;
+      color: rgba(255,255,255,0.96);
+      opacity: 1;
+      font-weight: 700;
       margin-bottom: 1.25rem;
+      text-shadow:
+        0 2px 12px rgba(0,0,0,0.85),
+        0 0 4px rgba(0,0,0,0.8);
     }
     .header-title {
       font-family: 'Playfair Display', serif;
@@ -545,6 +549,653 @@
     .img-card-btn { margin-top: 1rem; display: inline-block; font-family: "DM Mono", monospace; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cream); background: var(--moss); padding: 0.55rem 1rem; align-self: flex-start; transition: background 0.2s; }
     .img-card:hover .img-card-btn { background: var(--bark); }
 
+
+
+    /* ── HARVEST HUB TEMPLATE ── */
+    .hub-intro {
+      background: var(--linen);
+      padding: 4rem 5rem 3.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .hub-intro-inner {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+    }
+    .hub-kicker {
+      font-family: "DM Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #a8502e;
+      margin-bottom: 0.85rem;
+    }
+    .hub-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.8rem, 3vw, 2.75rem);
+      font-weight: 700;
+      line-height: 1.18;
+      color: var(--bark);
+      max-width: 820px;
+      margin-bottom: 1rem;
+    }
+    .hub-title em { font-style: italic; color: var(--moss); }
+    .hub-copy {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: rgba(30,22,14,0.78);
+      max-width: 780px;
+    }
+    .hub-copy a { color: #a8502e; text-decoration: underline; }
+    .hub-quick-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0.85rem;
+      margin-top: 2rem;
+    }
+    .hub-quick-card {
+      background: var(--cream);
+      border: 1px solid rgba(59,42,26,0.12);
+      text-decoration: none;
+      color: inherit;
+      padding: 1.1rem 1rem 1.15rem;
+      min-height: 132px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .hub-quick-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(59,42,26,0.11);
+      border-color: rgba(184,92,56,0.35);
+    }
+    .hub-quick-icon {
+      font-size: 1.45rem;
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+    .hub-quick-label {
+      font-family: "DM Mono", monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #a8502e;
+      margin-bottom: 0.35rem;
+    }
+    .hub-quick-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.28;
+      color: var(--bark);
+    }
+    .hub-quick-arrow {
+      font-family: "DM Mono", monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(30,22,14,0.52);
+      margin-top: 0.9rem;
+    }
+
+    .hub-journey {
+      background: var(--parchment);
+      padding: 4.5rem 5rem;
+    }
+    .hub-journey-inner {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .hub-journey-sticky { position: sticky; top: 130px; }
+    .journey-flow {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    .journey-card {
+      background: var(--cream);
+      border: 1px solid rgba(59,42,26,0.12);
+      padding: 1.35rem;
+      text-decoration: none;
+      color: inherit;
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .journey-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(59,42,26,0.1);
+    }
+    .journey-number {
+      font-family: "DM Mono", monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #a8502e;
+      margin-bottom: 0.75rem;
+    }
+    .journey-card-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--bark);
+      margin-bottom: 0.55rem;
+      line-height: 1.25;
+    }
+    .journey-card-copy {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: rgba(30,22,14,0.72);
+      flex: 1;
+    }
+    .journey-card-cta {
+      font-family: "DM Mono", monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--moss);
+      margin-top: 1rem;
+    }
+
+    .hub-featured {
+      background: var(--moss);
+      padding: 4.5rem 5rem;
+    }
+    .hub-featured-inner {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 0;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .hub-featured-photo {
+      min-height: 390px;
+      overflow: hidden;
+    }
+    .hub-featured-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .hub-featured-content {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hub-featured-content .section-eyebrow { color: var(--amber); }
+    .hub-featured-content .section-title { color: var(--cream); }
+    .hub-featured-content p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: rgba(245,240,232,0.78);
+      margin-bottom: 1.5rem;
+    }
+    .hub-button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .hub-button {
+      font-family: "DM Mono", monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0.75rem 1.1rem;
+      border: 1px solid rgba(245,240,232,0.35);
+      color: var(--cream);
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+    .hub-button.primary {
+      background: var(--amber);
+      border-color: var(--amber);
+      color: var(--bark);
+    }
+    .hub-button:hover {
+      background: var(--cream);
+      border-color: var(--cream);
+      color: var(--bark);
+    }
+
+    /* ── HARVEST CHOICE FEATURE ── */
+    .harvest-choice-section {
+      background: var(--linen);
+      padding: 5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .harvest-choice-inner {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+    }
+    .harvest-choice-lede {
+      max-width: 760px;
+      margin-bottom: 2.5rem;
+    }
+    .harvest-choice-lede p {
+      font-size: 1.02rem;
+      line-height: 1.9;
+      color: rgba(30,22,14,0.78);
+      margin-bottom: 1rem;
+    }
+    .harvest-choice-motto {
+      font-family: "Playfair Display", serif;
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--moss);
+      margin-top: 1.25rem;
+    }
+    .harvest-choice-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+    .harvest-choice-card {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      min-height: 250px;
+      background: var(--cream);
+      border: 1px solid rgba(59,42,26,0.12);
+      text-decoration: none;
+      color: inherit;
+      overflow: hidden;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+    .harvest-choice-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 34px rgba(59,42,26,0.12);
+      border-color: rgba(184,92,56,0.28);
+    }
+    .harvest-choice-photo {
+      min-height: 250px;
+      overflow: hidden;
+      background: var(--parchment);
+    }
+    .harvest-choice-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.45s ease;
+    }
+    .harvest-choice-card:hover .harvest-choice-photo img { transform: scale(1.04); }
+    .harvest-choice-content {
+      padding: 1.65rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .harvest-choice-label {
+      font-family: "DM Mono", monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #a8502e;
+      margin-bottom: 0.65rem;
+    }
+    .harvest-choice-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      font-style: italic;
+      line-height: 1.18;
+      color: var(--bark);
+      margin-bottom: 0.75rem;
+    }
+    .harvest-choice-copy {
+      font-size: 0.94rem;
+      line-height: 1.75;
+      color: rgba(30,22,14,0.72);
+      margin-bottom: 1.15rem;
+    }
+    .harvest-choice-cta {
+      font-family: "DM Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--moss);
+      margin-top: auto;
+    }
+
+
+    /* ── EDITORIAL TRANSITIONS ── */
+    .editorial-transition {
+      background: var(--linen);
+      padding: 3.25rem 5rem;
+      border-top: 1px solid rgba(59,42,26,0.06);
+      border-bottom: 1px solid rgba(59,42,26,0.06);
+    }
+    .editorial-transition.alt { background: var(--parchment); }
+    .editorial-transition.dark-note { background: var(--bark); }
+    .editorial-transition-inner {
+      max-width: 760px;
+      margin: 0;
+    }
+    .editorial-transition p {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.15rem, 2vw, 1.55rem);
+      font-style: italic;
+      line-height: 1.65;
+      color: rgba(30,22,14,0.78);
+    }
+    .editorial-transition.dark-note p { color: rgba(245,240,232,0.78); }
+
+
+    /* ── V6: QUICK START, GARDEN NOTE, FAVORITES, AT-A-GLANCE ── */
+    .quick-start-section {
+      background: var(--linen);
+      padding: 4.25rem 5rem;
+      position: relative;
+      z-index: 1;
+      border-bottom: 1px solid rgba(59,42,26,0.07);
+    }
+    .quick-start-inner,
+    .garden-note-inner,
+    .favorites-inner {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+    }
+    .quick-start-header {
+      max-width: 780px;
+      margin-bottom: 2rem;
+    }
+    .quick-start-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    .quick-start-card {
+      background: var(--cream);
+      border: 1px solid rgba(59,42,26,0.12);
+      padding: 1.45rem;
+      min-height: 210px;
+      display: flex;
+      flex-direction: column;
+    }
+    .quick-start-step {
+      font-family: "DM Mono", monospace;
+      font-size: 0.66rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #a8502e;
+      margin-bottom: 0.75rem;
+    }
+    .quick-start-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--bark);
+      line-height: 1.25;
+      margin-bottom: 0.65rem;
+    }
+    .quick-start-copy {
+      font-size: 0.92rem;
+      line-height: 1.75;
+      color: rgba(30,22,14,0.72);
+      flex: 1;
+    }
+    .quick-start-link {
+      font-family: "DM Mono", monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--moss);
+      text-decoration: none;
+      margin-top: 1rem;
+    }
+
+    .garden-note-section {
+      background: var(--parchment);
+      padding: 4.75rem 5rem;
+    }
+    .garden-note-card {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 0;
+      background: var(--cream);
+      border: 1px solid rgba(59,42,26,0.12);
+    }
+    .garden-note-photo {
+      min-height: 420px;
+      overflow: hidden;
+      background: var(--parchment);
+    }
+    .garden-note-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .garden-note-content {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .garden-note-content p {
+      font-size: 1rem;
+      line-height: 1.9;
+      color: rgba(30,22,14,0.78);
+      margin-bottom: 1rem;
+      max-width: 680px;
+    }
+    .garden-note-signoff {
+      font-family: "Playfair Display", serif;
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--moss);
+      margin-top: 0.35rem;
+    }
+
+    .favorites-section {
+      background: var(--linen);
+      padding: 4.75rem 5rem;
+      border-top: 1px solid rgba(59,42,26,0.06);
+      border-bottom: 1px solid rgba(59,42,26,0.06);
+    }
+    .favorites-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+    .favorite-card {
+      background: var(--cream);
+      border: 1px solid rgba(59,42,26,0.12);
+      padding: 1.75rem;
+      text-decoration: none;
+      color: inherit;
+      min-height: 240px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .favorite-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 34px rgba(59,42,26,0.12);
+      border-color: rgba(184,92,56,0.28);
+    }
+    .favorite-star {
+      font-size: 1.35rem;
+      margin-bottom: 0.8rem;
+    }
+    .favorite-label {
+      font-family: "DM Mono", monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #a8502e;
+      margin-bottom: 0.55rem;
+    }
+    .favorite-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      font-style: italic;
+      line-height: 1.2;
+      color: var(--bark);
+      margin-bottom: 0.75rem;
+    }
+    .favorite-copy {
+      font-size: 0.94rem;
+      line-height: 1.75;
+      color: rgba(30,22,14,0.72);
+      flex: 1;
+    }
+    .favorite-cta {
+      font-family: "DM Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--moss);
+      margin-top: 1.1rem;
+    }
+
+    .mint-glance {
+      background: var(--cream);
+      border: 1px solid rgba(59,42,26,0.12);
+      border-left: 4px solid var(--moss);
+      padding: 1.5rem;
+      margin: 0 0 2.25rem;
+      max-width: 900px;
+    }
+    .mint-glance-title {
+      font-family: "DM Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #a8502e;
+      margin-bottom: 1rem;
+    }
+    .mint-glance-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+    .mint-glance-item {
+      border-top: 1px solid rgba(59,42,26,0.12);
+      padding-top: 0.85rem;
+    }
+    .mint-glance-label {
+      font-family: "DM Mono", monospace;
+      font-size: 0.64rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(30,22,14,0.5);
+      margin-bottom: 0.35rem;
+    }
+    .mint-glance-value {
+      font-family: "Playfair Display", serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--bark);
+      line-height: 1.3;
+    }
+
+    @media (max-width: 900px) {
+      .quick-start-section,
+      .garden-note-section,
+      .favorites-section { padding: 3.75rem 1.75rem; }
+      .quick-start-grid,
+      .favorites-grid,
+      .mint-glance-grid { grid-template-columns: 1fr; }
+      .garden-note-card { grid-template-columns: 1fr; }
+      .garden-note-photo { min-height: 260px; }
+      .garden-note-content { padding: 2rem 1.5rem; }
+    }
+
+
+
+
+    /* ── V7: EDITORIAL GUIDE IMAGES ── */
+    .guide-feature-figure {
+      margin: 2rem 0 2.25rem;
+      width: 100%;
+      overflow: hidden;
+      border: 1px solid rgba(59,42,26,0.12);
+      background: var(--parchment);
+    }
+    .guide-feature-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+    .favorites-feature-figure {
+      margin-top: 0.75rem;
+      margin-bottom: 2rem;
+    }
+    .companion-herbs-feature {
+      margin-top: 0;
+      margin-bottom: 2.75rem;
+    }
+    .mint-glance-feature {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 1.5rem;
+      align-items: stretch;
+      margin: 0 0 2.5rem;
+      max-width: 1120px;
+    }
+    .mint-glance-photo {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid rgba(59,42,26,0.12);
+      background: var(--parchment);
+      min-height: 100%;
+    }
+    .mint-glance-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 280px;
+      object-fit: cover;
+    }
+    .mint-glance-feature .mint-glance {
+      margin: 0;
+      max-width: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @media (max-width: 900px) {
+      .guide-feature-figure {
+        margin: 1.75rem 0 2rem;
+      }
+      .mint-glance-feature {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      .mint-glance-photo img {
+        min-height: 230px;
+      }
+      .mint-glance-feature .mint-glance {
+        border-left: 1px solid rgba(59,42,26,0.12);
+        border-top: 4px solid var(--moss);
+      }
+    }
+
     /* ── ANIMATIONS ── */
     @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -582,6 +1233,24 @@
       
       .jump-nav { padding: 1rem 1.75rem; }
       .content-section { padding: 4rem 1.75rem; }
+      .harvest-choice-section { padding: 4rem 1.75rem; }
+      .editorial-transition { padding: 2.75rem 1.75rem; }
+      .harvest-choice-grid { grid-template-columns: 1fr; }
+      .harvest-choice-card { grid-template-columns: 1fr; }
+      .harvest-choice-photo { min-height: 230px; }
+
+      .hub-intro { padding: 3.5rem 1.75rem 3rem; }
+      .hub-quick-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+      .hub-quick-card { min-height: 126px; padding: 1rem; }
+      .hub-journey { padding: 3.75rem 1.75rem; }
+      .hub-journey-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .hub-journey-sticky { position: static; }
+      .journey-flow { grid-template-columns: 1fr; }
+      .hub-featured { padding: 3.75rem 1.75rem; }
+      .hub-featured-inner { grid-template-columns: 1fr; }
+      .hub-featured-photo { min-height: 260px; }
+      .hub-featured-content { padding: 2rem 1.5rem; }
+
       .reasons-grid { grid-template-columns: 1fr; }
       .variety-grid { grid-template-columns: 1fr; }
       .growing-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -599,6 +1268,11 @@
     }
     @media (max-width: 480px) {
       .img-card-grid { grid-template-columns: 1fr; }
+      .hub-quick-grid { grid-template-columns: 1fr; }
+      .hub-button-row { flex-direction: column; }
+      .hub-button { width: 100%; }
+      .harvest-choice-card { min-height: auto; }
+      .harvest-choice-content { padding: 1.35rem; }
     }
   
     /* ── NEWSLETTER ── */
@@ -1046,15 +1720,15 @@
     <a href="herb-hub" class="header-back">← Herb Hub</a>
 
     <p class="header-eyebrow">
-      Cocktail Herb Guide
+      Mint Harvest Hub
     </p>
 
     <h1 class="header-title">
-      How to Grow Mint for Cocktails &amp; Mocktails
+      Grow Mint. Preserve the Harvest. Gather Around the Table.
     </h1>
 
     <p class="header-sub">
-      Mint is the most useful herb in a garden-to-glass bar. Learn how to grow, harvest, preserve, and use it in cocktails, mocktails, syrups, and garnishes.
+      A full garden-to-glass guide to the herb that teaches abundance: how to grow it, cut it, save it as syrup, and turn a handful of fresh leaves into something worth sharing.
     </p>
 
     <div class="header-meta">
@@ -1068,25 +1742,214 @@
 
 </header>
 
+<!-- ── QUICK START ── -->
+<section class="quick-start-section" id="quick-start" aria-labelledby="quick-start-title">
+  <div class="quick-start-inner">
+    <div class="quick-start-header">
+      <p class="section-eyebrow">New to mint?</p>
+      <h2 class="section-title" id="quick-start-title">Start here.</h2>
+      <p class="section-intro">If you landed here with a mint plant, a handful of leaves, or a drink idea in mind, this is the simplest path through the harvest. Grow it well, cut it often, save what you can, and make something worth sharing.</p>
+    </div>
+
+    <div class="quick-start-grid" aria-label="Quick start mint guide">
+      <div class="quick-start-card">
+        <p class="quick-start-step">Step 01</p>
+        <h3 class="quick-start-title">Grow Mint</h3>
+        <p class="quick-start-copy">Plant it once in a container and you'll have fresh growth through the warm months without letting it take over the garden.</p>
+        <a href="#growing" class="quick-start-link">Learn to grow →</a>
+      </div>
+      <div class="quick-start-card">
+        <p class="quick-start-step">Step 02</p>
+        <h3 class="quick-start-title">Harvest Mint</h3>
+        <p class="quick-start-copy">Cut stems in the morning, harvest often, and keep the plant full, tender, and ready for drinks.</p>
+        <a href="#harvesting" class="quick-start-link">Harvest well →</a>
+      </div>
+      <div class="quick-start-card">
+        <p class="quick-start-step">Step 03</p>
+        <h3 class="quick-start-title">Make Mint Syrup</h3>
+        <p class="quick-start-copy">Turn extra mint into a simple syrup that waits in the refrigerator for limeade, tea, cocktails, and company.</p>
+        <a href="recipe-mint-simple-syrup" class="quick-start-link">Make syrup →</a>
+      </div>
+      <div class="quick-start-card">
+        <p class="quick-start-step">Step 04</p>
+        <h3 class="quick-start-title">Mix Something Special</h3>
+        <p class="quick-start-copy">Start with a Garden Mojito or Sparkling Mint Limeade and bring the harvest to the table.</p>
+        <a href="#favorites" class="quick-start-link">See favorites →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FROM OUR GARDEN ── -->
+<section class="garden-note-section" id="from-our-garden" aria-labelledby="from-our-garden-title">
+  <div class="garden-note-inner">
+    <div class="garden-note-card">
+      <div class="garden-note-photo">
+        <img src="images/guides/mint-guide-from-our-garden.jpg" alt="Mint growing in containers beside a backyard patio" loading="lazy" />
+      </div>
+      <div class="garden-note-content">
+        <p class="section-eyebrow">From our garden</p>
+        <h2 class="section-title" id="from-our-garden-title">Mint teaches abundance.</h2>
+        <p>Our mint grows in containers near the patio, where it gets enough sun to stay lively and enough shade to keep from turning tired in the heat.</p>
+        <p>Every summer we end up harvesting more than we planned. Some goes straight into drinks, some becomes syrup for later, and some gets shared with neighbors and friends.</p>
+        <p>That is one of the things we love most about mint. It asks very little, gives more than expected, and keeps inviting us back outside with a pair of scissors and a reason to gather.</p>
+        <p class="garden-note-signoff">Rooted in the garden. Raised around the table.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── MINT HARVEST HUB ── -->
+<section class="hub-intro" id="explore-mint" aria-labelledby="explore-mint-title">
+  <div class="hub-intro-inner">
+    <p class="hub-kicker">Mint Harvest Hub</p>
+    <h2 class="hub-title" id="explore-mint-title">Everything we grow, preserve, and make with mint.</h2>
+    <p class="hub-copy">Mint is often the first herb that makes a garden feel generous. A few stems become syrup in the refrigerator, a sprig turns limeade into something special, and a full handful can become the drink everyone remembers. Start where you are — growing, harvesting, preserving, pouring — and follow the whole mint journey when you're ready.</p>
+
+    <div class="hub-quick-grid" aria-label="Explore mint pages">
+      <a href="how-to-harvest-preserve-mint" class="hub-quick-card">
+        <div>
+          <div class="hub-quick-icon">✂️</div>
+          <p class="hub-quick-label">Harvest</p>
+          <h3 class="hub-quick-title">Harvest Mint</h3>
+        </div>
+        <span class="hub-quick-arrow">Harvest guide →</span>
+      </a>
+      <a href="recipe-mint-simple-syrup" class="hub-quick-card">
+        <div>
+          <div class="hub-quick-icon">🫙</div>
+          <p class="hub-quick-label">Bar Pantry</p>
+          <h3 class="hub-quick-title">Mint Simple Syrup</h3>
+        </div>
+        <span class="hub-quick-arrow">Make syrup →</span>
+      </a>
+      <a href="cocktails-garden-mojito" class="hub-quick-card">
+        <div>
+          <div class="hub-quick-icon">🍹</div>
+          <p class="hub-quick-label">Cocktail</p>
+          <h3 class="hub-quick-title">Garden Mojito</h3>
+        </div>
+        <span class="hub-quick-arrow">Make drink →</span>
+      </a>
+      <a href="mocktails-sparkling-mint-limeade" class="hub-quick-card">
+        <div>
+          <div class="hub-quick-icon">🥤</div>
+          <p class="hub-quick-label">Mocktail</p>
+          <h3 class="hub-quick-title">Sparkling Mint Limeade</h3>
+        </div>
+        <span class="hub-quick-arrow">Make mocktail →</span>
+      </a>
+      <a href="recipe-cucumber-mint-gin-tonic" class="hub-quick-card">
+        <div>
+          <div class="hub-quick-icon">🥒</div>
+          <p class="hub-quick-label">Recipe</p>
+          <h3 class="hub-quick-title">Cucumber Mint Gin &amp; Tonic</h3>
+        </div>
+        <span class="hub-quick-arrow">View recipe →</span>
+      </a>
+      <a href="#growing" class="hub-quick-card">
+        <div>
+          <div class="hub-quick-icon">🌱</div>
+          <p class="hub-quick-label">Grow</p>
+          <h3 class="hub-quick-title">Growing Mint</h3>
+        </div>
+        <span class="hub-quick-arrow">Read below →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="hub-journey" aria-labelledby="mint-journey-title">
+  <div class="hub-journey-inner">
+    <div class="hub-journey-sticky">
+      <p class="section-eyebrow">The mint journey</p>
+      <h2 class="section-title" id="mint-journey-title">From bed to bar, in order.</h2>
+      <p class="section-intro" style="margin-bottom:0;">Every season begins in the garden. A morning harvest becomes mint simple syrup tucked into the refrigerator. Fresh sprigs find their way into summer mocktails and evening cocktails. Before long, family and friends gather around the table, and the cycle begins again. Rooted in the garden. Raised around the table.</p>
+    </div>
+
+    <div class="journey-flow">
+      <a href="#varieties" class="journey-card">
+        <p class="journey-number">01 · Grow</p>
+        <h3 class="journey-card-title">Start with a pot of mint</h3>
+        <p class="journey-card-copy">Spearmint and mojito mint are the varieties we reach for most because they stay bright, clean, and balanced in the glass.</p>
+        <span class="journey-card-cta">Compare varieties →</span>
+      </a>
+      <a href="how-to-harvest-preserve-mint" class="journey-card">
+        <p class="journey-number">02 · Harvest</p>
+        <h3 class="journey-card-title">Cut while it is full and fragrant</h3>
+        <p class="journey-card-copy">Regular cutting keeps the plant generous and gives you tender leaves before heat and flowers turn the flavor harsh.</p>
+        <span class="journey-card-cta">Harvest guide →</span>
+      </a>
+      <a href="recipe-mint-simple-syrup" class="journey-card">
+        <p class="journey-number">03 · Preserve</p>
+        <h3 class="journey-card-title">Turn extra mint into syrup</h3>
+        <p class="journey-card-copy">Mint syrup is the bridge between the garden and the bar: a small jar of summer ready for lemonade, cocktails, tea, and sparkling water.</p>
+        <span class="journey-card-cta">Make syrup →</span>
+      </a>
+      <a href="cocktails-garden-mojito" class="journey-card">
+        <p class="journey-number">04 · Cocktail</p>
+        <h3 class="journey-card-title">Pour something fresh</h3>
+        <p class="journey-card-copy">The Garden Mojito keeps the focus where it belongs: fresh mint, bright lime, and a slower moment at the end of the day.</p>
+        <span class="journey-card-cta">Make mojito →</span>
+      </a>
+      <a href="mocktails-sparkling-mint-limeade" class="journey-card">
+        <p class="journey-number">05 · Mocktail</p>
+        <h3 class="journey-card-title">Make it for everyone</h3>
+        <p class="journey-card-copy">Mint makes alcohol-free drinks feel cared for — bright, refreshing, and worthy of the same table as any cocktail.</p>
+        <span class="journey-card-cta">Make limeade →</span>
+      </a>
+      <a href="herb-hub" class="journey-card">
+        <p class="journey-number">06 · Grow again</p>
+        <h3 class="journey-card-title">Plant what comes next</h3>
+        <p class="journey-card-copy">Mint rarely grows alone for long. Basil, rosemary, thyme, lavender, and lemon balm each bring their own season and story.</p>
+        <span class="journey-card-cta">Visit Herb Hub →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="hub-featured" aria-labelledby="featured-mint-recipe-title">
+  <div class="hub-featured-inner">
+    <div class="hub-featured-photo">
+      <img src="images/garden-mojito.png" alt="A Garden Mojito cocktail with fresh mint from the garden" loading="lazy" width="1672" height="941" />
+    </div>
+    <div class="hub-featured-content">
+      <p class="section-eyebrow">Made with fresh mint</p>
+      <h2 class="section-title" id="featured-mint-recipe-title">Start with the Garden Mojito.</h2>
+      <p>One of our favorite ways to celebrate a summer harvest is with a Garden Mojito. Bright lime, plenty of fresh mint, and a slower pace at the end of the day. Nothing fancy. Just something worth sharing.</p>
+      <div class="hub-button-row">
+        <a href="cocktails-garden-mojito" class="hub-button primary">Make the Mojito</a>
+        <a href="recipe-mint-simple-syrup" class="hub-button">Make Mint Syrup</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- ── JUMP NAV ── -->
 <div class="jump-nav">
-  <span class="jump-nav-label">Jump to:</span>
-  <a href="#why-grow" class="jump-link">Why Grow</a>
-  <a href="#varieties" class="jump-link">Varieties</a>
-  <a href="#growing" class="jump-link">Growing</a>
-  <a href="#harvesting" class="jump-link">Harvesting</a>
-  <a href="#preserving" class="jump-link">Preserving</a>
-  <a href="#using" class="jump-link">Using Mint</a>
-  <a href="#drinks" class="jump-link">Drink Ideas</a>
-  <a href="#mistakes" class="jump-link">Mistakes</a>
+  <span class="jump-nav-label">Guide detail:</span>
+  <a href="#quick-start" class="jump-link">Start</a>
+  <a href="#from-our-garden" class="jump-link">Garden Note</a>
+  <a href="#explore-mint" class="jump-link">Mint Hub</a>
+  <a href="#why-grow" class="jump-link">Why</a>
+  <a href="#varieties" class="jump-link">Favorite</a>
+  <a href="#growing" class="jump-link">Grow Well</a>
+  <a href="#harvesting" class="jump-link">Garden</a>
+  <a href="#preserving" class="jump-link">Save Summer</a>
+  <a href="#using" class="jump-link">Table</a>
+  <a href="#drinks" class="jump-link">Enjoy</a>
+  <a href="#mistakes" class="jump-link">Lessons</a>
+  <a href="#favorites" class="jump-link">Favorites</a>
   <a href="#faq" class="jump-link">FAQ</a>
 </div>
 
 <!-- ── WHY GROW MINT ── -->
 <section class="content-section" id="why-grow">
   <p class="section-eyebrow">Start here</p>
-  <h2 class="section-title">Why Grow Mint?</h2>
-  <p class="section-intro">Most cocktail herbs take patience. Mint is not one of them. It establishes quickly, produces heavily, and earns its place in the bar garden faster than anything else you'll plant. Here's why it's the first herb most home bartenders should grow. For a full comparison of all cocktail herbs, see the <a href="herb-hub">Cocktail Herb Guide</a>.</p>
+  <h2 class="section-title">Why We Keep Growing Mint</h2>
+  <p class="section-intro">Every garden seems to have one plant that teaches abundance. For us, it's mint. Long after the first excitement of planting has passed, mint keeps showing up — in lemonade after a hot afternoon, in a weekend mojito, in a jar of syrup waiting for company, and in the quiet reminder that what grows well is meant to be shared. For a full comparison of cocktail herbs, see the <a href="herb-hub">Cocktail Herb Guide</a>.</p>
   <div class="reasons-grid">
     <div class="reason-card">
       <div class="reason-icon">🌱</div>
@@ -1123,9 +1986,9 @@
 
 <!-- ── VARIETIES ── -->
 <section class="content-section alt" id="varieties">
-  <p class="section-eyebrow">Choose your plant</p>
-  <h2 class="section-title">Which Mint Variety is Best for Drinks?</h2>
-  <p class="section-intro">Not all mint is the same. The variety you choose affects flavour, intensity, and how well it holds up when muddled or infused. These four are the most useful for cocktails and mocktails.</p>
+  <p class="section-eyebrow">Finding your favorite</p>
+  <h2 class="section-title">The Mint We Reach for Most</h2>
+  <p class="section-intro">Not all mint belongs in the same glass. Some varieties are clean and bright, some are bold and cooling, and a few are better saved for syrup than muddling. Choosing the right mint is less about collecting every variety and more about finding the one that fits the way your family gathers.</p>
   <div class="variety-grid">
     <div class="variety-card">
       <div class="variety-name">Spearmint</div>
@@ -1196,9 +2059,38 @@
 
 <!-- ── GROWING MINT ── -->
 <section class="content-section sage-tint" id="growing">
-  <p class="section-eyebrow">In the garden</p>
-  <h2 class="section-title">Growing Mint</h2>
-  <p class="section-intro">Mint is hard to kill, but it does have preferences. Give it the right conditions and it'll produce more than you can use. Get the container rule wrong and you'll spend years trying to reclaim your garden. For zone-specific planting timing, see the <a href="planting-guide">planting guide</a>.</p>
+  <p class="section-eyebrow">Growing well</p>
+  <h2 class="section-title">How to Grow Mint Without Letting It Take Over</h2>
+  <p class="section-intro">Mint is generous, but it needs a little direction. Give it a proper container, steady moisture, and regular cutting, and it will reward you with enough fresh growth for drinks, syrups, garnishes, and more than a few last-minute gatherings. Get the container rule wrong and you'll spend years trying to reclaim your garden. For zone-specific planting timing, see the <a href="planting-guide">planting guide</a>.</p>
+
+
+  <div class="mint-glance-feature">
+    <figure class="mint-glance-photo">
+      <img src="images/guides/mint-guide-harvest-bundle.jpg" alt="Freshly harvested mint bundled with twine beside garden shears" loading="lazy" />
+    </figure>
+
+    <div class="mint-glance" aria-label="Mint at a glance">
+      <p class="mint-glance-title">Mint at a glance</p>
+      <div class="mint-glance-grid">
+        <div class="mint-glance-item">
+          <p class="mint-glance-label">Peak harvest</p>
+          <p class="mint-glance-value">April–September</p>
+        </div>
+        <div class="mint-glance-item">
+          <p class="mint-glance-label">Best uses</p>
+          <p class="mint-glance-value">Syrups • Mojitos • Limeade • Garnishes</p>
+        </div>
+        <div class="mint-glance-item">
+          <p class="mint-glance-label">Difficulty</p>
+          <p class="mint-glance-value">Beginner friendly</p>
+        </div>
+        <div class="mint-glance-item">
+          <p class="mint-glance-label">Returns each year</p>
+          <p class="mint-glance-value">Yes</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="growing-grid">
     <div class="growing-block">
@@ -1230,11 +2122,17 @@
   </div>
 </section>
 
+<section class="editorial-transition" aria-label="Mint harvest note">
+  <div class="editorial-transition-inner">
+    <p>By the time mint is growing well, the real question becomes less about keeping it alive and more about what to do with the abundance.</p>
+  </div>
+</section>
+
 <!-- ── HARVESTING ── -->
 <section class="content-section alt" id="harvesting">
-  <p class="section-eyebrow">From garden to glass</p>
-  <h2 class="section-title">How to Harvest Mint</h2>
-  <p class="section-intro">How you harvest mint affects both the quality of the ingredient and the long-term productivity of the plant. These four steps cover everything that matters.</p>
+  <p class="section-eyebrow">From the garden</p>
+  <h2 class="section-title">How to Harvest Mint Well</h2>
+  <p class="section-intro">By midsummer, mint usually gives us more than we need. That is part of its charm. A few stems go into drinks, a few are tucked into the refrigerator, and before long we are looking for ways to keep the plant full, fragrant, and ready for the next round.</p>
   <div class="harvest-steps">
     <div class="harvest-step">
       <div class="step-num">01 — When</div>
@@ -1269,9 +2167,9 @@
 
 <!-- ── PRESERVING ── -->
 <section class="content-section dark" id="preserving">
-  <p class="section-eyebrow light">Making it last</p>
+  <p class="section-eyebrow light">Saving summer for later</p>
   <h2 class="section-title light">How to Preserve Mint</h2>
-  <p class="section-intro light">A productive mint plant will give you more than you can use fresh. These five methods turn a summer surplus into a year-round bar ingredient.</p>
+  <p class="section-intro light">Preserving mint is one of the simplest ways to stretch a good season. A jar of syrup, a tray of herb ice cubes, or a small bundle dried for tea can carry the garden into ordinary days long after the plant has slowed down.</p>
   <div class="preserve-grid">
     <div class="preserve-card">
       <div class="preserve-icon">❄️</div>
@@ -1306,11 +2204,17 @@
   </div>
 </section>
 
+<section class="editorial-transition dark-note" aria-label="Preserving mint note">
+  <div class="editorial-transition-inner">
+    <p>Once mint is tucked away as syrup, ice cubes, or a small infusion, it stops being only a garnish and becomes part of how we gather.</p>
+  </div>
+</section>
+
 <!-- ── USING MINT ── -->
 <section class="content-section" id="using">
-  <p class="section-eyebrow">In the glass</p>
+  <p class="section-eyebrow">Around the table</p>
   <h2 class="section-title">Using Mint in Drinks</h2>
-  <p class="section-intro">Mint works in five distinct ways in a drink. Understanding what each technique does — and what it's for — makes you a significantly better home bartender. See <a href="bar-essentials">Bar Essentials</a> for tool recommendations, and <a href="recipes">Recipes</a> for full drink recipes using mint.</p>
+  <p class="section-intro">Mint is one of those ingredients that makes a drink feel cared for. Sometimes it is muddled into the glass, sometimes it becomes syrup, and sometimes one fresh sprig is enough to make a pitcher of lemonade feel like it was made for company. See <a href="bar-essentials">Bar Essentials</a> for tool recommendations, and <a href="recipes">Recipes</a> for full drink recipes using mint.</p>
   <div class="technique-grid">
     <div class="technique-card">
       <div class="technique-icon">🥃</div>
@@ -1353,9 +2257,9 @@
 
 <!-- ── DRINK IDEAS ── -->
 <section class="content-section alt" id="drinks">
-  <p class="section-eyebrow">From the garden</p>
-  <h2 class="section-title">Best Mint Drink Ideas</h2>
-  <p class="section-intro">These are the drinks that show mint at its best — from the classics to the alcohol-free. Browse our <a href="recipes">full recipe collection</a> for complete recipes, or visit the <a href="herb-hub">Cocktail Herb Guide</a> for pairing ideas across all herbs.</p>
+  <p class="section-eyebrow">Ways we enjoy mint</p>
+  <h2 class="section-title">Mint Drinks for Cocktails, Mocktails, and Slow Evenings</h2>
+  <p class="section-intro">Around here, mint rarely makes it to the compost pile. There is almost always another way to use it — a quiet evening cocktail, a pitcher of something alcohol-free for the table, or a simple glass of sparkling water made brighter with syrup from the refrigerator. Browse our <a href="recipes">full recipe collection</a> for complete recipes, or visit the <a href="herb-hub">Cocktail Herb Guide</a> for pairing ideas across all herbs.</p>
   <div class="drinks-list">
     <div class="drink-item">
       <div>
@@ -1422,9 +2326,9 @@
 
 <!-- ── COMMON MISTAKES ── -->
 <section class="content-section" id="mistakes">
-  <p class="section-eyebrow">What to avoid</p>
-  <h2 class="section-title">Common Mint Mistakes</h2>
-  <p class="section-intro">Mint is forgiving, but a few mistakes show up repeatedly — both in the garden and at the bar. These are the ones worth knowing before you start.</p>
+  <p class="section-eyebrow">Lessons learned</p>
+  <h2 class="section-title">What We Learned the Hard Way</h2>
+  <p class="section-intro">Mint is forgiving, but it still has opinions. Most problems come from letting it roam too freely, cutting it too late, or treating it too roughly in the glass. These are the small lessons that make the plant easier to live with and the drinks noticeably better.</p>
   <div class="mistakes-grid">
     <div class="mistake-card">
       <div class="mistake-card-num">Mistake 01</div>
@@ -1464,6 +2368,214 @@
     </div>
   </div>
 </section>
+
+<section class="editorial-transition alt" aria-label="Mint abundance note">
+  <div class="editorial-transition-inner">
+    <p>After the growing, cutting, preserving, and pouring, the point is still simple: use what you have, make something beautiful, and invite people in.</p>
+  </div>
+</section>
+
+
+<!-- ── OUR FAVORITES ── -->
+<section class="favorites-section" id="favorites" aria-labelledby="favorites-title">
+  <div class="favorites-inner">
+    <p class="section-eyebrow">Our favorites</p>
+    <h2 class="section-title" id="favorites-title">Where we reach first.</h2>
+    <p class="section-intro">A generous mint plant can go in a dozen directions, but these are the three we come back to most: one for preserving, one for celebrating, and one for everyone gathered around the table.</p>
+
+    <figure class="guide-feature-figure favorites-feature-figure">
+      <img src="images/guides/mint-guide-favorites.jpg" alt="Mint simple syrup, a garden mojito, and sparkling mint limeade on a rustic table" loading="lazy" />
+    </figure>
+
+    <div class="favorites-grid">
+      <a href="recipe-mint-simple-syrup" class="favorite-card">
+        <div class="favorite-star">⭐</div>
+        <p class="favorite-label">Favorite way to preserve mint</p>
+        <h3 class="favorite-title">Mint Simple Syrup</h3>
+        <p class="favorite-copy">The easiest way to save summer for later. A jar in the refrigerator turns iced tea, limeade, and cocktails into something that feels cared for.</p>
+        <span class="favorite-cta">Make mint syrup →</span>
+      </a>
+
+      <a href="cocktails-garden-mojito" class="favorite-card">
+        <div class="favorite-star">⭐</div>
+        <p class="favorite-label">Favorite cocktail</p>
+        <h3 class="favorite-title">Garden Mojito</h3>
+        <p class="favorite-copy">Fresh lime, garden mint, and a slower pace at the end of the day. Simple enough for a weeknight, special enough for company.</p>
+        <span class="favorite-cta">Make the mojito →</span>
+      </a>
+
+      <a href="mocktails-mint-limeade" class="favorite-card">
+        <div class="favorite-star">⭐</div>
+        <p class="favorite-label">Favorite family drink</p>
+        <h3 class="favorite-title">Sparkling Mint Limeade</h3>
+        <p class="favorite-copy">Bright, refreshing, and made for everyone around the table. Proof that a drink can feel festive without needing spirits.</p>
+        <span class="favorite-cta">Make the limeade →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FROM BED TO BAR: CHOOSE YOUR HARVEST ── -->
+<section class="harvest-choice-section" id="related">
+  <div class="harvest-choice-inner">
+    <p class="section-eyebrow">From bed to bar</p>
+    <h2 class="section-title">What to Do With All This Mint</h2>
+
+    <div class="harvest-choice-lede">
+      <p>A pot of mint has a way of producing more than we expect. Some gets tucked into drinks shared on the porch. Some becomes syrup waiting in the refrigerator for tomorrow. A few handfuls are frozen for winter, and the rest reminds us that abundance is not something to manage — it is something to share.</p>
+      <p class="harvest-choice-motto">Rooted in the garden. Raised around the table.</p>
+    </div>
+
+    <div class="harvest-choice-grid" aria-label="Mint recipes and guides">
+
+      <a href="recipe-mint-simple-syrup" class="harvest-choice-card">
+        <div class="harvest-choice-photo">
+          <img src="images/mint-simple-syrup.png" alt="Homemade mint simple syrup in a glass jar with fresh mint" loading="lazy" width="1672" height="941" />
+        </div>
+        <div class="harvest-choice-content">
+          <p class="harvest-choice-label">Preserve it</p>
+          <h3 class="harvest-choice-title">Mint Simple Syrup</h3>
+          <p class="harvest-choice-copy">Capture summer in a jar. A handful of fresh mint, a little sugar, and twenty quiet minutes create something you'll reach for all season long.</p>
+          <span class="harvest-choice-cta">Make the syrup →</span>
+        </div>
+      </a>
+
+      <a href="cocktails-garden-mojito" class="harvest-choice-card">
+        <div class="harvest-choice-photo">
+          <img src="images/garden-mojito.png" alt="Garden mojito with fresh mint and lime" loading="lazy" width="1672" height="941" />
+        </div>
+        <div class="harvest-choice-content">
+          <p class="harvest-choice-label">Pour it</p>
+          <h3 class="harvest-choice-title">Garden Mojito</h3>
+          <p class="harvest-choice-copy">Bright lime, fresh mint, and a slower pace at the end of the day. One of our favorite ways to celebrate a summer harvest.</p>
+          <span class="harvest-choice-cta">Make the cocktail →</span>
+        </div>
+      </a>
+
+      <a href="mocktails-sparkling-mint-limeade" class="harvest-choice-card">
+        <div class="harvest-choice-photo">
+          <img src="images/mint-limeade.png" alt="Sparkling mint limeade with fresh mint and lime" loading="lazy" width="1672" height="941" />
+        </div>
+        <div class="harvest-choice-content">
+          <p class="harvest-choice-label">Share it</p>
+          <h3 class="harvest-choice-title">Sparkling Mint Limeade</h3>
+          <p class="harvest-choice-copy">Fresh, bright, and made for everyone around the table. Proof that some of the best drinks don't need spirits.</p>
+          <span class="harvest-choice-cta">Make the mocktail →</span>
+        </div>
+      </a>
+
+      <a href="how-to-harvest-preserve-mint" class="harvest-choice-card">
+        <div class="harvest-choice-photo">
+          <img src="images/harvest-preserve-mint.png" alt="Fresh mint being harvested and preserved from the garden" loading="lazy" width="1672" height="941" />
+        </div>
+        <div class="harvest-choice-content">
+          <p class="harvest-choice-label">Save it</p>
+          <h3 class="harvest-choice-title">Harvest &amp; Preserve Mint</h3>
+          <p class="harvest-choice-copy">Learn when to cut, how to store it, and simple ways to freeze summer for the months when the garden rests.</p>
+          <span class="harvest-choice-cta">Read the guide →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTINUE THE GARDEN ── -->
+<section class="content-section alt" id="explore-more">
+  <figure class="guide-feature-figure companion-herbs-feature">
+    <img src="images/guides/mint-guide-companion-herbs.jpg" alt="Mint, basil, rosemary, and lavender growing together in a summer garden" loading="lazy" />
+  </figure>
+
+  <p class="section-eyebrow">What to grow next</p>
+  <h2 class="section-title">Continue the Garden</h2>
+  <p class="section-intro">Mint rarely grows alone. Nearby you'll usually find basil waiting for strawberries, rosemary destined for syrup, lavender perfuming the garden, and fruit trees preparing the next harvest. Explore what grows alongside mint — every plant has its season, and every harvest has a story.</p>
+
+  <div class="img-card-grid">
+
+    <a href="basil-guide" class="img-card">
+      <div class="img-card-photo">
+        <img src="images/guides/basil-guide-hero.png" alt="Fresh basil growing in the garden" loading="lazy" width="1672" height="941" />
+      </div>
+      <div class="img-card-body">
+        <p class="img-card-eyebrow">Herb Guide</p>
+        <p class="img-card-title">Basil Guide</p>
+        <p class="img-card-desc">Sweet, fragrant, and made for summer fruit, lemonade, and garden cocktails.</p>
+        <span class="img-card-btn">Explore basil</span>
+      </div>
+    </a>
+
+    <a href="lavender-guide" class="img-card">
+      <div class="img-card-photo">
+        <img src="images/guides/lavender-guide-hero.png" alt="Fresh lavender bundles and lavender growing in the garden" loading="lazy" width="1672" height="941" />
+      </div>
+      <div class="img-card-body">
+        <p class="img-card-eyebrow">Herb Guide</p>
+        <p class="img-card-title">Lavender Guide</p>
+        <p class="img-card-desc">A calming harvest for syrups, spritzes, and quiet evenings around the table.</p>
+        <span class="img-card-btn">Explore lavender</span>
+      </div>
+    </a>
+
+    <a href="rosemary-guide" class="img-card">
+      <div class="img-card-photo">
+        <img src="images/guides/rosemary-guide-hero.png" alt="Fresh rosemary growing in a garden-to-glass herb bed" loading="lazy" width="1672" height="941" />
+      </div>
+      <div class="img-card-body">
+        <p class="img-card-eyebrow">Herb Guide</p>
+        <p class="img-card-title">Rosemary Guide</p>
+        <p class="img-card-desc">Woody, evergreen, and beautiful in bourbon, citrus, and winter syrups.</p>
+        <span class="img-card-btn">Explore rosemary</span>
+      </div>
+    </a>
+
+    <a href="plum-guide" class="img-card">
+      <div class="img-card-photo">
+        <img src="images/guides/plum-guide-hero.png" alt="Fresh plums from the garden harvest" loading="lazy" width="1672" height="941" />
+      </div>
+      <div class="img-card-body">
+        <p class="img-card-eyebrow">Fruit Guide</p>
+        <p class="img-card-title">Plum Guide</p>
+        <p class="img-card-desc">From tree to jam, syrup, cocktails, and family-friendly drinks.</p>
+        <span class="img-card-btn">Explore plums</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ── INTERNAL LINKS STRIP ── -->
+<div class="link-strip" style="background: var(--bark);">
+  <span class="link-strip-label">Mint Harvest</span>
+  <a href="mint-guide" class="link-strip-link">Mint Guide</a>
+  <a href="how-to-harvest-preserve-mint" class="link-strip-link">Harvest &amp; Preserve</a>
+  <a href="recipe-mint-simple-syrup" class="link-strip-link">Mint Syrup</a>
+  <a href="cocktails-garden-mojito" class="link-strip-link">Garden Mojito</a>
+  <a href="mocktails-sparkling-mint-limeade" class="link-strip-link">Mint Limeade</a>
+  <a href="recipe-cucumber-mint-gin-tonic" class="link-strip-link">Cucumber Mint Gin & Tonic</a>
+</div>
+
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter-section" id="newsletter">
+    <p class="section-label">Stay Connected</p>
+    <h2 class="section-title">Recipes in your inbox, <em>in season.</em></h2>
+    <p class="newsletter-sub">Seasonal recipes, garden notes, and simple ideas for bringing what you grow to the table.</p>
+    <script src="https://f.convertkit.com/ckjs/ck.5.js" async></script>
+    <form action="https://app.kit.com/forms/9503567/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9503567" data-uid="08e54ce9b8" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;redirect&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;https://frombedtobar.com/thank-you&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:true,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800">
+      <div data-style="clean">
+        <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+        <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
+          <div class="formkit-field">
+            <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required="" type="email" />
+          </div>
+          <button data-element="submit" class="formkit-submit formkit-submit">
+            <div class="formkit-spinner"><div></div><div></div><div></div></div>
+            <span>Subscribe</span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </section>
 
 <!-- ── FAQ ── -->
 <section class="content-section alt" id="faq">
@@ -1513,137 +2625,7 @@
   </div>
 </section>
 
-<!-- ── MINT CLUSTER ── -->
-<section class="content-section" id="related">
-  <p class="section-eyebrow">From this guide</p>
-  <h2 class="section-title">The Mint Content Cluster</h2>
-  <p class="section-intro" style="margin-bottom: 1.75rem;">Everything on this site that starts with garden mint. One plant, four pages — from harvest to glass. For a full overview of all cocktail herbs, see the <a href="herb-hub">Cocktail Herb Guide</a>.</p>
-  <div class="related-guides" style="max-width: 680px;">
-    <a href="recipe-mint-simple-syrup" class="related-guide-item" style="text-decoration:none; color:inherit;">
-      <div class="related-guide-icon">🫙</div>
-      <div>
-        <div class="related-guide-text" style="color: var(--bark); font-style: normal; font-weight: 600;">Mint Simple Syrup</div>
-        <span class="related-guide-soon" style="color: var(--terracotta);">Recipe — 20 minutes, keeps 3 weeks →</span>
-      </div>
-    </a>
-    <a href="cocktails-garden-mojito" class="related-guide-item" style="text-decoration:none; color:inherit;">
-      <div class="related-guide-icon">🍹</div>
-      <div>
-        <div class="related-guide-text" style="color: var(--bark); font-style: normal; font-weight: 600;">Garden Mojito</div>
-        <span class="related-guide-soon" style="color: var(--terracotta);">Cocktail — rum, mint syrup, lime, soda →</span>
-      </div>
-    </a>
-    <a href="mocktails-sparkling-mint-limeade" class="related-guide-item" style="text-decoration:none; color:inherit;">
-      <div class="related-guide-icon">🌿</div>
-      <div>
-        <div class="related-guide-text" style="color: var(--bark); font-style: normal; font-weight: 600;">Sparkling Mint Limeade</div>
-        <span class="related-guide-soon" style="color: var(--terracotta);">Mocktail — alcohol-free, all ages →</span>
-      </div>
-    </a>
-    <a href="how-to-harvest-preserve-mint" class="related-guide-item" style="text-decoration:none; color:inherit;">
-      <div class="related-guide-icon">✂️</div>
-      <div>
-        <div class="related-guide-text" style="color: var(--bark); font-style: normal; font-weight: 600;">How to Harvest &amp; Preserve Mint</div>
-        <span class="related-guide-soon" style="color: var(--terracotta);">Garden guide — cutting, storing, freezing →</span>
-      </div>
-    </a>
-    <div class="related-guide-item">
-      <div class="related-guide-icon">🌱</div>
-      <div>
-        <div class="related-guide-text">Basil Guide — growing &amp; using basil in drinks</div>
-        <span class="related-guide-soon">Coming soon</span>
-      </div>
-    </div>
-    <a href="lavender-guide" class="related-guide-item" style="text-decoration:none; color:inherit;">
-      <div class="related-guide-icon">💜</div>
-      <div>
-        <div class="related-guide-text" style="color: var(--bark); font-style: normal; font-weight: 600;">Lavender Guide — growing &amp; using lavender in drinks</div>
-        <span class="related-guide-soon" style="color: var(--terracotta);">Herb guide — varieties, syrups, garnishes →</span>
-      </div>
-    </a>
-  </div>
-</section>
 
-<!-- ── EXPLORE MORE MINT RECIPES & GUIDES ── -->
-<section class="content-section alt" id="explore-more">
-  <p class="section-eyebrow">Explore more</p>
-  <h2 class="section-title">Mint Recipes <em>&amp; Guides</em></h2>
-  <p class="section-intro">One plant, four ways to use it. Every page below starts with the mint growing in your garden right now.</p>
-
-  <div class="img-card-grid">
-
-  <a href="recipe-mint-simple-syrup" class="img-card">
-    <div class="img-card-photo">
-      <img src="images/mint-simple-syrup.png" alt="Homemade mint simple syrup in a glass jar with fresh spearmint sprigs" loading="lazy" width="1672" height="941" />
-    </div>
-    <div class="img-card-body">
-      <p class="img-card-eyebrow">Homemade Syrup</p>
-      <p class="img-card-title">Mint Simple Syrup</p>
-      <p class="img-card-desc">Bright, clean, and endlessly useful. The foundation of every mint cocktail and mocktail from the garden.</p>
-      <span class="img-card-btn">View recipe</span>
-    </div>
-  </a>
-
-  <a href="cocktails-garden-mojito" class="img-card">
-    <div class="img-card-photo">
-      <img src="images/garden-mojito.png" alt="A Garden Mojito cocktail with fresh mint from the garden" loading="lazy" width="1672" height="941" />
-    </div>
-    <div class="img-card-body">
-      <p class="img-card-eyebrow">Featured Cocktail</p>
-      <p class="img-card-title">Garden Mojito</p>
-      <p class="img-card-desc">Fresh spearmint, rum, lime, and soda water. The drink that makes every gardener want to grow more mint.</p>
-      <span class="img-card-btn">Make it</span>
-    </div>
-  </a>
-
-  <a href="herb-hub" class="img-card">
-    <div class="img-card-photo">
-      <img src="images/heroes/herb-hub-hero.png" alt="Fresh herbs growing in a bar garden — mint, basil, rosemary, and thyme" loading="lazy" width="1672" height="941" />
-    </div>
-    <div class="img-card-body">
-      <p class="img-card-eyebrow">Explore More</p>
-      <p class="img-card-title">Visit the Herb Hub</p>
-      <p class="img-card-desc">Discover more herbs, growing guides, and seasonal inspiration for your garden-to-glass journey.</p>
-      <span class="img-card-btn">Explore</span>
-    </div>
-  </a>
-
-</div>
-</section>
-
-<!-- ── INTERNAL LINKS STRIP ── -->
-<div class="link-strip" style="background: var(--bark);">
-  <span class="link-strip-label">Mint Cluster</span>
-  <a href="mint-guide" class="link-strip-link">Mint Guide</a>
-  <a href="how-to-harvest-preserve-mint" class="link-strip-link">Harvest &amp; Preserve</a>
-  <a href="recipe-mint-simple-syrup" class="link-strip-link">Mint Syrup</a>
-  <a href="cocktails-garden-mojito" class="link-strip-link">Garden Mojito</a>
-  <a href="mocktails-sparkling-mint-limeade" class="link-strip-link">Mint Limeade</a>
-  <a href="recipe-cucumber-mint-gin-tonic" class="link-strip-link">Cucumber Mint G&T</a>
-</div>
-
-
-  <!-- NEWSLETTER -->
-  <section class="newsletter-section" id="newsletter">
-    <p class="section-label">Stay Connected</p>
-    <h2 class="section-title">Recipes in your inbox, <em>in season.</em></h2>
-    <p class="newsletter-sub">No spam, no filler. Just seasonal recipes, what to plant this month, and the occasional tip that'll make your next drink noticeably better.</p>
-    <script src="https://f.convertkit.com/ckjs/ck.5.js" async></script>
-    <form action="https://app.kit.com/forms/9503567/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9503567" data-uid="08e54ce9b8" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;redirect&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;https://frombedtobar.com/thank-you&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:true,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800">
-      <div data-style="clean">
-        <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
-        <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
-          <div class="formkit-field">
-            <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required="" type="email" />
-          </div>
-          <button data-element="submit" class="formkit-submit formkit-submit">
-            <div class="formkit-spinner"><div></div><div></div><div></div></div>
-            <span>Subscribe</span>
-          </button>
-        </div>
-      </div>
-    </form>
-  </section>
 
   <div class="site-tagline">
   <p><strong>Drink responsibly.</strong> Every mocktail on this site is just as good as the cocktail version. Enjoy the garden. Enjoy the bar. Be safe, be kind, and look after each other.</p>
