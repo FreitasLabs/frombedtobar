@@ -560,6 +560,219 @@
 
       @page { margin: 1.5cm; size: letter; }
     }
+  
+
+    /* ── MOBILE RESPONSIVE FIXES — bar essentials cleanup ── */
+    @media (max-width: 900px) {
+      html,
+      body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      nav {
+        height: 66px;
+        padding: 0 1.5rem;
+      }
+
+      .nav-logo img {
+        width: 44px;
+        height: 44px;
+      }
+
+      .page-header {
+        min-height: 80vh;
+        padding-top: 66px;
+        align-items: flex-end;
+      }
+
+      .header-inner,
+      .header-inner-wrap {
+        padding: 0 1.5rem 3rem;
+        max-width: 100%;
+      }
+
+      .header-title {
+        font-size: clamp(2.25rem, 10vw, 3.2rem);
+      }
+
+      .header-sub {
+        font-size: 1rem;
+        line-height: 1.75;
+        max-width: 100%;
+      }
+
+      .header-eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
+      }
+
+      .page-header::after {
+        background: linear-gradient(
+          to top,
+          rgba(8,6,2,.92) 0%,
+          rgba(8,6,2,.68) 42%,
+          rgba(8,6,2,.22) 74%,
+          rgba(8,6,2,0) 100%
+        );
+      }
+
+      /* Mobile jump nav should scroll with the page, not freeze over content */
+      .jump-nav {
+        position: static;
+        top: auto;
+        z-index: 1;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 0.85rem 1rem;
+        scrollbar-width: none;
+      }
+
+      .jump-nav::-webkit-scrollbar {
+        display: none;
+      }
+
+      .jump-nav-label {
+        display: none;
+      }
+
+      .jump-link {
+        flex: 0 0 auto;
+        font-size: 0.68rem;
+        padding: 0.45rem 0.75rem;
+        white-space: nowrap;
+      }
+
+      .tools-section,
+      .spirits-section,
+      .techniques-section,
+      .ratios-section,
+      .pantry-section,
+      .newsletter-section {
+        padding: 3.5rem 1.5rem;
+      }
+
+      .section-title {
+        font-size: clamp(1.75rem, 8vw, 2.35rem);
+      }
+
+      .section-intro {
+        max-width: 100%;
+        margin-bottom: 2rem;
+      }
+
+      .tools-grid,
+      .spirits-grid,
+      .ratios-grid,
+      .pantry-cols {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .tool-card,
+      .spirit-card,
+      .ratio-card {
+        padding: 1.5rem;
+      }
+
+      .technique-item {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        padding: 1.5rem 0;
+      }
+
+      .technique-num {
+        text-align: left;
+        font-size: 2rem;
+      }
+
+      .technique-rule {
+        overflow-wrap: anywhere;
+      }
+
+      .spirit-header {
+        align-items: flex-start;
+      }
+
+      .spirit-style,
+      .tool-why,
+      .ratio-formula,
+      .pantry-col-title {
+        line-height: 1.5;
+      }
+
+      .bottle-list li,
+      .pantry-list li,
+      .tool-desc,
+      .spirit-desc,
+      .ratio-desc,
+      .technique-desc {
+        overflow-wrap: break-word;
+      }
+
+      main > div[style*="background:var(--parchment)"] {
+        padding: 2.5rem 1.5rem !important;
+      }
+
+      .formkit-fields {
+        flex-direction: column !important;
+        max-width: 100% !important;
+        border: none !important;
+        gap: 0.75rem !important;
+      }
+
+      .formkit-field {
+        width: 100% !important;
+      }
+
+      .formkit-input,
+      .formkit-submit {
+        width: 100% !important;
+      }
+
+      .site-tagline {
+        padding: 1.25rem 1.5rem;
+      }
+
+      footer {
+        padding: 2.5rem 1.5rem;
+      }
+    }
+
+    @media (min-width: 540px) and (max-width: 900px) {
+      .tools-grid,
+      .ratios-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 430px) {
+      .tools-section,
+      .spirits-section,
+      .techniques-section,
+      .ratios-section,
+      .pantry-section,
+      .newsletter-section {
+        padding: 3rem 1.25rem;
+      }
+
+      .header-inner,
+      .header-inner-wrap {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+      }
+
+      .tool-card,
+      .spirit-card,
+      .ratio-card {
+        padding: 1.35rem;
+      }
+    }
+
   </style>
 </head>
 <body>
