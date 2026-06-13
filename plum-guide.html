@@ -1169,6 +1169,44 @@
       .img-card-grid { gap: 1.1rem; }
     }
 
+
+
+    /* ── P3.1: PLUM USE CARD LINK + RHYTHM FIX ── */
+    .plum-use-section { padding-top: 4.25rem; padding-bottom: 4.25rem; }
+    .plum-use-grid { align-items: stretch; }
+    .plum-use-card {
+      min-height: 0;
+      padding: 1.65rem;
+    }
+    .plum-use-card .technique-desc { margin-bottom: 1.1rem; }
+    .plum-use-link {
+      display: inline-flex;
+      align-items: center;
+      align-self: flex-start;
+      margin-top: auto;
+      padding-top: 0.15rem;
+      color: #a8502e;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(168,80,46,0.35);
+      line-height: 1.45;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+    .plum-use-link:hover,
+    .plum-use-link:focus-visible {
+      color: var(--bark);
+      border-bottom-color: var(--bark);
+    }
+
+    @media (max-width: 900px) {
+      .plum-use-section { padding-top: 4rem; padding-bottom: 4rem; }
+      .plum-use-card { padding: 1.75rem; }
+    }
+
+    
+    .cocktail-card .technique-desc {
+      margin-bottom: 2.85rem;
+    }
+
     /* ── ANIMATIONS ── */
     @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
@@ -1846,7 +1884,34 @@
 </div>
 </section>
 <!-- ── USING PLUMS ── -->
-<section class="content-section" id="using"><p class="section-eyebrow">Around the table</p><h2 class="section-title">Using Plums in the Kitchen and the Bar</h2><p class="section-intro">Plums can go sweet, tart, rich, or bright depending on how you use them. Fresh fruit belongs on the table, cooked fruit belongs in jars, and syrup has a way of making even a quiet evening drink feel seasonal.</p><div class="technique-grid"><div class="technique-card"><div class="technique-icon">🫙</div><div class="technique-title">Jam</div><div class="technique-desc">Jam is the classic plum preserve because plums bring both flavor and natural body. Slightly firm fruit often gives the best set.</div><div class="technique-tip">→ Start with: Homemade Plum Jam</div></div><div class="technique-card"><div class="technique-icon">🍯</div><div class="technique-title">Syrup</div><div class="technique-desc">Plum syrup captures color and acidity in a form that is easy to pour into cocktails, mocktails, iced tea, lemonade, and sparkling water.</div><div class="technique-tip">→ Start with: Plum Simple Syrup</div></div><div class="technique-card"><div class="technique-icon">🥃</div><div class="technique-title">Cocktails and Mocktails</div><div class="technique-desc">Plum pairs especially well with bourbon, gin, lemon, thyme, rosemary, ginger, and sparkling water.</div><div class="technique-tip">→ Start with: Plum Bourbon Sour</div></div></div></section>
+<section class="content-section plum-use-section" id="using">
+  <p class="section-eyebrow">Around the table</p>
+  <h2 class="section-title">Using Plums in the Kitchen and the Bar</h2>
+  <p class="section-intro">Plums can go sweet, tart, rich, or bright depending on how you use them. Fresh fruit belongs on the table, cooked fruit belongs in jars, and syrup has a way of making even a quiet evening drink feel seasonal.</p>
+
+  <div class="technique-grid plum-use-grid">
+    <div class="technique-card plum-use-card cocktail-card">
+      <div class="technique-icon">🫙</div>
+      <div class="technique-title">Jam</div>
+      <div class="technique-desc">Jam is the classic plum preserve because plums bring both flavor and natural body. Slightly firm fruit often gives the best set.</div>
+      <a class="technique-tip plum-use-link" href="preserves-plum-jam">Start with Homemade Plum Jam →</a>
+    </div>
+
+    <div class="technique-card plum-use-card">
+      <div class="technique-icon">🍯</div>
+      <div class="technique-title">Syrup</div>
+      <div class="technique-desc">Plum syrup captures color and acidity in a form that is easy to pour into cocktails, mocktails, iced tea, lemonade, and sparkling water.</div>
+      <a class="technique-tip plum-use-link" href="recipe-plum-simple-syrup">Start with Plum Simple Syrup →</a>
+    </div>
+
+    <div class="technique-card plum-use-card">
+      <div class="technique-icon">🥃</div>
+      <div class="technique-title">Cocktails and Mocktails</div>
+      <div class="technique-desc">Plum pairs especially well with bourbon, gin, lemon, thyme, rosemary, ginger, and sparkling water.</div>
+      <a class="technique-tip plum-use-link" href="cocktails-plum-bourbon-sour">Start with Plum Bourbon Sour →</a>
+    </div>
+  </div>
+</section>
 <!-- ── DRINK IDEAS ── -->
 <section class="content-section alt" id="drinks"><p class="section-eyebrow">Ways we enjoy plums</p><h2 class="section-title">Plum Drinks for Cocktails, Mocktails, and Late Summer Evenings</h2><p class="section-intro">A good plum syrup does a lot of work. It brings fruit, color, body, and sweetness to a glass without needing much else. Keep a bottle in the refrigerator during harvest season and the whole table has options.</p><div class="drinks-list"><div class="drink-item"><div><div class="drink-name">Plum Bourbon Sour</div><div class="drink-type">Cocktail</div></div><div><div class="drink-desc">Bourbon, plum syrup, lemon, and a little bitters. Rich enough for cooler evenings, bright enough for late summer.</div><div class="drink-pairing">Best with: Santa Rosa or Elephant Heart syrup</div></div></div><div class="drink-item"><div><div class="drink-name">Sparkling Plum Mocktail</div><div class="drink-type">Mocktail</div></div><div><div class="drink-desc">Plum syrup, lemon, sparkling water, and mint or rosemary. Simple, beautiful, and easy to make for everyone around the table.</div><div class="drink-pairing">Best with: chilled plum syrup</div></div></div><div class="drink-item"><div><div class="drink-name">Plum Gin Spritz</div><div class="drink-type">Cocktail idea</div></div><div><div class="drink-desc">Plum syrup with gin, lemon, and sparkling water. Herbal, bright, and especially good with basil or thyme nearby.</div><div class="drink-pairing">Best with: tart Japanese plums</div></div></div></div></section>
 <!-- ── COMMON MISTAKES ── -->
