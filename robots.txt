@@ -3,3 +3,4 @@ Allow: /
 Disallow: /search
 
 Sitemap: https://frombedtobar.com/sitemap.xml
+Disallow: /thank-you

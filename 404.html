@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | From Bed to Bar</title>
+  <meta name="description" content="The page you were looking for couldn't be found. Head back to the garden — there are plenty of recipes and herb guides waiting." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://frombedtobar.com/404" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="From Bed to Bar" />
+  <meta property="og:title" content="Page Not Found | From Bed to Bar" />
+  <meta property="og:description" content="The page you were looking for couldn't be found." />
+  <meta property="og:url" content="https://frombedtobar.com/404" />
+  <meta property="og:image" content="https://frombedtobar.com/images/og-image.PNG" />
+  <meta name="theme-color" content="#b85c38" />
+
+  <!-- Fonts: non-render-blocking -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" /></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #f5f0e8; --bark: #3b2a1a; --moss: #4a5e3a;
+      --terracotta: #b85c38; --amber: #c9873a; --linen: #faf7f2; --ink: #1e160e;
+    }
+    body { font-family: 'Lora', Georgia, serif; background: var(--linen); color: var(--ink); min-height: 100vh; display: flex; flex-direction: column; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 0 3.5rem; height: 100px; background: rgba(245,240,232,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(59,42,26,0.12); }
+    .nav-logo { text-decoration: none; display: flex; align-items: center; }
+    .nav-logo img { height: 84px; width: 84px; object-fit: contain; }
+    .nav-links { display: flex; gap: 2.25rem; list-style: none; }
+    .nav-links a { font-family: 'DM Mono', monospace; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bark); text-decoration: none; opacity: 0.82; transition: opacity 0.2s; }
+    .nav-links a:hover { opacity: 1; }
+    main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 140px 2rem 6rem; text-align: center; }
+    .four-oh-four { max-width: 560px; }
+    .error-code { font-family: 'Playfair Display', serif; font-size: clamp(5rem, 15vw, 10rem); font-weight: 700; line-height: 1; color: var(--bark); opacity: 0.08; margin-bottom: -1rem; }
+    .error-label { font-family: 'DM Mono', monospace; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: #a8502e; margin-bottom: 1.5rem; }
+    .error-title { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 700; color: var(--bark); line-height: 1.2; margin-bottom: 1.25rem; }
+    .error-desc { font-size: 1rem; line-height: 1.8; color: rgba(30,22,14,0.72); margin-bottom: 2.5rem; }
+    .error-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { display: inline-block; font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; padding: 1rem 2rem; background: var(--terracotta); color: var(--cream); text-decoration: none; transition: background 0.2s; }
+    .btn-primary:hover { background: var(--amber); }
+    .btn-secondary { display: inline-block; font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; padding: 1rem 2rem; background: transparent; color: var(--bark); text-decoration: none; border: 1px solid rgba(59,42,26,0.3); transition: all 0.2s; }
+    .btn-secondary:hover { background: var(--cream); border-color: var(--bark); }
+    footer { background: var(--bark); padding: 2rem 3rem; display: flex; flex-direction: column; align-items: center; gap: 0.75rem; text-align: center; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1rem; color: var(--cream); }
+    .footer-copy { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: rgba(245,240,232,0.6); }
+    @media (max-width: 768px) {
+      nav { padding: 0 1.5rem; height: 66px; }
+      .nav-logo img { height: 44px; width: 44px; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content" style="position:absolute;top:-100%;left:0;background:var(--bark);color:var(--cream);padding:0.75rem 1.5rem;z-index:9999;font-family:'DM Mono',monospace;font-size:0.875rem;text-decoration:none;text-transform:uppercase;">Skip to main content</a>
+
+  <nav aria-label="Main navigation">
+    <a href="/" class="nav-logo"><img src="images/logo.png" alt="From Bed to Bar — home" width="84" height="84" /></a>
+    <ul class="nav-links" id="navMenu" role="list">
+      <li><a href="/">Home</a></li>
+      <li><a href="recipes">Recipes</a></li>
+      <li><a href="herb-hub">Herb Hub</a></li>
+      <li><a href="garden-tips">Garden Tips</a></li>
+      <li><a href="bar-essentials">Bar Essentials</a></li>
+      <li><a href="blog">Blog</a></li>
+      <li><a href="about">About</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <div class="four-oh-four">
+      <div class="error-code" aria-hidden="true">404</div>
+      <p class="error-label">Page not found</p>
+      <h1 class="error-title">Nothing growing here.</h1>
+      <p class="error-desc">The page you were looking for has either moved or never existed. Head back to the garden — there are plenty of recipes and herb guides waiting.</p>
+      <div class="error-links">
+        <a href="/" class="btn-primary">Back to Home</a>
+        <a href="recipes" class="btn-secondary">Browse Recipes</a>
+        <a href="herb-hub" class="btn-secondary">Herb Hub</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <span class="footer-logo">From Bed to Bar</span>
+    <span class="footer-copy">&copy; 2026 FromBedtoBar.com</span>
+  </footer>
+
+</body>
+</html>

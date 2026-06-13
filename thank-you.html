@@ -16,8 +16,11 @@
 
   <meta name="theme-color" content="#4a5e3a" />
 
+  <!-- Fonts: non-render-blocking -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" /></noscript>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -151,7 +154,7 @@
     }
     .start-label {
       font-family: "DM Mono", monospace;
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: rgba(245,240,232,0.5);
@@ -181,7 +184,7 @@
     }
     .start-link-desc {
       font-family: "DM Mono", monospace;
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       letter-spacing: 0.04em;
       color: rgba(245,240,232,0.5);
     }
@@ -219,15 +222,89 @@
       .site-tagline { padding: 1.25rem 1.75rem; }
       footer { padding: 2.5rem 1.75rem; }
     }
+
+    /* ── SCREEN READER ONLY UTILITY ── */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* ── CONTRAST FIXES (WCAG 1.4.3 AA) ── */
+    .section-label,
+    .section-eyebrow,
+    .header-eyebrow {
+      color: #a8502e; /* darkened from --terracotta for WCAG AA (5.10:1 on light, 4.81:1 on cream) */
+    }
+
+    /* ── SKIP LINK (accessibility) ── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      background: var(--bark);
+      color: var(--cream);
+      padding: 0.75rem 1.5rem;
+      z-index: 9999;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.875rem;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-bottom: 2px solid var(--terracotta);
+      transition: none;
+    }
+    .skip-link:focus {
+      top: 0;
+      outline: 3px solid var(--amber);
+      outline-offset: 2px;
+    }
+
+    /* ── FOCUS INDICATORS ── */
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--terracotta);
+      outline-offset: 3px;
+    }
+    .formkit-input:focus {
+      outline: 3px solid var(--moss) !important;
+      outline-offset: 0 !important;
+    }
+
+
+    /* ── NAV TOUCH TARGET (min 44px, WCAG 2.5.5) ── */
+    @media (min-width: 769px) {
+      .nav-links a {
+        padding: 0.75rem 0;
+        display: inline-block;
+      }
+    }
+    /* ── PREFERS REDUCED MOTION ── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
   </style>
 </head>
 <body>
 
 <!-- ── NAV ── -->
-<nav>
-  <a href="/" class="nav-logo"><img src="images/logo.png" alt="From Bed to Bar — home" /></a>
-  <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-  <ul class="nav-links">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+<nav aria-label="Main navigation">
+  <a href="/" class="nav-logo"><img src="images/logo.png" alt="From Bed to Bar — home" width="84" height="84" /></a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="navMenu" role="list">
     <li><a href="/">Home</a></li>
     <li><a href="recipes">Recipes</a></li>
     <li><a href="herb-hub">Herb Hub</a></li>
@@ -241,7 +318,7 @@
 </nav>
 
 <!-- ── MAIN ── -->
-<main>
+<main id="main-content">
   <section class="page-hero">
     <div class="hero-inner">
       <p class="hero-eyebrow">From Bed to Bar</p>
@@ -278,7 +355,7 @@
 <footer>
   <span class="footer-logo">From Bed to Bar</span>
   <span class="footer-copy">© 2026 FromBedtoBar.com</span>
-  <ul class="footer-links">
+  <ul class="footer-links" role="list">
     <li><a href="/">Home</a></li>
     <li><a href="recipes">Recipes</a></li>
     <li><a href="herb-hub">Herb Hub</a></li>
@@ -305,6 +382,8 @@
       hamburger.addEventListener("click", function() {
         hamburger.classList.toggle("open");
         navLinks.classList.toggle("open");
+        var expanded = hamburger.getAttribute("aria-expanded") === "true";
+        hamburger.setAttribute("aria-expanded", String(!expanded));
       });
       navLinks.querySelectorAll("a").forEach(function(link) {
         link.addEventListener("click", function() {
