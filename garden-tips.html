@@ -40,8 +40,8 @@
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
     }
 
-    /* NAV */
-    nav {
+    /* ── NAV ── */
+    .site-nav {
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
@@ -56,7 +56,7 @@
     }
     .nav-logo { text-decoration: none; display: flex; align-items: center; }
     .nav-logo img { height: 84px; width: 84px; object-fit: contain; }
-    .nav-links { display: flex; gap: 2.25rem; list-style: none; flex-wrap: wrap; }
+    .nav-links { display: flex; gap: 2.25rem; list-style: none; }
     .nav-links a {
       font-family: "DM Mono", monospace;
       font-size: 0.875rem;
@@ -70,8 +70,155 @@
     }
     .nav-links a:hover { opacity: 1; }
     .nav-links a.active { opacity: 1; border-bottom: 2px solid var(--terracotta); padding-bottom: 2px; }
+    /* ── HAMBURGER BUTTON ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+      min-width: 44px;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+    }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--bark); transition: transform 0.3s, opacity 0.3s; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-    /* PAGE HEADER */
+    /* ── HERB HUB DROPDOWN ── */
+    .nav-item-dropdown { position: relative; }
+    .dropdown-arrow { font-size: 0.6em; }
+    .nav-item-dropdown > .dropdown-menu {
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 176px;
+      background: var(--cream);
+      border: 1px solid rgba(59,42,26,0.14);
+      border-top: 2px solid var(--terracotta);
+      list-style: none;
+      z-index: 200;
+      padding: 0.4rem 0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .nav-item-dropdown > .dropdown-menu li { width: 100%; }
+    .nav-item-dropdown > .dropdown-menu a {
+      display: block;
+      padding: 0.6rem 1.25rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.76rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--bark);
+      text-decoration: none;
+      opacity: 0.85;
+      transition: opacity 0.15s, background 0.15s;
+      border-bottom: 1px solid rgba(59,42,26,0.06);
+      white-space: nowrap;
+    }
+    .nav-item-dropdown > .dropdown-menu li:last-child a { border-bottom: none; }
+    .nav-item-dropdown > .dropdown-menu a:hover,
+    .nav-item-dropdown > .dropdown-menu a:focus-visible { opacity: 1; background: rgba(59,42,26,0.04); }
+
+    /* Desktop (≥1101px): dropdown opens on hover + keyboard focus */
+    @media (min-width: 1101px) {
+      .nav-item-dropdown::after {
+        content: "";
+        position: absolute;
+        left: -0.5rem;
+        right: -0.5rem;
+        top: 100%;
+        height: 12px;
+      }
+      .nav-item-dropdown:hover > .dropdown-menu,
+      .nav-item-dropdown:focus-within > .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+      .nav-mobile-only { display: none; }
+      .nav-hamburger { display: none; }
+      .nav-links { display: flex; flex-wrap: nowrap; }
+    }
+
+    /* Tablet / mobile (≤1100px): hamburger navigation */
+    @media (max-width: 1100px) {
+      .site-nav { padding: 0 1.5rem; height: 66px; }
+      .nav-logo img { height: 44px; width: 44px; }
+      .nav-hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 66px;
+        left: 0; right: 0;
+        background: rgba(245,240,232,0.98);
+        backdrop-filter: blur(8px);
+        flex-direction: column;
+        gap: 0;
+        border-bottom: 1px solid rgba(59,42,26,0.12);
+        z-index: 99;
+        padding: 0.5rem 0;
+        max-height: calc(100vh - 66px);
+        overflow-y: auto;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links > li { width: 100%; }
+      .nav-links > li > a {
+        display: flex;
+        align-items: center;
+        padding: 0.9rem 2rem;
+        font-size: 0.82rem;
+        opacity: 1;
+        border-bottom: 1px solid rgba(59,42,26,0.06);
+        min-height: 44px;
+      }
+      .nav-links a.active { border-left: 3px solid var(--terracotta); padding-left: calc(2rem - 3px); }
+      /* Guide links: always visible, indented */
+      .nav-item-dropdown > .dropdown-menu {
+        display: block !important;
+        position: static;
+        transform: none;
+        min-width: auto;
+        background: rgba(59,42,26,0.04);
+        border: none;
+        border-top: none;
+        padding: 0;
+        box-shadow: none;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+      }
+      .nav-item-dropdown > .dropdown-menu li { width: 100%; }
+      .nav-item-dropdown > .dropdown-menu a {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 2rem 0.75rem 3rem;
+        font-size: 0.76rem;
+        border-bottom: 1px solid rgba(59,42,26,0.05);
+        min-height: 44px;
+        background: transparent;
+        opacity: 0.82;
+        white-space: normal;
+      }
+      .nav-item-dropdown > .dropdown-menu a:hover { background: rgba(59,42,26,0.06); opacity: 1; }
+      .dropdown-arrow { display: none; }
+    }
+
+    /* Jump nav: correct offset for desktop nav height */
+    @media (min-width: 1101px) {
+      .jump-nav { top: 100px; }
+    }
+
+/* PAGE HEADER */
     .page-header {
   position: relative;
   min-height: 75vh;
@@ -300,48 +447,92 @@
       letter-spacing: 0.08em; color: rgba(30,22,14,0.78);
     }
 
-    /* FOOTER */
-        footer {
+    /* ── FOOTER ── */
+    footer {
       background: var(--bark);
-      padding: 2.5rem 3rem;
+      padding: 2.75rem 3rem 2rem;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2.25rem;
+      align-items: stretch;
+    }
+    .footer-brand {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1rem;
       text-align: center;
+      gap: 0.45rem;
+      padding-bottom: 1.6rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
     .footer-logo {
       font-family: "Playfair Display", serif;
       font-style: italic;
-      font-size: 1.1rem;
+      font-size: 1.35rem;
       color: var(--cream);
+      display: block;
+    }
+    .footer-tagline {
+      font-family: "Lora", Georgia, serif;
+      font-size: 0.9rem;
+      font-style: italic;
+      line-height: 1.6;
+      color: rgba(245,240,232,0.72);
+      display: block;
     }
     .footer-copy {
       font-family: "DM Mono", monospace;
-      font-size: 0.75rem;
+      font-size: 0.68rem;
       letter-spacing: 0.1em;
-      color: rgba(245,240,232,0.72);
+      color: rgba(245,240,232,0.45);
+      display: block;
+      margin-top: 0.15rem;
     }
-    .footer-links {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-      flex-wrap: wrap;
-      justify-content: center;
+    .footer-nav {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
     }
-    .footer-links a {
+    .footer-group-heading {
       font-family: "DM Mono", monospace;
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: rgba(245,240,232,0.72);
+      color: rgba(245,240,232,0.4);
+      margin-bottom: 0.85rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-group-links { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-group-links a {
+      font-family: "DM Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.68);
       text-decoration: none;
       transition: color 0.2s;
     }
-    .footer-links a:hover { color: var(--sage); }
+    .footer-group-links a:hover { color: var(--sage); }
+    @media (max-width: 768px) {
+      footer { padding: 2.5rem 1.75rem 1.9rem; }
+      .footer-inner { gap: 2rem; }
+      .footer-nav { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    }
+    @media (max-width: 480px) {
+      footer { padding: 2.25rem 1.5rem 1.75rem; }
+      .footer-brand { padding-bottom: 1.35rem; }
+      .footer-logo { font-size: 1.25rem; }
+      .footer-tagline { font-size: 0.86rem; max-width: 280px; }
+      .footer-nav { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    }
 
-
-    /* JUMP NAV */
+/* JUMP NAV */
     .jump-nav { background: var(--bark); padding: 1rem 5rem; display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); position: sticky; top: 66px; z-index: 90; }
     .jump-nav-label { font-family: "DM Mono", monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,240,232,0.65); flex-shrink: 0; margin-right: 0.5rem; }
     .jump-link { font-family: "DM Mono", monospace; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(245,240,232,0.82); text-decoration: none; padding: 0.35rem 0.85rem; border: 1px solid rgba(255,255,255,0.15); transition: all 0.2s; white-space: nowrap; }
@@ -391,58 +582,6 @@
     }
     .site-tagline strong { color: var(--amber); }
 
-    /* MOBILE NAV */
-    .nav-hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      padding: 4px;
-      background: none;
-      border: none;
-    }
-    .nav-hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--bark);
-      transition: all 0.3s;
-    }
-    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
-    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-    @media (max-width: 768px) {
-      .nav-hamburger { display: flex; }
-      .nav-links {
-        display: none;
-        position: fixed;
-        top: 66px;
-        left: 0; right: 0;
-        background: rgba(245,240,232,0.98);
-        backdrop-filter: blur(8px);
-        flex-direction: column;
-        gap: 0;
-        border-bottom: 1px solid rgba(59,42,26,0.12);
-        z-index: 99;
-        padding: 0.5rem 0;
-      }
-      .nav-links.open { display: flex; }
-      .nav-links li { width: 100%; }
-      .nav-links a {
-        display: block;
-        padding: 0.9rem 2rem;
-        font-size: 0.82rem;
-        opacity: 1;
-        border-bottom: 1px solid rgba(59,42,26,0.06);
-      }
-      .nav-links a.active {
-        border-bottom: 1px solid rgba(59,42,26,0.06);
-        border-left: 3px solid var(--terracotta);
-        padding-left: calc(2rem - 3px);
-      }
-    }
-  
     /* ── NEWSLETTER ── */
     .newsletter-section {
       background: var(--parchment);
@@ -541,7 +680,7 @@
 
     /* ── PRINT STYLES ── */
     @media print {
-      nav, footer, .site-tagline, .newsletter-section,
+      .site-nav, footer, .site-tagline, .newsletter-section,
       .skip-link, .jump-nav, .link-strip,
       .recipe-hero .hero-back, .hero-ctas,
       .related-section, .faq-section,
@@ -575,7 +714,7 @@
   
     /* ── GARDEN TIPS MOBILE RESPONSIVE FIX ── */
     @media (max-width: 900px) {
-      nav {
+      .site-nav {
         height: 66px;
         padding: 0 1.5rem;
       }
@@ -734,6 +873,339 @@
       }
     }
 
+  
+/* ── APPROVED NAV OVERRIDES (Phase 5B core rollout) ── */
+/* ── NAV ── */
+    .site-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 3.5rem;
+      height: 100px;
+      background: rgba(245,240,232,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(59,42,26,0.12);
+    }
+    .nav-logo { text-decoration: none; display: flex; align-items: center; }
+    .nav-logo img { height: 84px; width: 84px; object-fit: contain; }
+    .nav-links { display: flex; gap: 2.25rem; list-style: none; }
+    .nav-links a {
+      font-family: "DM Mono", monospace;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--bark);
+      text-decoration: none;
+      opacity: 0.82;
+      transition: opacity 0.2s;
+    }
+    .nav-links a:hover { opacity: 1; }
+    .nav-links a.active { opacity: 1; border-bottom: 2px solid var(--terracotta); padding-bottom: 2px; }
+    /* ── HAMBURGER BUTTON ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+      min-width: 44px;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+    }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--bark); transition: transform 0.3s, opacity 0.3s; }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ── HERB HUB DROPDOWN ── */
+    .nav-item-dropdown { position: relative; }
+    .dropdown-arrow { font-size: 0.6em; }
+    .nav-item-dropdown > .dropdown-menu {
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 176px;
+      background: var(--cream);
+      border: 1px solid rgba(59,42,26,0.14);
+      border-top: 2px solid var(--terracotta);
+      list-style: none;
+      z-index: 200;
+      padding: 0.4rem 0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .nav-item-dropdown > .dropdown-menu li { width: 100%; }
+    .nav-item-dropdown > .dropdown-menu a {
+      display: block;
+      padding: 0.6rem 1.25rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.76rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--bark);
+      text-decoration: none;
+      opacity: 0.85;
+      transition: opacity 0.15s, background 0.15s;
+      border-bottom: 1px solid rgba(59,42,26,0.06);
+      white-space: nowrap;
+    }
+    .nav-item-dropdown > .dropdown-menu li:last-child a { border-bottom: none; }
+    .nav-item-dropdown > .dropdown-menu a:hover,
+    .nav-item-dropdown > .dropdown-menu a:focus-visible { opacity: 1; background: rgba(59,42,26,0.04); }
+
+    /* Desktop (≥1101px): dropdown opens on hover + keyboard focus */
+    @media (min-width: 1101px) {
+      .nav-item-dropdown::after {
+        content: "";
+        position: absolute;
+        left: -0.5rem;
+        right: -0.5rem;
+        top: 100%;
+        height: 12px;
+      }
+      .nav-item-dropdown:hover > .dropdown-menu,
+      .nav-item-dropdown:focus-within > .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+      .nav-mobile-only { display: none; }
+      .nav-hamburger { display: none; }
+      .nav-links { display: flex; flex-wrap: nowrap; }
+    }
+
+    /* Tablet / mobile (≤1100px): hamburger navigation */
+    @media (max-width: 1100px) {
+      .site-nav { padding: 0 1.5rem; height: 66px; }
+      .nav-logo img { height: 44px; width: 44px; }
+      .nav-hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 66px;
+        left: 0; right: 0;
+        background: rgba(245,240,232,0.98);
+        backdrop-filter: blur(8px);
+        flex-direction: column;
+        gap: 0;
+        border-bottom: 1px solid rgba(59,42,26,0.12);
+        z-index: 99;
+        padding: 0.5rem 0;
+        max-height: calc(100vh - 66px);
+        overflow-y: auto;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links > li { width: 100%; }
+      .nav-links > li > a {
+        display: flex;
+        align-items: center;
+        padding: 0.9rem 2rem;
+        font-size: 0.82rem;
+        opacity: 1;
+        border-bottom: 1px solid rgba(59,42,26,0.06);
+        min-height: 44px;
+      }
+      .nav-links a.active { border-left: 3px solid var(--terracotta); padding-left: calc(2rem - 3px); }
+      /* Guide links: always visible, indented */
+      .nav-item-dropdown > .dropdown-menu {
+        display: block !important;
+        position: static;
+        transform: none;
+        min-width: auto;
+        background: rgba(59,42,26,0.04);
+        border: none;
+        border-top: none;
+        padding: 0;
+        box-shadow: none;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+      }
+      .nav-item-dropdown > .dropdown-menu li { width: 100%; }
+      .nav-item-dropdown > .dropdown-menu a {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 2rem 0.75rem 3rem;
+        font-size: 0.76rem;
+        border-bottom: 1px solid rgba(59,42,26,0.05);
+        min-height: 44px;
+        background: transparent;
+        opacity: 0.82;
+        white-space: normal;
+      }
+      .nav-item-dropdown > .dropdown-menu a:hover { background: rgba(59,42,26,0.06); opacity: 1; }
+      .dropdown-arrow { display: none; }
+    }
+
+    /* Jump nav: correct offset for desktop nav height */
+    @media (min-width: 1101px) {
+      .jump-nav { top: 100px; }
+    }
+
+
+/* ── APPROVED FOOTER OVERRIDES (Phase 5B core rollout) ── */
+
+/* Reset legacy footer flex styles so the grouped footer layout behaves consistently */
+footer { display: block; text-align: initial; align-items: initial; gap: 0; }
+/* ── FOOTER ── */
+    footer {
+      background: var(--bark);
+      padding: 2.75rem 3rem 2rem;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2.25rem;
+      align-items: stretch;
+    }
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.45rem;
+      padding-bottom: 1.6rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-logo {
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-size: 1.35rem;
+      color: var(--cream);
+      display: block;
+    }
+    .footer-tagline {
+      font-family: "Lora", Georgia, serif;
+      font-size: 0.9rem;
+      font-style: italic;
+      line-height: 1.6;
+      color: rgba(245,240,232,0.72);
+      display: block;
+    }
+    .footer-copy {
+      font-family: "DM Mono", monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      color: rgba(245,240,232,0.45);
+      display: block;
+      margin-top: 0.15rem;
+    }
+    .footer-nav {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .footer-group-heading {
+      font-family: "DM Mono", monospace;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.4);
+      margin-bottom: 0.85rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-group-links { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-group-links a {
+      font-family: "DM Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.68);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-group-links a:hover { color: var(--sage); }
+    @media (max-width: 768px) {
+      footer { padding: 2.5rem 1.75rem 1.9rem; }
+      .footer-inner { gap: 2rem; }
+      .footer-nav { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    }
+    @media (max-width: 480px) {
+      footer { padding: 2.25rem 1.5rem 1.75rem; }
+      .footer-brand { padding-bottom: 1.35rem; }
+      .footer-logo { font-size: 1.25rem; }
+      .footer-tagline { font-size: 0.86rem; max-width: 280px; }
+      .footer-nav { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    }
+
+
+
+    /* ── FINAL NAV SAFETY OVERRIDE: approved Herb Hub behavior ── */
+    @media (max-width: 1100px) {
+      .site-nav { padding: 0 1.5rem !important; height: 66px !important; }
+      .site-nav .nav-hamburger { display: flex !important; }
+      .site-nav .nav-logo img,
+      .site-nav .nav-logo-img { height: 44px !important; width: 44px !important; }
+      .site-nav .nav-links {
+        display: none !important;
+        position: fixed !important;
+        top: 66px !important;
+        left: 0 !important;
+        right: 0 !important;
+        background: rgba(245,240,232,0.98) !important;
+        backdrop-filter: blur(8px) !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+        border-bottom: 1px solid rgba(59,42,26,0.12) !important;
+        z-index: 99 !important;
+        padding: 0.5rem 0 !important;
+        max-height: calc(100vh - 66px) !important;
+        overflow-y: auto !important;
+      }
+      .site-nav .nav-links.open { display: flex !important; }
+      .site-nav .nav-links > li { width: 100% !important; }
+      .site-nav .nav-links > li > a {
+        display: flex !important;
+        align-items: center !important;
+        padding: 0.9rem 2rem !important;
+        font-size: 0.82rem !important;
+        opacity: 1 !important;
+        border-bottom: 1px solid rgba(59,42,26,0.06) !important;
+        min-height: 44px !important;
+      }
+      .site-nav .nav-item-dropdown > .dropdown-menu {
+        display: block !important;
+        position: static !important;
+        transform: none !important;
+        min-width: auto !important;
+        background: rgba(59,42,26,0.04) !important;
+        border: none !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+      }
+      .site-nav .nav-item-dropdown > .dropdown-menu a {
+        display: flex !important;
+        align-items: center !important;
+        padding: 0.75rem 2rem 0.75rem 3rem !important;
+        min-height: 44px !important;
+        white-space: normal !important;
+      }
+      .site-nav .dropdown-arrow { display: none !important; }
+    }
+
+    @media (min-width: 1101px) {
+      .site-nav .nav-hamburger { display: none !important; }
+      .site-nav .nav-links { display: flex !important; }
+    }
+
   </style>
   <!-- JSON-LD Schema -->
   <script type="application/ld+json">
@@ -771,19 +1243,30 @@
 
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<nav aria-label="Main navigation">
+<nav class="site-nav" aria-label="Main navigation">
   <a href="/" class="nav-logo"><img src="images/logo.png" alt="From Bed to Bar — home" width="84" height="84" /></a>
-  <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
   <ul class="nav-links" id="navMenu" role="list">
     <li><a href="/">Home</a></li>
     <li><a href="recipes">Recipes</a></li>
-    <li><a href="herb-hub">Herb Hub</a></li>
+    <li class="nav-item-dropdown">
+      <a href="herb-hub" class="dropdown-toggle" aria-haspopup="true">Herb Hub <span class="dropdown-arrow" aria-hidden="true">&#9660;</span></a>
+      <ul class="dropdown-menu" role="list">
+        <li><a href="mint-guide">Mint Guide</a></li>
+        <li><a href="plum-guide">Plum Guide</a></li>
+        <li><a href="rosemary-guide">Rosemary Guide</a></li>
+        <li><a href="thyme-guide">Thyme Guide</a></li>
+        <li><a href="basil-guide">Basil Guide</a></li>
+        <li><a href="lavender-guide">Lavender Guide</a></li>
+        <li><a href="lemon-balm-guide">Lemon Balm Guide</a></li>
+      </ul>
+    </li>
     <li><a href="garden-tips">Garden Tips</a></li>
     <li><a href="planting-guide">Planting Guide</a></li>
     <li><a href="bar-essentials">Bar Essentials</a></li>
     <li><a href="blog">Blog</a></li>
     <li><a href="about">About</a></li>
-    <li><a href="disclaimer">Disclaimer</a></li>
+    <li class="nav-mobile-only"><a href="disclaimer">Disclaimer</a></li>
   </ul>
 </nav>
 
@@ -1115,44 +1598,81 @@
 </div>
 </main>
 <footer>
-  <span class="footer-logo">From Bed to Bar</span>
-  <span class="footer-copy">© 2026 FromBedtoBar.com</span>
-  <ul class="footer-links" role="list">
-    <li><a href="/">Home</a></li>
-    <li><a href="recipes">Recipes</a></li>
-    <li><a href="herb-hub">Herb Hub</a></li>
-    <li><a href="garden-tips">Garden Tips</a></li>
-    <li><a href="bar-essentials">Bar Essentials</a></li>
-    <li><a href="blog">Blog</a></li>
-    <li><a href="about">About</a></li>
-    <li><a href="disclaimer">Disclaimer</a></li>
-    <li><a href="mint-guide">Mint Guide</a></li>
-    <li><a href="plum-guide">Plum Guide</a></li>
-    <li><a href="rosemary-guide">Rosemary Guide</a></li>
-    <li><a href="thyme-guide">Thyme Guide</a></li>
-    <li><a href="basil-guide">Basil Guide</a></li>
-    <li><a href="lavender-guide">Lavender Guide</a></li>
-    <li><a href="lemon-balm-guide">Lemon Balm Guide</a></li>
-  </ul>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">From Bed to Bar</span>
+      <span class="footer-tagline">Rooted in the garden. Raised around the table.</span>
+      <span class="footer-copy">&copy; 2026 FromBedtoBar.com</span>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <div class="footer-group">
+        <h3 class="footer-group-heading">Explore</h3>
+        <ul class="footer-group-links" role="list">
+          <li><a href="/">Home</a></li>
+          <li><a href="recipes">Recipes</a></li>
+          <li><a href="herb-hub">Herb Hub</a></li>
+          <li><a href="garden-tips">Garden Tips</a></li>
+          <li><a href="planting-guide">Planting Guide</a></li>
+          <li><a href="bar-essentials">Bar Essentials</a></li>
+        </ul>
+      </div>
+      <div class="footer-group">
+        <h3 class="footer-group-heading">Guides</h3>
+        <ul class="footer-group-links" role="list">
+          <li><a href="mint-guide">Mint Guide</a></li>
+          <li><a href="plum-guide">Plum Guide</a></li>
+          <li><a href="rosemary-guide">Rosemary Guide</a></li>
+          <li><a href="thyme-guide">Thyme Guide</a></li>
+          <li><a href="basil-guide">Basil Guide</a></li>
+          <li><a href="lavender-guide">Lavender Guide</a></li>
+          <li><a href="lemon-balm-guide">Lemon Balm Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-group">
+        <h3 class="footer-group-heading">Company</h3>
+        <ul class="footer-group-links" role="list">
+          <li><a href="about">About</a></li>
+          <li><a href="blog">Blog</a></li>
+          <li><a href="disclaimer">Disclaimer</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </footer>
+
 
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     var hamburger = document.getElementById("navHamburger");
-    var navLinks = document.querySelector(".nav-links");
-    if (hamburger && navLinks) {
+    var navMenu = document.getElementById("navMenu");
+
+    if (hamburger && navMenu) {
+      function closeMenu() {
+        hamburger.classList.remove("open");
+        navMenu.classList.remove("open");
+        hamburger.setAttribute("aria-expanded", "false");
+      }
+
       hamburger.addEventListener("click", function() {
-        hamburger.classList.toggle("open");
-        navLinks.classList.toggle("open");
-        var expanded = hamburger.getAttribute("aria-expanded") === "true";
-        hamburger.setAttribute("aria-expanded", String(!expanded));
+        var isOpen = !navMenu.classList.contains("open");
+        hamburger.classList.toggle("open", isOpen);
+        navMenu.classList.toggle("open", isOpen);
+        hamburger.setAttribute("aria-expanded", String(isOpen));
       });
-      // Close menu when a link is clicked
-      navLinks.querySelectorAll("a").forEach(function(link) {
+
+      navMenu.querySelectorAll("a").forEach(function(link) {
         link.addEventListener("click", function() {
-          hamburger.classList.remove("open");
-          navLinks.classList.remove("open");
+          if (window.innerWidth <= 1100) {
+            closeMenu();
+          }
         });
+      });
+
+      document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape" && navMenu.classList.contains("open")) {
+          closeMenu();
+          hamburger.focus();
+        }
       });
     }
   });
