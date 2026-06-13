@@ -221,9 +221,9 @@
     .nav-item-dropdown { position: relative; }
     .dropdown-arrow { font-size: 0.6em; }
     .nav-item-dropdown > .dropdown-menu {
-      display: none;
+      display: block;
       position: absolute;
-      top: calc(100% + 6px);
+      top: 100%;
       left: 50%;
       transform: translateX(-50%);
       min-width: 176px;
@@ -234,6 +234,9 @@
       z-index: 200;
       padding: 0.4rem 0;
       box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
     }
     .nav-item-dropdown > .dropdown-menu li { width: 100%; }
     .nav-item-dropdown > .dropdown-menu a {
@@ -256,8 +259,20 @@
 
     /* Desktop (≥1025px): dropdown opens on hover + keyboard focus */
     @media (min-width: 1025px) {
+      .nav-item-dropdown::after {
+        content: "";
+        position: absolute;
+        left: -0.5rem;
+        right: -0.5rem;
+        top: 100%;
+        height: 12px;
+      }
       .nav-item-dropdown:hover > .dropdown-menu,
-      .nav-item-dropdown:focus-within > .dropdown-menu { display: block; }
+      .nav-item-dropdown:focus-within > .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
       .nav-mobile-only { display: none; }
     }
 
@@ -295,7 +310,7 @@
       .nav-links a.active { border-left: 3px solid var(--terracotta); padding-left: calc(2rem - 3px); }
       /* Guide links: always visible, indented */
       .nav-item-dropdown > .dropdown-menu {
-        display: block;
+        display: block !important;
         position: static;
         transform: none;
         min-width: auto;
@@ -304,6 +319,9 @@
         border-top: none;
         padding: 0;
         box-shadow: none;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
       }
       .nav-item-dropdown > .dropdown-menu li { width: 100%; }
       .nav-item-dropdown > .dropdown-menu a {
@@ -323,7 +341,7 @@
 
     /* Jump nav: correct offset for desktop nav height */
     @media (min-width: 1025px) {
-      .jump-nav { top: 100px; }
+      .jump-nav { top: 100px !important; }
     }
 
     /* ── JUMP NAV ── */
@@ -331,11 +349,6 @@
     .jump-nav-label { font-family: "DM Mono", monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,240,232,0.65); flex-shrink: 0; margin-right: 0.5rem; }
     .jump-link { font-family: "DM Mono", monospace; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(245,240,232,0.82); text-decoration: none; padding: 0.35rem 0.85rem; border: 1px solid rgba(255,255,255,0.15); transition: all 0.2s; white-space: nowrap; }
     .jump-link:hover { background: var(--amber); color: var(--bark); border-color: var(--amber); }
-
-    /* Desktop jump nav offset: must appear after base .jump-nav rule to win cascade */
-    @media (min-width: 1025px) {
-      .jump-nav { top: 100px; }
-    }
 
     /* ── PAGE HERO ── */
 .page-header {
@@ -533,7 +546,7 @@
     .footer-brand { display: flex; flex-direction: column; gap: 0.6rem; padding-top: 0.15rem; }
     .footer-logo { font-family: "Playfair Display", serif; font-style: italic; font-size: 1.2rem; color: var(--cream); display: block; }
     .footer-copy { font-family: "DM Mono", monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: rgba(245,240,232,0.45); display: block; }
-    .footer-nav { position: static; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .footer-nav { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
     .footer-group-heading {
       font-family: "DM Mono", monospace;
       font-size: 0.65rem;
