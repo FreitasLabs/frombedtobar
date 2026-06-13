@@ -169,7 +169,7 @@
     }
 
     /* ── NAV ── */
-    nav {
+    .site-nav {
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
@@ -184,7 +184,7 @@
     }
     .nav-logo { text-decoration: none; display: flex; align-items: center; }
     .nav-logo img { height: 84px; width: 84px; object-fit: contain; }
-    .nav-links { display: flex; gap: 2.25rem; list-style: none; flex-wrap: wrap; }
+    .nav-links { display: flex; gap: 2.25rem; list-style: none; }
     .nav-links a {
       font-family: "DM Mono", monospace;
       font-size: 0.875rem;
@@ -198,18 +198,132 @@
     }
     .nav-links a:hover { opacity: 1; }
     .nav-links a.active { opacity: 1; border-bottom: 2px solid var(--terracotta); padding-bottom: 2px; }
-    .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
-    .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--bark); transition: all 0.3s; }
+    /* ── HAMBURGER BUTTON ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+      min-width: 44px;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+    }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--bark); transition: transform 0.3s, opacity 0.3s; }
     .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .nav-hamburger.open span:nth-child(2) { opacity: 0; }
     .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    @media (max-width: 768px) {
+
+    /* ── HERB HUB DROPDOWN ── */
+    .nav-item-dropdown { position: relative; }
+    .dropdown-arrow { font-size: 0.6em; }
+    .nav-item-dropdown > .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 176px;
+      background: var(--cream);
+      border: 1px solid rgba(59,42,26,0.14);
+      border-top: 2px solid var(--terracotta);
+      list-style: none;
+      z-index: 200;
+      padding: 0.4rem 0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+    .nav-item-dropdown > .dropdown-menu li { width: 100%; }
+    .nav-item-dropdown > .dropdown-menu a {
+      display: block;
+      padding: 0.6rem 1.25rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.76rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--bark);
+      text-decoration: none;
+      opacity: 0.85;
+      transition: opacity 0.15s, background 0.15s;
+      border-bottom: 1px solid rgba(59,42,26,0.06);
+      white-space: nowrap;
+    }
+    .nav-item-dropdown > .dropdown-menu li:last-child a { border-bottom: none; }
+    .nav-item-dropdown > .dropdown-menu a:hover,
+    .nav-item-dropdown > .dropdown-menu a:focus-visible { opacity: 1; background: rgba(59,42,26,0.04); }
+
+    /* Desktop (≥1025px): dropdown opens on hover + keyboard focus */
+    @media (min-width: 1025px) {
+      .nav-item-dropdown:hover > .dropdown-menu,
+      .nav-item-dropdown:focus-within > .dropdown-menu { display: block; }
+      .nav-mobile-only { display: none; }
+    }
+
+    /* Tablet / mobile (≤1024px): hamburger navigation */
+    @media (max-width: 1024px) {
+      .site-nav { padding: 0 1.5rem; height: 66px; }
+      .nav-logo img { height: 44px; width: 44px; }
       .nav-hamburger { display: flex; }
-      .nav-links { display: none; position: fixed; top: 66px; left: 0; right: 0; background: rgba(245,240,232,0.98); backdrop-filter: blur(8px); flex-direction: column; gap: 0; border-bottom: 1px solid rgba(59,42,26,0.12); z-index: 99; padding: 0.5rem 0; }
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 66px;
+        left: 0; right: 0;
+        background: rgba(245,240,232,0.98);
+        backdrop-filter: blur(8px);
+        flex-direction: column;
+        gap: 0;
+        border-bottom: 1px solid rgba(59,42,26,0.12);
+        z-index: 99;
+        padding: 0.5rem 0;
+        max-height: calc(100vh - 66px);
+        overflow-y: auto;
+      }
       .nav-links.open { display: flex; }
-      .nav-links li { width: 100%; }
-      .nav-links a { display: block; padding: 0.9rem 2rem; font-size: 0.82rem; opacity: 1; border-bottom: 1px solid rgba(59,42,26,0.06); }
+      .nav-links > li { width: 100%; }
+      .nav-links > li > a {
+        display: flex;
+        align-items: center;
+        padding: 0.9rem 2rem;
+        font-size: 0.82rem;
+        opacity: 1;
+        border-bottom: 1px solid rgba(59,42,26,0.06);
+        min-height: 44px;
+      }
       .nav-links a.active { border-left: 3px solid var(--terracotta); padding-left: calc(2rem - 3px); }
+      /* Guide links: always visible, indented */
+      .nav-item-dropdown > .dropdown-menu {
+        display: block;
+        position: static;
+        transform: none;
+        min-width: auto;
+        background: rgba(59,42,26,0.04);
+        border: none;
+        border-top: none;
+        padding: 0;
+        box-shadow: none;
+      }
+      .nav-item-dropdown > .dropdown-menu li { width: 100%; }
+      .nav-item-dropdown > .dropdown-menu a {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 2rem 0.75rem 3rem;
+        font-size: 0.76rem;
+        border-bottom: 1px solid rgba(59,42,26,0.05);
+        min-height: 44px;
+        background: transparent;
+        opacity: 0.82;
+        white-space: normal;
+      }
+      .nav-item-dropdown > .dropdown-menu a:hover { background: rgba(59,42,26,0.06); opacity: 1; }
+      .dropdown-arrow { display: none; }
+    }
+
+    /* Jump nav: correct offset for desktop nav height */
+    @media (min-width: 1025px) {
+      .jump-nav { top: 100px; }
     }
 
     /* ── JUMP NAV ── */
@@ -217,6 +331,11 @@
     .jump-nav-label { font-family: "DM Mono", monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,240,232,0.65); flex-shrink: 0; margin-right: 0.5rem; }
     .jump-link { font-family: "DM Mono", monospace; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(245,240,232,0.82); text-decoration: none; padding: 0.35rem 0.85rem; border: 1px solid rgba(255,255,255,0.15); transition: all 0.2s; white-space: nowrap; }
     .jump-link:hover { background: var(--amber); color: var(--bark); border-color: var(--amber); }
+
+    /* Desktop jump nav offset: must appear after base .jump-nav rule to win cascade */
+    @media (min-width: 1025px) {
+      .jump-nav { top: 100px; }
+    }
 
     /* ── PAGE HERO ── */
 .page-header {
@@ -402,12 +521,49 @@
     .site-tagline strong { color: var(--amber); }
 
     /* ── FOOTER ── */
-    footer { background: var(--bark); padding: 2.5rem 3rem; display: flex; flex-direction: column; align-items: center; gap: 1rem; text-align: center; }
-    .footer-logo { font-family: "Playfair Display", serif; font-style: italic; font-size: 1.1rem; color: var(--cream); }
-    .footer-copy { font-family: "DM Mono", monospace; font-size: 0.75rem; letter-spacing: 0.1em; color: rgba(245,240,232,0.72); }
-    .footer-links { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; justify-content: center; }
-    .footer-links a { font-family: "DM Mono", monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,240,232,0.72); text-decoration: none; transition: color 0.2s; }
-    .footer-links a:hover { color: var(--sage); }
+    footer { background: var(--bark); padding: 3.5rem 3rem 2.5rem; }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .footer-brand { display: flex; flex-direction: column; gap: 0.6rem; padding-top: 0.15rem; }
+    .footer-logo { font-family: "Playfair Display", serif; font-style: italic; font-size: 1.2rem; color: var(--cream); display: block; }
+    .footer-copy { font-family: "DM Mono", monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: rgba(245,240,232,0.45); display: block; }
+    .footer-nav { position: static; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .footer-group-heading {
+      font-family: "DM Mono", monospace;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.4);
+      margin-bottom: 0.85rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-group-links { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-group-links a {
+      font-family: "DM Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.68);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-group-links a:hover { color: var(--sage); }
+    @media (max-width: 768px) {
+      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-nav { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    }
+    @media (max-width: 480px) {
+      footer { padding: 2.5rem 1.5rem 2rem; }
+      .footer-nav { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    }
 
     /* ── ANIMATIONS ── */
     @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
@@ -533,7 +689,7 @@
 
     /* ── NAV TOUCH TARGET (min 44px, WCAG 2.5.5) ── */
     @media (min-width: 769px) {
-      .nav-links a {
+      .nav-links > li > a {
         padding: 0.75rem 0;
         display: inline-block;
       }
@@ -567,19 +723,30 @@
 <!-- ── NAV ── -->
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<nav aria-label="Main navigation">
+<nav class="site-nav" aria-label="Main navigation">
   <a href="/" class="nav-logo"><img src="images/logo.png" alt="From Bed to Bar — home" width="84" height="84" /></a>
-  <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
   <ul class="nav-links" id="navMenu" role="list">
     <li><a href="/">Home</a></li>
     <li><a href="recipes">Recipes</a></li>
-    <li><a href="herb-hub">Herb Hub</a></li>
+    <li class="nav-item-dropdown">
+      <a href="herb-hub" class="dropdown-toggle" aria-haspopup="true">Herb Hub <span class="dropdown-arrow" aria-hidden="true">&#9660;</span></a>
+      <ul class="dropdown-menu" role="list">
+        <li><a href="mint-guide">Mint Guide</a></li>
+        <li><a href="plum-guide">Plum Guide</a></li>
+        <li><a href="rosemary-guide">Rosemary Guide</a></li>
+        <li><a href="thyme-guide">Thyme Guide</a></li>
+        <li><a href="basil-guide">Basil Guide</a></li>
+        <li><a href="lavender-guide">Lavender Guide</a></li>
+        <li><a href="lemon-balm-guide">Lemon Balm Guide</a></li>
+      </ul>
+    </li>
     <li><a href="garden-tips">Garden Tips</a></li>
     <li><a href="planting-guide">Planting Guide</a></li>
     <li><a href="bar-essentials">Bar Essentials</a></li>
     <li><a href="blog">Blog</a></li>
     <li><a href="about">About</a></li>
-    <li><a href="disclaimer">Disclaimer</a></li>
+    <li class="nav-mobile-only"><a href="disclaimer">Disclaimer</a></li>
   </ul>
 </nav>
 
@@ -1228,44 +1395,74 @@
 
 </main>
 <footer>
-  <span class="footer-logo">From Bed to Bar</span>
-  <span class="footer-copy">© 2026 FromBedtoBar.com</span>
-  <ul class="footer-links" role="list">
-    <li><a href="/">Home</a></li>
-    <li><a href="recipes">Recipes</a></li>
-    <li><a href="herb-hub">Herb Hub</a></li>
-    <li><a href="garden-tips">Garden Tips</a></li>
-    <li><a href="bar-essentials">Bar Essentials</a></li>
-    <li><a href="blog">Blog</a></li>
-    <li><a href="about">About</a></li>
-    <li><a href="disclaimer">Disclaimer</a></li>
-    <li><a href="mint-guide">Mint Guide</a></li>
-    <li><a href="plum-guide">Plum Guide</a></li>
-    <li><a href="rosemary-guide">Rosemary Guide</a></li>
-    <li><a href="thyme-guide">Thyme Guide</a></li>
-    <li><a href="basil-guide">Basil Guide</a></li>
-    <li><a href="lavender-guide">Lavender Guide</a></li>
-    <li><a href="lemon-balm-guide">Lemon Balm Guide</a></li>
-  </ul>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">From Bed to Bar</span>
+      <span class="footer-copy">&copy; 2026 FromBedtoBar.com</span>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <div class="footer-group">
+        <h3 class="footer-group-heading">Explore</h3>
+        <ul class="footer-group-links" role="list">
+          <li><a href="/">Home</a></li>
+          <li><a href="recipes">Recipes</a></li>
+          <li><a href="herb-hub">Herb Hub</a></li>
+          <li><a href="garden-tips">Garden Tips</a></li>
+          <li><a href="planting-guide">Planting Guide</a></li>
+          <li><a href="bar-essentials">Bar Essentials</a></li>
+        </ul>
+      </div>
+      <div class="footer-group">
+        <h3 class="footer-group-heading">Guides</h3>
+        <ul class="footer-group-links" role="list">
+          <li><a href="mint-guide">Mint Guide</a></li>
+          <li><a href="plum-guide">Plum Guide</a></li>
+          <li><a href="rosemary-guide">Rosemary Guide</a></li>
+          <li><a href="thyme-guide">Thyme Guide</a></li>
+          <li><a href="basil-guide">Basil Guide</a></li>
+          <li><a href="lavender-guide">Lavender Guide</a></li>
+          <li><a href="lemon-balm-guide">Lemon Balm Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-group">
+        <h3 class="footer-group-heading">Company</h3>
+        <ul class="footer-group-links" role="list">
+          <li><a href="about">About</a></li>
+          <li><a href="blog">Blog</a></li>
+          <li><a href="disclaimer">Disclaimer</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </footer>
 
 <script>
   // Mobile nav
   document.addEventListener("DOMContentLoaded", function() {
     var hamburger = document.getElementById("navHamburger");
-    var navLinks = document.querySelector(".nav-links");
-    if (hamburger && navLinks) {
+    var navMenu = document.getElementById("navMenu");
+    if (hamburger && navMenu) {
       hamburger.addEventListener("click", function() {
-        hamburger.classList.toggle("open");
-        navLinks.classList.toggle("open");
-        var expanded = hamburger.getAttribute("aria-expanded") === "true";
-        hamburger.setAttribute("aria-expanded", String(!expanded));
+        var isOpen = hamburger.classList.toggle("open");
+        navMenu.classList.toggle("open", isOpen);
+        hamburger.setAttribute("aria-expanded", String(isOpen));
       });
-      navLinks.querySelectorAll("a").forEach(function(link) {
+      navMenu.querySelectorAll("a").forEach(function(link) {
         link.addEventListener("click", function() {
-          hamburger.classList.remove("open");
-          navLinks.classList.remove("open");
+          if (window.innerWidth <= 1024) {
+            hamburger.classList.remove("open");
+            navMenu.classList.remove("open");
+            hamburger.setAttribute("aria-expanded", "false");
+          }
         });
+      });
+      document.addEventListener("keydown", function(e) {
+        if (e.key === "Escape" && navMenu.classList.contains("open")) {
+          hamburger.classList.remove("open");
+          navMenu.classList.remove("open");
+          hamburger.setAttribute("aria-expanded", "false");
+          hamburger.focus();
+        }
       });
     }
   });
