@@ -1410,6 +1410,59 @@
       .jump-nav { top: 100px; }
     }
 
+  
+    /* ── ROSEMARY P5 IMAGE RHYTHM ── */
+    .guide-photo {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      background: var(--linen);
+    }
+    .guide-photo-inner {
+      padding: 0 5rem 4rem;
+    }
+    .guide-photo-inner img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 560px;
+      object-fit: cover;
+      border: 1px solid rgba(59,42,26,0.12);
+      box-shadow: 0 18px 42px rgba(59,42,26,0.08);
+    }
+    .guide-photo.alt {
+      background: var(--parchment);
+    }
+    .guide-photo.tint {
+      background: var(--rosemary-pale);
+    }
+    .guide-photo.wide .guide-photo-inner img {
+      max-height: 680px;
+    }
+    @media (max-width: 900px) {
+      .guide-photo-inner {
+        padding: 0 1.5rem 3rem;
+      }
+      .guide-photo-inner img {
+        max-height: none;
+      }
+    }
+
+  
+    /* ── ROSEMARY P5.1 IMAGE PATH + DISPLAY FIX ── */
+    figure.guide-photo {
+      display: block;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+    figure.guide-photo img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
   </style>
 <!-- P3.6 kitchen-first placement pass applied -->
 <!-- Rosemary P4 final pass -->
@@ -1566,6 +1619,13 @@
   </div>
 </section>
 
+<figure class="guide-photo alt" aria-label="Mature rosemary growing beside a Northern California backyard patio">
+  <div class="guide-photo-inner">
+    <img src="images/guides/rosemary-guide-from-our-garden.jpg" alt="Mature rosemary shrub growing beside a rustic backyard patio with terracotta pots, gravel paths, and raised garden beds" loading="lazy" width="1600" height="900" />
+  </div>
+</figure>
+
+
 
 <!-- ── AROUND THE TABLE ── -->
 <section class="content-section" id="around-the-table">
@@ -1633,6 +1693,13 @@
     </div>
   </div>
 </section>
+
+<figure class="guide-photo tint" aria-label="Freshly harvested rosemary stems on weathered wood">
+  <div class="guide-photo-inner">
+    <img src="images/guides/rosemary-guide-at-a-glance.jpg" alt="Fresh rosemary stems bundled with garden twine on weathered wood beside vintage pruning shears with a soft garden path in the background" loading="lazy" width="1600" height="900" />
+  </div>
+</figure>
+
 
 <!-- ── THROUGH EVERY SEASON ── -->
 <section class="content-section" id="seasons">
@@ -2129,6 +2196,13 @@
   </p>
 </section>
 
+
+<figure class="guide-photo" aria-label="Favorite ways to use rosemary from kitchen to bar">
+  <div class="guide-photo-inner">
+    <img src="images/guides/rosemary-guide-our-favorites.jpg" alt="Rosemary simple syrup, a rosemary bourbon sour, focaccia, roasted potatoes, and fresh rosemary on a rustic garden table" loading="lazy" width="1600" height="900" />
+  </div>
+</figure>
+
 <!-- ── OUR FAVORITE WAYS TO USE ROSEMARY ── -->
 <section class="favorites-section" id="favorites">
   <div class="favorites-inner">
@@ -2253,6 +2327,13 @@
     </div>
   </div>
 </section>
+
+
+<figure class="guide-photo wide" aria-label="Rosemary growing within a broader garden-to-glass herb bed">
+  <div class="guide-photo-inner">
+    <img src="images/guides/rosemary-guide-beyond-the-herb-bed.jpg" alt="Expansive Northern California backyard herb garden with rosemary, basil, lavender, mint, thyme, raised beds, rustic paths, and a peaceful porch" loading="lazy" width="1600" height="900" />
+  </div>
+</figure>
 
 <div class="link-strip">
   <span class="link-strip-label">Rosemary Cluster</span>
