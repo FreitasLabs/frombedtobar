@@ -1269,8 +1269,150 @@
       .footer-tagline { font-size: 0.86rem; max-width: 280px; }
       .footer-nav { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
     }
+  
+    /* ── ROSEMARY P4 FINAL MOBILE + RHYTHM PASS ── */
+    .jump-nav {
+      background: var(--rosemary-deep);
+      padding: 0.55rem 5rem;
+      display: flex;
+      gap: 0.45rem;
+      flex-wrap: nowrap;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: sticky;
+      top: 66px;
+      z-index: 90;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .jump-nav::-webkit-scrollbar { display: none; }
+    .jump-nav-label {
+      font-family: "DM Mono", monospace;
+      font-size: 0.66rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.58);
+      flex: 0 0 auto;
+      margin-right: 0.25rem;
+      white-space: nowrap;
+    }
+    .jump-link {
+      font-family: "DM Mono", monospace;
+      font-size: 0.66rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.82);
+      text-decoration: none;
+      padding: 0.28rem 0.62rem;
+      border: 1px solid rgba(255,255,255,0.14);
+      transition: all 0.2s;
+      white-space: nowrap;
+      flex: 0 0 auto;
+    }
+    .jump-link:hover,
+    .jump-link:focus-visible {
+      background: rgba(255,255,255,0.12);
+      color: var(--cream);
+    }
+
+    @media (min-width: 901px) {
+      .content-section,
+      .quick-start-section,
+      .garden-note-section,
+      .favorites-section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+      .quick-start-card { min-height: 190px; }
+      .garden-note-card { padding: 2.5rem; }
+      .favorite-card { min-height: 220px; }
+    }
+
+    .favorite-card,
+    .technique-card,
+    .preserve-card,
+    .reason-card,
+    .season-card,
+    .quick-start-card {
+      height: 100%;
+    }
+    .favorite-card,
+    .technique-card,
+    .preserve-card {
+      display: flex;
+      flex-direction: column;
+    }
+    .favorite-copy,
+    .technique-desc,
+    .preserve-desc {
+      flex: 1;
+    }
+    .favorite-cta,
+    .technique-tip,
+    .preserve-tip {
+      margin-top: auto;
+    }
+
+    #kitchen-first {
+      background: var(--linen);
+      border-top: 1px solid rgba(59,42,26,0.06);
+      border-bottom: 1px solid rgba(59,42,26,0.06);
+    }
+    #kitchen-first .section-intro {
+      margin-bottom: 1.15rem;
+    }
+    #kitchen-first .section-intro:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 900px) {
+      .jump-nav {
+        top: 66px;
+        padding: 0.5rem 1rem;
+        gap: 0.4rem;
+      }
+      .jump-link {
+        font-size: 0.62rem;
+        padding: 0.25rem 0.55rem;
+      }
+      .jump-nav-label {
+        font-size: 0.62rem;
+      }
+      .content-section,
+      .quick-start-section,
+      .garden-note-section,
+      .favorites-section,
+      .newsletter-section {
+        padding: 3rem 1.5rem;
+      }
+      .section-intro {
+        margin-bottom: 2rem;
+      }
+      .quick-start-grid,
+      .favorites-grid,
+      .rosemary-glance-grid,
+      .season-grid,
+      .reasons-grid,
+      .variety-grid,
+      .preserve-grid,
+      .technique-grid,
+      .mistakes-grid {
+        grid-template-columns: 1fr;
+      }
+      .garden-note-card {
+        padding: 2rem 1.35rem;
+      }
+    }
+
+    @media (min-width: 1101px) {
+      .jump-nav { top: 100px; }
+    }
+
   </style>
 <!-- P3.6 kitchen-first placement pass applied -->
+<!-- Rosemary P4 final pass -->
 </head>
 <body>
 
@@ -1344,18 +1486,17 @@
 </header>
 
 <div class="jump-nav">
-  <span class="jump-nav-label">Jump to:</span>
+  <span class="jump-nav-label">Guide:</span>
   <a href="#year-round" class="jump-link">Year-Round</a>
-  <a href="#from-our-garden" class="jump-link">Our Garden</a>
-  <a href="#glance" class="jump-link">At a Glance</a>
-  <a href="#why-grow" class="jump-link">Why Grow</a>
+  <a href="#from-our-garden" class="jump-link">Garden</a>
+  <a href="#glance" class="jump-link">Glance</a>
+  <a href="#why-grow" class="jump-link">Why</a>
   <a href="#varieties" class="jump-link">Varieties</a>
   <a href="#growing" class="jump-link">Growing</a>
-  <a href="#harvesting" class="jump-link">Harvesting</a>
-  <a href="#around-the-table" class="jump-link">Table</a>
-  <a href="#kitchen-first" class="jump-link">Kitchen</a>
+  <a href="#harvesting" class="jump-link">Harvest</a>
   <a href="#using" class="jump-link">Uses</a>
-  <a href="#drinks" class="jump-link">From the Bar</a>
+  <a href="#drinks" class="jump-link">Bar</a>
+  <a href="#favorites" class="jump-link">Favorites</a>
   <a href="#faq" class="jump-link">FAQ</a>
 </div>
 
@@ -1444,7 +1585,7 @@
 
 
 <!-- ── KITCHEN FIRST, BAR SECOND ── -->
-<section class="content-section rosemary-tint" id="kitchen-first">
+<section class="content-section" id="kitchen-first">
   <p class="section-eyebrow">Our rosemary philosophy</p>
   <h2 class="section-title">Kitchen first, <em>bar second</em>.</h2>
   <p class="section-intro">
