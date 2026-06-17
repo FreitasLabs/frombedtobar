@@ -1410,57 +1410,109 @@
       .jump-nav { top: 100px; }
     }
 
+
   
-    /* ── ROSEMARY P5 IMAGE RHYTHM ── */
-    .guide-photo {
+    /* ── ROSEMARY P5.2 INTEGRATED IMAGE LAYOUT ── */
+    .garden-note-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+      gap: 2rem;
+      align-items: stretch;
+    }
+    .garden-note-photo {
+      min-height: 100%;
+      overflow: hidden;
+      border: 1px solid rgba(59,42,26,0.12);
+      background: var(--parchment);
+    }
+    .garden-note-photo img {
+      width: 100%;
+      height: 100%;
+      min-height: 340px;
+      object-fit: cover;
+      display: block;
+    }
+    .rosemary-feature-image {
+      background: var(--linen);
+      padding: 0 5rem 4rem;
+      margin: 0;
       position: relative;
       z-index: 1;
-      margin: 0;
-      background: var(--linen);
     }
-    .guide-photo-inner {
-      padding: 0 5rem 4rem;
-    }
-    .guide-photo-inner img {
-      display: block;
+    .rosemary-feature-image img {
       width: 100%;
-      height: auto;
-      max-height: 560px;
+      max-height: 620px;
       object-fit: cover;
+      display: block;
       border: 1px solid rgba(59,42,26,0.12);
       box-shadow: 0 18px 42px rgba(59,42,26,0.08);
     }
-    .guide-photo.alt {
-      background: var(--parchment);
+    #glance {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+      gap: 2rem;
+      align-items: center;
     }
-    .guide-photo.tint {
-      background: var(--rosemary-pale);
+    #glance > .section-eyebrow,
+    #glance > .section-title,
+    #glance > .section-intro,
+    #glance > .rosemary-glance {
+      grid-column: 1;
     }
-    .guide-photo.wide .guide-photo-inner img {
-      max-height: 680px;
+    .rosemary-glance-photo {
+      grid-column: 2;
+      grid-row: 1 / span 4;
+      overflow: hidden;
+      border: 1px solid rgba(59,42,26,0.12);
+      box-shadow: 0 18px 42px rgba(59,42,26,0.08);
+      background: var(--linen);
     }
-    @media (max-width: 900px) {
-      .guide-photo-inner {
-        padding: 0 1.5rem 3rem;
-      }
-      .guide-photo-inner img {
-        max-height: none;
-      }
-    }
-
-  
-    /* ── ROSEMARY P5.1 IMAGE PATH + DISPLAY FIX ── */
-    figure.guide-photo {
-      display: block;
+    .rosemary-glance-photo img {
       width: 100%;
+      height: 100%;
+      min-height: 430px;
+      object-fit: cover;
+      display: block;
+    }
+    .rosemary-closing-image {
+      background: var(--parchment);
+      padding: 0 5rem 4rem;
+      margin: 0;
       position: relative;
       z-index: 1;
     }
-    figure.guide-photo img {
-      display: block;
+    .rosemary-closing-image img {
       width: 100%;
-      height: auto;
+      max-height: 680px;
       object-fit: cover;
+      display: block;
+      border: 1px solid rgba(59,42,26,0.12);
+      box-shadow: 0 18px 42px rgba(59,42,26,0.08);
+    }
+    @media (max-width: 900px) {
+      .garden-note-card,
+      #glance {
+        display: block;
+      }
+      .garden-note-photo {
+        margin-top: 1.5rem;
+      }
+      .garden-note-photo img,
+      .rosemary-glance-photo img {
+        min-height: 0;
+        height: auto;
+      }
+      .rosemary-feature-image,
+      .rosemary-closing-image {
+        padding: 0 1.5rem 3rem;
+      }
+      .rosemary-feature-image img,
+      .rosemary-closing-image img {
+        max-height: none;
+      }
+      .rosemary-glance-photo {
+        margin-top: 1.5rem;
+      }
     }
 
   </style>
@@ -1615,18 +1667,13 @@
         </p>
         <div class="garden-note-signoff">Rooted in the garden. Raised around the table.</div>
       </div>
-    </div>
+    
+        <div class="garden-note-photo">
+          <img src="images/guides/rosemary-guide-from-our-garden.jpg" alt="Mature rosemary shrub growing beside a rustic backyard patio with terracotta pots, gravel paths, and raised garden beds" loading="lazy" width="1600" height="900" />
+        </div>
+</div>
   </div>
 </section>
-
-<figure class="guide-photo alt" aria-label="Mature rosemary growing beside a Northern California backyard patio">
-  <div class="guide-photo-inner">
-    <img src="images/guides/rosemary-guide-from-our-garden.jpg" alt="Mature rosemary shrub growing beside a rustic backyard patio with terracotta pots, gravel paths, and raised garden beds" loading="lazy" width="1600" height="900" />
-  </div>
-</figure>
-
-
-
 <!-- ── AROUND THE TABLE ── -->
 <section class="content-section" id="around-the-table">
   <p class="section-eyebrow">Around the table</p>
@@ -1658,6 +1705,13 @@
     When rosemary syrup, a smoked garnish, or a bourbon sour reaches the table, it does not feel random. It feels like the garden simply followed the meal into the glass.
   </p>
 </section>
+
+
+
+<!-- ── ROSEMARY FAVORITES FEATURE ── -->
+<figure class="rosemary-feature-image" aria-label="Favorite ways to use rosemary from kitchen to bar">
+  <img src="images/guides/rosemary-guide-our-favorites.jpg" alt="Rosemary simple syrup, a rosemary bourbon sour, focaccia, roasted potatoes, and fresh rosemary on a rustic garden table" loading="lazy" width="1600" height="900" />
+</figure>
 
 <!-- ── ROSEMARY AT A GLANCE ── -->
 <section class="content-section rosemary-tint" id="glance">
@@ -1692,517 +1746,11 @@
       </div>
     </div>
   </div>
-</section>
 
-<figure class="guide-photo tint" aria-label="Freshly harvested rosemary stems on weathered wood">
-  <div class="guide-photo-inner">
+  <div class="rosemary-glance-photo">
     <img src="images/guides/rosemary-guide-at-a-glance.jpg" alt="Fresh rosemary stems bundled with garden twine on weathered wood beside vintage pruning shears with a soft garden path in the background" loading="lazy" width="1600" height="900" />
   </div>
-</figure>
-
-
-<!-- ── THROUGH EVERY SEASON ── -->
-<section class="content-section" id="seasons">
-  <p class="section-eyebrow">Through every season</p>
-  <h2 class="section-title">Rosemary does not belong to one moment.</h2>
-  <p class="section-intro">
-    Mint feels like summer. Plums feel like harvest. Rosemary feels like home because it follows the family through the year.
-  </p>
-
-  <div class="season-grid">
-    <div class="season-card">
-      <h3>Spring</h3>
-      <p>Fresh growth begins, flowers appear, and a light trim sets the plant up for a full season of useful stems.</p>
-    </div>
-    <div class="season-card">
-      <h3>Summer</h3>
-      <p>Rosemary stands up to heat when softer herbs fade, bringing structure to grilled vegetables, lemonade, and evening drinks.</p>
-    </div>
-    <div class="season-card">
-      <h3>Fall</h3>
-      <p>It moves naturally into roasted potatoes, breads, soups, and richer cocktails built around bourbon, rye, and citrus.</p>
-    </div>
-    <div class="season-card">
-      <h3>Winter</h3>
-      <p>When much of the garden is quiet, rosemary still offers fresh stems for holiday meals, simmer pots, and simple garnishes.</p>
-    </div>
-  </div>
 </section>
-
-
-<!-- WHY GROW -->
-<section class="content-section" id="why-grow">
-  <p class="section-eyebrow">Why we keep growing rosemary</p>
-  <h2 class="section-title">Why Rosemary Earns Its Place</h2>
-  <p class="section-intro">Rosemary earns its place because it moves easily between the garden, the kitchen, and the glass. It brings depth to bourbon and mezcal, fragrance to roasted vegetables, structure to winter soups, and a sense of care to simple food served around the table. For the full picture on cocktail herbs, see the <a href="herb-hub">Cocktail Herb Guide</a>.</p>
-  <div class="reasons-grid">
-    <div class="reason-card">
-      <div class="reason-icon">🌲</div>
-      <div class="reason-title">Truly evergreen</div>
-      <div class="reason-desc">While most garden herbs disappear in winter, rosemary keeps its needles year-round in zones 7 and above. That means you can harvest small amounts in February when everything else is dormant — a quality that becomes genuinely valuable once you start building a bar garden around seasonal ingredients.</div>
-    </div>
-    <div class="reason-card">
-      <div class="reason-icon">🥃</div>
-      <div class="reason-title">Made for aged spirits</div>
-      <div class="reason-desc">Lavender belongs with gin. Mint belongs with rum. Rosemary belongs with bourbon, rye, and mezcal. The piney, slightly resinous character has an affinity with oak and smoke that no other cocktail herb matches. A Rosemary Bourbon Sour is not a curiosity — it's one of the best garden-to-glass drinks you can make.</div>
-    </div>
-    <div class="reason-card">
-      <div class="reason-icon">🔥</div>
-      <div class="reason-title">The best smoked garnish in the garden</div>
-      <div class="reason-desc">Briefly torch a dried rosemary sprig and the room changes. The piney, campfire smoke it releases is one of the most evocative aromas in bartending — and it costs nothing beyond a few seconds and a match. No other herb produces this effect with the same elegance.</div>
-    </div>
-    <div class="reason-card">
-      <div class="reason-icon">📅</div>
-      <div class="reason-title">Long-lived and low-maintenance</div>
-      <div class="reason-desc">A well-positioned rosemary plant will outlive most of the other things you plant near it — 10 to 15 years is not unusual. It asks for almost nothing once established: no regular feeding, minimal watering, no annual replanting. The only real task is a light prune after flowering each year.</div>
-    </div>
-    <div class="reason-card">
-      <div class="reason-icon">🫙</div>
-      <div class="reason-title">One syrup, a season of drinks</div>
-      <div class="reason-desc">A jar of rosemary simple syrup made at the height of summer covers the Rosemary Bourbon Sour, rosemary lemonade, rosemary grapefruit soda, and any cocktail that needs an herbal backbone. Freeze it in cubes and that one batch goes further still — into fall, into winter, right through the lean months.</div>
-    </div>
-    <div class="reason-card">
-      <div class="reason-icon">🫗</div>
-      <div class="reason-title">Exceptional in alcohol-free drinks</div>
-      <div class="reason-desc">Rosemary's assertive character means it doesn't disappear when there's no spirit to anchor it — a quality that matters enormously in mocktails. Rosemary grapefruit soda, rosemary honey lemon, and rosemary sparkling water are drinks that feel complete rather than diminished. Browse our <a href="recipes">full recipe collection</a>.</div>
-    </div>
-  </div>
-</section>
-
-<!-- VARIETIES -->
-<section class="content-section alt" id="varieties">
-  <p class="section-eyebrow">Finding your favorite</p>
-  <h2 class="section-title">Rosemary Varieties for the Garden and Table</h2>
-  <p class="section-intro">Unlike lavender, where variety changes the flavor dramatically, most upright rosemary cultivars work well in both the kitchen and the bar. The real decision is growth habit, cold hardiness, and how you plan to use the stems — for cooking, syrups, garnishes, or a long-lived garden anchor.</p>
-  <div class="variety-grid">
-    <div class="variety-card">
-      <div class="variety-name">Tuscan Blue</div>
-      <span class="variety-badge best">Best all-rounder</span>
-      <div class="variety-row">
-        <div class="variety-label">Flavor</div>
-        <div class="variety-val">Intensely piney and resinous with clean, strong fragrance. The benchmark cocktail rosemary — bold without being medicinal.</div>
-      </div>
-      <div class="variety-row">
-        <div class="variety-label">Growth</div>
-        <div class="variety-val">Upright and vigorous, reaching 4 to 6 feet in ideal conditions. Long, straight stems that are perfect for garnishes.</div>
-      </div>
-      <div class="variety-row">
-        <div class="variety-label">Best for</div>
-        <div class="variety-val">Syrups, smoked garnishes, spirit infusions, dried bundles</div>
-      </div>
-    </div>
-    <div class="variety-card">
-      <div class="variety-name">Arp</div>
-      <span class="variety-badge cold">Best for cold climates</span>
-      <div class="variety-row">
-        <div class="variety-label">Flavor</div>
-        <div class="variety-val">Slightly lighter than Tuscan Blue, with a lemon-pine character. Excellent quality, more delicate than the classic rosemary profile.</div>
-      </div>
-      <div class="variety-row">
-        <div class="variety-label">Growth</div>
-        <div class="variety-val">Upright and compact. The most cold-hardy rosemary available — reliably perennial to zone 6 and sometimes zone 5 with protection.</div>
-      </div>
-      <div class="variety-row">
-        <div class="variety-label">Best for</div>
-        <div class="variety-val">Gardens in colder zones where standard rosemary won't overwinter</div>
-      </div>
-    </div>
-    <div class="variety-card">
-      <div class="variety-name">Barbecue (BBQ)</div>
-      <span class="variety-badge good">Excellent garnish variety</span>
-      <div class="variety-row">
-        <div class="variety-label">Flavor</div>
-        <div class="variety-val">Strong and resinous with excellent fragrance. Named for its thick stems — which are long enough to use as cocktail skewers and garnish stakes.</div>
-      </div>
-      <div class="variety-row">
-        <div class="variety-label">Growth</div>
-        <div class="variety-val">Upright with unusually thick, woody stems. Slower growing but produces dramatic garnish material.</div>
-      </div>
-      <div class="variety-row">
-        <div class="variety-label">Best for</div>
-        <div class="variety-val">Smoked garnishes, cocktail skewers, dramatic presentation</div>
-      </div>
-    </div>
-    <div class="variety-card">
-      <div class="variety-name">Prostratus (Trailing)</div>
-      <span class="variety-badge" style="background:var(--parchment);color:var(--bark);border:1px solid rgba(59,42,26,0.2);">Skip for cocktails</span>
-      <div class="variety-row">
-        <div class="variety-label">Flavor</div>
-        <div class="variety-val">Similar fragrance to upright varieties but less concentrated. Shorter stems make it impractical for garnishes or bundling.</div>
-      </div>
-      <div class="variety-row">
-        <div class="variety-label">Growth</div>
-        <div class="variety-val">Low and spreading — excellent for walls and ground cover but unhelpful at the bar. Short stems are fiddly to harvest and too small for most preparations.</div>
-      </div>
-      <div class="variety-row">
-        <div class="variety-label">Use instead</div>
-        <div class="variety-val">Any upright cultivar — Tuscan Blue or Arp</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GROWING -->
-<section class="content-section rosemary-tint" id="growing">
-  <p class="section-eyebrow">In the ground</p>
-  <h2 class="section-title">How to Grow Rosemary</h2>
-  <p class="section-intro">Rosemary is one of the most self-sufficient plants you can put in a bar garden. Give it the right conditions and it will largely look after itself. Get the conditions wrong and no amount of attention will save it.</p>
-  <div class="growing-grid">
-    <div class="growing-block">
-      <h3>What rosemary needs</h3>
-      <ul class="growing-list">
-        <li><strong>Sun:</strong> Full sun — at least 6 hours per day. In shade it grows slowly, flowers poorly, and the flavor is less concentrated.</li>
-        <li><strong>Drainage:</strong> Critical. Rosemary's roots rot quickly in wet or waterlogged conditions. In heavy clay soil, plant in a raised bed or container and add significant grit or sand.</li>
-        <li><strong>Watering:</strong> Minimal once established. Water new plants for the first 6 weeks, then step back. Overwatering is the most common mistake with established rosemary.</li>
-        <li><strong>Soil pH:</strong> Neutral to slightly alkaline (pH 6.0 to 7.5). Tolerates poor, lean soil well — excess fertility encourages soft growth at the expense of fragrance.</li>
-        <li><strong>Spacing:</strong> 24–36 inches apart for upright varieties. Rosemary grows into a substantial shrub — give it room from the start.</li>
-        <li><strong>Feeding:</strong> Rarely needed. A light balanced feed in early spring is sufficient. Heavy nitrogen feeding produces lush, soft foliage with less aromatic intensity.</li>
-      </ul>
-    </div>
-    <div class="growing-block">
-      <h3>The most common problems</h3>
-      <ul class="mistake-list">
-        <li class="mistake-item">
-          <div class="mistake-title">Root rot in winter</div>
-          <div class="mistake-desc">The combination of cold and wet soil kills more rosemary plants than frost alone. If your garden has heavy or poorly draining soil, the risk is highest in fall and winter. A raised bed or container is the most reliable solution.</div>
-        </li>
-        <li class="mistake-item">
-          <div class="mistake-title">Insufficient sun</div>
-          <div class="mistake-desc">A partially shaded rosemary produces less fragrance, fewer flowers, and weaker stems. The flavor difference between a sun-grown plant and a shade-grown plant is noticeable in the glass. Don't compromise on position.</div>
-        </li>
-        <li class="mistake-item">
-          <div class="mistake-title">Cutting into old wood</div>
-          <div class="mistake-desc">Like lavender, rosemary will not regenerate from old grey wood. Always leave green foliage below any cut. A light annual trim is much more effective than an occasional hard cut.</div>
-        </li>
-        <li class="mistake-item">
-          <div class="mistake-title">Harvesting too aggressively</div>
-          <div class="mistake-desc">Taking more than a third of the plant at once stresses it significantly and slows recovery. Harvest little and often rather than stripping the plant in one session — you'll get more over the course of a season.</div>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="callout-box" style="margin-top: 3rem;">
-    <strong>Winter protection in colder zones</strong>
-    <p>In zones 6 and below, rosemary needs help to survive winter. In a container, move it to a sheltered spot — an unheated greenhouse, cold frame, or against a south-facing wall provides enough protection in most winters. Mulch around the base of in-ground plants before the first hard frost, and consider a horticultural fleece wrap in zone 6. Arp is the variety most likely to survive without intervention in colder gardens.</p>
-  </div>
-</section>
-
-<!-- HARVESTING -->
-<section class="content-section" id="harvesting">
-  <p class="section-eyebrow">From the plant</p>
-  <h2 class="section-title">When and How to Harvest</h2>
-  <p class="section-intro">Rosemary can be harvested almost year-round in mild climates, but the quality and flavor are best when the plant is growing actively — late spring through early fall. A few principles make a significant difference to what you get from each harvest.</p>
-  <div class="harvest-steps">
-    <div class="harvest-step">
-      <div class="step-num">Step 01</div>
-      <div class="step-body">
-        <h3>Harvest young, flexible tip growth</h3>
-        <p>The most aromatic and flavorful part of the plant is the young, soft tip growth — the last 4 to 6 inches of each stem where the needles are pale green and flexible. This is what to use in syrups and for fresh garnishes. Older, woodier stems have less aromatic oil and tougher needles.</p>
-      </div>
-    </div>
-    <div class="harvest-step">
-      <div class="step-num">Step 02</div>
-      <div class="step-body">
-        <h3>Cut in the morning</h3>
-        <p>As with all aromatic herbs, essential oils are most concentrated in the morning after dew has dried. Morning rosemary is noticeably more fragrant than rosemary cut in the afternoon heat. This matters most if you're making syrup or an infusion where you're extracting the oils directly.</p>
-      </div>
-    </div>
-    <div class="harvest-step">
-      <div class="step-num">Step 03</div>
-      <div class="step-body">
-        <h3>Never take more than a third at once</h3>
-        <p>Rosemary is resilient but not indestructible. Taking more than a third of the foliage in a single harvest stresses the plant and slows its recovery significantly. Harvest regularly in small amounts rather than stripping the plant before a big event — the cumulative yield will be higher and the plant will stay healthier.</p>
-      </div>
-    </div>
-    <div class="harvest-step">
-      <div class="step-num">Step 04</div>
-      <div class="step-body">
-        <h3>Harvest before and during flowering</h3>
-        <p>Rosemary typically flowers in spring — small blue-purple blooms that are themselves edible and garnish-worthy. Harvest tips freely before and during this period; the plant's fragrance is at its highest. After flowering, give the plant a light trim to encourage fresh growth.</p>
-      </div>
-    </div>
-    <div class="harvest-step">
-      <div class="step-num">Step 05</div>
-      <div class="step-body">
-        <h3>Select special stems for garnishes</h3>
-        <p>When harvesting for garnishes, look for stems with dense, evenly-distributed needles and a clean, straight profile. A rosemary garnish stem is a beautiful object — choose the best ones deliberately. Stems intended for smoking should be cut slightly more mature so they hold their structure when briefly torched.</p>
-      </div>
-    </div>
-    <div class="harvest-step">
-      <div class="step-num">Step 06</div>
-      <div class="step-body">
-        <h3>Use fresh or begin drying immediately</h3>
-        <p>Fresh rosemary is best used the same day or stored briefly stem-down in a glass of water in the fridge. For drying, bundle loosely and hang in a warm, well-ventilated dark space. Rosemary dries in 1 to 2 weeks and retains excellent flavor for months — far better than most herbs dried at home.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRESERVING -->
-<section class="content-section dark" id="preserving">
-  <p class="section-eyebrow light">Make it last</p>
-  <h2 class="section-title light">Preserving Your <em>Rosemary Harvest</em></h2>
-  <p class="section-intro light">Rosemary is one of the most preservable herbs in the bar garden. It dries beautifully, infuses cleanly, and freezes well as a syrup. A summer harvest handled right will supply your bar into the following spring.</p>
-  <div class="preserve-grid">
-    <div class="preserve-card">
-      <div class="preserve-icon">🌾</div>
-      <div class="preserve-title">Drying</div>
-      <div class="preserve-desc">Bundle 6 to 8 stems together and hang upside-down in a warm, dark, ventilated space for 1 to 2 weeks. Dried rosemary retains its flavor exceptionally well — whole dried stems work as garnishes, and stripped needles keep in a sealed jar for up to 12 months for syrup-making.</div>
-      <div class="preserve-tip">Dried rosemary needles store better stripped from the stem — they take up less space and are ready to use without preparation.</div>
-    </div>
-    <div class="preserve-card">
-      <div class="preserve-icon">🫙</div>
-      <div class="preserve-title">Rosemary Simple Syrup</div>
-      <div class="preserve-desc">Combine 1 cup sugar and 1 cup water in a saucepan. Once sugar dissolves, remove from heat, add 3 to 4 fresh sprigs (or 1.5 tablespoons dried needles), and steep for 20 to 30 minutes off the heat, tasting frequently. Strain, cool, and refrigerate. The base of the Rosemary Bourbon Sour.</div>
-      <div class="preserve-tip">Keeps refrigerated for 3 to 4 weeks. Freezes well in ice cube trays for up to 6 months.</div>
-    </div>
-    <div class="preserve-card">
-      <div class="preserve-icon">🔥</div>
-      <div class="preserve-title">Dried Smoked Garnishes</div>
-      <div class="preserve-desc">Dry the best stems with dense needle coverage for smoking garnishes. Stored in a dry place, they keep indefinitely and are ready to torch at a moment's notice. A bundle tied with twine on the bar is both practical and atmospheric — the smell alone sets the tone before a drink is poured.</div>
-      <div class="preserve-tip">Keep a dedicated supply of garnish stems separate from your cooking and syrup rosemary — handle them carefully to preserve their shape.</div>
-    </div>
-    <div class="preserve-card">
-      <div class="preserve-icon">🫗</div>
-      <div class="preserve-title">Spirit Infusion</div>
-      <div class="preserve-desc">Add 2 fresh rosemary sprigs to 250ml of bourbon, rye, or gin. Taste every 30 minutes — rosemary infuses assertively and can become bitter or medicinal if left too long. Most infusions are done in 1 to 2 hours. Strain, bottle, and use within 3 months. Rosemary-infused bourbon is particularly good.</div>
-      <div class="preserve-tip">Start with a neutral spirit if you want to taste the rosemary clearly. Bourbon adds its own complexity, which can be a feature or a distraction.</div>
-    </div>
-    <div class="preserve-card">
-      <div class="preserve-icon">🧊</div>
-      <div class="preserve-title">Syrup Ice Cubes</div>
-      <div class="preserve-desc">Pour finished rosemary syrup into ice cube trays and freeze. Each cube delivers roughly 1 oz of syrup directly into a shaker or glass, eliminating the need to measure. Drop a cube into the tin with the other ingredients — it dilutes appropriately as it breaks down in shaking.</div>
-      <div class="preserve-tip">Label trays clearly. Rosemary, mint, and lavender syrup cubes look identical and produce very different drinks.</div>
-    </div>
-    <div class="preserve-card">
-      <div class="preserve-icon">🍯</div>
-      <div class="preserve-title">Rosemary Honey</div>
-      <div class="preserve-desc">Gently warm honey in a saucepan (don't boil) and steep 2 fresh rosemary sprigs for 20 to 30 minutes. Remove sprigs, cool, and jar. The result is a deeply aromatic sweetener that works particularly well in whiskey drinks, lemon-based cocktails, and anywhere the honey note should carry through.</div>
-      <div class="preserve-tip">Keeps for several months at room temperature. A small jar on the bar is one of the most useful and versatile things you can make from the garden.</div>
-    </div>
-  </div>
-</section>
-
-<!-- USING ROSEMARY -->
-<section class="content-section" id="using">
-  <p class="section-eyebrow">At the bar</p>
-  <h2 class="section-title">Using Rosemary in Drinks</h2>
-  <p class="section-intro">Rosemary has more uses at the bar than almost any other garden herb — syrup, garnish, smoke, infusion, muddling, and honey. Each technique brings out a different aspect of its flavor. Here's when to reach for each one.</p>
-  <div class="technique-grid">
-    <div class="technique-card rosemary-use-card">
-      <div class="technique-icon">🫙</div>
-      <div class="technique-title">Simple Syrup</div>
-      <div class="technique-desc">The most versatile preparation. Rosemary syrup can carry a drink or quietly support it — how much you use determines which. In the Rosemary Bourbon Sour, it's the main herbal character. In a rosemary-lemon fizz it's the back note. Start with half an ounce in a shaken drink and adjust from there.</div>
-      <div class="technique-tip">Steep off the heat and taste every 10 minutes. The line between herbal and medicinal is crossed quickly — stop when the rosemary flavor is clear but not dominant.</div>
-    </div>
-    <div class="technique-card rosemary-use-card">
-      <div class="technique-icon">🌿</div>
-      <div class="technique-title">Fresh Garnish</div>
-      <div class="technique-desc">A single rosemary stem laid across the rim of a glass is one of the most handsome garnishes in the bar garden. The fragrance carries into every sip without adding flavor directly. Choose stems with even needle coverage and a good length — 4 to 6 inches is the ideal garnish size.</div>
-      <div class="technique-tip">Slap the stem gently against your palm once before placing it — the light bruising releases fragrance without damaging the structure.</div>
-    </div>
-    <div class="technique-card rosemary-use-card">
-      <div class="technique-icon">🔥</div>
-      <div class="technique-title">Smoked Garnish</div>
-      <div class="technique-desc">This is where rosemary surpasses every other cocktail herb. Hold a dried stem over a flame until it catches, blow it out, and rest it across the glass. The smouldering tips release a column of piney smoke that perfumes the whole drink and the immediate atmosphere. It's the single most dramatic bar garden technique.</div>
-      <div class="technique-tip">Use dried, not fresh — fresh rosemary smoulders poorly and produces less smoke. A brief catch and blow-out is all you need; let it smoulder gently rather than burning fiercely.</div>
-    </div>
-    <div class="technique-card rosemary-use-card">
-      <div class="technique-icon">🧉</div>
-      <div class="technique-title">Gentle Muddling</div>
-      <div class="technique-desc">Rosemary can be muddled, but carefully. Use only the soft tip growth and press it gently — crushing the woody stem or muddling hard releases bitter, astringent compounds from the stems rather than the fragrant oils from the needles. A light press is enough to open the aroma.</div>
-      <div class="technique-tip">Two or three gentle presses of 3 to 4 young tip needles is the limit. When in doubt, use a syrup instead — you get more control and none of the bitterness risk.</div>
-    </div>
-    <div class="technique-card rosemary-use-card">
-      <div class="technique-icon">🫗</div>
-      <div class="technique-title">Infused Spirit</div>
-      <div class="technique-desc">Rosemary-infused bourbon is one of the most rewarding spirit infusions from the bar garden. The resinous, piney quality of the herb bridges beautifully with the spirit's caramel and oak, creating something that tastes designed rather than assembled. Use it anywhere you'd use plain bourbon — it just goes further.</div>
-      <div class="technique-tip">Taste at 30-minute intervals. Rosemary in spirit can turn astringent quickly — remove it as soon as it tastes like the rosemary is clearly present but not dominant.</div>
-    </div>
-    <div class="technique-card rosemary-use-card">
-      <div class="technique-icon">🍊</div>
-      <div class="technique-title">Citrus Companion</div>
-      <div class="technique-desc">Rosemary and citrus — particularly grapefruit and lemon — are one of the great garden pairings. The bitterness of the citrus cuts through rosemary's resinous quality and the two together produce a flavor that's more complex than either alone. Rosemary grapefruit soda is one of the best alcohol-free drinks from the garden.</div>
-      <div class="technique-tip">Grapefruit is the best rosemary citrus partner. Lemon is cleaner and more adaptable. Orange can work but sometimes reads as too sweet against rosemary's intensity.</div>
-    </div>
-  </div>
-</section>
-
-<!-- DRINK IDEAS -->
-
-<section class="content-section alt" id="drinks">
-  <p class="section-eyebrow">In the glass</p>
-  <h2 class="section-title">What to Make with Garden Rosemary</h2>
-  <p class="section-intro">Rosemary's natural affinities are with aged spirits, citrus, and smoke. Start with the Rosemary Bourbon Sour — it's the clearest expression of what this herb does at its best — and build out from there.</p>
-  <div class="drinks-list">
-    <div class="drink-item">
-      <div>
-        <div class="drink-name"><a href="recipe-rosemary-bourbon-sour">Rosemary Bourbon Sour</a></div>
-        <div class="drink-type">Cocktail · On the site</div>
-      </div>
-      <div>
-        <div class="drink-desc">Bourbon, fresh lemon juice, rosemary syrup, and an optional egg white or aquafaba foam. The drink that shows exactly what rosemary does at the bar — herbal and piney against caramel and oak, citrus threading through both. Smoky, complex, and built for cooler evenings.</div>
-        <div class="drink-pairing">Spirit: Bourbon or Rye &nbsp;·&nbsp; Foam: Egg white or aquafaba optional</div>
-      </div>
-    </div>
-    <div class="drink-item">
-      <div>
-        <div class="drink-name">Rosemary Gin Fizz</div>
-        <div class="drink-type">Cocktail · Summer</div>
-      </div>
-      <div>
-        <div class="drink-desc">London Dry gin, rosemary syrup, fresh lemon, and soda water — shaken and poured long over ice with a rosemary garnish. The piney botanical overlap between rosemary and gin creates something that tastes like the herb grew specifically for this drink. Light, herbal, and very good in the garden.</div>
-        <div class="drink-pairing">Spirit: London Dry Gin &nbsp;·&nbsp; Garnish: Fresh rosemary sprig</div>
-      </div>
-    </div>
-    <div class="drink-item">
-      <div>
-        <div class="drink-name">Rosemary Paloma</div>
-        <div class="drink-type">Cocktail · Tequila</div>
-      </div>
-      <div>
-        <div class="drink-desc">Tequila blanco, fresh grapefruit juice, rosemary syrup, a squeeze of lime, and grapefruit soda. Rosemary's bitterness and the grapefruit's bitterness amplify each other beautifully, and the tequila keeps it clean and dry. A smoked rosemary garnish takes this somewhere memorable.</div>
-        <div class="drink-pairing">Spirit: Tequila Blanco &nbsp;·&nbsp; Garnish: Smoked rosemary sprig</div>
-      </div>
-    </div>
-    <div class="drink-item">
-      <div>
-        <div class="drink-name">Rosemary Negroni</div>
-        <div class="drink-type">Cocktail · Stirred</div>
-      </div>
-      <div>
-        <div class="drink-desc">Add half an ounce of rosemary syrup or a rosemary-infused gin to a classic Negroni and stir. The piney note cuts through the bitterness of the Campari and adds an herbal dimension that makes the drink feel like it arrived from a different part of Italy. Finish with a rosemary sprig instead of an orange peel.</div>
-        <div class="drink-pairing">Spirit: Rosemary-infused Gin &nbsp;·&nbsp; Garnish: Rosemary instead of orange</div>
-      </div>
-    </div>
-    <div class="drink-item">
-      <div>
-        <div class="drink-name">Rosemary Grapefruit Soda</div>
-        <div class="drink-type">Mocktail · Alcohol-Free</div>
-      </div>
-      <div>
-        <div class="drink-desc">Fresh grapefruit juice, rosemary syrup, a squeeze of lemon, and sparkling water over ice. The bitterness of the grapefruit and the resinous quality of rosemary work together in a way that feels complete without any spirit. One of the most satisfying garden mocktails — genuinely grown-up and complex.</div>
-        <div class="drink-pairing">A pinch of flaky salt on the rim amplifies the grapefruit and balances the bitterness beautifully</div>
-      </div>
-    </div>
-    <div class="drink-item">
-      <div>
-        <div class="drink-name">Rosemary Honey Whiskey Sour</div>
-        <div class="drink-type">Cocktail · Variation</div>
-      </div>
-      <div>
-        <div class="drink-desc">Replace plain simple syrup in a whiskey sour with rosemary honey — the herbal note comes through more gently and with the rounded sweetness of honey behind it. A slight variation on the Rosemary Bourbon Sour that sits differently on the palate — softer and rounder, less piney, more floral in the finish.</div>
-        <div class="drink-pairing">Spirit: Bourbon or Irish Whiskey &nbsp;·&nbsp; Sweetener: Rosemary honey</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="img-card-grid">
-
-  <a href="recipe-rosemary-syrup" class="img-card">
-    <div class="img-card-photo">
-      <img src="images/syrups/rosemary-syrup.jpg" alt="Homemade rosemary simple syrup width="1672" height="941"  loading="lazy" />
-    </div>
-    <div class="img-card-body">
-      <p class="img-card-eyebrow">Homemade Syrup</p>
-      <p class="img-card-title">Rosemary Simple Syrup</p>
-      <p class="img-card-desc">Earthy, aromatic, and surprisingly versatile. A simple way to preserve fresh rosemary from the garden.</p>
-      <span class="img-card-btn">View recipe</span>
-    </div>
-  </a>
-
-  <a href="recipe-rosemary-bourbon-sour" class="img-card">
-    <div class="img-card-photo">
-      <img src="images/rosemary-bourbon-sour.jpeg" alt="Rosemary Bourbon Sour cocktail width="1536" height="864"  loading="lazy" />
-    </div>
-    <div class="img-card-body">
-      <p class="img-card-eyebrow">Featured Cocktail</p>
-      <p class="img-card-title">Rosemary Bourbon Sour</p>
-      <p class="img-card-desc">Bright citrus, rich bourbon, and fresh rosemary come together in a classic cocktail perfect for cool evenings.</p>
-      <span class="img-card-btn">Make it</span>
-    </div>
-  </a>
-
-  <a href="herb-hub" class="img-card">
-    <div class="img-card-photo">
-      <img src="images/heroes/herb-hub-hero.png" alt="Fresh herbs growing in the garden width="1672" height="941"  loading="lazy" />
-    </div>
-    <div class="img-card-body">
-      <p class="img-card-eyebrow">Explore More</p>
-      <p class="img-card-title">Visit the Herb Hub</p>
-      <p class="img-card-desc">Discover more herbs, growing guides, and seasonal inspiration for your garden-to-glass journey.</p>
-      <span class="img-card-btn">Explore</span>
-    </div>
-  </a>
-
-</div>
-</section>
-
-<!-- MISTAKES -->
-<section class="content-section" id="mistakes">
-  <p class="section-eyebrow">Learn from these</p>
-  <h2 class="section-title">Common Rosemary Mistakes</h2>
-  <p class="section-intro">Most rosemary failures are preventable. Here are the ones worth knowing before you plant — and before you reach for the bottle.</p>
-  <div class="mistakes-grid">
-    <div class="mistake-card">
-      <div class="mistake-card-num">Mistake 01</div>
-      <div class="mistake-card-title">Planting in poor drainage</div>
-      <div class="mistake-card-desc">Root rot caused by wet soil is the leading cause of rosemary death in gardens. The plant can look fine through summer and then collapse over a wet fall. Heavy clay or low-lying ground is unsuitable without significant amendment.</div>
-      <div class="mistake-fix">Fix: Raise the bed, add plenty of grit, or grow in a container. The investment in a terracotta pot is cheaper than replacing dead plants.</div>
-    </div>
-    <div class="mistake-card">
-      <div class="mistake-card-num">Mistake 02</div>
-      <div class="mistake-card-title">Over-steeping the syrup</div>
-      <div class="mistake-card-desc">Rosemary syrup can go from beautifully herbal to medicinal and bitter in under ten minutes. Following recipe timings exactly without tasting is a mistake — the strength of fresh versus dried rosemary varies considerably.</div>
-      <div class="mistake-fix">Fix: Steep off the heat and taste every 10 minutes. Remove the rosemary the moment the flavor is clearly present but not dominant.</div>
-    </div>
-    <div class="mistake-card">
-      <div class="mistake-card-num">Mistake 03</div>
-      <div class="mistake-card-title">Hard muddling</div>
-      <div class="mistake-card-desc">Crushing a rosemary stem in a muddler releases bitter compounds from the woody tissue that overwhelm the aromatic needle oils. The resulting drink can taste resinous and unpleasant. A light press of young tip growth only is the correct approach.</div>
-      <div class="mistake-fix">Fix: Use a syrup instead of muddling for consistent, controllable rosemary flavor. If muddling, use only the soft tip growth and press very gently — 2 or 3 times maximum.</div>
-    </div>
-    <div class="mistake-card">
-      <div class="mistake-card-num">Mistake 04</div>
-      <div class="mistake-card-title">Letting the smoked garnish burn too long</div>
-      <div class="mistake-card-desc">A briefly smouldering rosemary sprig smells like a piney campfire — evocative and exactly right. One that keeps burning or is charred heavily smells acrid and unpleasant and puts a bitter note in the drink.</div>
-      <div class="mistake-fix">Fix: Light briefly, blow out immediately, and place over the glass while still smouldering. The column of smoke does the work — you don't need a long burn.</div>
-    </div>
-    <div class="mistake-card">
-      <div class="mistake-card-num">Mistake 05</div>
-      <div class="mistake-card-title">Choosing a trailing variety</div>
-      <div class="mistake-card-desc">Prostrate and trailing rosemary varieties are beautiful in the right garden context but impractical for cocktail use. The short, spreading stems are difficult to harvest, hard to bundle for drying, and too small for garnishes.</div>
-      <div class="mistake-fix">Fix: Choose an upright variety from the start — Tuscan Blue, Arp, or Barbecue depending on your climate and intended use.</div>
-    </div>
-    <div class="mistake-card">
-      <div class="mistake-card-num">Mistake 06</div>
-      <div class="mistake-card-title">Ignoring it in winter</div>
-      <div class="mistake-card-desc">In zones 7 and above, rosemary is there year-round — and year-round is exactly when you can use it. A rosemary cocktail in January, made with a sprig cut fresh from a frost-touched plant, is one of the most rewarding things the bar garden offers. Don't let the plant sit unused through the cold months.</div>
-      <div class="mistake-fix">Fix: Make the winter harvest a ritual. Cut a few stems on a cold morning, make a batch of syrup, and put something warming in the glass.</div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-
-
-<!-- ── KEEP GROWING WITH US ── -->
-<section class="content-section rosemary-link-note" aria-label="Keep growing with From Bed to Bar">
-  <p class="section-eyebrow">Keep growing with us</p>
-  <h2 class="section-title">Let rosemary lead you deeper into the garden.</h2>
-  <p class="section-intro">
-    If rosemary is the kind of plant you want more of — useful, beautiful, and always close to the table — spend time in the <a href="herb-hub">Herb Hub</a>, browse the <a href="recipes">recipe collection</a>, or join the newsletter for garden-to-glass ideas as the seasons change.
-  </p>
-</section>
-
-
-<figure class="guide-photo" aria-label="Favorite ways to use rosemary from kitchen to bar">
-  <div class="guide-photo-inner">
-    <img src="images/guides/rosemary-guide-our-favorites.jpg" alt="Rosemary simple syrup, a rosemary bourbon sour, focaccia, roasted potatoes, and fresh rosemary on a rustic garden table" loading="lazy" width="1600" height="900" />
-  </div>
-</figure>
-
 <!-- ── OUR FAVORITE WAYS TO USE ROSEMARY ── -->
 <section class="favorites-section" id="favorites">
   <div class="favorites-inner">
@@ -2328,11 +1876,9 @@
   </div>
 </section>
 
-
-<figure class="guide-photo wide" aria-label="Rosemary growing within a broader garden-to-glass herb bed">
-  <div class="guide-photo-inner">
-    <img src="images/guides/rosemary-guide-beyond-the-herb-bed.jpg" alt="Expansive Northern California backyard herb garden with rosemary, basil, lavender, mint, thyme, raised beds, rustic paths, and a peaceful porch" loading="lazy" width="1600" height="900" />
-  </div>
+<!-- ── BEYOND THE HERB BED PHOTO ── -->
+<figure class="rosemary-closing-image" aria-label="Rosemary growing within a broader garden-to-glass herb bed">
+  <img src="images/guides/rosemary-guide-beyond-the-herb-bed.jpg" alt="Expansive Northern California backyard herb garden with rosemary, basil, lavender, mint, thyme, raised beds, rustic paths, and a peaceful porch" loading="lazy" width="1600" height="900" />
 </figure>
 
 <div class="link-strip">
