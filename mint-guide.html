@@ -1669,6 +1669,72 @@
       .footer-tagline { font-size: 0.86rem; max-width: 280px; }
       .footer-nav { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
     }
+  
+    /* ── P3: APPROVED FLAGSHIP JUMP NAV ALIGNMENT ── */
+    .jump-nav {
+      background: var(--bark);
+      padding: 0.55rem 5rem;
+      display: flex;
+      gap: 0.45rem;
+      flex-wrap: nowrap;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: sticky;
+      top: 66px;
+      z-index: 90;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .jump-nav::-webkit-scrollbar { display: none; }
+    .jump-nav-label {
+      font-family: "DM Mono", monospace;
+      font-size: 0.66rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.58);
+      flex: 0 0 auto;
+      margin-right: 0.25rem;
+      white-space: nowrap;
+    }
+    .jump-link {
+      font-family: "DM Mono", monospace;
+      font-size: 0.66rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.82);
+      text-decoration: none;
+      padding: 0.28rem 0.62rem;
+      border: 1px solid rgba(255,255,255,0.14);
+      white-space: nowrap;
+      flex: 0 0 auto;
+      transition: all 0.2s ease;
+    }
+    .jump-link:hover {
+      background: rgba(255,255,255,0.12);
+      color: var(--cream);
+      border-color: rgba(255,255,255,0.22);
+    }
+    @media (min-width: 1101px) {
+      .jump-nav { top: 100px; }
+    }
+    @media (max-width: 900px) {
+      .jump-nav {
+        padding: 0.52rem 1.5rem;
+        top: 66px;
+        gap: 0.4rem;
+      }
+      .jump-nav-label {
+        display: inline-flex;
+        font-size: 0.62rem;
+      }
+      .jump-link {
+        font-size: 0.62rem;
+        padding: 0.27rem 0.55rem;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -1892,22 +1958,7 @@
 </div>
 </section>
 <!-- ── JUMP NAV ── -->
-<div class="jump-nav">
-<span class="jump-nav-label">Guide detail:</span>
-<a class="jump-link" href="#quick-start">Start</a>
-<a class="jump-link" href="#from-our-garden">Garden Note</a>
-<a class="jump-link" href="#explore-mint">Mint Hub</a>
-<a class="jump-link" href="#why-grow">Why</a>
-<a class="jump-link" href="#varieties">Favorite</a>
-<a class="jump-link" href="#growing">Grow Well</a>
-<a class="jump-link" href="#harvesting">Garden</a>
-<a class="jump-link" href="#preserving">Save Summer</a>
-<a class="jump-link" href="#using">Table</a>
-<a class="jump-link" href="#drinks">Enjoy</a>
-<a class="jump-link" href="#mistakes">Lessons</a>
-<a class="jump-link" href="#favorites">Favorites</a>
-<a class="jump-link" href="#faq">FAQ</a>
-</div>
+<div class="jump-nav"><span class="jump-nav-label">Jump to:</span><a class="jump-link" href="#why-grow">Why We Grow</a><a class="jump-link" href="#from-garden">From Our Garden</a><a class="jump-link" href="#around-table">Around the Table</a><a class="jump-link" href="#at-a-glance">At a Glance</a><a class="jump-link" href="#save-harvest">Save the Harvest</a><a class="jump-link" href="#favorites">Our Favorites</a><a class="jump-link" href="#continue-garden">Continue</a><a class="jump-link" href="#faq">FAQ</a></div>
 <!-- ── WHY GROW MINT ── -->
 <section class="content-section" id="why-grow">
 <p class="section-eyebrow">Why we keep planting it</p>
