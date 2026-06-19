@@ -1776,7 +1776,87 @@
       }
     }
 
-  </style>
+  
+    /* ── MOBILE HORIZONTAL OVERFLOW FIX ── */
+    html,
+    body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    main,
+    section,
+    nav,
+    footer,
+    .site-nav,
+    .jump-nav,
+    .content-section,
+    .ecosystem-section,
+    .newsletter-section,
+    .link-strip {
+      max-width: 100%;
+    }
+
+    img,
+    picture,
+    video,
+    iframe {
+      max-width: 100%;
+    }
+
+    @media (max-width: 900px) {
+      .content-section,
+      .ecosystem-section,
+      .quick-start-section,
+      .garden-note-section,
+      .favorites-section,
+      .newsletter-section,
+      .link-strip,
+      .site-tagline {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      .ecosystem-grid,
+      .quick-start-grid,
+      .favorites-grid,
+      .thyme-glance-grid,
+      .season-grid,
+      .img-card-grid,
+      .reasons-grid,
+      .variety-grid,
+      .preserve-grid,
+      .technique-grid,
+      .mistakes-grid {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .storage-guide {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+      }
+
+      .storage-guide table {
+        width: 100%;
+        min-width: 0;
+      }
+
+      .formkit-fields {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      .formkit-submit {
+        padding-left: 0.9rem !important;
+        padding-right: 0.9rem !important;
+      }
+    }
+
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
