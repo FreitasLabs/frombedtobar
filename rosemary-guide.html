@@ -493,6 +493,8 @@
     .mistake-card-desc { font-size: 0.92rem; line-height: 1.75; color: rgba(30,22,14,0.75); }
     .mistake-fix { margin-top: 0.75rem; font-size: 0.88rem; line-height: 1.7; color: var(--moss); font-style: italic; }
 
+    .next-chapter-grid { margin-top: 1.5rem; }
+
     /* ── FAQ ── */
     .faq-list { display: flex; flex-direction: column; max-width: 780px; }
     .faq-item { border-top: 1px solid rgba(59,42,26,0.1); }
@@ -818,6 +820,136 @@
       color: var(--rosemary);
       margin-top: 1.1rem;
     }
+
+
+    /* ── ROSEMARY ECOSYSTEM PORTAL ── */
+    .ecosystem-section {
+      background: var(--rosemary-pale);
+      padding: 4.5rem 5rem;
+      border-bottom: 1px solid rgba(59,42,26,0.08);
+      position: relative;
+      z-index: 1;
+    }
+    .ecosystem-kicker {
+      font-family: "DM Mono", monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--rosemary);
+      margin-bottom: 0.85rem;
+    }
+    .ecosystem-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.7rem, 3vw, 2.55rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--bark);
+      margin-bottom: 0.9rem;
+    }
+    .ecosystem-title em { font-style: italic; }
+    .ecosystem-intro {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: rgba(30,22,14,0.76);
+      max-width: 740px;
+      margin-bottom: 2rem;
+    }
+    .ecosystem-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 1.75rem;
+    }
+    .ecosystem-card {
+      background: var(--cream);
+      border: 1px solid rgba(59,42,26,0.12);
+      padding: 1.55rem;
+      min-height: 235px;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .ecosystem-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(59,42,26,0.11);
+      border-color: rgba(61,107,74,0.32);
+    }
+    .ecosystem-card.current { border-top: 3px solid var(--rosemary-deep); }
+    .ecosystem-icon { font-size: 1.35rem; margin-bottom: 0.75rem; }
+    .ecosystem-label {
+      font-family: "DM Mono", monospace;
+      font-size: 0.66rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rosemary);
+      margin-bottom: 0.55rem;
+    }
+    .ecosystem-card-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.18rem;
+      font-weight: 700;
+      font-style: italic;
+      line-height: 1.25;
+      color: var(--bark);
+      margin-bottom: 0.65rem;
+    }
+    .ecosystem-copy {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: rgba(30,22,14,0.72);
+      flex: 1;
+    }
+    .ecosystem-cta {
+      font-family: "DM Mono", monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: var(--rosemary);
+      margin-top: 1rem;
+    }
+    .coming-soon-strip {
+      margin-top: 1.25rem;
+      padding: 1.25rem 1.5rem;
+      background: rgba(255,255,255,0.45);
+      border: 1px solid rgba(59,42,26,0.1);
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .coming-soon-label {
+      font-family: "DM Mono", monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--rosemary);
+      margin-right: 0.25rem;
+    }
+    .coming-soon-link {
+      font-family: "DM Mono", monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(30,22,14,0.7);
+      text-decoration: none;
+      padding: 0.35rem 0.65rem;
+      border: 1px solid rgba(59,42,26,0.14);
+      background: rgba(250,247,242,0.68);
+    }
+    .coming-soon-link:hover { color: var(--rosemary-deep); border-color: rgba(61,107,74,0.34); }
+    @media (min-width: 701px) and (max-width: 1100px) {
+      .ecosystem-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 900px) {
+      .ecosystem-section { padding: 3.5rem 1.5rem; }
+      .ecosystem-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .ecosystem-card { min-height: auto; }
+      .coming-soon-strip { padding: 1.1rem; align-items: flex-start; }
+      .coming-soon-label { width: 100%; }
+    }
+
     @media (max-width: 900px) {
       .quick-start-section,
       .garden-note-section,
@@ -1605,6 +1737,7 @@
 
 <div class="jump-nav">
   <span class="jump-nav-label">Guide:</span>
+  <a href="#explore-rosemary" class="jump-link">Explore</a>
   <a href="#year-round" class="jump-link">Year-Round</a>
   <a href="#from-our-garden" class="jump-link">Garden</a>
   <a href="#glance" class="jump-link">Glance</a>
@@ -1612,11 +1745,64 @@
   <a href="#varieties" class="jump-link">Varieties</a>
   <a href="#growing" class="jump-link">Growing</a>
   <a href="#harvesting" class="jump-link">Harvest</a>
+  <a href="#next-chapter" class="jump-link">Preserve</a>
   <a href="#using" class="jump-link">Uses</a>
   <a href="#drinks" class="jump-link">Bar</a>
   <a href="#favorites" class="jump-link">Favorites</a>
   <a href="#faq" class="jump-link">FAQ</a>
 </div>
+
+
+<!-- ── EXPLORE ROSEMARY ECOSYSTEM ── -->
+<section class="ecosystem-section" id="explore-rosemary" aria-label="Explore the Rosemary ecosystem">
+  <p class="ecosystem-kicker">Explore Rosemary</p>
+  <h2 class="ecosystem-title">Everything we grow, preserve, and enjoy <em>around the table.</em></h2>
+  <p class="ecosystem-intro">
+    Rosemary is more than a plant in the herb bed. It becomes dried bundles in the pantry, syrup cubes for the bar, bread on the counter, dinner in the cast iron, and one more reason to gather. Start wherever you are in the season.
+  </p>
+
+  <div class="ecosystem-grid">
+    <a class="ecosystem-card current" href="rosemary-guide" aria-current="page">
+      <div class="ecosystem-icon">🌿</div>
+      <div class="ecosystem-label">You are here</div>
+      <div class="ecosystem-card-title">Rosemary Guide</div>
+      <p class="ecosystem-copy">Grow rosemary well, choose the right varieties, harvest with confidence, and understand why this herb stays at the center of our garden-to-glass table.</p>
+      <span class="ecosystem-cta">Read the guide →</span>
+    </a>
+
+    <a class="ecosystem-card" href="how-to-harvest-preserve-rosemary">
+      <div class="ecosystem-icon">✂️</div>
+      <div class="ecosystem-label">Next chapter</div>
+      <div class="ecosystem-card-title">Harvest &amp; Preserve Rosemary</div>
+      <p class="ecosystem-copy">Learn how we dry rosemary, freeze syrup cubes, store it well, and bring the harvest back to the table throughout the year.</p>
+      <span class="ecosystem-cta">Save the harvest →</span>
+    </a>
+
+    <a class="ecosystem-card" href="recipe-rosemary-syrup">
+      <div class="ecosystem-icon">🍯</div>
+      <div class="ecosystem-label">For the glass</div>
+      <div class="ecosystem-card-title">Rosemary Simple Syrup</div>
+      <p class="ecosystem-copy">Turn fresh rosemary into a simple syrup for bourbon sours, lemonade, sparkling mocktails, tea, and seasonal drinks.</p>
+      <span class="ecosystem-cta">Make the syrup →</span>
+    </a>
+
+    <a class="ecosystem-card" href="recipe-rosemary-bourbon-sour">
+      <div class="ecosystem-icon">🥃</div>
+      <div class="ecosystem-label">Signature drink</div>
+      <div class="ecosystem-card-title">Rosemary Bourbon Sour</div>
+      <p class="ecosystem-copy">A cozy garden-to-glass cocktail where rosemary, citrus, and bourbon feel made for one another.</p>
+      <span class="ecosystem-cta">Mix the drink →</span>
+    </a>
+  </div>
+
+  <div class="coming-soon-strip" aria-label="Coming soon rosemary recipes">
+    <span class="coming-soon-label">Coming soon:</span>
+    <a class="coming-soon-link" href="recipe-rosemary-focaccia-bread">🍞 Focaccia Bread</a>
+    <a class="coming-soon-link" href="recipe-rosemary-compound-butter">🧈 Compound Butter</a>
+    <a class="coming-soon-link" href="recipe-rosemary-roast-chicken">🍗 Roast Chicken</a>
+    <a class="coming-soon-link" href="recipe-rosemary-potatoes">🥔 Crispy Potatoes</a>
+  </div>
+</section>
 
 
 <!-- ── THE HERB WE REACH FOR YEAR-ROUND ── -->
@@ -2246,13 +2432,36 @@
 <!-- FAQ -->
 
 
-<!-- ── KEEP GROWING WITH US ── -->
-<section class="content-section rosemary-link-note" aria-label="Keep growing with From Bed to Bar">
-  <p class="section-eyebrow">Keep growing with us</p>
-  <h2 class="section-title">Let rosemary lead you deeper into the garden.</h2>
+<!-- ── KEEP THE HARVEST GOING ── -->
+<section class="content-section rosemary-link-note" id="next-chapter" aria-label="Keep the rosemary harvest going">
+  <p class="section-eyebrow">Keep the harvest going</p>
+  <h2 class="section-title">The season does not end when the stems are cut.</h2>
   <p class="section-intro">
-    If rosemary is the kind of plant you want more of — useful, beautiful, and always close to the table — spend time in the <a href="herb-hub">Herb Hub</a>, browse the <a href="recipes">recipe collection</a>, or join the newsletter for garden-to-glass ideas as the seasons change.
+    Once rosemary is established, the next question becomes simple: what do we do with all of it? This next chapter walks through the rhythms we return to — fresh stems for dinner, small bundles for drying, syrup cubes for the bar, and the meals that bring the harvest back to the table.
   </p>
+  <div class="favorites-grid next-chapter-grid">
+    <a class="favorite-card" href="how-to-harvest-preserve-rosemary">
+      <div class="favorite-star">🌿</div>
+      <div class="favorite-label">Next chapter</div>
+      <div class="favorite-title">Harvest &amp; Preserve Rosemary</div>
+      <p class="favorite-copy">Learn how we dry bundles, freeze syrup cubes, store rosemary well, and bring this dependable herb back to the table throughout the year.</p>
+      <span class="favorite-cta">Save the harvest →</span>
+    </a>
+    <a class="favorite-card" href="recipe-rosemary-syrup">
+      <div class="favorite-star">🍯</div>
+      <div class="favorite-label">Preserve for the glass</div>
+      <div class="favorite-title">Rosemary Simple Syrup</div>
+      <p class="favorite-copy">Turn fresh rosemary into a small-batch syrup for bourbon sours, lemonade, sparkling mocktails, tea, and seasonal drinks.</p>
+      <span class="favorite-cta">Make the syrup →</span>
+    </a>
+    <a class="favorite-card" href="recipe-rosemary-bourbon-sour">
+      <div class="favorite-star">🥃</div>
+      <div class="favorite-label">Bring it to the glass</div>
+      <div class="favorite-title">Rosemary Bourbon Sour</div>
+      <p class="favorite-copy">A cozy garden-to-glass cocktail where rosemary, citrus, and bourbon feel made for one another.</p>
+      <span class="favorite-cta">Mix the drink →</span>
+    </a>
+  </div>
 </section>
 
 <!-- ── OUR FAVORITE WAYS TO USE ROSEMARY ── -->
@@ -2392,12 +2601,14 @@
 <div class="link-strip">
   <span class="link-strip-label">Rosemary Cluster</span>
   <a href="rosemary-guide" class="link-strip-link">Rosemary Guide</a>
+  <a href="how-to-harvest-preserve-rosemary" class="link-strip-link">Harvest &amp; Preserve</a>
+  <a href="recipe-rosemary-syrup" class="link-strip-link">Rosemary Syrup</a>
   <a href="recipe-rosemary-bourbon-sour" class="link-strip-link">Rosemary Bourbon Sour</a>
-  <a href="recipe-garden-herb-gimlet" class="link-strip-link">Garden Herb Gimlet</a>
-  <a href="herb-hub" class="link-strip-link">Herb Hub</a>
-  <a href="lavender-guide" class="link-strip-link">Lavender Guide</a>
-  <a href="mint-guide" class="link-strip-link">Mint Guide</a>
-  <a href="planting-guide" class="link-strip-link">Planting Guide</a>
+  <a href="recipe-rosemary-focaccia-bread" class="link-strip-link">Focaccia — Coming Soon</a>
+  <a href="recipe-rosemary-compound-butter" class="link-strip-link">Compound Butter — Coming Soon</a>
+  <a href="recipe-rosemary-roast-chicken" class="link-strip-link">Roast Chicken — Coming Soon</a>
+  <a href="recipe-rosemary-potatoes" class="link-strip-link">Rosemary Potatoes — Coming Soon</a>
+  <a href="herb-hub" class="link-strip-link">Harvest Hub</a>
 </div>
 
 
