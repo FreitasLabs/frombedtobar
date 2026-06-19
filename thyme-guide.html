@@ -782,6 +782,7 @@
       flex-direction: column;
       transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     }
+    .favorite-card.current { border-top: 3px solid var(--thyme-deep); }
     .favorite-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 14px 34px rgba(59,42,26,0.12);
@@ -1613,6 +1614,7 @@
 <!-- ── JUMP NAV ── -->
 <div class="jump-nav">
   <span class="jump-nav-label">Jump to:</span>
+  <a href="#explore-thyme" class="jump-link">Explore</a>
   <a href="#why-grow" class="jump-link">Why Grow</a>
   <a href="#from-our-garden" class="jump-link">From Our Garden</a>
   <a href="#around-the-table" class="jump-link">Around the Table</a>
@@ -1621,6 +1623,47 @@
   <a href="#continue" class="jump-link">Continue</a>
   <a href="#faq" class="jump-link">FAQ</a>
 </div>
+
+<!-- ── EXPLORE THYME ECOSYSTEM ── -->
+<section class="favorites-section" id="explore-thyme" aria-label="Explore the Thyme ecosystem">
+  <div class="favorites-inner">
+    <p class="section-eyebrow">Explore Thyme</p>
+    <h2 class="section-title">From the garden to the pantry, the glass, and the meals we gather around.</h2>
+    <p class="section-intro">
+      This guide is one part of the Thyme story. Save the harvest, make the syrup, or browse the recipes that bring thyme back into the kitchen and around the table.
+    </p>
+    <div class="favorites-grid">
+      <a href="thyme-guide" class="favorite-card current" aria-current="page">
+        <div class="favorite-star">🌿</div>
+        <div class="favorite-label">You are here</div>
+        <div class="favorite-title">Thyme Guide</div>
+        <p class="favorite-copy">Discover how we grow, harvest, and enjoy one of our favorite herbs.</p>
+        <span class="favorite-cta">Explore the guide →</span>
+      </a>
+      <a href="how-to-harvest-preserve-thyme" class="favorite-card">
+        <div class="favorite-star">✂️</div>
+        <div class="favorite-label">Save the harvest</div>
+        <div class="favorite-title">Harvest &amp; Preserve Thyme</div>
+        <p class="favorite-copy">Learn when to harvest thyme, how to dry it, freeze it, and bring its aroma into the cooler months.</p>
+        <span class="favorite-cta">Save the harvest →</span>
+      </a>
+      <a href="recipe-thyme-syrup" class="favorite-card">
+        <div class="favorite-star">🍯</div>
+        <div class="favorite-label">For the glass</div>
+        <div class="favorite-title">Thyme Simple Syrup</div>
+        <p class="favorite-copy">Learn how we capture fresh thyme flavor for cocktails, mocktails, lemonades, and seasonal drinks.</p>
+        <span class="favorite-cta">Make the syrup →</span>
+      </a>
+      <a href="recipes" class="favorite-card">
+        <div class="favorite-star">🍸</div>
+        <div class="favorite-label">Recipes</div>
+        <div class="favorite-title">Seasonal Recipes</div>
+        <p class="favorite-copy">Explore seasonal cocktails, mocktails, and recipes inspired by what we grow.</p>
+        <span class="favorite-cta">Browse recipes →</span>
+      </a>
+    </div>
+  </div>
+</section>
 
 <!-- ── WHY WE GROW THYME ── -->
 <section class="quick-start-section" id="why-grow">
@@ -1730,29 +1773,6 @@
     <p class="section-intro">
       We say grace, we pass plates, we tell stories from the day, and somewhere in the middle of it all is the quiet flavor of the garden. Thyme reminds me that food does not have to be elaborate to be meaningful. Sometimes a warm meal, people we love, and a few stems clipped from the garden are more than enough.
     </p>
-    <div class="favorites-grid">
-      <a href="recipe-thyme-syrup" class="favorite-card">
-        <div class="favorite-star">🍯</div>
-        <div class="favorite-label">Simple Syrup</div>
-        <div class="favorite-title">Thyme Simple Syrup</div>
-        <p class="favorite-copy">A gentle herbal syrup for lemon drinks, gin cocktails, sparkling water, bourbon sours, and evenings when our table lingers a little longer.</p>
-        <span class="favorite-cta">Make the syrup →</span>
-      </a>
-      <a href="recipes" class="favorite-card">
-        <div class="favorite-star">🍋</div>
-        <div class="favorite-label">Garden Drinks</div>
-        <div class="favorite-title">Lemon, Honey &amp; Thyme</div>
-        <p class="favorite-copy">Thyme is beautiful with lemon, honey, gin, whiskey, tequila, and sparkling water — especially when it supports the gathering instead of stealing the show.</p>
-        <span class="favorite-cta">Browse recipes →</span>
-      </a>
-      <a href="#saving-season" class="favorite-card">
-        <div class="favorite-star">🍲</div>
-        <div class="favorite-label">For the Table</div>
-        <div class="favorite-title">Meals Made Warmer</div>
-        <p class="favorite-copy">Use thyme in roasted vegetables, chicken, potatoes, soups, focaccia, compound butter, herb salts, marinades, and the familiar meals that become our family memories.</p>
-        <span class="favorite-cta">Save the season →</span>
-      </a>
-    </div>
   </div>
 </section>
 
@@ -2051,9 +2071,8 @@
           <li><a href="mint-guide">Mint Guide</a></li>
           <li><a href="plum-guide">Plum Guide</a></li>
           <li><a href="rosemary-guide">Rosemary Guide</a></li>
-          <li><a href="thyme-guide">Thyme Guide</a></li>
-          <li><a href="basil-guide">Basil Guide</a></li>
           <li><a href="thyme-guide" class="active">Thyme Guide</a></li>
+          <li><a href="basil-guide">Basil Guide</a></li>
           <li><a href="lemon-balm-guide">Lemon Balm Guide</a></li>
         </ul>
       </div>

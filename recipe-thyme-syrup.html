@@ -389,6 +389,7 @@
     /* ── CROSSLINKS ── */
     .crosslink-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 1.5rem; }
     .crosslink-card { background: var(--cream); border: 1px solid rgba(59,42,26,0.1); padding: 0; text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s; display: block; overflow: hidden; }
+    .crosslink-card.current { border-top: 3px solid var(--terracotta); }
     .crosslink-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(59,42,26,0.1); }
     .crosslink-img { width: 100%; height: 180px; object-fit: cover; display: block; }
     .crosslink-body { padding: 1.25rem; }
@@ -703,8 +704,64 @@
   <a href="#variations" class="jump-link">Variations</a>
   <a href="#uses" class="jump-link">How to Use</a>
   <a href="#storage" class="jump-link">Storage</a>
-  <a href="#drinks" class="jump-link">Drink Ideas</a>
+  <a href="#explore-thyme" class="jump-link">Explore</a>
 </nav>
+
+<!-- ── EXPLORE THYME ECOSYSTEM ── -->
+<section class="content-section alt" id="explore-thyme" aria-label="Explore the Thyme ecosystem">
+  <p class="section-eyebrow">Explore Thyme</p>
+  <h2 class="section-title">From the garden to the pantry, the glass, and the meals we gather around.</h2>
+
+  <p class="section-intro">
+    This syrup is one part of the Thyme story. Start with the guide, save the harvest, or browse the recipes that carry thyme from the garden into the glass and around the table.
+  </p>
+
+  <div class="crosslink-grid">
+    <a href="thyme-guide" class="crosslink-card">
+      <img src="images/guides/thyme-guide-from-our-garden.jpg"
+           alt="Fresh thyme growing in the garden"
+           class="crosslink-img" width="1600" height="900" loading="lazy" />
+      <div class="crosslink-body">
+        <div class="crosslink-eyebrow">Start here</div>
+        <div class="crosslink-title">Thyme Guide</div>
+        <div class="crosslink-desc">Discover how we grow, harvest, and enjoy one of our favorite herbs.</div>
+      </div>
+    </a>
+
+    <a href="how-to-harvest-preserve-thyme" class="crosslink-card">
+      <img src="images/guides/thyme-harvest-from-the-garden.jpg"
+           alt="Freshly harvested thyme bundles from the garden"
+           class="crosslink-img" width="1600" height="900" loading="lazy" />
+      <div class="crosslink-body">
+        <div class="crosslink-eyebrow">Save the harvest</div>
+        <div class="crosslink-title">Harvest &amp; Preserve Thyme</div>
+        <div class="crosslink-desc">Learn when to harvest thyme, how to dry it, freeze it, and bring its aroma into the cooler months.</div>
+      </div>
+    </a>
+
+    <a href="recipe-thyme-syrup" class="crosslink-card current" aria-current="page">
+      <img src="images/syrups/thyme-syrup.jpg"
+           alt="Thyme simple syrup made from fresh garden thyme"
+           class="crosslink-img" width="1600" height="900" loading="lazy" />
+      <div class="crosslink-body">
+        <div class="crosslink-eyebrow">You are here</div>
+        <div class="crosslink-title">Thyme Simple Syrup</div>
+        <div class="crosslink-desc">Learn how we capture fresh thyme flavor for cocktails, mocktails, lemonades, and seasonal drinks.</div>
+      </div>
+    </a>
+
+    <a href="recipes" class="crosslink-card">
+      <img src="images/heroes/recipes-hero.png"
+           alt="Seasonal cocktails and mocktails inspired by the garden"
+           class="crosslink-img" width="1600" height="900" loading="lazy" />
+      <div class="crosslink-body">
+        <div class="crosslink-eyebrow">Recipes</div>
+        <div class="crosslink-title">Seasonal Recipes</div>
+        <div class="crosslink-desc">Explore seasonal cocktails, mocktails, and recipes inspired by what we grow.</div>
+      </div>
+    </a>
+  </div>
+</section>
 
 <!-- ── RECIPE ── -->
 <section class="content-section" id="recipe">
@@ -896,67 +953,13 @@
   </div>
 </section>
 
-<!-- ── DRINK IDEAS ── -->
-<section class="content-section alt" id="drinks">
-  <p class="section-eyebrow">What to make next</p>
- <h2 class="section-title">Explore More with Thyme</h2>
-
-<p class="section-intro">
-Start with a bottle of homemade thyme syrup, then discover one of our favorite cocktails and explore more herbs and recipes from the garden.
-</p>
-  <div class="crosslink-grid">
-
-  <a href="recipe-thyme-syrup" class="crosslink-card">
-    <img src="images/syrups/thyme-syrup.jpg"
-         alt="Homemade thyme simple syrup"
-         class="crosslink-img"  width="1672" height="941"  loading="lazy" />
-    <div class="crosslink-body">
-      <div class="crosslink-eyebrow">Homemade Syrup</div>
-      <div class="crosslink-title">Thyme Simple Syrup</div>
-      <div class="crosslink-desc">
-        Fresh thyme, sugar, and water create a versatile syrup that brings gentle herbal notes to cocktails, mocktails, lemonades, and sparkling water.
-      </div>
-    </div>
-  </a>
-
-  <a href="recipe-garden-herb-gimlet" class="crosslink-card">
-    <img src="images/recipes/garden-herb-gimlet.jpeg"
-         alt="Garden Herb Gimlet cocktail"
-         class="crosslink-img"  width="1536" height="864"  loading="lazy" />
-    <div class="crosslink-body">
-      <div class="crosslink-eyebrow">Featured Cocktail</div>
-      <div class="crosslink-title">Garden Herb Gimlet</div>
-      <div class="crosslink-desc">
-        Gin, fresh lime, and garden herbs come together in one of our favorite cocktails for showcasing fresh thyme.
-      </div>
-    </div>
-  </a>
-
-  <a href="herb-hub" class="crosslink-card">
-    <img src="images/heroes/herb-hub-hero.png"
-         alt="Fresh herbs growing in the garden"
-         class="crosslink-img"  width="1672" height="941"  loading="lazy" />
-    <div class="crosslink-body">
-      <div class="crosslink-eyebrow">Explore More</div>
-      <div class="crosslink-title">Visit the Herb Hub</div>
-      <div class="crosslink-desc">
-        Discover growing guides, preservation ideas, and seasonal inspiration for herbs from the garden.
-      </div>
-    </div>
-  </a>
-
-</div>
-</section>
-
 <!-- ── LINK STRIP ── -->
 <div class="link-strip">
-  <span class="link-strip-label">Explore more</span>
-  <a href="recipe-garden-herb-gimlet" class="link-strip-link">Garden Herb Gimlet</a>
-  <a href="recipe-peach-honey-bourbon-smash" class="link-strip-link">Peach Bourbon Smash</a>
+  <span class="link-strip-label">Explore thyme</span>
   <a href="thyme-guide" class="link-strip-link">Thyme Guide</a>
-  <a href="herb-hub" class="link-strip-link">Herb Hub</a>
-  <a href="planting-guide" class="link-strip-link">Planting Guide</a>
+  <a href="how-to-harvest-preserve-thyme" class="link-strip-link">Harvest &amp; Preserve Thyme</a>
   <a href="recipes" class="link-strip-link">All Recipes</a>
+  <a href="herb-hub" class="link-strip-link">Herb Hub</a>
 </div>
 
 <!-- ── NEWSLETTER ── -->
