@@ -512,6 +512,105 @@
     .footer-links a { font-family: "DM Mono", monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,240,232,0.72); text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: var(--sage); }
 
+
+
+    /* ── BASIL ECOSYSTEM PORTAL ── */
+    .ecosystem-section {
+      background: var(--basil-pale);
+      padding: 4.5rem 5rem;
+      border-bottom: 1px solid rgba(59,42,26,0.08);
+      position: relative;
+      z-index: 1;
+    }
+    .ecosystem-kicker {
+      font-family: "DM Mono", monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--basil);
+      margin-bottom: 0.85rem;
+    }
+    .ecosystem-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.7rem, 3vw, 2.55rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--bark);
+      margin-bottom: 0.9rem;
+    }
+    .ecosystem-title em { font-style: italic; }
+    .ecosystem-intro {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: rgba(30,22,14,0.76);
+      max-width: 740px;
+      margin-bottom: 2rem;
+    }
+    .ecosystem-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 1.75rem;
+    }
+    .ecosystem-card {
+      background: var(--cream);
+      border: 1px solid rgba(59,42,26,0.12);
+      padding: 1.55rem;
+      min-height: 235px;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .ecosystem-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(59,42,26,0.11);
+      border-color: rgba(61,107,74,0.32);
+    }
+    .ecosystem-card.current { border-top: 3px solid var(--basil-deep); }
+    .ecosystem-icon { font-size: 1.35rem; margin-bottom: 0.75rem; }
+    .ecosystem-label {
+      font-family: "DM Mono", monospace;
+      font-size: 0.66rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--basil);
+      margin-bottom: 0.55rem;
+    }
+    .ecosystem-card-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.18rem;
+      font-weight: 700;
+      font-style: italic;
+      line-height: 1.25;
+      color: var(--bark);
+      margin-bottom: 0.65rem;
+    }
+    .ecosystem-copy {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: rgba(30,22,14,0.72);
+      flex: 1;
+    }
+    .ecosystem-cta {
+      font-family: "DM Mono", monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: var(--basil);
+      margin-top: 1rem;
+    }
+
+    @media (min-width: 701px) and (max-width: 1100px) {
+      .ecosystem-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 900px) {
+      .ecosystem-section { padding: 3.5rem 1.5rem; }
+      .ecosystem-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .ecosystem-card { min-height: auto; }
+    }
+
     @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
     @media (max-width: 900px) {
@@ -1437,6 +1536,42 @@
 <a class="jump-link" href="#faq">FAQ</a>
 </div>
 <!-- ── SUMMER STARTS HERE ── -->
+
+<section class="ecosystem-section" id="explore">
+<div class="ecosystem-kicker">Explore Basil</div>
+<h2 class="ecosystem-title">Continue the Basil Story</h2>
+<p class="ecosystem-intro">Basil begins in the garden, but it rarely stays there for long. It moves from warm beds to pizza nights, caprese salads, lemonade, pesto days, freezer cubes, and the meals that make summer feel full.</p>
+<div class="ecosystem-grid">
+<a aria-current="page" class="ecosystem-card current" href="basil-guide">
+<div class="ecosystem-icon">🌿</div>
+<div class="ecosystem-label">You Are Here</div>
+<h3 class="ecosystem-card-title">Basil Guide</h3>
+<p class="ecosystem-copy">Grow basil for peak summer flavor, generous harvests, garden meals, fresh drinks, and warm-weather abundance.</p>
+<span class="ecosystem-cta">Explore the Guide →</span>
+</a>
+<a class="ecosystem-card" href="how-to-harvest-preserve-basil">
+<div class="ecosystem-icon">✂️</div>
+<div class="ecosystem-label">Save the Harvest</div>
+<h3 class="ecosystem-card-title">Harvest &amp; Preserve Basil</h3>
+<p class="ecosystem-copy">Learn when to cut basil, how to harvest generously, and how to turn too much basil into a summer blessing.</p>
+<span class="ecosystem-cta">Save the Harvest →</span>
+</a>
+<a class="ecosystem-card" href="basil-simple-syrup">
+<div class="ecosystem-icon">🍋</div>
+<div class="ecosystem-label">For the Glass</div>
+<h3 class="ecosystem-card-title">Basil Simple Syrup</h3>
+<p class="ecosystem-copy">Make a bright, garden-fresh syrup for lemonade, spritzes, mocktails, cocktails, and summer gatherings.</p>
+<span class="ecosystem-cta">Make the Syrup →</span>
+</a>
+<a class="ecosystem-card" href="recipes">
+<div class="ecosystem-icon">🍕</div>
+<div class="ecosystem-label">Recipes</div>
+<h3 class="ecosystem-card-title">Seasonal Recipes</h3>
+<p class="ecosystem-copy">Bring basil into pizza, pasta, salads, drinks, and garden-to-glass recipes built around what is growing now.</p>
+<span class="ecosystem-cta">Browse Recipes →</span>
+</a>
+</div>
+</section>
 <section class="quick-start-section" id="summer-starts">
 <div class="quick-start-inner">
 <div class="quick-start-header">
@@ -2049,7 +2184,6 @@
 <div class="link-strip">
 <span class="link-strip-label">Basil Cluster</span>
 <a class="link-strip-link" href="basil-guide">Basil Guide</a>
-<a class="link-strip-link" href="how-to-harvest-preserve-basil">Harvest &amp; Preserve Basil</a>
 <a class="link-strip-link" href="recipe-strawberry-basil-smash">Strawberry Basil Smash</a>
 <a class="link-strip-link" href="herb-hub">Herb Hub</a>
 <a class="link-strip-link" href="lavender-guide">Lavender Guide</a>
