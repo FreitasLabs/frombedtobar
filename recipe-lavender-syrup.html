@@ -12,11 +12,11 @@
   <meta property="og:title" content="Lavender Simple Syrup | Peace in a Glass" />
   <meta property="og:description" content="Lavender should whisper, not shout. A calm garden-to-glass syrup for lemonade, tea, sparkling water, mocktails, and gentle cocktails." />
   <meta property="og:url" content="https://frombedtobar.com/lavender-syrup" />
-  <meta property="og:image" content="https://frombedtobar.com/images/og-image.PNG" />
+  <meta property="og:image" content="https://frombedtobar.com/images/syrups/lavender-syrup-hero.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Lavender Simple Syrup | Peace in a Glass" />
   <meta name="twitter:description" content="A calm lavender syrup for slow evenings, lemonade, tea, sparkling water, mocktails, and gentle cocktails." />
-  <meta name="twitter:image" content="https://frombedtobar.com/images/og-image.PNG" />
+  <meta name="twitter:image" content="https://frombedtobar.com/images/syrups/lavender-syrup-hero.jpg" />
   <meta name="theme-color" content="#6f5f8f" />
 
   <script type="application/ld+json">
@@ -53,7 +53,7 @@
           "url": "https://frombedtobar.com/about"
         },
         "publisher": { "@id": "https://frombedtobar.com/#organization" },
-        "image": "https://frombedtobar.com/images/og-image.PNG",
+        "image": "https://frombedtobar.com/images/syrups/lavender-syrup-hero.jpg",
         "datePublished": "2026-06-19",
         "keywords": "lavender simple syrup, lavender syrup, culinary lavender, garden to glass, floral syrup, mocktail syrup, cocktail syrup",
         "recipeIngredient": [
@@ -489,6 +489,38 @@
     @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 
     /* ── MOBILE ── */
+
+    /* ── LAVENDER REAL IMAGE PLACEMENT (P4.1) ── */
+    .section-image {
+      display: block;
+      margin: 2.5rem 5rem;
+      border: 1px solid rgba(59,42,26,0.1);
+      background: var(--cream);
+      overflow: hidden;
+    }
+    .content-section .section-image,
+    .section-image.section-image-placeholder {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .section-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+    .section-image.wide {
+      max-width: 1120px;
+    }
+    .section-image:not(.wide) {
+      max-width: 980px;
+    }
+    .section-image.dark {
+      border-color: rgba(216,205,230,0.22);
+      background: rgba(255,255,255,0.06);
+    }
+
     @media (max-width: 900px) {
       .recipe-body { grid-template-columns: 1fr; }
       .ingredient-card { position: static; }
@@ -506,6 +538,16 @@
       .header-inner { padding: 2rem 1.75rem 3rem; max-width: 100%; }
       .jump-nav { padding: 1rem 1.75rem; top: 66px; }
       .content-section { padding: 3.5rem 1.75rem; }
+
+      .section-image {
+        margin: 2rem 1.75rem;
+      }
+      .content-section .section-image,
+      .section-image.section-image-placeholder {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
       .link-strip { padding: 2rem 1.75rem; }
       .newsletter-section { padding: 3.5rem 1.75rem; }
       footer { padding: 2.5rem 1.75rem; }
@@ -1024,9 +1066,13 @@
   </div>
 </section>
 
-<figure class="image-placeholder section-image-placeholder wide" aria-label="Image placeholder: dried lavender, syrup bottle, and quiet drink elements">
-  <span>Garden-to-glass transition image</span>
-  <small>/images/syrups/lavender-syrup-peace-in-a-glass.jpg</small>
+<figure class="section-image section-image-placeholder wide">
+  <img
+    src="/images/syrups/lavender-syrup-peace-in-a-glass.jpg"
+    alt="Lavender lemonade, tea, books, and fresh lavender beside an open window during a quiet summer evening."
+    loading="lazy"
+    width="1600"
+    height="900">
 </figure>
 
 <!-- ── PEACE IN A GLASS ── -->
@@ -1055,10 +1101,14 @@
   <h2 class="section-title">Simple by design.</h2>
   <p class="section-intro">This syrup is meant to stay simple. Water, sugar, and a little culinary lavender are enough. The real work is restraint — tasting as it steeps and stopping while the flavor is still soft.</p>
 
-  <figure class="image-placeholder section-image-placeholder" aria-label="Image placeholder: lavender buds, sugar, water, and syrup-making tools">
-    <span>Simple process image</span>
-    <small>/images/syrups/lavender-syrup-how-we-make-it.jpg</small>
-  </figure>
+  <figure class="section-image section-image-placeholder">
+  <img
+    src="/images/syrups/lavender-syrup-how-we-make-it.jpg"
+    alt="Lavender syrup being prepared with culinary lavender, sugar, a saucepan, and a wooden spoon in a farmhouse kitchen."
+    loading="lazy"
+    width="1600"
+    height="900">
+</figure>
 
   <div class="recipe-card-soft">
     <div class="recipe-grid-simple">
@@ -1099,10 +1149,14 @@
   <p class="section-eyebrow light">Ways We Enjoy It</p>
   <h2 class="section-title light">The gentler kinds of drinks.</h2>
 
-  <figure class="image-placeholder section-image-placeholder dark" aria-label="Image placeholder: finished lavender drinks for quiet evenings">
-    <span>Finished drinks image</span>
-    <small>/images/syrups/lavender-syrup-ways-we-enjoy-it.jpg</small>
-  </figure>
+  <figure class="section-image section-image-placeholder dark">
+  <img
+    src="/images/syrups/lavender-syrup-ways-we-enjoy-it.jpg"
+    alt="Lavender lemonade, sparkling water, tea, and a gentle spritz gathered on a rustic table at sunset."
+    loading="lazy"
+    width="1600"
+    height="900">
+</figure>
 
   <div class="ways-list">
     <p>We reach for lavender syrup when a drink needs a softer edge, not a louder flavor.</p>
@@ -1132,10 +1186,14 @@
     <p><strong>Rooted in the garden. Raised around the table.</strong></p>
   </div>
 
-  <figure class="image-placeholder section-image-placeholder wide" aria-label="Image placeholder: dried lavender jar on a shelf or quiet evening table">
-    <span>Closing garden-to-glass image</span>
-    <small>/images/syrups/lavender-syrup-carrying-summer-forward.jpg</small>
-  </figure>
+  <figure class="section-image section-image-placeholder wide">
+  <img
+    src="/images/syrups/lavender-syrup-carrying-summer-forward.jpg"
+    alt="Dried lavender, tea, lavender syrup, and jars of lavender buds resting on a farmhouse table in warm evening light."
+    loading="lazy"
+    width="1600"
+    height="900">
+</figure>
 </section>
 
 <!-- ── FAQ ── -->
