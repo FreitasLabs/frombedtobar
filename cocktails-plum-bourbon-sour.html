@@ -446,12 +446,12 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <nav aria-label="Main navigation">
-    <a href="/" class="nav-logo"><img src="images/logo.png" alt="From Bed to Bar — home" style="height:40px;width:40px;object-fit:contain;" width="84" height="84" / loading="lazy"></a>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+    <a href="/" class="nav-logo"><img src="images/logo.png" alt="From Bed to Bar — home" style="height:40px;width:40px;object-fit:contain;" width="84" height="84"  loading="lazy"></a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="navMenu" role="list">
     <li><a href="/">Home</a></li>
     <li><a href="recipes">Recipes</a></li>
-    <li><a href="herb-hub">Herb Hub</a></li>
+    <li><a href="herb-hub">Harvest Hub</a></li>
     <li><a href="garden-tips">Garden Tips</a></li>
     <li><a href="planting-guide">Planting Guide</a></li>
     <li><a href="bar-essentials">Bar Essentials</a></li>
@@ -697,7 +697,7 @@
   <ul class="footer-links" role="list">
     <li><a href="/">Home</a></li>
     <li><a href="recipes">Recipes</a></li>
-    <li><a href="herb-hub">Herb Hub</a></li>
+    <li><a href="herb-hub">Harvest Hub</a></li>
     <li><a href="garden-tips">Garden Tips</a></li>
     <li><a href="bar-essentials">Bar Essentials</a></li>
     <li><a href="blog">Blog</a></li>
@@ -719,17 +719,34 @@
       var navLinks = document.querySelector(".nav-links");
       if (hamburger && navLinks) {
         hamburger.addEventListener("click", function() {
-          hamburger.classList.toggle("open");
-          navLinks.classList.toggle("open");
+          var isOpen = hamburger.classList.toggle("open");
+          navLinks.classList.toggle("open", isOpen);
+          hamburger.setAttribute("aria-expanded", String(isOpen));
+          hamburger.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
         });
         navLinks.querySelectorAll("a").forEach(function(link) {
           link.addEventListener("click", function() {
             hamburger.classList.remove("open");
             navLinks.classList.remove("open");
+            hamburger.setAttribute("aria-expanded", "false");
+            hamburger.setAttribute("aria-label", "Open navigation menu");
           });
         });
       }
     });
   </script>
+<script>
+  document.addEventListener("keydown", function(event) {
+    var hamburger = document.getElementById("navHamburger");
+    var navLinks = document.querySelector(".nav-links");
+    if (event.key === "Escape" && hamburger && navLinks && navLinks.classList.contains("open")) {
+      hamburger.classList.remove("open");
+      navLinks.classList.remove("open");
+      hamburger.setAttribute("aria-expanded", "false");
+      hamburger.setAttribute("aria-label", "Open navigation menu");
+      hamburger.focus();
+    }
+  });
+</script>
 </body>
 </html>

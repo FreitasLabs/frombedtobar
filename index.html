@@ -1153,13 +1153,13 @@
 
   <!-- NAV -->
   <nav class="site-nav" aria-label="Main navigation">
-  <a href="/" class="nav-logo"><img src="images/logo.png" alt="From Bed to Bar — home" width="84" height="84" / loading="lazy"></a>
+  <a href="/" class="nav-logo"><img src="images/logo.png" alt="From Bed to Bar — home" width="84" height="84"  loading="lazy"></a>
   <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
   <ul class="nav-links" id="navMenu" role="list">
     <li><a href="/">Home</a></li>
     <li><a href="recipes">Recipes</a></li>
     <li class="nav-item-dropdown">
-      <a href="herb-hub" class="dropdown-toggle" aria-haspopup="true">Herb Hub <span class="dropdown-arrow" aria-hidden="true">&#9660;</span></a>
+      <a href="herb-hub" class="dropdown-toggle" aria-haspopup="true">Harvest Hub <span class="dropdown-arrow" aria-hidden="true">&#9660;</span></a>
       <ul class="dropdown-menu" role="list">
         <li><a href="mint-guide">Mint Guide</a></li>
         <li><a href="plum-guide">Plum Guide</a></li>
@@ -1186,20 +1186,31 @@
     class="hero"
     aria-label="A garden-to-glass table scene: fresh herbs, seasonal fruit, homemade syrups, cocktails and mocktails set outdoors in a summer garden"
   >
-    <img
-      src="images/og-image.PNG"
-      alt=""
-      class="hero-bg"
-      fetchpriority="high"
-      aria-hidden="true"
-     width="1672" height="941" / loading="lazy">
+    <picture>
+      <source
+        type="image/avif"
+        srcset="images/heroes/home-hero-640.avif 640w, images/heroes/home-hero-1024.avif 1024w, images/heroes/home-hero-1672.avif 1672w"
+        sizes="100vw">
+      <source
+        type="image/webp"
+        srcset="images/heroes/home-hero-640.webp 640w, images/heroes/home-hero-1024.webp 1024w, images/heroes/home-hero-1672.webp 1672w"
+        sizes="100vw">
+      <img
+        src="images/og-image.PNG"
+        alt=""
+        class="hero-bg"
+        fetchpriority="high"
+        aria-hidden="true"
+        width="1672"
+        height="941">
+    </picture>
     <div class="hero-content">
       <p class="hero-eyebrow">Garden-to-Glass Living</p>
       <h1 class="hero-title">Rooted in the garden.<em>Raised around the table.</em></h1>
       <p class="hero-tagline">A seasonal homegrown approach to cocktails, mocktails, syrups, preserves, and garden guides.</p>
       <div class="hero-ctas">
         <a href="recipes" class="btn-primary">Explore Recipes</a>
-        <a href="herb-hub" class="btn-secondary">Start with the Herb Hub</a>
+        <a href="herb-hub" class="btn-secondary">Start with the Harvest Hub</a>
       </div>
     </div>
   </section>
@@ -1366,10 +1377,10 @@
       </div>
 
       <div class="start-here-card">
-        <p class="start-here-card-label">Herb Hub</p>
-        <h3 class="start-here-card-title">Herb Hub</h3>
+        <p class="start-here-card-label">Harvest Hub</p>
+        <h3 class="start-here-card-title">Harvest Hub</h3>
         <p class="start-here-card-desc">Learn how to grow, harvest, and use herbs throughout the seasons.</p>
-        <a href="herb-hub" class="start-here-card-link">Visit Herb Hub →</a>
+        <a href="herb-hub" class="start-here-card-link">Visit Harvest Hub →</a>
       </div>
 
       <div class="start-here-card">
@@ -1431,7 +1442,7 @@
         <ul class="footer-group-links" role="list">
           <li><a href="/">Home</a></li>
           <li><a href="recipes">Recipes</a></li>
-          <li><a href="herb-hub">Herb Hub</a></li>
+          <li><a href="herb-hub">Harvest Hub</a></li>
           <li><a href="garden-tips">Garden Tips</a></li>
           <li><a href="planting-guide">Planting Guide</a></li>
           <li><a href="bar-essentials">Bar Essentials</a></li>
@@ -1471,6 +1482,7 @@
         var isOpen = hamburger.classList.toggle("open");
         navMenu.classList.toggle("open", isOpen);
         hamburger.setAttribute("aria-expanded", String(isOpen));
+        hamburger.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
       });
       navMenu.querySelectorAll("a").forEach(function(link) {
         link.addEventListener("click", function() {
@@ -1478,6 +1490,7 @@
             hamburger.classList.remove("open");
             navMenu.classList.remove("open");
             hamburger.setAttribute("aria-expanded", "false");
+            hamburger.setAttribute("aria-label", "Open navigation menu");
           }
         });
       });
@@ -1486,6 +1499,7 @@
           hamburger.classList.remove("open");
           navMenu.classList.remove("open");
           hamburger.setAttribute("aria-expanded", "false");
+          hamburger.setAttribute("aria-label", "Open navigation menu");
           hamburger.focus();
         }
       });
