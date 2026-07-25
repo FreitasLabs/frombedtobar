@@ -1,0 +1,3 @@
+# Cloudflare Pages permanent route consolidation.
+# Keep this file at the root of the deployed static output.
+/lavender-simple-syrup /recipe-lavender-syrup 301

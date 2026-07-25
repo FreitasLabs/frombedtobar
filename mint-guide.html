@@ -1743,13 +1743,13 @@
 <!-- ── NAV ── -->
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <nav aria-label="Main navigation" class="site-nav">
-<a class="nav-logo" href="/"><img alt="From Bed to Bar — home" height="84" src="images/logo.png" width="84"/ loading="lazy"></a>
+<a class="nav-logo" href="/"><img alt="From Bed to Bar — home" height="84" src="images/logo.png" width="84" loading="lazy"></a>
 <button aria-controls="navMenu" aria-expanded="false" aria-label="Open navigation menu" class="nav-hamburger" id="navHamburger"><span></span><span></span><span></span></button>
 <ul class="nav-links" id="navMenu" role="list">
 <li><a href="/">Home</a></li>
 <li><a href="recipes">Recipes</a></li>
 <li class="nav-item-dropdown">
-<a aria-haspopup="true" class="dropdown-toggle" href="herb-hub">Herb Hub <span aria-hidden="true" class="dropdown-arrow">▼</span></a>
+<a aria-haspopup="true" class="dropdown-toggle" href="herb-hub">Harvest Hub <span aria-hidden="true" class="dropdown-arrow">▼</span></a>
 <ul class="dropdown-menu" role="list">
 <li><a href="mint-guide">Mint Guide</a></li>
 <li><a href="plum-guide">Plum Guide</a></li>
@@ -1773,7 +1773,7 @@
 <header class="page-header">
 <img alt="" aria-hidden="true" class="page-header-bg" fetchpriority="high" height="941" src="images/guides/mint-guide-hero.png" width="1672"/>
 <div class="header-inner">
-<a class="header-back" href="herb-hub">← Herb Hub</a>
+<a class="header-back" href="herb-hub">← Harvest Hub</a>
 <p class="header-eyebrow">
       Mint Harvest Hub
     </p>
@@ -1828,7 +1828,7 @@
 <div class="garden-note-inner">
 <div class="garden-note-card">
 <div class="garden-note-photo">
-<img alt="Mint growing in containers beside a backyard patio" loading="lazy" src="images/guides/mint-guide-from-our-garden.jpg"/>
+<img alt="Mint growing in containers beside a backyard patio" height="941" loading="lazy" src="images/guides/mint-guide-from-our-garden.jpg" width="1672"/>
 </div>
 <div class="garden-note-content">
 <p class="section-eyebrow">From our garden</p>
@@ -1938,7 +1938,7 @@
 <p class="journey-number">06 · Grow again</p>
 <h3 class="journey-card-title">Plant what comes next</h3>
 <p class="journey-card-copy">Mint rarely grows alone for long. Basil, rosemary, thyme, lavender, and lemon balm each bring their own season and story.</p>
-<span class="journey-card-cta">Visit Herb Hub →</span>
+<span class="journey-card-cta">Visit Harvest Hub →</span>
 </a>
 </div>
 </div>
@@ -2078,7 +2078,7 @@
 <p class="section-intro">Mint is generous, but it needs a little direction. Give it a proper container, steady moisture, and regular cutting, and it will reward you with enough fresh growth for drinks, syrups, garnishes, and more than a few last-minute gatherings. Get the container rule right, and mint becomes one of the easiest herbs to love. For zone-specific planting timing, see the <a href="planting-guide">planting guide</a>.</p>
 <div class="mint-glance-feature">
 <figure class="mint-glance-photo">
-<img alt="Freshly harvested mint bundled with twine beside garden shears" loading="lazy" src="images/guides/mint-guide-harvest-bundle.jpg"/>
+<img alt="Freshly harvested mint bundled with twine beside garden shears" height="941" loading="lazy" src="images/guides/mint-guide-harvest-bundle.jpg" width="1672"/>
 </figure>
 <div aria-label="Mint at a glance" class="mint-glance">
 <p class="mint-glance-title">Mint at a glance</p>
@@ -2382,7 +2382,7 @@
 <h2 class="section-title" id="favorites-title">The Ones We Make Again and Again.</h2>
 <p class="section-intro">A generous mint plant can go in a dozen directions, but these are the three we come back to most: one for preserving, one for celebrating, and one for everyone gathered around the table.</p>
 <figure class="guide-feature-figure favorites-feature-figure">
-<img alt="Mint simple syrup, a garden mojito, and sparkling mint limeade on a rustic table" loading="lazy" src="images/guides/mint-guide-favorites.jpg"/>
+<img alt="Mint simple syrup, a garden mojito, and sparkling mint limeade on a rustic table" height="941" loading="lazy" src="images/guides/mint-guide-favorites.jpg" width="1672"/>
 </figure>
 <div class="favorites-grid">
 <a class="favorite-card" href="recipe-mint-simple-syrup">
@@ -2469,7 +2469,7 @@
 <!-- ── CONTINUE THE GARDEN ── -->
 <section class="content-section alt" id="explore-more">
 <figure class="guide-feature-figure companion-herbs-feature">
-<img alt="Mint, basil, rosemary, and lavender growing together in a summer garden" loading="lazy" src="images/guides/mint-guide-companion-herbs.jpg"/>
+<img alt="Mint, basil, rosemary, and lavender growing together in a summer garden" height="941" loading="lazy" src="images/guides/mint-guide-companion-herbs.jpg" width="1672"/>
 </figure>
 <p class="section-eyebrow">What to grow next</p>
 <h2 class="section-title">Continue the Garden</h2>
@@ -2616,7 +2616,7 @@
 <ul class="footer-group-links" role="list">
 <li><a href="/">Home</a></li>
 <li><a href="recipes">Recipes</a></li>
-<li><a href="herb-hub">Herb Hub</a></li>
+<li><a href="herb-hub">Harvest Hub</a></li>
 <li><a href="garden-tips">Garden Tips</a></li>
 <li><a href="planting-guide">Planting Guide</a></li>
 <li><a href="bar-essentials">Bar Essentials</a></li>
@@ -2655,6 +2655,7 @@
         var isOpen = hamburger.classList.toggle("open");
         navMenu.classList.toggle("open", isOpen);
         hamburger.setAttribute("aria-expanded", String(isOpen));
+        hamburger.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
       });
       navMenu.querySelectorAll("a").forEach(function(link) {
         link.addEventListener("click", function() {
@@ -2662,6 +2663,7 @@
             hamburger.classList.remove("open");
             navMenu.classList.remove("open");
             hamburger.setAttribute("aria-expanded", "false");
+            hamburger.setAttribute("aria-label", "Open navigation menu");
           }
         });
       });
@@ -2670,6 +2672,7 @@
           hamburger.classList.remove("open");
           navMenu.classList.remove("open");
           hamburger.setAttribute("aria-expanded", "false");
+          hamburger.setAttribute("aria-label", "Open navigation menu");
           hamburger.focus();
         }
       });

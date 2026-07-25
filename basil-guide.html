@@ -1478,13 +1478,13 @@
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <nav aria-label="Main navigation" class="site-nav">
-<a class="nav-logo" href="/"><img alt="From Bed to Bar — home" height="84" src="images/logo.png" width="84"/ loading="lazy"></a>
+<a class="nav-logo" href="/"><img alt="From Bed to Bar — home" height="84" src="images/logo.png" width="84" loading="lazy"></a>
 <button aria-controls="navMenu" aria-expanded="false" aria-label="Open navigation menu" class="nav-hamburger" id="navHamburger"><span></span><span></span><span></span></button>
 <ul class="nav-links" id="navMenu" role="list">
 <li><a href="/">Home</a></li>
 <li><a href="recipes">Recipes</a></li>
 <li class="nav-item-dropdown">
-<a aria-haspopup="true" class="dropdown-toggle" href="herb-hub">Herb Hub <span aria-hidden="true" class="dropdown-arrow">▼</span></a>
+<a aria-haspopup="true" class="dropdown-toggle" href="herb-hub">Harvest Hub <span aria-hidden="true" class="dropdown-arrow">▼</span></a>
 <ul class="dropdown-menu" role="list">
 <li><a href="mint-guide">Mint Guide</a></li>
 <li><a href="plum-guide">Plum Guide</a></li>
@@ -1505,9 +1505,9 @@
 </nav>
 <main id="main-content">
 <header class="page-header">
-<img alt="" aria-hidden="true" class="page-header-bg" fetchpriority="high" height="941" src="images/guides/basil-guide.jpg" width="1672"/ loading="lazy">
+<img alt="" aria-hidden="true" class="page-header-bg" fetchpriority="high" height="941" src="images/guides/basil-guide.jpg" width="1672" loading="lazy">
 <div class="header-inner">
-<a class="header-back" href="herb-hub">← Herb Hub</a>
+<a class="header-back" href="herb-hub">← Harvest Hub</a>
 <p class="header-eyebrow">Basil Harvest Hub</p>
 <h1 class="header-title">Summer Always Gives Us More<br/><em>Grow, Harvest &amp; Use Basil</em></h1>
 <p class="header-sub">Every year I wonder if I planted too much basil. By July, we are making Caprese salads, adding handfuls to pizza night, clipping stems for lemonade, and tucking pesto cubes away for later. Somehow, that abundance always feels like a gift.</p>
@@ -2021,7 +2021,7 @@
 </div>
 <div class="img-card-body">
 <p class="img-card-eyebrow">Explore More</p>
-<p class="img-card-title">Visit the Herb Hub</p>
+<p class="img-card-title">Visit the Harvest Hub</p>
 <p class="img-card-desc">Discover more herbs, growing guides, and seasonal inspiration for your garden-to-glass journey.</p>
 <span class="img-card-btn">Explore</span>
 </div>
@@ -2185,7 +2185,7 @@
 <span class="link-strip-label">Basil Cluster</span>
 <a class="link-strip-link" href="basil-guide">Basil Guide</a>
 <a class="link-strip-link" href="recipe-strawberry-basil-smash">Strawberry Basil Smash</a>
-<a class="link-strip-link" href="herb-hub">Herb Hub</a>
+<a class="link-strip-link" href="herb-hub">Harvest Hub</a>
 <a class="link-strip-link" href="lavender-guide">Lavender Guide</a>
 <a class="link-strip-link" href="mint-guide">Mint Guide</a>
 <a class="link-strip-link" href="thyme-guide">Thyme Guide</a>
@@ -2229,7 +2229,7 @@
 <ul class="footer-group-links" role="list">
 <li><a href="/">Home</a></li>
 <li><a href="recipes">Recipes</a></li>
-<li><a href="herb-hub">Herb Hub</a></li>
+<li><a href="herb-hub">Harvest Hub</a></li>
 <li><a href="garden-tips">Garden Tips</a></li>
 <li><a href="planting-guide">Planting Guide</a></li>
 <li><a href="bar-essentials">Bar Essentials</a></li>
@@ -2268,6 +2268,7 @@
         var isOpen = hamburger.classList.toggle("open");
         navMenu.classList.toggle("open", isOpen);
         hamburger.setAttribute("aria-expanded", String(isOpen));
+        hamburger.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
       });
       navMenu.querySelectorAll("a").forEach(function(link) {
         link.addEventListener("click", function() {
@@ -2275,6 +2276,7 @@
             hamburger.classList.remove("open");
             navMenu.classList.remove("open");
             hamburger.setAttribute("aria-expanded", "false");
+            hamburger.setAttribute("aria-label", "Open navigation menu");
           }
         });
       });
@@ -2283,6 +2285,7 @@
           hamburger.classList.remove("open");
           navMenu.classList.remove("open");
           hamburger.setAttribute("aria-expanded", "false");
+          hamburger.setAttribute("aria-label", "Open navigation menu");
           hamburger.focus();
         }
       });

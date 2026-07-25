@@ -545,12 +545,12 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
 <nav aria-label="Main navigation">
-  <a href="/" class="nav-logo"><img src="images/logo.png" alt="From Bed to Bar — home" width="84" height="84" / loading="lazy"></a>
-  <button class="nav-hamburger" id="navHamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <a href="/" class="nav-logo"><img src="images/logo.png" alt="From Bed to Bar — home" width="84" height="84"  loading="lazy"></a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
   <ul class="nav-links" id="navMenu" role="list">
     <li><a href="/">Home</a></li>
     <li><a href="recipes">Recipes</a></li>
-    <li><a href="herb-hub">Herb Hub</a></li>
+    <li><a href="herb-hub">Harvest Hub</a></li>
     <li><a href="garden-tips">Garden Tips</a></li>
     <li><a href="planting-guide">Planting Guide</a></li>
     <li><a href="bar-essentials">Bar Essentials</a></li>
@@ -839,7 +839,7 @@
   <ul class="footer-links" role="list">
     <li><a href="/">Home</a></li>
     <li><a href="recipes">Recipes</a></li>
-    <li><a href="herb-hub">Herb Hub</a></li>
+    <li><a href="herb-hub">Harvest Hub</a></li>
     <li><a href="garden-tips">Garden Tips</a></li>
     <li><a href="bar-essentials">Bar Essentials</a></li>
     <li><a href="blog">Blog</a></li>
@@ -879,12 +879,15 @@
         navLinks.classList.toggle("open");
         var expanded = hamburger.getAttribute("aria-expanded") === "true";
         hamburger.setAttribute("aria-expanded", String(!expanded));
+        hamburger.setAttribute("aria-label", !expanded ? "Close navigation menu" : "Open navigation menu");
       });
       // Close menu when a link is clicked
       navLinks.querySelectorAll("a").forEach(function(link) {
         link.addEventListener("click", function() {
           hamburger.classList.remove("open");
           navLinks.classList.remove("open");
+          hamburger.setAttribute("aria-expanded", "false");
+          hamburger.setAttribute("aria-label", "Open navigation menu");
         });
       });
     }
@@ -903,6 +906,19 @@
         answer.hidden = false;
       }
     });
+  });
+</script>
+<script>
+  document.addEventListener("keydown", function(event) {
+    var hamburger = document.getElementById("navHamburger");
+    var navLinks = document.querySelector(".nav-links");
+    if (event.key === "Escape" && hamburger && navLinks && navLinks.classList.contains("open")) {
+      hamburger.classList.remove("open");
+      navLinks.classList.remove("open");
+      hamburger.setAttribute("aria-expanded", "false");
+      hamburger.setAttribute("aria-label", "Open navigation menu");
+      hamburger.focus();
+    }
   });
 </script>
 </body>

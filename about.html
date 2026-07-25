@@ -999,7 +999,7 @@ footer { display: block; text-align: initial; align-items: initial; gap: 0; }
 
 
 
-    /* ── FINAL NAV SAFETY OVERRIDE: approved Herb Hub behavior ── */
+    /* ── FINAL NAV SAFETY OVERRIDE: approved Harvest Hub behavior ── */
     @media (max-width: 1100px) {
       .site-nav { padding: 0 1.5rem !important; height: 66px !important; }
       .site-nav .nav-hamburger { display: flex !important; }
@@ -1068,13 +1068,13 @@ footer { display: block; text-align: initial; align-items: initial; gap: 0; }
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
 <nav class="site-nav" aria-label="Main navigation">
-  <a href="/" class="nav-logo"><img src="images/logo.png" alt="From Bed to Bar — home" width="84" height="84" / loading="lazy"></a>
+  <a href="/" class="nav-logo"><img src="images/logo.png" alt="From Bed to Bar — home" width="84" height="84"  loading="lazy"></a>
   <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
   <ul class="nav-links" id="navMenu" role="list">
     <li><a href="/">Home</a></li>
     <li><a href="recipes">Recipes</a></li>
     <li class="nav-item-dropdown">
-      <a href="herb-hub" class="dropdown-toggle" aria-haspopup="true">Herb Hub <span class="dropdown-arrow" aria-hidden="true">&#9660;</span></a>
+      <a href="herb-hub" class="dropdown-toggle" aria-haspopup="true">Harvest Hub <span class="dropdown-arrow" aria-hidden="true">&#9660;</span></a>
       <ul class="dropdown-menu" role="list">
         <li><a href="mint-guide">Mint Guide</a></li>
         <li><a href="plum-guide">Plum Guide</a></li>
@@ -1280,7 +1280,7 @@ footer { display: block; text-align: initial; align-items: initial; gap: 0; }
         <ul class="footer-group-links" role="list">
           <li><a href="/">Home</a></li>
           <li><a href="recipes">Recipes</a></li>
-          <li><a href="herb-hub">Herb Hub</a></li>
+          <li><a href="herb-hub">Harvest Hub</a></li>
           <li><a href="garden-tips">Garden Tips</a></li>
           <li><a href="planting-guide">Planting Guide</a></li>
           <li><a href="bar-essentials">Bar Essentials</a></li>
@@ -1321,6 +1321,7 @@ footer { display: block; text-align: initial; align-items: initial; gap: 0; }
         hamburger.classList.remove("open");
         navMenu.classList.remove("open");
         hamburger.setAttribute("aria-expanded", "false");
+        hamburger.setAttribute("aria-label", "Open navigation menu");
       }
 
       hamburger.addEventListener("click", function() {
@@ -1328,6 +1329,7 @@ footer { display: block; text-align: initial; align-items: initial; gap: 0; }
         hamburger.classList.toggle("open", isOpen);
         navMenu.classList.toggle("open", isOpen);
         hamburger.setAttribute("aria-expanded", String(isOpen));
+        hamburger.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
       });
 
       navMenu.querySelectorAll("a").forEach(function(link) {
