@@ -3,27 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy | From Bed to Bar</title>
-  <meta name="description" content="Privacy policy for From Bed to Bar, operated by Mint to Be Home Solutions LLC." />
-  <link rel="canonical" href="https://frombedtobar.com/privacy" />
+  <title>Terms of Service | From Bed to Bar</title>
+  <meta name="description" content="Terms governing use of From Bed to Bar, a garden-to-glass editorial website operated by Mint to Be Home Solutions LLC." />
+  <link rel="canonical" href="https://frombedtobar.com/terms" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="From Bed to Bar" />
-  <meta property="og:title" content="Privacy Policy | From Bed to Bar" />
-  <meta property="og:description" content="How From Bed to Bar handles visitor information, service providers, cookies, and privacy requests." />
-  <meta property="og:url" content="https://frombedtobar.com/privacy" />
+  <meta property="og:title" content="Terms of Service | From Bed to Bar" />
+  <meta property="og:description" content="Terms governing use of From Bed to Bar." />
+  <meta property="og:url" content="https://frombedtobar.com/terms" />
   <meta property="og:image" content="https://frombedtobar.com/images/og-image.PNG" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Privacy Policy | From Bed to Bar" />
-  <meta name="twitter:description" content="How From Bed to Bar handles visitor information and privacy requests." />
+  <meta name="twitter:title" content="Terms of Service | From Bed to Bar" />
+  <meta name="twitter:description" content="Terms governing use of From Bed to Bar." />
   <meta name="twitter:image" content="https://frombedtobar.com/images/og-image.PNG" />
   <meta name="theme-color" content="#b85c38" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" /></noscript>
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" /></noscript>
 
   <style>
     :root {
@@ -40,19 +40,19 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: "Lora", Georgia, serif;
+      overflow-x: hidden;
       background: var(--linen);
       color: var(--ink);
-      overflow-x: hidden;
+      font-family: "Lora", Georgia, serif;
     }
     .skip-link {
       position: absolute;
       top: -100%;
       left: 0;
+      z-index: 9999;
+      padding: 0.75rem 1.5rem;
       background: var(--bark);
       color: var(--cream);
-      padding: 0.75rem 1.5rem;
-      z-index: 9999;
       font-family: "DM Mono", monospace;
       font-size: 0.875rem;
       letter-spacing: 0.08em;
@@ -60,25 +60,24 @@
       text-transform: uppercase;
     }
     .skip-link:focus { top: 0; outline: 3px solid var(--amber); outline-offset: 2px; }
-
     .site-nav {
       position: fixed;
       top: 0;
-      left: 0;
       right: 0;
+      left: 0;
       z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       height: 100px;
       padding: 0 3.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       background: rgba(245,240,232,0.92);
-      backdrop-filter: blur(8px);
       border-bottom: 1px solid rgba(59,42,26,0.12);
+      backdrop-filter: blur(8px);
     }
     .nav-logo { display: flex; align-items: center; text-decoration: none; }
     .nav-logo img { width: 84px; height: 84px; object-fit: contain; }
-    .nav-links { display: flex; gap: 2.25rem; align-items: center; list-style: none; }
+    .nav-links { display: flex; align-items: center; gap: 2.25rem; list-style: none; }
     .nav-links a {
       color: var(--bark);
       font-family: "DM Mono", monospace;
@@ -116,7 +115,7 @@
       white-space: nowrap;
       border-bottom: 1px solid rgba(59,42,26,0.06);
     }
-    .dropdown-menu li:last-child a { border-bottom: none; }
+    .dropdown-menu li:last-child a { border-bottom: 0; }
     .nav-item-dropdown:hover > .dropdown-menu,
     .nav-item-dropdown:focus-within > .dropdown-menu {
       opacity: 1;
@@ -128,13 +127,13 @@
       width: 44px;
       height: 44px;
       padding: 8px;
-      border: 0;
-      background: none;
-      cursor: pointer;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 5px;
+      background: none;
+      border: 0;
+      cursor: pointer;
     }
     .nav-hamburger span {
       display: block;
@@ -191,8 +190,8 @@
       z-index: 90;
       display: flex;
       flex-wrap: wrap;
-      gap: 0.75rem;
       align-items: center;
+      gap: 0.75rem;
       padding: 1rem 5rem;
       background: var(--bark);
       border-top: 1px solid rgba(255,255,255,0.08);
@@ -210,8 +209,8 @@
     .jump-link:hover,
     .jump-link:focus-visible { color: var(--amber); }
 
-    .policy-body { max-width: 860px; margin: 0 auto; padding: 4rem 5rem 6rem; }
-    .policy-intro {
+    .terms-body { max-width: 860px; margin: 0 auto; padding: 4rem 5rem 6rem; }
+    .terms-intro {
       margin-bottom: 3rem;
       padding: 1.5rem;
       background: var(--parchment);
@@ -219,46 +218,46 @@
       font-size: 1rem;
       line-height: 1.85;
     }
-    .policy-section { margin-bottom: 3rem; scroll-margin-top: 160px; }
-    .policy-number {
+    .terms-section { margin-bottom: 3rem; scroll-margin-top: 160px; }
+    .terms-number {
       margin-bottom: 0.55rem;
       color: var(--terracotta);
       font-family: "DM Mono", monospace;
       font-size: 0.7rem;
       letter-spacing: 0.15em;
     }
-    .policy-section h2 {
+    .terms-section h2 {
       margin-bottom: 1rem;
       color: var(--bark);
       font-family: "Playfair Display", serif;
       font-size: 1.55rem;
       line-height: 1.3;
     }
-    .policy-section h3 {
+    .terms-section h3 {
       margin: 1.5rem 0 0.65rem;
       color: var(--moss);
       font-family: "Playfair Display", serif;
       font-size: 1.1rem;
     }
-    .policy-section p,
-    .policy-section li {
+    .terms-section p,
+    .terms-section li {
       color: rgba(30,22,14,0.82);
       font-size: 0.97rem;
       line-height: 1.85;
     }
-    .policy-section p { margin-bottom: 1rem; }
-    .policy-section ul { margin: 0.75rem 0 1rem 1.2rem; }
-    .policy-section li { margin-bottom: 0.5rem; padding-left: 0.25rem; }
-    .policy-section a { color: #8f3f23; text-underline-offset: 3px; }
-    .policy-divider { margin: 0 0 3rem; border: 0; border-top: 1px solid rgba(59,42,26,0.14); }
-    .policy-meta {
+    .terms-section p { margin-bottom: 1rem; }
+    .terms-section ul { margin: 0.75rem 0 1rem 1.2rem; }
+    .terms-section li { margin-bottom: 0.5rem; padding-left: 0.25rem; }
+    .terms-section a { color: #8f3f23; text-underline-offset: 3px; }
+    .terms-divider { margin: 0 0 3rem; border: 0; border-top: 1px solid rgba(59,42,26,0.14); }
+    .terms-meta {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 1rem;
       margin-top: 1.5rem;
     }
-    .policy-meta div { padding: 1rem 1.2rem; background: var(--cream); border: 1px solid rgba(59,42,26,0.12); }
-    .policy-meta strong {
+    .terms-meta div { padding: 1rem 1.2rem; background: var(--cream); border: 1px solid rgba(59,42,26,0.12); }
+    .terms-meta strong {
       display: block;
       margin-bottom: 0.35rem;
       color: var(--terracotta);
@@ -266,6 +265,11 @@
       font-size: 0.67rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
+    }
+    .legal-note {
+      padding: 1.25rem;
+      background: var(--cream);
+      border: 1px solid rgba(59,42,26,0.12);
     }
 
     .site-tagline {
@@ -283,13 +287,7 @@
     }
     .site-tagline strong { color: var(--amber); }
     footer { padding: 2.75rem 3rem 2rem; background: var(--bark); }
-    .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 2.25rem;
-    }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 2.25rem; }
     .footer-brand {
       display: flex;
       flex-direction: column;
@@ -336,8 +334,8 @@
         display: none;
         position: fixed;
         top: 66px;
-        left: 0;
         right: 0;
+        left: 0;
         z-index: 99;
         max-height: calc(100vh - 66px);
         overflow-y: auto;
@@ -376,17 +374,17 @@
       .nav-mobile-only { display: block; }
       .page-header { padding: 7rem 1.75rem 3rem; }
       .jump-nav { top: 66px; padding: 1rem 1.75rem; }
-      .policy-body { padding: 3rem 1.75rem 4rem; }
+      .terms-body { padding: 3rem 1.75rem 4rem; }
     }
     @media (max-width: 768px) {
       .footer-nav { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
-      .policy-meta { grid-template-columns: 1fr; }
+      .terms-meta { grid-template-columns: 1fr; }
     }
     @media (max-width: 480px) {
       footer { padding: 2.25rem 1.5rem 1.75rem; }
       .footer-nav { grid-template-columns: 1fr 1fr; }
       .jump-nav { display: none; }
-      .policy-section { scroll-margin-top: 90px; }
+      .terms-section { scroll-margin-top: 90px; }
     }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
@@ -401,8 +399,8 @@
       .page-header { padding: 1rem 0; background: white; }
       .page-header::before { display: none; }
       .header-eyebrow, .header-title, .header-title em, .header-sub { color: black; }
-      .policy-body { max-width: none; padding: 1rem 0; }
-      .policy-section { break-inside: avoid; }
+      .terms-body { max-width: none; padding: 1rem 0; }
+      .terms-section { break-inside: avoid; }
       a { color: black; }
       @page { margin: 1.5cm; size: letter; }
     }
@@ -428,9 +426,9 @@
       },
       {
         "@type": "WebPage",
-        "@id": "https://frombedtobar.com/privacy#webpage",
-        "url": "https://frombedtobar.com/privacy",
-        "name": "Privacy Policy | From Bed to Bar",
+        "@id": "https://frombedtobar.com/terms#webpage",
+        "url": "https://frombedtobar.com/terms",
+        "name": "Terms of Service | From Bed to Bar",
         "isPartOf": {"@id": "https://frombedtobar.com/#website"},
         "publisher": {"@id": "https://frombedtobar.com/#organization"},
         "datePublished": "2026-07-28",
@@ -468,157 +466,159 @@
       <li><a href="blog">Blog</a></li>
       <li><a href="about">About</a></li>
       <li class="nav-mobile-only"><a href="disclaimer">Disclaimer</a></li>
-      <li class="nav-mobile-only"><a href="privacy" aria-current="page">Privacy</a></li>
+      <li class="nav-mobile-only"><a href="terms" aria-current="page">Terms</a></li>
+      <li class="nav-mobile-only"><a href="privacy">Privacy</a></li>
     </ul>
   </nav>
 
   <main id="main-content">
     <header class="page-header">
-      <p class="header-eyebrow">Privacy · FromBedtoBar.com</p>
-      <h1 class="header-title">Privacy <em>Policy</em></h1>
-      <p class="header-sub">This policy explains the limited information involved when you visit From Bed to Bar or contact us directly, the service providers involved, and the choices available to you.</p>
+      <p class="header-eyebrow">Legal · FromBedtoBar.com</p>
+      <h1 class="header-title">Terms of <em>Service</em></h1>
+      <p class="header-sub">These terms explain the ground rules for using From Bed to Bar and its garden-to-glass editorial content.</p>
     </header>
 
-    <nav class="jump-nav" aria-label="Privacy policy sections">
+    <nav class="jump-nav" aria-label="Terms of service sections">
       <span class="jump-nav-label">Jump to:</span>
-      <a class="jump-link" href="#information">Information</a>
-      <a class="jump-link" href="#use">Use</a>
-      <a class="jump-link" href="#services">Services</a>
-      <a class="jump-link" href="#cookies">Cookies</a>
-      <a class="jump-link" href="#retention">Retention</a>
-      <a class="jump-link" href="#rights">Your Rights</a>
-      <a class="jump-link" href="#california">California</a>
+      <a class="jump-link" href="#agreement">Agreement</a>
+      <a class="jump-link" href="#use">Site Use</a>
+      <a class="jump-link" href="#content">Content</a>
+      <a class="jump-link" href="#safety">Safety</a>
+      <a class="jump-link" href="#disclaimers">Disclaimers</a>
+      <a class="jump-link" href="#law">Law</a>
       <a class="jump-link" href="#contact">Contact</a>
     </nav>
 
-    <div class="policy-body">
-      <p class="policy-intro">From Bed to Bar is a garden-to-glass editorial website operated by <strong>Mint to Be Home Solutions LLC</strong>. The Site does not currently offer user accounts, accept purchases, operate a newsletter, or intentionally use advertising or behavioral-analytics technology.</p>
+    <div class="terms-body">
+      <p class="terms-intro">From Bed to Bar is a free garden-to-glass editorial website operated by <strong>Mint to Be Home Solutions LLC</strong>. The Site currently provides informational content only. It does not offer user accounts, accept purchases, operate a newsletter, or allow visitors to post content.</p>
 
-      <section class="policy-section" id="operator">
-        <div class="policy-number">01</div>
-        <h2>Who We Are</h2>
-        <p>“From Bed to Bar,” “we,” “us,” and “our” refer to the From Bed to Bar website and its operator, Mint to Be Home Solutions LLC. This policy applies to frombedtobar.com and the pages served through that domain.</p>
-        <div class="policy-meta">
+      <section class="terms-section" id="agreement">
+        <div class="terms-number">01</div>
+        <h2>Agreement to These Terms</h2>
+        <p>These Terms of Service (“Terms”) govern your access to and use of frombedtobar.com and the pages and content served through that domain (the “Site”). “From Bed to Bar,” “we,” “us,” and “our” refer to the Site and its operator, Mint to Be Home Solutions LLC.</p>
+        <p>By accessing or using the Site, you agree to these Terms, our <a href="privacy">Privacy Policy</a>, and our <a href="disclaimer">Disclaimer</a>. If you do not agree, do not use the Site.</p>
+        <p>If a separate written agreement between you and Mint to Be Home Solutions LLC expressly governs a particular service or transaction, that agreement controls for that service or transaction if it conflicts with these Terms.</p>
+        <div class="terms-meta">
           <div><strong>Operator</strong>Mint to Be Home Solutions LLC</div>
-          <div><strong>Privacy Email</strong><a href="mailto:owner.frombedtobar@gmail.com">owner.frombedtobar@gmail.com</a></div>
+          <div><strong>Website</strong>frombedtobar.com</div>
           <div><strong>Effective Date</strong>July 28, 2026</div>
           <div><strong>Last Updated</strong>July 28, 2026</div>
         </div>
       </section>
-      <hr class="policy-divider" />
+      <hr class="terms-divider" />
 
-      <section class="policy-section" id="information">
-        <div class="policy-number">02</div>
-        <h2>Information Involved When You Use the Site</h2>
-        <h3>Information you provide</h3>
-        <p>The Site does not currently contain contact forms, newsletter forms, account registration, or checkout. If you email us directly, we receive your email address and the information you choose to include in your message.</p>
-        <h3>Technical request information</h3>
-        <p>When you request a page, our hosting and content-delivery provider, Cloudflare, processes technical information needed to deliver and protect the Site. This can include an IP address, requested URL, request date and time, browser or device information contained in HTTP headers, routing information, and security or network-event information.</p>
-        <h3>Google Fonts requests</h3>
-        <p>The Site currently requests typefaces from the Google Fonts Web API. When your browser requests those files, Google receives the IP address needed to return the files, the requested URL, and HTTP headers that may include browser, operating-system, and referring-page information. Google states in its <a href="https://developers.google.com/fonts/faq/privacy">Google Fonts privacy documentation</a> that Google Fonts does not set or log cookies and does not use information collected through Google Fonts to profile end users or serve targeted advertising.</p>
+      <section class="terms-section" id="eligibility">
+        <div class="terms-number">02</div>
+        <h2>Age and Responsible Use</h2>
+        <p>The Site is intended for a general audience, but portions of it discuss cocktails and alcoholic beverages. Alcohol-related content is intended only for adults who are at least 21 years old in the United States, or who are otherwise of legal drinking age where they live.</p>
+        <p>If you are under the age of majority where you live, you may use non-alcohol-related portions of the Site only with permission and supervision from a parent or legal guardian. You must not use the Site in violation of any law that applies to you.</p>
+        <p>We do not sell, furnish, or deliver alcoholic beverages through the Site. Content involving alcohol is educational and editorial; it is not an invitation to drink or to violate local law. Never drink and drive, and never serve alcohol to anyone who is underage or impaired.</p>
       </section>
-      <hr class="policy-divider" />
+      <hr class="terms-divider" />
 
-      <section class="policy-section" id="use">
-        <div class="policy-number">03</div>
-        <h2>How Information Is Used</h2>
-        <p>Information described above may be used to:</p>
+      <section class="terms-section" id="use">
+        <div class="terms-number">03</div>
+        <h2>Permitted and Prohibited Use</h2>
+        <p>You may browse, print, or save reasonable portions of the Site for your own lawful, personal, noncommercial use, subject to these Terms.</p>
+        <p>You may not:</p>
         <ul>
-          <li>Deliver requested pages, images, fonts, and other Site resources;</li>
-          <li>Protect the Site and its visitors from malicious traffic, abuse, and technical failures;</li>
-          <li>Diagnose operational or security problems;</li>
-          <li>Respond when you contact us directly; and</li>
-          <li>Comply with applicable legal obligations and enforce legal rights.</li>
+          <li>Use the Site or its content for an unlawful, fraudulent, harmful, or deceptive purpose;</li>
+          <li>Interfere with the Site’s operation, security, or availability, or attempt to gain unauthorized access to any system or data;</li>
+          <li>Introduce malicious code, overload the Site, or conduct denial-of-service activity;</li>
+          <li>Impersonate From Bed to Bar, Mint to Be Home Solutions LLC, or another person or misrepresent an affiliation with us;</li>
+          <li>Remove copyright, trademark, attribution, or other proprietary notices;</li>
+          <li>Copy, republish, sell, license, or commercially exploit a substantial part of the Site or its content without written permission; or</li>
+          <li>Use automated means to scrape or extract Site content at a volume or frequency that burdens the Site, bypasses access controls, or creates a substitute publication or dataset.</li>
         </ul>
-        <p>We do not use personal information for targeted advertising, and we do not sell personal information.</p>
+        <p>General-purpose search engines may crawl the Site in accordance with our robots instructions. We may restrict or block access reasonably believed to violate these Terms or threaten the Site or others.</p>
       </section>
-      <hr class="policy-divider" />
+      <hr class="terms-divider" />
 
-      <section class="policy-section" id="services">
-        <div class="policy-number">04</div>
-        <h2>Service Providers and Disclosures</h2>
-        <p>The following providers are involved in the Site’s current operation:</p>
-        <ul>
-          <li><strong>Cloudflare:</strong> hosting, content delivery, network security, and request processing. Cloudflare may process IP addresses and network or request data under its service terms and privacy documentation.</li>
-          <li><strong>Google Fonts:</strong> delivery of the Site’s typefaces. Google receives technical request data as described above.</li>
-          <li><strong>Google Gmail:</strong> processing and storage of messages sent to our published email address.</li>
-        </ul>
-        <p>We may also disclose information when reasonably necessary to comply with law, respond to lawful process, protect the Site or others, investigate abuse, or complete a legitimate corporate transaction involving the Site or its operator. We do not permit these providers to use information on our behalf for cross-context behavioral advertising.</p>
-        <p>Provider information is available from <a href="https://www.cloudflare.com/policies/privacy/">Cloudflare</a> and <a href="https://policies.google.com/privacy">Google</a>.</p>
+      <section class="terms-section" id="content">
+        <div class="terms-number">04</div>
+        <h2>Ownership and Use of Site Content</h2>
+        <p>The Site and its original text, photographs, graphics, branding, page design, and other original materials are owned by Mint to Be Home Solutions LLC or used with permission and are protected by applicable intellectual-property laws. “From Bed to Bar” and associated branding may not be used in a way that suggests sponsorship, endorsement, or affiliation without prior written permission.</p>
+        <p>You may link to publicly available Site pages and may share a brief quotation for commentary, education, or reference when permitted by law, provided you give clear credit and link to the original page. These Terms do not limit rights that cannot lawfully be restricted, including applicable fair-use rights.</p>
+        <p>For permission to reproduce a recipe, photograph, article, or other material beyond those limited uses, contact us before using it.</p>
+        <h3>Copyright concerns</h3>
+        <p>If you believe material on the Site infringes your copyright, email <a href="mailto:owner.frombedtobar@gmail.com">owner.frombedtobar@gmail.com</a> with your contact information, identification of the copyrighted work, the specific Site URL, an explanation of the claimed infringement, and a statement that your report is accurate and made in good faith. We may request additional information needed to evaluate the report.</p>
       </section>
-      <hr class="policy-divider" />
+      <hr class="terms-divider" />
 
-      <section class="policy-section" id="cookies">
-        <div class="policy-number">05</div>
-        <h2>Cookies, Analytics, and Tracking Signals</h2>
-        <p>The Site does not currently operate a newsletter, intentionally set first-party cookies, use advertising pixels, or include an owner-enabled behavioral-analytics script. Google states that its Google Fonts Web API does not set or log cookies.</p>
-        <p>Because the Site does not currently sell or share personal information for cross-context behavioral advertising or conduct cross-site behavioral tracking, browser “Do Not Track” and Global Privacy Control signals do not change the Site’s present operation. If our practices change in a way that makes a legally recognized opt-out signal applicable, we will update the Site and honor the signal as required before enabling that practice.</p>
-        <p>We will update this policy and assess whether consent controls are required before introducing non-essential cookies, analytics, advertising, or newsletter technology.</p>
+      <section class="terms-section" id="safety">
+        <div class="terms-number">05</div>
+        <h2>Editorial Information, Recipes, and Safety</h2>
+        <p>The Site provides recipes, gardening information, preservation discussions, ingredient information, and related editorial content for general informational, educational, and entertainment purposes. It is not professional medical, nutritional, legal, horticultural, food-safety, alcohol-service, or other expert advice.</p>
+        <p>Conditions, ingredients, equipment, allergies, health needs, local rules, and individual skill levels vary. You are responsible for deciding whether and how to use Site content, checking ingredients and current authoritative guidance, following product instructions, and obtaining qualified advice when appropriate.</p>
+        <p>Additional safety terms—including information about alcohol, food handling and preservation, allergies, gardening, plants, and foraging—appear in our <a href="disclaimer">Disclaimer</a>. Please review it before using a recipe or technique.</p>
       </section>
-      <hr class="policy-divider" />
+      <hr class="terms-divider" />
 
-      <section class="policy-section" id="retention">
-        <div class="policy-number">06</div>
-        <h2>Data Retention and Security</h2>
-        <p>Routine email inquiries may be retained for up to 24 months after the last correspondence so we can respond, maintain context, and address follow-up questions. We may retain a message longer when reasonably necessary for security, fraud prevention, legal compliance, dispute resolution, or recordkeeping. You may request earlier deletion, subject to applicable exceptions.</p>
-        <p>Technical request information processed by Cloudflare and Google is retained according to the relevant provider’s settings, service terms, and legal obligations. From Bed to Bar does not maintain an independent visitor-profile database.</p>
-        <p>We use reasonable administrative and technical safeguards appropriate to the limited information involved. No method of transmission or electronic storage can be guaranteed completely secure.</p>
+      <section class="terms-section" id="third-parties">
+        <div class="terms-number">06</div>
+        <h2>Third-Party Links and Services</h2>
+        <p>The Site may link to websites, products, resources, or services operated by third parties. A link is provided for convenience and does not, by itself, mean that we sponsor or endorse the third party or its content.</p>
+        <p>Third-party sites operate under their own terms and privacy practices. We do not control and are not responsible for their availability, accuracy, security, products, services, or practices. Review the third party’s terms and policies before interacting with it or providing information.</p>
       </section>
-      <hr class="policy-divider" />
+      <hr class="terms-divider" />
 
-      <section class="policy-section" id="rights">
-        <div class="policy-number">07</div>
-        <h2>Your Privacy Choices and Requests</h2>
-        <p>Depending on the law that applies to you and the information involved, you may have rights to request access, correction, deletion, restriction, objection, or a portable copy of personal information. You may also have the right to complain to an appropriate privacy or data-protection authority.</p>
-        <p>To make a request, email <a href="mailto:owner.frombedtobar@gmail.com">owner.frombedtobar@gmail.com</a> and describe what you are requesting. We may need to verify that the request relates to you before acting on it. We will evaluate and respond to valid requests within the period required by applicable law. We will not discriminate against you for making a privacy request.</p>
-        <h3>International visitors</h3>
-        <p>The Site is operated from the United States and does not currently target goods or services to individuals in the European Economic Area or United Kingdom or monitor their behavior for advertising or analytics. Information handled by our providers may be processed in the United States or other countries where they operate. Where applicable law grants additional rights or requires transfer safeguards, we will apply those requirements to the relevant processing.</p>
+      <section class="terms-section" id="communications">
+        <div class="terms-number">07</div>
+        <h2>Messages and Feedback</h2>
+        <p>If you contact us, you are responsible for the information you choose to send and for having the right to send it. Do not send confidential, proprietary, unlawful, or infringing material.</p>
+        <p>You may send suggestions or feedback voluntarily. Unless we agree otherwise in writing, feedback is not confidential, and you give us a nonexclusive, worldwide, royalty-free right to use it to evaluate and improve the Site. This does not transfer ownership of your original work or permit us to publish your name, private correspondence, photographs, recipes, or other submitted content without further permission.</p>
       </section>
-      <hr class="policy-divider" />
+      <hr class="terms-divider" />
 
-      <section class="policy-section" id="california">
-        <div class="policy-number">08</div>
-        <h2>California Privacy Information</h2>
-        <p>California visitors may encounter the following categories of personal information in connection with the Site:</p>
-        <ul>
-          <li><strong>Identifiers:</strong> IP address and, if you email us, your email address and name if supplied;</li>
-          <li><strong>Internet or network activity:</strong> requested pages, request times, browser or device headers, routing information, and security-event information; and</li>
-          <li><strong>Correspondence:</strong> the contents of messages you choose to send.</li>
-        </ul>
-        <p>These categories come from your browser or device, directly from you, and from the service providers described in this policy. They are used and disclosed for content delivery, security, operations, correspondence, and legal compliance. The categories of recipients are hosting and security providers, font-delivery providers, email providers, and authorities or professional advisers when disclosure is legally necessary.</p>
-        <p>From Bed to Bar does not sell personal information, share it for cross-context behavioral advertising, or use or disclose sensitive personal information for purposes that require a right to limit under the California Consumer Privacy Act. If that law applies to a particular request, we will process the applicable right to know, access, correct, delete, opt out, limit, or receive equal treatment as required. Instructions for submitting a request appear in Section 7.</p>
+      <section class="terms-section" id="disclaimers">
+        <div class="terms-number">08</div>
+        <h2>Disclaimers and Limitation of Liability</h2>
+        <p>The Site and its content are provided on an “as is” and “as available” basis. To the fullest extent permitted by law, we disclaim implied warranties, including warranties of merchantability, fitness for a particular purpose, title, and noninfringement. We do not promise that the Site will always be available, secure, current, accurate, complete, or error-free.</p>
+        <p>To the fullest extent permitted by law, Mint to Be Home Solutions LLC and its members, officers, employees, contractors, and agents will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, or for lost profits, revenues, data, goodwill, or business opportunities, arising from or related to the Site or these Terms.</p>
+        <p>To the fullest extent permitted by law, our total liability for all claims arising from or related to the Site or these Terms will not exceed the greater of (a) the amount you paid us, if any, specifically for the Site service giving rise to the claim during the twelve months before the event giving rise to liability, or (b) one hundred U.S. dollars (US $100).</p>
+        <p>Some jurisdictions do not allow certain warranty exclusions or limitations of liability. In those jurisdictions, the exclusions and limits above apply only to the extent permitted by law. Nothing in these Terms excludes or limits liability that cannot legally be excluded or limited.</p>
       </section>
-      <hr class="policy-divider" />
+      <hr class="terms-divider" />
 
-      <section class="policy-section" id="children">
-        <div class="policy-number">09</div>
-        <h2>Children’s Privacy</h2>
-        <p>The Site is a general-audience editorial website and is not directed to children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has sent us personal information, contact us so we can review and delete it as appropriate.</p>
+      <section class="terms-section" id="indemnity">
+        <div class="terms-number">09</div>
+        <h2>Your Responsibility for Misuse</h2>
+        <p>To the fullest extent permitted by law, you agree to defend, indemnify, and hold harmless Mint to Be Home Solutions LLC and its members, officers, employees, contractors, and agents from third-party claims, liabilities, damages, judgments, awards, losses, costs, and reasonable attorneys’ fees arising from your unlawful use of the Site, your material violation of these Terms, or your infringement of another person’s rights.</p>
+        <p>This obligation does not apply to the extent a claim results from our own unlawful conduct. We may control the defense of a covered claim, and you agree to provide reasonable cooperation. You may not settle a covered claim in a way that admits fault by or imposes an obligation on us without our written consent.</p>
       </section>
-      <hr class="policy-divider" />
+      <hr class="terms-divider" />
 
-      <section class="policy-section" id="changes">
-        <div class="policy-number">10</div>
-        <h2>Changes to This Policy</h2>
-        <p>We may revise this policy to reflect changes in the Site, our service providers, or applicable requirements. The “Last Updated” date identifies the current version. When required, we will provide additional notice before a material change takes effect. We will reassess this policy before introducing a newsletter, user accounts, commerce, behavioral analytics, advertising, or intentional targeting of additional jurisdictions.</p>
+      <section class="terms-section" id="changes">
+        <div class="terms-number">10</div>
+        <h2>Changes, Availability, and Enforcement</h2>
+        <p>We may update, correct, suspend, or discontinue any part of the Site. We may also update these Terms by posting a revised version and changing the “Last Updated” date. Changes apply prospectively from the date posted. If a change is material, we will use a reasonable method to make it noticeable on the Site.</p>
+        <p>Your continued use of the Site after revised Terms take effect means you accept the revised Terms. If you do not agree, stop using the Site.</p>
+        <p>We may restrict or terminate access to the Site when reasonably necessary to protect the Site or others, comply with law, or respond to a violation of these Terms. Sections that by their nature should continue after access ends—including ownership, disclaimers, liability limits, indemnity, and governing law—will survive.</p>
       </section>
-      <hr class="policy-divider" />
+      <hr class="terms-divider" />
 
-      <section class="policy-section" id="contact">
-        <div class="policy-number">11</div>
+      <section class="terms-section" id="law">
+        <div class="terms-number">11</div>
+        <h2>Governing Law and General Terms</h2>
+        <p>These Terms are governed by the laws of the State of California, without regard to conflict-of-law principles, except to the extent federal law applies. Any dispute must be brought in a court that has lawful jurisdiction over the dispute and the parties.</p>
+        <p>If a provision of these Terms is found unenforceable, it will be limited or removed only to the minimum extent necessary, and the remaining provisions will continue in effect. Our failure to enforce a provision is not a waiver. You may not assign your rights or obligations under these Terms without our written consent; we may assign these Terms in connection with a merger, reorganization, sale of assets, or operation of the Site.</p>
+        <p>These Terms, together with the policies they incorporate, are the entire agreement between you and us regarding use of the Site and replace prior discussions or terms on that subject. Headings are for convenience only.</p>
+        <p class="legal-note"><strong>No mandatory arbitration or class-action waiver:</strong> These Terms do not require private arbitration and do not include a contractual waiver of class proceedings.</p>
+      </section>
+      <hr class="terms-divider" />
+
+      <section class="terms-section" id="contact">
+        <div class="terms-number">12</div>
         <h2>Contact Us</h2>
-        <p>For questions, concerns, or privacy requests, contact:</p>
-        <p><strong>Mint to Be Home Solutions LLC</strong><br />
-        From Bed to Bar<br />
-        Email: <a href="mailto:owner.frombedtobar@gmail.com">owner.frombedtobar@gmail.com</a><br />
-        Website: <a href="https://frombedtobar.com">https://frombedtobar.com</a></p>
+        <p>Questions about these Terms or requests for content permission may be sent to <a href="mailto:owner.frombedtobar@gmail.com">owner.frombedtobar@gmail.com</a>.</p>
+        <p>Please do not include sensitive personal information in an ordinary email. Information about how we handle messages appears in our <a href="privacy">Privacy Policy</a>.</p>
       </section>
-    </div>
-
-    <div class="site-tagline">
-      <p><strong>Drink responsibly.</strong> Every mocktail on this site is just as good as the cocktail version. Enjoy the garden. Enjoy the bar. Be safe, be kind, and look after each other.</p>
     </div>
   </main>
+
+  <div class="site-tagline">
+    <p><strong>From Bed to Bar</strong> · Rooted in the garden. Raised around the table.</p>
+  </div>
 
   <footer>
     <div class="footer-inner">
@@ -657,8 +657,8 @@
             <li><a href="about">About</a></li>
             <li><a href="blog">Blog</a></li>
             <li><a href="disclaimer">Disclaimer</a></li>
-          <li><a href="terms">Terms</a></li>
-            <li><a href="privacy" aria-current="page">Privacy</a></li>
+            <li><a href="terms" aria-current="page">Terms</a></li>
+            <li><a href="privacy">Privacy</a></li>
           </ul>
         </div>
       </nav>
