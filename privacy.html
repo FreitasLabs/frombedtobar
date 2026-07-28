@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | From Bed to Bar</title>
+  <meta name="description" content="Privacy policy for From Bed to Bar, operated by Mint to Be Home Solutions LLC." />
+  <link rel="canonical" href="https://frombedtobar.com/privacy" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="From Bed to Bar" />
+  <meta property="og:title" content="Privacy Policy | From Bed to Bar" />
+  <meta property="og:description" content="How From Bed to Bar handles visitor information, service providers, cookies, and privacy requests." />
+  <meta property="og:url" content="https://frombedtobar.com/privacy" />
+  <meta property="og:image" content="https://frombedtobar.com/images/og-image.PNG" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Privacy Policy | From Bed to Bar" />
+  <meta name="twitter:description" content="How From Bed to Bar handles visitor information and privacy requests." />
+  <meta name="twitter:image" content="https://frombedtobar.com/images/og-image.PNG" />
+  <meta name="theme-color" content="#b85c38" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" /></noscript>
+
+  <style>
+    :root {
+      --cream: #f5f0e8;
+      --parchment: #ede5d0;
+      --bark: #3b2a1a;
+      --moss: #4a5e3a;
+      --sage: #7a9468;
+      --terracotta: #b85c38;
+      --amber: #c9873a;
+      --linen: #faf7f2;
+      --ink: #1e160e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Lora", Georgia, serif;
+      background: var(--linen);
+      color: var(--ink);
+      overflow-x: hidden;
+    }
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      background: var(--bark);
+      color: var(--cream);
+      padding: 0.75rem 1.5rem;
+      z-index: 9999;
+      font-family: "DM Mono", monospace;
+      font-size: 0.875rem;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .skip-link:focus { top: 0; outline: 3px solid var(--amber); outline-offset: 2px; }
+
+    .site-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: 100px;
+      padding: 0 3.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(245,240,232,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(59,42,26,0.12);
+    }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo img { width: 84px; height: 84px; object-fit: contain; }
+    .nav-links { display: flex; gap: 2.25rem; align-items: center; list-style: none; }
+    .nav-links a {
+      color: var(--bark);
+      font-family: "DM Mono", monospace;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      opacity: 0.82;
+    }
+    .nav-links a:hover,
+    .nav-links a:focus-visible { opacity: 1; }
+    .nav-item-dropdown { position: relative; }
+    .dropdown-arrow { font-size: 0.6em; }
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      min-width: 176px;
+      padding: 0.4rem 0;
+      transform: translateX(-50%);
+      background: var(--cream);
+      border: 1px solid rgba(59,42,26,0.14);
+      border-top: 2px solid var(--terracotta);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      list-style: none;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .dropdown-menu a {
+      display: block;
+      padding: 0.6rem 1.25rem;
+      font-size: 0.76rem;
+      white-space: nowrap;
+      border-bottom: 1px solid rgba(59,42,26,0.06);
+    }
+    .dropdown-menu li:last-child a { border-bottom: none; }
+    .nav-item-dropdown:hover > .dropdown-menu,
+    .nav-item-dropdown:focus-within > .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+    .nav-hamburger {
+      display: none;
+      width: 44px;
+      height: 44px;
+      padding: 8px;
+      border: 0;
+      background: none;
+      cursor: pointer;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--bark);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-mobile-only { display: none; }
+
+    .page-header {
+      position: relative;
+      overflow: hidden;
+      padding: 8rem 5rem 4rem;
+      background: var(--bark);
+    }
+    .page-header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(-45deg, transparent, transparent 18px, rgba(255,255,255,0.02) 18px, rgba(255,255,255,0.02) 19px);
+    }
+    .header-eyebrow,
+    .header-title,
+    .header-sub { position: relative; }
+    .header-eyebrow {
+      margin-bottom: 1rem;
+      color: var(--amber);
+      font-family: "DM Mono", monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    .header-title {
+      margin-bottom: 1rem;
+      color: var(--cream);
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      line-height: 1.05;
+    }
+    .header-title em { color: var(--sage); font-weight: 400; }
+    .header-sub {
+      max-width: 720px;
+      color: rgba(245,240,232,0.78);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+    .jump-nav {
+      position: sticky;
+      top: 100px;
+      z-index: 90;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      padding: 1rem 5rem;
+      background: var(--bark);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .jump-nav-label,
+    .jump-link {
+      font-family: "DM Mono", monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .jump-nav-label { color: rgba(245,240,232,0.55); }
+    .jump-link { color: rgba(245,240,232,0.82); text-decoration: none; }
+    .jump-link:hover,
+    .jump-link:focus-visible { color: var(--amber); }
+
+    .policy-body { max-width: 860px; margin: 0 auto; padding: 4rem 5rem 6rem; }
+    .policy-intro {
+      margin-bottom: 3rem;
+      padding: 1.5rem;
+      background: var(--parchment);
+      border-left: 4px solid var(--terracotta);
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+    .policy-section { margin-bottom: 3rem; scroll-margin-top: 160px; }
+    .policy-number {
+      margin-bottom: 0.55rem;
+      color: var(--terracotta);
+      font-family: "DM Mono", monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+    }
+    .policy-section h2 {
+      margin-bottom: 1rem;
+      color: var(--bark);
+      font-family: "Playfair Display", serif;
+      font-size: 1.55rem;
+      line-height: 1.3;
+    }
+    .policy-section h3 {
+      margin: 1.5rem 0 0.65rem;
+      color: var(--moss);
+      font-family: "Playfair Display", serif;
+      font-size: 1.1rem;
+    }
+    .policy-section p,
+    .policy-section li {
+      color: rgba(30,22,14,0.82);
+      font-size: 0.97rem;
+      line-height: 1.85;
+    }
+    .policy-section p { margin-bottom: 1rem; }
+    .policy-section ul { margin: 0.75rem 0 1rem 1.2rem; }
+    .policy-section li { margin-bottom: 0.5rem; padding-left: 0.25rem; }
+    .policy-section a { color: #8f3f23; text-underline-offset: 3px; }
+    .policy-divider { margin: 0 0 3rem; border: 0; border-top: 1px solid rgba(59,42,26,0.14); }
+    .policy-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .policy-meta div { padding: 1rem 1.2rem; background: var(--cream); border: 1px solid rgba(59,42,26,0.12); }
+    .policy-meta strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--terracotta);
+      font-family: "DM Mono", monospace;
+      font-size: 0.67rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .site-tagline {
+      padding: 1.25rem 3rem;
+      text-align: center;
+      background: var(--moss);
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .site-tagline p {
+      color: rgba(245,240,232,0.88);
+      font-family: "DM Mono", monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      line-height: 1.75;
+    }
+    .site-tagline strong { color: var(--amber); }
+    footer { padding: 2.75rem 3rem 2rem; background: var(--bark); }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2.25rem;
+    }
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.45rem;
+      padding-bottom: 1.6rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-logo { color: var(--cream); font-family: "Playfair Display", serif; font-size: 1.35rem; font-style: italic; }
+    .footer-tagline { color: rgba(245,240,232,0.72); font-size: 0.9rem; font-style: italic; }
+    .footer-copy { color: rgba(245,240,232,0.45); font-family: "DM Mono", monospace; font-size: 0.68rem; letter-spacing: 0.1em; }
+    .footer-nav { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .footer-group-heading {
+      margin-bottom: 0.85rem;
+      padding-bottom: 0.5rem;
+      color: rgba(245,240,232,0.4);
+      font-family: "DM Mono", monospace;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-group-links { display: flex; flex-direction: column; gap: 0.5rem; list-style: none; }
+    .footer-group-links a {
+      color: rgba(245,240,232,0.68);
+      font-family: "DM Mono", monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .footer-group-links a:hover,
+    .footer-group-links a:focus-visible { color: var(--sage); }
+    a:focus-visible,
+    button:focus-visible { outline: 3px solid var(--terracotta); outline-offset: 3px; }
+
+    @media (max-width: 1100px) {
+      .site-nav { height: 66px; padding: 0 1.5rem; }
+      .nav-logo img { width: 44px; height: 44px; }
+      .nav-hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 66px;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        max-height: calc(100vh - 66px);
+        overflow-y: auto;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0.5rem 0;
+        background: rgba(245,240,232,0.98);
+        border-bottom: 1px solid rgba(59,42,26,0.12);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links > li { width: 100%; }
+      .nav-links > li > a {
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 0.9rem 2rem;
+        border-bottom: 1px solid rgba(59,42,26,0.06);
+        opacity: 1;
+      }
+      .dropdown-menu {
+        display: block;
+        position: static;
+        min-width: auto;
+        padding: 0;
+        transform: none;
+        background: rgba(59,42,26,0.04);
+        border: 0;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
+      .dropdown-menu a { display: flex; align-items: center; min-height: 44px; padding: 0.75rem 2rem 0.75rem 3rem; white-space: normal; }
+      .dropdown-arrow { display: none; }
+      .nav-mobile-only { display: block; }
+      .page-header { padding: 7rem 1.75rem 3rem; }
+      .jump-nav { top: 66px; padding: 1rem 1.75rem; }
+      .policy-body { padding: 3rem 1.75rem 4rem; }
+    }
+    @media (max-width: 768px) {
+      .footer-nav { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+      .policy-meta { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      footer { padding: 2.25rem 1.5rem 1.75rem; }
+      .footer-nav { grid-template-columns: 1fr 1fr; }
+      .jump-nav { display: none; }
+      .policy-section { scroll-margin-top: 90px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+    @media print {
+      .site-nav, .jump-nav, .site-tagline, footer { display: none !important; }
+      .page-header { padding: 1rem 0; background: white; }
+      .page-header::before { display: none; }
+      .header-eyebrow, .header-title, .header-title em, .header-sub { color: black; }
+      .policy-body { max-width: none; padding: 1rem 0; }
+      .policy-section { break-inside: avoid; }
+      a { color: black; }
+      @page { margin: 1.5cm; size: letter; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://frombedtobar.com/#website",
+        "url": "https://frombedtobar.com/",
+        "name": "From Bed to Bar",
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://frombedtobar.com/#organization",
+        "name": "From Bed to Bar",
+        "legalName": "Mint to Be Home Solutions LLC",
+        "url": "https://frombedtobar.com/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://frombedtobar.com/privacy#webpage",
+        "url": "https://frombedtobar.com/privacy",
+        "name": "Privacy Policy | From Bed to Bar",
+        "isPartOf": {"@id": "https://frombedtobar.com/#website"},
+        "publisher": {"@id": "https://frombedtobar.com/#organization"},
+        "datePublished": "2026-07-28",
+        "dateModified": "2026-07-28",
+        "inLanguage": "en-US"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="/" class="nav-logo"><img src="images/logo.png" alt="From Bed to Bar — home" width="84" height="84"></a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navMenu" role="list">
+      <li><a href="/">Home</a></li>
+      <li><a href="recipes">Recipes</a></li>
+      <li class="nav-item-dropdown">
+        <a href="herb-hub" class="dropdown-toggle" aria-haspopup="true">Harvest Hub <span class="dropdown-arrow" aria-hidden="true">&#9660;</span></a>
+        <ul class="dropdown-menu" role="list">
+          <li><a href="mint-guide">Mint Guide</a></li>
+          <li><a href="plum-guide">Plum Guide</a></li>
+          <li><a href="rosemary-guide">Rosemary Guide</a></li>
+          <li><a href="thyme-guide">Thyme Guide</a></li>
+          <li><a href="basil-guide">Basil Guide</a></li>
+          <li><a href="lavender-guide">Lavender Guide</a></li>
+          <li><a href="lemon-balm-guide">Lemon Balm Guide</a></li>
+        </ul>
+      </li>
+      <li><a href="garden-tips">Garden Tips</a></li>
+      <li><a href="planting-guide">Planting Guide</a></li>
+      <li><a href="bar-essentials">Bar Essentials</a></li>
+      <li><a href="blog">Blog</a></li>
+      <li><a href="about">About</a></li>
+      <li class="nav-mobile-only"><a href="disclaimer">Disclaimer</a></li>
+      <li class="nav-mobile-only"><a href="privacy" aria-current="page">Privacy</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <header class="page-header">
+      <p class="header-eyebrow">Privacy · FromBedtoBar.com</p>
+      <h1 class="header-title">Privacy <em>Policy</em></h1>
+      <p class="header-sub">This policy explains the limited information involved when you visit From Bed to Bar or contact us directly, the service providers involved, and the choices available to you.</p>
+    </header>
+
+    <nav class="jump-nav" aria-label="Privacy policy sections">
+      <span class="jump-nav-label">Jump to:</span>
+      <a class="jump-link" href="#information">Information</a>
+      <a class="jump-link" href="#use">Use</a>
+      <a class="jump-link" href="#services">Services</a>
+      <a class="jump-link" href="#cookies">Cookies</a>
+      <a class="jump-link" href="#retention">Retention</a>
+      <a class="jump-link" href="#rights">Your Rights</a>
+      <a class="jump-link" href="#california">California</a>
+      <a class="jump-link" href="#contact">Contact</a>
+    </nav>
+
+    <div class="policy-body">
+      <p class="policy-intro">From Bed to Bar is a garden-to-glass editorial website operated by <strong>Mint to Be Home Solutions LLC</strong>. The Site does not currently offer user accounts, accept purchases, operate a newsletter, or intentionally use advertising or behavioral-analytics technology.</p>
+
+      <section class="policy-section" id="operator">
+        <div class="policy-number">01</div>
+        <h2>Who We Are</h2>
+        <p>“From Bed to Bar,” “we,” “us,” and “our” refer to the From Bed to Bar website and its operator, Mint to Be Home Solutions LLC. This policy applies to frombedtobar.com and the pages served through that domain.</p>
+        <div class="policy-meta">
+          <div><strong>Operator</strong>Mint to Be Home Solutions LLC</div>
+          <div><strong>Privacy Email</strong><a href="mailto:owner.frombedtobar@gmail.com">owner.frombedtobar@gmail.com</a></div>
+          <div><strong>Effective Date</strong>July 28, 2026</div>
+          <div><strong>Last Updated</strong>July 28, 2026</div>
+        </div>
+      </section>
+      <hr class="policy-divider" />
+
+      <section class="policy-section" id="information">
+        <div class="policy-number">02</div>
+        <h2>Information Involved When You Use the Site</h2>
+        <h3>Information you provide</h3>
+        <p>The Site does not currently contain contact forms, newsletter forms, account registration, or checkout. If you email us directly, we receive your email address and the information you choose to include in your message.</p>
+        <h3>Technical request information</h3>
+        <p>When you request a page, our hosting and content-delivery provider, Cloudflare, processes technical information needed to deliver and protect the Site. This can include an IP address, requested URL, request date and time, browser or device information contained in HTTP headers, routing information, and security or network-event information.</p>
+        <h3>Google Fonts requests</h3>
+        <p>The Site currently requests typefaces from the Google Fonts Web API. When your browser requests those files, Google receives the IP address needed to return the files, the requested URL, and HTTP headers that may include browser, operating-system, and referring-page information. Google states in its <a href="https://developers.google.com/fonts/faq/privacy">Google Fonts privacy documentation</a> that Google Fonts does not set or log cookies and does not use information collected through Google Fonts to profile end users or serve targeted advertising.</p>
+      </section>
+      <hr class="policy-divider" />
+
+      <section class="policy-section" id="use">
+        <div class="policy-number">03</div>
+        <h2>How Information Is Used</h2>
+        <p>Information described above may be used to:</p>
+        <ul>
+          <li>Deliver requested pages, images, fonts, and other Site resources;</li>
+          <li>Protect the Site and its visitors from malicious traffic, abuse, and technical failures;</li>
+          <li>Diagnose operational or security problems;</li>
+          <li>Respond when you contact us directly; and</li>
+          <li>Comply with applicable legal obligations and enforce legal rights.</li>
+        </ul>
+        <p>We do not use personal information for targeted advertising, and we do not sell personal information.</p>
+      </section>
+      <hr class="policy-divider" />
+
+      <section class="policy-section" id="services">
+        <div class="policy-number">04</div>
+        <h2>Service Providers and Disclosures</h2>
+        <p>The following providers are involved in the Site’s current operation:</p>
+        <ul>
+          <li><strong>Cloudflare:</strong> hosting, content delivery, network security, and request processing. Cloudflare may process IP addresses and network or request data under its service terms and privacy documentation.</li>
+          <li><strong>Google Fonts:</strong> delivery of the Site’s typefaces. Google receives technical request data as described above.</li>
+          <li><strong>Google Gmail:</strong> processing and storage of messages sent to our published email address.</li>
+        </ul>
+        <p>We may also disclose information when reasonably necessary to comply with law, respond to lawful process, protect the Site or others, investigate abuse, or complete a legitimate corporate transaction involving the Site or its operator. We do not permit these providers to use information on our behalf for cross-context behavioral advertising.</p>
+        <p>Provider information is available from <a href="https://www.cloudflare.com/policies/privacy/">Cloudflare</a> and <a href="https://policies.google.com/privacy">Google</a>.</p>
+      </section>
+      <hr class="policy-divider" />
+
+      <section class="policy-section" id="cookies">
+        <div class="policy-number">05</div>
+        <h2>Cookies, Analytics, and Tracking Signals</h2>
+        <p>The Site does not currently operate a newsletter, intentionally set first-party cookies, use advertising pixels, or include an owner-enabled behavioral-analytics script. Google states that its Google Fonts Web API does not set or log cookies.</p>
+        <p>Because the Site does not currently sell or share personal information for cross-context behavioral advertising or conduct cross-site behavioral tracking, browser “Do Not Track” and Global Privacy Control signals do not change the Site’s present operation. If our practices change in a way that makes a legally recognized opt-out signal applicable, we will update the Site and honor the signal as required before enabling that practice.</p>
+        <p>We will update this policy and assess whether consent controls are required before introducing non-essential cookies, analytics, advertising, or newsletter technology.</p>
+      </section>
+      <hr class="policy-divider" />
+
+      <section class="policy-section" id="retention">
+        <div class="policy-number">06</div>
+        <h2>Data Retention and Security</h2>
+        <p>Routine email inquiries may be retained for up to 24 months after the last correspondence so we can respond, maintain context, and address follow-up questions. We may retain a message longer when reasonably necessary for security, fraud prevention, legal compliance, dispute resolution, or recordkeeping. You may request earlier deletion, subject to applicable exceptions.</p>
+        <p>Technical request information processed by Cloudflare and Google is retained according to the relevant provider’s settings, service terms, and legal obligations. From Bed to Bar does not maintain an independent visitor-profile database.</p>
+        <p>We use reasonable administrative and technical safeguards appropriate to the limited information involved. No method of transmission or electronic storage can be guaranteed completely secure.</p>
+      </section>
+      <hr class="policy-divider" />
+
+      <section class="policy-section" id="rights">
+        <div class="policy-number">07</div>
+        <h2>Your Privacy Choices and Requests</h2>
+        <p>Depending on the law that applies to you and the information involved, you may have rights to request access, correction, deletion, restriction, objection, or a portable copy of personal information. You may also have the right to complain to an appropriate privacy or data-protection authority.</p>
+        <p>To make a request, email <a href="mailto:owner.frombedtobar@gmail.com">owner.frombedtobar@gmail.com</a> and describe what you are requesting. We may need to verify that the request relates to you before acting on it. We will evaluate and respond to valid requests within the period required by applicable law. We will not discriminate against you for making a privacy request.</p>
+        <h3>International visitors</h3>
+        <p>The Site is operated from the United States and does not currently target goods or services to individuals in the European Economic Area or United Kingdom or monitor their behavior for advertising or analytics. Information handled by our providers may be processed in the United States or other countries where they operate. Where applicable law grants additional rights or requires transfer safeguards, we will apply those requirements to the relevant processing.</p>
+      </section>
+      <hr class="policy-divider" />
+
+      <section class="policy-section" id="california">
+        <div class="policy-number">08</div>
+        <h2>California Privacy Information</h2>
+        <p>California visitors may encounter the following categories of personal information in connection with the Site:</p>
+        <ul>
+          <li><strong>Identifiers:</strong> IP address and, if you email us, your email address and name if supplied;</li>
+          <li><strong>Internet or network activity:</strong> requested pages, request times, browser or device headers, routing information, and security-event information; and</li>
+          <li><strong>Correspondence:</strong> the contents of messages you choose to send.</li>
+        </ul>
+        <p>These categories come from your browser or device, directly from you, and from the service providers described in this policy. They are used and disclosed for content delivery, security, operations, correspondence, and legal compliance. The categories of recipients are hosting and security providers, font-delivery providers, email providers, and authorities or professional advisers when disclosure is legally necessary.</p>
+        <p>From Bed to Bar does not sell personal information, share it for cross-context behavioral advertising, or use or disclose sensitive personal information for purposes that require a right to limit under the California Consumer Privacy Act. If that law applies to a particular request, we will process the applicable right to know, access, correct, delete, opt out, limit, or receive equal treatment as required. Instructions for submitting a request appear in Section 7.</p>
+      </section>
+      <hr class="policy-divider" />
+
+      <section class="policy-section" id="children">
+        <div class="policy-number">09</div>
+        <h2>Children’s Privacy</h2>
+        <p>The Site is a general-audience editorial website and is not directed to children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has sent us personal information, contact us so we can review and delete it as appropriate.</p>
+      </section>
+      <hr class="policy-divider" />
+
+      <section class="policy-section" id="changes">
+        <div class="policy-number">10</div>
+        <h2>Changes to This Policy</h2>
+        <p>We may revise this policy to reflect changes in the Site, our service providers, or applicable requirements. The “Last Updated” date identifies the current version. When required, we will provide additional notice before a material change takes effect. We will reassess this policy before introducing a newsletter, user accounts, commerce, behavioral analytics, advertising, or intentional targeting of additional jurisdictions.</p>
+      </section>
+      <hr class="policy-divider" />
+
+      <section class="policy-section" id="contact">
+        <div class="policy-number">11</div>
+        <h2>Contact Us</h2>
+        <p>For questions, concerns, or privacy requests, contact:</p>
+        <p><strong>Mint to Be Home Solutions LLC</strong><br />
+        From Bed to Bar<br />
+        Email: <a href="mailto:owner.frombedtobar@gmail.com">owner.frombedtobar@gmail.com</a><br />
+        Website: <a href="https://frombedtobar.com">https://frombedtobar.com</a></p>
+      </section>
+    </div>
+
+    <div class="site-tagline">
+      <p><strong>Drink responsibly.</strong> Every mocktail on this site is just as good as the cocktail version. Enjoy the garden. Enjoy the bar. Be safe, be kind, and look after each other.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">From Bed to Bar</span>
+        <span class="footer-tagline">Rooted in the garden. Raised around the table.</span>
+        <span class="footer-copy">&copy; 2026 FromBedtoBar.com</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="footer-group">
+          <h3 class="footer-group-heading">Explore</h3>
+          <ul class="footer-group-links" role="list">
+            <li><a href="/">Home</a></li>
+            <li><a href="recipes">Recipes</a></li>
+            <li><a href="herb-hub">Harvest Hub</a></li>
+            <li><a href="garden-tips">Garden Tips</a></li>
+            <li><a href="planting-guide">Planting Guide</a></li>
+            <li><a href="bar-essentials">Bar Essentials</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h3 class="footer-group-heading">Guides</h3>
+          <ul class="footer-group-links" role="list">
+            <li><a href="mint-guide">Mint Guide</a></li>
+            <li><a href="plum-guide">Plum Guide</a></li>
+            <li><a href="rosemary-guide">Rosemary Guide</a></li>
+            <li><a href="thyme-guide">Thyme Guide</a></li>
+            <li><a href="basil-guide">Basil Guide</a></li>
+            <li><a href="lavender-guide">Lavender Guide</a></li>
+            <li><a href="lemon-balm-guide">Lemon Balm Guide</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h3 class="footer-group-heading">Company</h3>
+          <ul class="footer-group-links" role="list">
+            <li><a href="about">About</a></li>
+            <li><a href="blog">Blog</a></li>
+            <li><a href="disclaimer">Disclaimer</a></li>
+            <li><a href="privacy" aria-current="page">Privacy</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var hamburger = document.getElementById("navHamburger");
+      var navMenu = document.getElementById("navMenu");
+      if (!hamburger || !navMenu) return;
+
+      function closeMenu(returnFocus) {
+        hamburger.classList.remove("open");
+        navMenu.classList.remove("open");
+        hamburger.setAttribute("aria-expanded", "false");
+        hamburger.setAttribute("aria-label", "Open navigation menu");
+        if (returnFocus) hamburger.focus();
+      }
+
+      hamburger.addEventListener("click", function() {
+        var isOpen = hamburger.classList.toggle("open");
+        navMenu.classList.toggle("open", isOpen);
+        hamburger.setAttribute("aria-expanded", String(isOpen));
+        hamburger.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+      });
+
+      navMenu.querySelectorAll("a").forEach(function(link) {
+        link.addEventListener("click", function() {
+          if (window.innerWidth <= 1100) closeMenu(false);
+        });
+      });
+
+      document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape" && navMenu.classList.contains("open")) closeMenu(true);
+      });
+    });
+  </script>
+</body>
+</html>
