@@ -964,29 +964,6 @@
       .img-card-grid { grid-template-columns: repeat(2, 1fr); }
     }
   
-    /* ── NEWSLETTER ── */
-    .newsletter-section {
-      background: var(--parchment);
-      text-align: center;
-      padding: 6rem 5rem;
-    }
-    .newsletter-section .section-title { margin-bottom: 0.75rem; }
-    .newsletter-sub {
-      font-size: 1rem;
-      line-height: 1.7;
-      color: rgba(30,22,14,0.75);
-      max-width: 480px;
-      margin: 0 auto 2.5rem;
-    }
-    /* Kit form overrides */
-    .formkit-form { background: transparent !important; padding: 0 !important; }
-    .formkit-fields { display: flex !important; max-width: 440px !important; margin: 0 auto !important; border: 1px solid rgba(59,42,26,0.25) !important; flex-wrap: nowrap !important; }
-    .formkit-field { flex: 2 !important; }
-    .formkit-input { font-family: 'Lora', serif !important; font-size: 0.9rem !important; padding: 1rem 1.25rem !important; border: none !important; background: white !important; color: #1e160e !important; width: 100% !important; box-sizing: border-box !important; border-radius: 0 !important; outline: none !important; }
-    .formkit-submit { background: #4a5e3a !important; color: #f5f0e8 !important; font-family: 'DM Mono', monospace !important; font-size: 0.85rem !important; letter-spacing: 0.12em !important; text-transform: uppercase !important; padding: 1rem 1.5rem !important; border: none !important; border-radius: 0 !important; cursor: pointer !important; white-space: nowrap !important; box-shadow: none !important; margin: 0 !important; }
-    .formkit-submit:hover { background: #3b2a1a !important; }
-    .formkit-guarantee, .formkit-powered-by-convertkit-container { display: none !important; }
-    .formkit-alert:empty { display: none !important; }
 
     /* ── SCREEN READER ONLY UTILITY ── */
     .sr-only {
@@ -1036,10 +1013,7 @@
       outline: 3px solid var(--terracotta);
       outline-offset: 3px;
     }
-    .formkit-input:focus {
-      outline: 3px solid var(--moss) !important;
-      outline-offset: 0 !important;
-    }
+
 
 
     /* ── NAV TOUCH TARGET (min 44px, WCAG 2.5.5) ── */
@@ -1061,11 +1035,11 @@
 
     /* ── PRINT STYLES ── */
     @media print {
-      nav, footer, .site-tagline, .newsletter-section,
+      nav, footer, .site-tagline,
       .skip-link, .jump-nav, .link-strip,
       .recipe-hero .hero-back, .hero-ctas,
       .related-section, .faq-section,
-      [class*="related"], [class*="newsletter"],
+      [class*="related"],
       button:not(.print-btn) { display: none !important; }
 
       body { background: white !important; color: #000 !important; font-size: 12pt; }
@@ -1472,9 +1446,7 @@
       .quick-start-section,
       .garden-note-section,
       .favorites-section,
-      .newsletter-section {
-        padding: 3rem 1.5rem;
-      }
+
       .section-intro {
         margin-bottom: 2rem;
       }
@@ -2151,27 +2123,6 @@
     <div class="faq-item"><button class="faq-question" aria-expanded="false" aria-controls="faq6"><span>Can old woody rosemary stems be used?</span><span class="faq-icon">+</span></button><div id="faq6" class="faq-answer" hidden><p>Yes, but not in the same way as tender green growth. Woody stems can be used as skewers, smoking sprigs, or aromatics for roasting. For drying and fresh flavor, use younger green stems.</p></div></div>
   </div>
 </section>
-  <!-- NEWSLETTER -->
-  <section class="newsletter-section" id="newsletter">
-    <p class="section-label">Stay Connected</p>
-    <h2 class="section-title">Recipes in your inbox, <em>in season.</em></h2>
-    <p class="newsletter-sub">No spam, no filler. Just seasonal recipes, garden notes, and simple ways to bring the harvest to the table.</p>
-    <script src="https://f.convertkit.com/ckjs/ck.5.js" async></script>
-    <form action="https://app.kit.com/forms/9503567/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9503567" data-uid="08e54ce9b8" data-format="inline" data-version="5" data-options="{&quot;settings&quot;:{&quot;after_subscribe&quot;:{&quot;action&quot;:&quot;redirect&quot;,&quot;success_message&quot;:&quot;Success! Now check your email to confirm your subscription.&quot;,&quot;redirect_url&quot;:&quot;https://frombedtobar.com/thank-you&quot;},&quot;analytics&quot;:{&quot;google&quot;:null,&quot;fathom&quot;:null,&quot;facebook&quot;:null,&quot;segment&quot;:null,&quot;pinterest&quot;:null,&quot;sparkloop&quot;:null,&quot;googletagmanager&quot;:null},&quot;modal&quot;:{&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;powered_by&quot;:{&quot;show&quot;:true,&quot;url&quot;:&quot;https://kit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic&quot;},&quot;recaptcha&quot;:{&quot;enabled&quot;:false},&quot;return_visitor&quot;:{&quot;action&quot;:&quot;show&quot;,&quot;custom_content&quot;:&quot;&quot;},&quot;slide_in&quot;:{&quot;display_in&quot;:&quot;bottom_right&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15},&quot;sticky_bar&quot;:{&quot;display_in&quot;:&quot;top&quot;,&quot;trigger&quot;:&quot;timer&quot;,&quot;scroll_percentage&quot;:null,&quot;timer&quot;:5,&quot;devices&quot;:&quot;all&quot;,&quot;show_once_every&quot;:15}},&quot;version&quot;:&quot;5&quot;}" min-width="400 500 600 700 800">
-      <div data-style="clean">
-        <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
-        <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
-          <div class="formkit-field">
-            <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required="" type="email" />
-          </div>
-          <button data-element="submit" class="formkit-submit formkit-submit">
-            <div class="formkit-spinner"><div></div><div></div><div></div></div>
-            <span>Subscribe</span>
-          </button>
-        </div>
-      </div>
-    </form>
-  </section>
 
   <div class="site-tagline">
   <p><strong>Drink responsibly.</strong> Every mocktail on this site is just as good as the cocktail version. Enjoy the garden. Enjoy the bar. Be safe, be kind, and look after each other.</p>

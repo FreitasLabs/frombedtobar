@@ -1062,29 +1062,6 @@
       .img-card-grid { grid-template-columns: repeat(2, 1fr); }
     }
   
-    /* ── NEWSLETTER ── */
-    .newsletter-section {
-      background: var(--parchment);
-      text-align: center;
-      padding: 6rem 5rem;
-    }
-    .newsletter-section .section-title { margin-bottom: 0.75rem; }
-    .newsletter-sub {
-      font-size: 1rem;
-      line-height: 1.7;
-      color: rgba(30,22,14,0.75);
-      max-width: 480px;
-      margin: 0 auto 2.5rem;
-    }
-    /* Kit form overrides */
-    .formkit-form { background: transparent !important; padding: 0 !important; }
-    .formkit-fields { display: flex !important; max-width: 440px !important; margin: 0 auto !important; border: 1px solid rgba(59,42,26,0.25) !important; flex-wrap: nowrap !important; }
-    .formkit-field { flex: 2 !important; }
-    .formkit-input { font-family: 'Lora', serif !important; font-size: 0.9rem !important; padding: 1rem 1.25rem !important; border: none !important; background: white !important; color: #1e160e !important; width: 100% !important; box-sizing: border-box !important; border-radius: 0 !important; outline: none !important; }
-    .formkit-submit { background: #4a5e3a !important; color: #f5f0e8 !important; font-family: 'DM Mono', monospace !important; font-size: 0.85rem !important; letter-spacing: 0.12em !important; text-transform: uppercase !important; padding: 1rem 1.5rem !important; border: none !important; border-radius: 0 !important; cursor: pointer !important; white-space: nowrap !important; box-shadow: none !important; margin: 0 !important; }
-    .formkit-submit:hover { background: #3b2a1a !important; }
-    .formkit-guarantee, .formkit-powered-by-convertkit-container { display: none !important; }
-    .formkit-alert:empty { display: none !important; }
 
     /* ── SCREEN READER ONLY UTILITY ── */
     .sr-only {
@@ -1134,10 +1111,7 @@
       outline: 3px solid var(--terracotta);
       outline-offset: 3px;
     }
-    .formkit-input:focus {
-      outline: 3px solid var(--moss) !important;
-      outline-offset: 0 !important;
-    }
+
 
 
     /* ── NAV TOUCH TARGET (min 44px, WCAG 2.5.5) ── */
@@ -1159,11 +1133,11 @@
 
     /* ── PRINT STYLES ── */
     @media print {
-      nav, footer, .site-tagline, .newsletter-section,
+      nav, footer, .site-tagline,
       .skip-link, .jump-nav, .link-strip,
       .recipe-hero .hero-back, .hero-ctas,
       .related-section, .faq-section,
-      [class*="related"], [class*="newsletter"],
+      [class*="related"],
       button:not(.print-btn) { display: none !important; }
 
       body { background: white !important; color: #000 !important; font-size: 12pt; }
@@ -1570,9 +1544,7 @@
       .quick-start-section,
       .garden-note-section,
       .favorites-section,
-      .newsletter-section {
-        padding: 3rem 1.5rem;
-      }
+
       .section-intro {
         margin-bottom: 2rem;
       }
@@ -2191,11 +2163,6 @@
 <div class="faq-answer" hidden="" id="faq7"><p>For big harvests, pesto is usually the most satisfying way to preserve basil because it keeps the flavor tied to real meals. Basil oil cubes and frozen chopped basil are useful too, but pesto feels the most like summer at the table.</p></div>
 </div>
 </div>
-</section>
-<section class="newsletter-section">
-<h2 class="section-title">Bring the Garden to the Glass</h2>
-<p class="newsletter-sub">Seasonal recipes, garden notes, and simple ways to gather around the table.</p>
-<script async="" data-uid="76f668a3b6" src="https://frombedtobar.kit.com/76f668a3b6/index.js"></script>
 </section>
 </main>
 <footer>
