@@ -1,0 +1,42 @@
+/*
+ * Keep image-led heroes cinematic without letting them consume the first screen.
+ * Content can still make the section taller when a page needs more room.
+ */
+@media screen {
+  .hero {
+    min-height: clamp(32rem, 48svh, 38rem);
+  }
+
+  .page-header:has(> .page-header-bg),
+  .page-header:has(> picture .page-header-bg) {
+    min-height: clamp(28rem, 38svh, 34rem);
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .hero {
+    padding-block: 100px 2.5rem;
+  }
+
+  .hero .hero-content {
+    max-width: min(52rem, 58vw);
+    padding: 2.5rem 0 3rem clamp(3.5rem, 8vw, 8rem);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .hero {
+    min-height: clamp(34rem, 64svh, 38rem);
+    padding: 66px 0 1rem;
+  }
+
+  .hero .hero-content {
+    max-width: 100%;
+    padding: 0 1.5rem 2rem;
+  }
+
+  .page-header:has(> .page-header-bg),
+  .page-header:has(> picture .page-header-bg) {
+    min-height: clamp(26rem, 50svh, 31rem);
+  }
+}
